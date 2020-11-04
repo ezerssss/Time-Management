@@ -1,0 +1,8 @@
+X:\Documents\Learning\C# programs\Time management\app\bin\Debug\app.exe.config
+X:\Documents\Learning\C# programs\Time management\app\bin\Debug\app.exe
+X:\Documents\Learning\C# programs\Time management\app\bin\Debug\app.pdb
+X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Properties.Resources.resources
+X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.GenerateResource.cache
+X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.exe
+X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.pdb
