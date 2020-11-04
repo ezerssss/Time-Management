@@ -8,3 +8,13 @@ X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.Gener
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.exe
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.pdb
+D:\C# Projects\Time-Management\app\bin\Debug\app.exe.config
+D:\C# Projects\Time-Management\app\bin\Debug\app.exe
+D:\C# Projects\Time-Management\app\bin\Debug\app.pdb
+D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
+D:\C# Projects\Time-Management\app\obj\Debug\app.Form1.resources
+D:\C# Projects\Time-Management\app\obj\Debug\app.Properties.Resources.resources
+D:\C# Projects\Time-Management\app\obj\Debug\app.csproj.GenerateResource.cache
+D:\C# Projects\Time-Management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+D:\C# Projects\Time-Management\app\obj\Debug\app.exe
+D:\C# Projects\Time-Management\app\obj\Debug\app.pdb
