@@ -22,11 +22,6 @@ namespace app
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Tangina mo lol");
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -73,6 +68,29 @@ namespace app
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             drag = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            button1.Enabled = false;
+            screen.Visible = true;
+            if (logo1.Visible)
+                logo1.Visible = false;
+            logo2.Visible = true;
+            back.Visible = true;
+            back.Enabled = true;
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            button1.Visible = true;
+            button1.Enabled = true;
+            back.Visible = false;
+            back.Enabled = false;
+            screen.Visible = false;
+            logo1.Visible = true;
+            logo2.Visible = false;
         }
     }
 }
