@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button2 = new System.Windows.Forms.Button();
             this.toppanel = new System.Windows.Forms.Panel();
+            this.logo2 = new System.Windows.Forms.PictureBox();
+            this.screen = new System.Windows.Forms.Panel();
             this.logo1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.screen = new System.Windows.Forms.Panel();
-            this.logo2 = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.Button();
             this.toppanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo1)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -78,11 +78,31 @@
             this.toppanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.toppanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // logo2
+            // 
+            this.logo2.Image = ((System.Drawing.Image)(resources.GetObject("logo2.Image")));
+            this.logo2.Location = new System.Drawing.Point(66, 13);
+            this.logo2.Margin = new System.Windows.Forms.Padding(4);
+            this.logo2.Name = "logo2";
+            this.logo2.Size = new System.Drawing.Size(247, 68);
+            this.logo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo2.TabIndex = 4;
+            this.logo2.TabStop = false;
+            this.logo2.Visible = false;
+            // 
+            // screen
+            // 
+            this.screen.Location = new System.Drawing.Point(48, 81);
+            this.screen.Name = "screen";
+            this.screen.Size = new System.Drawing.Size(287, 440);
+            this.screen.TabIndex = 3;
+            this.screen.Visible = false;
+            // 
             // logo1
             // 
             this.logo1.Image = ((System.Drawing.Image)(resources.GetObject("logo1.Image")));
             this.logo1.Location = new System.Drawing.Point(16, 81);
-            this.logo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logo1.Margin = new System.Windows.Forms.Padding(4);
             this.logo1.Name = "logo1";
             this.logo1.Size = new System.Drawing.Size(352, 105);
             this.logo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,26 +130,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // screen
-            // 
-            this.screen.Location = new System.Drawing.Point(48, 81);
-            this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(287, 389);
-            this.screen.TabIndex = 3;
-            this.screen.Visible = false;
-            // 
-            // logo2
-            // 
-            this.logo2.Image = ((System.Drawing.Image)(resources.GetObject("logo2.Image")));
-            this.logo2.Location = new System.Drawing.Point(66, 13);
-            this.logo2.Margin = new System.Windows.Forms.Padding(4);
-            this.logo2.Name = "logo2";
-            this.logo2.Size = new System.Drawing.Size(247, 68);
-            this.logo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo2.TabIndex = 4;
-            this.logo2.TabStop = false;
-            this.logo2.Visible = false;
-            // 
             // back
             // 
             this.back.BackColor = System.Drawing.Color.Transparent;
@@ -143,7 +143,7 @@
             this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.back.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back.ForeColor = System.Drawing.Color.White;
-            this.back.Location = new System.Drawing.Point(119, 278);
+            this.back.Location = new System.Drawing.Point(52, 452);
             this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(147, 62);
@@ -163,7 +163,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.toppanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -172,8 +172,8 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.toppanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo1)).EndInit();
             this.ResumeLayout(false);
 
         }
