@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace app
 {
     public partial class Form1 : Form
     {
+        //ang location kay tupad rajud sa .exe file
+        string path = Application.StartupPath + @"\file.txt";
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +22,13 @@ namespace app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+                MessageBox.Show("File created");
+                //Application.Restart();
+                //^^^ incase nga naa problem with reading
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
