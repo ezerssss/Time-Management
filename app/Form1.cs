@@ -26,5 +26,53 @@ namespace app
         {
             MessageBox.Show("Tangina mo lol");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private bool drag = false;
+        private Point start = new Point(0, 0);
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start = new Point(e.X, e.Y);
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.start.X, p.Y - this.start.Y);
+            }
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.start.X, p.Y - this.start.Y);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
+        }
     }
 }
