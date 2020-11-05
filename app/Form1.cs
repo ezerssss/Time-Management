@@ -30,7 +30,7 @@ namespace app
                 //^^^ incase nga naa problem with reading
             }
         }
-        //function for getting file, kay mu error usahay if ika daghan i declare
+        //array method for getting file, kay mu error usahay if ika daghan i declare
         private string[] getFile()
         {
             string[] file = File.ReadAllLines(path);
