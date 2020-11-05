@@ -30,6 +30,12 @@ namespace app
                 //^^^ incase nga naa problem with reading
             }
         }
+        //function for getting file, kay mu error usahay if ika daghan i declare
+        private string[] getFile()
+        {
+            string[] file = File.ReadAllLines(path);
+            return file;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
