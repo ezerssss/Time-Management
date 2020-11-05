@@ -29,6 +29,16 @@ namespace app
                 //Application.Restart();
                 //^^^ incase nga naa problem with reading
             }
+
+            //sets calendar user control to be default launch panel
+            Calendar_View cv = new Calendar_View();
+            cv.Dock = DockStyle.Fill;
+            screen.Controls.Add(cv);
+
+            //loads both of them, para kung mu change ang user e to front nalang
+            Task_Lists tl = new Task_Lists();
+            tl.Dock = DockStyle.Fill;
+            screen.Controls.Add(tl);
         }
         //array method for getting file, kay mu error usahay if ika daghan i declare
         private string[] getFile()
@@ -65,13 +75,13 @@ namespace app
             drag = false;
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void logo2_MouseDown(object sender, MouseEventArgs e)
         {
             drag = true;
             start = new Point(e.X, e.Y);
         }
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void logo2_MouseMove(object sender, MouseEventArgs e)
         {
             if (drag)
             {
@@ -80,32 +90,44 @@ namespace app
             }
         }
 
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        private void logo2_MouseUp(object sender, MouseEventArgs e)
         {
             drag = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
-            button1.Visible = false;
-            button1.Enabled = false;
-            screen.Visible = true;
-            if (logo1.Visible)
-                logo1.Visible = false;
-            logo2.Visible = true;
-            back.Visible = true;
-            back.Enabled = true;
+            drag = true;
+            start = new Point(e.X, e.Y);
         }
 
-        private void back_Click(object sender, EventArgs e)
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
         {
-            button1.Visible = true;
-            button1.Enabled = true;
-            back.Visible = false;
-            back.Enabled = false;
-            screen.Visible = false;
-            logo1.Visible = true;
-            logo2.Visible = false;
+            if (drag)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.start.X, p.Y - this.start.Y);
+            }
         }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
+        }
+
+        private void task_Click(object sender, EventArgs e)
+        {
+            //checks if panel is in calendar view
+            if (screen.Controls.ContainsKey("Calendar_View"))
+                screen.Controls["Task_Lists"].BringToFront();
+        }
+
+        private void calendar_Click(object sender, EventArgs e)
+        {
+            //checks if panel is in task list
+            if (screen.Controls.ContainsKey("Task_Lists"))
+                screen.Controls["Calendar_View"].BringToFront();
+        }
+
     }
 }
