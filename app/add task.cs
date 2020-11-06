@@ -29,7 +29,7 @@ namespace app
             else
             {
                 List<string> lines = getFile().ToList();
-                lines.Add(subject.Text + x[0] + task.Text + x[0] + date.Text + x[0] + hours.Text + ":" + minutes.Text + day.Text);
+                lines.Add(subject.Text + x[0] + task.Text + x[0] + date.Text + x[0] + hours.Text + ":" + minutes.Text + day.Text + x[0] + "false");
                 File.WriteAllLines(path, lines);
                 resetText();
               

@@ -44,6 +44,7 @@
             // 
             // date
             // 
+            this.date.CustomFormat = "day, MMM/dd/yyyy";
             this.date.Location = new System.Drawing.Point(73, 113);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(181, 20);

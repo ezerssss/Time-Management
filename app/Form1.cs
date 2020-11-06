@@ -26,7 +26,7 @@ namespace app
             {
                 File.Create(path);
                 MessageBox.Show("File created");
-                //Application.Restart();
+                Application.Restart();
                 //^^^ incase nga naa problem with reading
             }
 
@@ -43,6 +43,12 @@ namespace app
             add_task at = new add_task();
             tl.Dock = DockStyle.Fill;
             screen.Controls.Add(at);
+
+
+            Data_Grid dg = new Data_Grid();
+            dg.Dock = DockStyle.Fill;
+            screen.Controls.Add(dg);
+
         }
         //array method for getting file, kay mu error usahay if ika daghan i declare
         private string[] getFile()
@@ -122,14 +128,14 @@ namespace app
         private void task_Click(object sender, EventArgs e)
         {
             //checks if panel is in calendar view or add task
-            if (screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("add_task"))
+            if (screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("add_task") || screen.Controls.ContainsKey("Data_Grid"))
                 screen.Controls["Task_Lists"].BringToFront();
         }
 
         private void calendar_Click(object sender, EventArgs e)
         {
             //checks if panel is in task list or add task
-            if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("add_task"))
+            if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("add_task") || screen.Controls.ContainsKey("Data_Grid"))
                 screen.Controls["Calendar_View"].BringToFront();
         }
 
@@ -145,8 +151,17 @@ namespace app
 
         private void addTask_Click(object sender, EventArgs e)
         {
-            if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("Calendar_View"))
+            if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("Data_Grid"))
                 screen.Controls["add_task"].BringToFront();
+        }
+
+        private void showTasks(object sender, EventArgs e)
+        {
+            if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("add_task")) {
+
+                screen.Controls["Data_Grid"].BringToFront();
+            }
+                
         }
     }
 }

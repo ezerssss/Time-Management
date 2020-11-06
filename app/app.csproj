@@ -58,6 +58,12 @@
     <Compile Include="Calendar View.Designer.cs">
       <DependentUpon>Calendar View.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data Grid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data Grid.Designer.cs">
+      <DependentUpon>Data Grid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Calendar View.resx">
       <DependentUpon>Calendar View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data Grid.resx">
+      <DependentUpon>Data Grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
