@@ -30,3 +30,5 @@ C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.exe
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.pdb
 D:\C# Projects\Time-Management\app\obj\Debug\app.Calendar_View.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.Task_Lists.resources
+C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Calendar_View.resources
+C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Task_Lists.resources
