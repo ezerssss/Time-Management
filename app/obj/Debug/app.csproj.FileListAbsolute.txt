@@ -28,3 +28,5 @@ C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.Gen
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.exe
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.pdb
+D:\C# Projects\Time-Management\app\obj\Debug\app.Calendar_View.resources
+D:\C# Projects\Time-Management\app\obj\Debug\app.Task_Lists.resources

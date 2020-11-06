@@ -29,141 +29,118 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button2 = new System.Windows.Forms.Button();
-            this.toppanel = new System.Windows.Forms.Panel();
-            this.logo1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.task = new System.Windows.Forms.Button();
+            this.calendar = new System.Windows.Forms.Button();
             this.screen = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.logo2 = new System.Windows.Forms.PictureBox();
-            this.back = new System.Windows.Forms.Button();
-            this.toppanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo1)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).BeginInit();
             this.SuspendLayout();
             // 
+            // task
+            // 
+            this.task.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.task.FlatAppearance.BorderSize = 0;
+            this.task.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.task.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.task.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.task.Image = ((System.Drawing.Image)(resources.GetObject("task.Image")));
+            this.task.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.task.Location = new System.Drawing.Point(156, 441);
+            this.task.Margin = new System.Windows.Forms.Padding(2);
+            this.task.Name = "task";
+            this.task.Size = new System.Drawing.Size(66, 66);
+            this.task.TabIndex = 5;
+            this.task.UseVisualStyleBackColor = true;
+            this.task.Click += new System.EventHandler(this.task_Click);
+            // 
+            // calendar
+            // 
+            this.calendar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.calendar.FlatAppearance.BorderSize = 0;
+            this.calendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.calendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.calendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calendar.Image = ((System.Drawing.Image)(resources.GetObject("calendar.Image")));
+            this.calendar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.calendar.Location = new System.Drawing.Point(72, 441);
+            this.calendar.Margin = new System.Windows.Forms.Padding(2);
+            this.calendar.Name = "calendar";
+            this.calendar.Size = new System.Drawing.Size(66, 66);
+            this.calendar.TabIndex = 7;
+            this.calendar.UseVisualStyleBackColor = true;
+            this.calendar.Click += new System.EventHandler(this.calendar_Click);
+            // 
+            // screen
+            // 
+            this.screen.BackColor = System.Drawing.Color.Transparent;
+            this.screen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.screen.Location = new System.Drawing.Point(37, 73);
+            this.screen.Name = "screen";
+            this.screen.Size = new System.Drawing.Size(220, 370);
+            this.screen.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(288, 227);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
+            // logo2
+            // 
+            this.logo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.logo2.Image = ((System.Drawing.Image)(resources.GetObject("logo2.Image")));
+            this.logo2.Location = new System.Drawing.Point(50, 12);
+            this.logo2.Name = "logo2";
+            this.logo2.Size = new System.Drawing.Size(185, 55);
+            this.logo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo2.TabIndex = 4;
+            this.logo2.TabStop = false;
+            this.logo2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.logo2_MouseDown);
+            this.logo2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.logo2_MouseMove);
+            this.logo2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.logo2_MouseUp);
+            // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(329, 14);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(247, 11);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 37);
+            this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // toppanel
-            // 
-            this.toppanel.BackColor = System.Drawing.Color.Transparent;
-            this.toppanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toppanel.BackgroundImage")));
-            this.toppanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toppanel.Controls.Add(this.logo2);
-            this.toppanel.Controls.Add(this.screen);
-            this.toppanel.Controls.Add(this.logo1);
-            this.toppanel.Controls.Add(this.button2);
-            this.toppanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.toppanel.Location = new System.Drawing.Point(0, 0);
-            this.toppanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.toppanel.Name = "toppanel";
-            this.toppanel.Size = new System.Drawing.Size(384, 279);
-            this.toppanel.TabIndex = 2;
-            this.toppanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.toppanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.toppanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // logo1
-            // 
-            this.logo1.Image = ((System.Drawing.Image)(resources.GetObject("logo1.Image")));
-            this.logo1.Location = new System.Drawing.Point(16, 81);
-            this.logo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.logo1.Name = "logo1";
-            this.logo1.Size = new System.Drawing.Size(352, 105);
-            this.logo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo1.TabIndex = 2;
-            this.logo1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(119, 348);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 62);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // screen
-            // 
-            this.screen.Location = new System.Drawing.Point(48, 81);
-            this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(287, 389);
-            this.screen.TabIndex = 3;
-            this.screen.Visible = false;
-            // 
-            // logo2
-            // 
-            this.logo2.Image = ((System.Drawing.Image)(resources.GetObject("logo2.Image")));
-            this.logo2.Location = new System.Drawing.Point(66, 13);
-            this.logo2.Margin = new System.Windows.Forms.Padding(4);
-            this.logo2.Name = "logo2";
-            this.logo2.Size = new System.Drawing.Size(247, 68);
-            this.logo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo2.TabIndex = 4;
-            this.logo2.TabStop = false;
-            this.logo2.Visible = false;
-            // 
-            // back
-            // 
-            this.back.BackColor = System.Drawing.Color.Transparent;
-            this.back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back.BackgroundImage")));
-            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back.Enabled = false;
-            this.back.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.back.FlatAppearance.BorderSize = 0;
-            this.back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back.ForeColor = System.Drawing.Color.White;
-            this.back.Location = new System.Drawing.Point(119, 278);
-            this.back.Margin = new System.Windows.Forms.Padding(4);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(147, 62);
-            this.back.TabIndex = 1;
-            this.back.Text = "Back";
-            this.back.UseVisualStyleBackColor = false;
-            this.back.Visible = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(384, 626);
-            this.Controls.Add(this.back);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.toppanel);
+            this.ClientSize = new System.Drawing.Size(288, 530);
+            this.Controls.Add(this.screen);
+            this.Controls.Add(this.logo2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.calendar);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.task);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -171,21 +148,19 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
-            this.toppanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel toppanel;
-        private System.Windows.Forms.PictureBox logo1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button task;
+        private System.Windows.Forms.Button calendar;
         private System.Windows.Forms.Panel screen;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox logo2;
-        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Button button2;
     }
 }
 
