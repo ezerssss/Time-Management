@@ -53,10 +53,12 @@ namespace app
         }
         public void update() {
             List<string> oldLines = getFile().ToList();
+            //kay if dili i show ang added task, dili siya mabasa sa update niya dili na ma show forever
             if (oldLines.Count != ((DataTable)this.dataGrid.DataSource).Rows.Count)
                 showData();
             MessageBox.Show("old lines are " + oldLines.Count);
             List<string> lines = new List<string>();
+            //always 5 man ang element, for now....
             string[] row = new string[5];
             //counts how many rows except the header
             int numRows = ((DataTable)this.dataGrid.DataSource).Rows.Count;
