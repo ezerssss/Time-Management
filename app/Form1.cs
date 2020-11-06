@@ -129,5 +129,9 @@ namespace app
                 screen.Controls["Calendar_View"].BringToFront();
         }
 
+        private void screen_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

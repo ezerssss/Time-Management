@@ -41,46 +41,52 @@
             // 
             // task
             // 
+            this.task.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.task.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("task.BackgroundImage")));
+            this.task.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.task.Cursor = System.Windows.Forms.Cursors.Hand;
             this.task.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.task.FlatAppearance.BorderSize = 0;
-            this.task.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.task.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.task.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.task.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.task.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.task.Image = ((System.Drawing.Image)(resources.GetObject("task.Image")));
             this.task.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.task.Location = new System.Drawing.Point(156, 441);
+            this.task.Location = new System.Drawing.Point(158, 448);
             this.task.Margin = new System.Windows.Forms.Padding(2);
             this.task.Name = "task";
-            this.task.Size = new System.Drawing.Size(66, 66);
+            this.task.Size = new System.Drawing.Size(58, 58);
             this.task.TabIndex = 5;
-            this.task.UseVisualStyleBackColor = true;
+            this.task.UseVisualStyleBackColor = false;
             this.task.Click += new System.EventHandler(this.task_Click);
             // 
             // calendar
             // 
+            this.calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.calendar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("calendar.BackgroundImage")));
+            this.calendar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.calendar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calendar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.calendar.FlatAppearance.BorderSize = 0;
-            this.calendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.calendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.calendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.calendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.calendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calendar.Image = ((System.Drawing.Image)(resources.GetObject("calendar.Image")));
-            this.calendar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.calendar.Location = new System.Drawing.Point(72, 441);
+            this.calendar.Location = new System.Drawing.Point(66, 448);
             this.calendar.Margin = new System.Windows.Forms.Padding(2);
             this.calendar.Name = "calendar";
-            this.calendar.Size = new System.Drawing.Size(66, 66);
+            this.calendar.Size = new System.Drawing.Size(58, 58);
             this.calendar.TabIndex = 7;
-            this.calendar.UseVisualStyleBackColor = true;
+            this.calendar.UseVisualStyleBackColor = false;
             this.calendar.Click += new System.EventHandler(this.calendar_Click);
             // 
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.screen.Location = new System.Drawing.Point(37, 73);
+            this.screen.Location = new System.Drawing.Point(0, 73);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(220, 370);
+            this.screen.Size = new System.Drawing.Size(288, 370);
             this.screen.TabIndex = 8;
+            this.screen.Paint += new System.Windows.Forms.PaintEventHandler(this.screen_Paint);
             // 
             // pictureBox2
             // 
