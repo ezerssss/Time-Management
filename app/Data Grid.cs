@@ -65,16 +65,28 @@ namespace app
                 }
                     
             }
-            foreach (int i in checkedMark)
-                temp.RemoveAt(i);
+
+            checkedMark.Sort();
+            for (int j = checkedMark.Count()-1; j >= 0; j--)
+            {
+                temp.RemoveAt(checkedMark[j]);
+            }
             File.WriteAllText(path, String.Empty);
             File.WriteAllLines(path, temp);
             getFile();
             showData();
+            temp.Clear();
+            checkedMark.Clear();
         }
 
         public void addroooow()
         {
+            table.Columns.Add("Subject", typeof(string));
+            table.Columns.Add("Task", typeof(string));
+            table.Columns.Add("Date", typeof(string));
+            table.Columns.Add("Time", typeof(string));
+            table.Columns.Add("Status", typeof(bool));
+            dataGrid.DataSource = table;
             string[] lines = getFile();
             string[] elements = lines[0].Split(x, StringSplitOptions.None);
             table.Rows.Add(elements);
