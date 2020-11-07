@@ -72,12 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task Lists.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Task Lists.Designer.cs">
-      <DependentUpon>Task Lists.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="add task.resx">
       <DependentUpon>add task.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,9 +93,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Task Lists.resx">
-      <DependentUpon>Task Lists.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

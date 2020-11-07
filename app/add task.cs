@@ -32,7 +32,8 @@ namespace app
                 lines.Add(subject.Text + x[0] + task.Text + x[0] + date.Text + x[0] + hours.Text + ":" + minutes.Text + day.Text + x[0] + "false");
                 File.WriteAllLines(path, lines);
                 resetText();
-              
+                Data_Grid dg = new Data_Grid();
+                //dg.addroooow();
                 MessageBox.Show("add task successful");
             }
         }

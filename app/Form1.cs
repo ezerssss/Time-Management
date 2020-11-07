@@ -35,13 +35,9 @@ namespace app
             cv.Dock = DockStyle.Fill;
             screen.Controls.Add(cv);
 
-            //loads both of them, para kung mu change ang user e to front nalang
-            Task_Lists tl = new Task_Lists();
-            tl.Dock = DockStyle.Fill;
-            screen.Controls.Add(tl);
 
             add_task at = new add_task();
-            tl.Dock = DockStyle.Fill;
+            at.Dock = DockStyle.Fill;
             screen.Controls.Add(at);
 
 
@@ -127,9 +123,7 @@ namespace app
 
         private void task_Click(object sender, EventArgs e)
         {
-            //checks if panel is in calendar view or add task
-            if (screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("add_task") || screen.Controls.ContainsKey("Data_Grid"))
-                screen.Controls["Task_Lists"].BringToFront();
+            MessageBox.Show("IBUTANG DIRI ANG KATON SHOW NIMO DRY");
         }
 
         private void calendar_Click(object sender, EventArgs e)

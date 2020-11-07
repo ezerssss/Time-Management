@@ -29,10 +29,11 @@ C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.Cor
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.exe
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.pdb
 D:\C# Projects\Time-Management\app\obj\Debug\app.Calendar_View.resources
-D:\C# Projects\Time-Management\app\obj\Debug\app.Task_Lists.resources
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Calendar_View.resources
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Task_Lists.resources
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.add_task.resources
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Calendar_View.resources
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Task_Lists.resources
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Data_Grid.resources
+D:\C# Projects\Time-Management\app\obj\Debug\app.add_task.resources
+D:\C# Projects\Time-Management\app\obj\Debug\app.Data_Grid.resources
