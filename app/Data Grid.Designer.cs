@@ -43,7 +43,7 @@
             this.dataGrid.Location = new System.Drawing.Point(10, 65);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersVisible = false;
-            this.dataGrid.Size = new System.Drawing.Size(266, 148);
+            this.dataGrid.Size = new System.Drawing.Size(266, 208);
             this.dataGrid.TabIndex = 0;
             // 
             // button1

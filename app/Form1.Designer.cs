@@ -52,7 +52,7 @@
             this.task.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.task.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.task.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.task.Location = new System.Drawing.Point(123, 448);
+            this.task.Location = new System.Drawing.Point(123, 450);
             this.task.Margin = new System.Windows.Forms.Padding(2);
             this.task.Name = "task";
             this.task.Size = new System.Drawing.Size(58, 58);
@@ -71,7 +71,7 @@
             this.calendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.calendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.calendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calendar.Location = new System.Drawing.Point(50, 448);
+            this.calendar.Location = new System.Drawing.Point(50, 451);
             this.calendar.Margin = new System.Windows.Forms.Padding(2);
             this.calendar.Name = "calendar";
             this.calendar.Size = new System.Drawing.Size(58, 58);
@@ -142,12 +142,13 @@
             this.addTask.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addTask.BackgroundImage")));
             this.addTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.addTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addTask.FlatAppearance.BorderSize = 0;
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.addTask.Location = new System.Drawing.Point(186, 440);
+            this.addTask.Location = new System.Drawing.Point(186, 445);
             this.addTask.Margin = new System.Windows.Forms.Padding(2);
             this.addTask.Name = "addTask";
-            this.addTask.Size = new System.Drawing.Size(77, 74);
+            this.addTask.Size = new System.Drawing.Size(67, 65);
             this.addTask.TabIndex = 10;
             this.addTask.UseVisualStyleBackColor = false;
             this.addTask.Click += new System.EventHandler(this.addTask_Click);
