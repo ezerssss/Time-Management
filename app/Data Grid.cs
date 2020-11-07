@@ -23,13 +23,16 @@ namespace app
 
         private void Data_Grid_Load(object sender, EventArgs e)
         {
+            header();
+            dataGrid.DataSource = table;
+            showData();
+        }
+        public void header() {
             table.Columns.Add("Subject", typeof(string));
             table.Columns.Add("Task", typeof(string));
             table.Columns.Add("Date", typeof(string));
             table.Columns.Add("Time", typeof(string));
             table.Columns.Add("Status", typeof(bool));
-            dataGrid.DataSource = table;
-            showData();
         }
 
         private void updateButton(object sender, EventArgs e)
@@ -41,7 +44,7 @@ namespace app
             table.Clear();
             string[] lines = getFile();
             string[] elements; // get the elements from a line;
-            for (int i = 0; i < lines.Length; i++){
+            for (int i = 0; i < lines.Length; i++) {
                 elements = lines[i].Split(x, StringSplitOptions.None); //splits the line into elements and stores it
                 table.Rows.Add(elements); //adds element to a row
             }
@@ -63,11 +66,11 @@ namespace app
                 {
                     checkedMark.Add(i);
                 }
-                    
+
             }
 
             checkedMark.Sort();
-            for (int j = checkedMark.Count()-1; j >= 0; j--)
+            for (int j = checkedMark.Count() - 1; j >= 0; j--)
             {
                 temp.RemoveAt(checkedMark[j]);
             }
@@ -77,6 +80,10 @@ namespace app
             showData();
             temp.Clear();
             checkedMark.Clear();
+        }
+        public void add(string[] addThis) {
+            table.Rows.Add(addThis);
+            MessageBox.Show(table.Rows.Count.ToString());
         }
     }
 }
