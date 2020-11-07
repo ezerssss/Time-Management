@@ -81,9 +81,5 @@ namespace app
             temp.Clear();
             checkedMark.Clear();
         }
-        public void add(string[] addThis) {
-            table.Rows.Add(addThis);
-            MessageBox.Show(table.Rows.Count.ToString());
-        }
     }
 }
