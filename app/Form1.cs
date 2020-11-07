@@ -123,7 +123,11 @@ namespace app
 
         private void task_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("IBUTANG DIRI ANG KATON SHOW NIMO DRY");
+            if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("add_task"))
+            {
+
+                screen.Controls["Data_Grid"].BringToFront();
+            }
         }
 
         private void calendar_Click(object sender, EventArgs e)
@@ -145,17 +149,8 @@ namespace app
 
         private void addTask_Click(object sender, EventArgs e)
         {
-            if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("add_task"))
-            {
-
-                screen.Controls["Data_Grid"].BringToFront();
-            }
-        }
-
-        private void showTasks(object sender, EventArgs e)
-        {
-            
-                
+            if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("Data_Grid"))
+                screen.Controls["add_task"].BringToFront();
         }
     }
 }
