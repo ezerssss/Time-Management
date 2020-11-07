@@ -21,10 +21,16 @@ namespace app
         public Calendar_View()
         {
             InitializeComponent();
-            path = Directory.GetCurrentDirectory() + "\\file.txt"; 
+            path = Directory.GetCurrentDirectory() + "\\file.txt";
+            checkAssignments();
         }
 
         private void monthCalendar1_MouseDown(object sender, MouseEventArgs e)
+        {
+            checkAssignments();
+        }
+
+        private void checkAssignments()
         {
             lines = File.ReadAllLines(path).ToList();
             assignmentScreen.Text = "";
@@ -44,5 +50,6 @@ namespace app
                 assignmentScreen.Text = "None! YAY :)";
             }
         }
+
     }
 }

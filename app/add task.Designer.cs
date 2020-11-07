@@ -45,7 +45,7 @@
             // date
             // 
             this.date.CustomFormat = "day, MMM/dd/yyyy";
-            this.date.Location = new System.Drawing.Point(73, 113);
+            this.date.Location = new System.Drawing.Point(126, 155);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(181, 20);
             this.date.TabIndex = 0;
@@ -53,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 65);
+            this.label1.Location = new System.Drawing.Point(69, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 90);
+            this.label2.Location = new System.Drawing.Point(69, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 113);
+            this.label3.Location = new System.Drawing.Point(69, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 3;
@@ -80,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 142);
+            this.label4.Location = new System.Drawing.Point(68, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 4;
@@ -102,7 +102,7 @@
             "10",
             "11",
             "12"});
-            this.hours.Location = new System.Drawing.Point(72, 139);
+            this.hours.Location = new System.Drawing.Point(125, 181);
             this.hours.Name = "hours";
             this.hours.Size = new System.Drawing.Size(45, 21);
             this.hours.TabIndex = 5;
@@ -170,7 +170,7 @@
             "57",
             "58",
             "59"});
-            this.minutes.Location = new System.Drawing.Point(139, 139);
+            this.minutes.Location = new System.Drawing.Point(192, 181);
             this.minutes.Name = "minutes";
             this.minutes.Size = new System.Drawing.Size(45, 21);
             this.minutes.TabIndex = 6;
@@ -181,7 +181,7 @@
             this.day.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.day.Location = new System.Drawing.Point(190, 139);
+            this.day.Location = new System.Drawing.Point(243, 181);
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(38, 21);
             this.day.TabIndex = 7;
@@ -197,21 +197,21 @@
             // 
             // subject
             // 
-            this.subject.Location = new System.Drawing.Point(73, 62);
+            this.subject.Location = new System.Drawing.Point(126, 104);
             this.subject.Name = "subject";
             this.subject.Size = new System.Drawing.Size(181, 20);
             this.subject.TabIndex = 9;
             // 
             // task
             // 
-            this.task.Location = new System.Drawing.Point(73, 87);
+            this.task.Location = new System.Drawing.Point(126, 129);
             this.task.Name = "task";
             this.task.Size = new System.Drawing.Size(181, 20);
             this.task.TabIndex = 10;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(111, 182);
+            this.button1.Location = new System.Drawing.Point(164, 224);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(61, 23);
             this.button1.TabIndex = 11;
@@ -236,7 +236,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.date);
             this.Name = "add_task";
-            this.Size = new System.Drawing.Size(288, 370);
+            this.Size = new System.Drawing.Size(388, 404);
             this.Load += new System.EventHandler(this.add_task_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

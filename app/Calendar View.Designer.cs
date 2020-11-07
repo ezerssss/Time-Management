@@ -35,17 +35,19 @@
             // 
             // calendar
             // 
-            this.calendar.Location = new System.Drawing.Point(30, 9);
+            this.calendar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar.Location = new System.Drawing.Point(81, 21);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 2;
             this.calendar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.monthCalendar1_MouseDown);
             // 
             // assignmentScreen
             // 
-            this.assignmentScreen.Location = new System.Drawing.Point(26, 200);
+            this.assignmentScreen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignmentScreen.Location = new System.Drawing.Point(21, 223);
             this.assignmentScreen.Multiline = true;
             this.assignmentScreen.Name = "assignmentScreen";
-            this.assignmentScreen.Size = new System.Drawing.Size(236, 146);
+            this.assignmentScreen.Size = new System.Drawing.Size(346, 166);
             this.assignmentScreen.TabIndex = 3;
             // 
             // toDoLabel
@@ -54,7 +56,7 @@
             this.toDoLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toDoLabel.Location = new System.Drawing.Point(0, 0);
             this.toDoLabel.Name = "toDoLabel";
-            this.toDoLabel.Size = new System.Drawing.Size(288, 370);
+            this.toDoLabel.Size = new System.Drawing.Size(388, 404);
             this.toDoLabel.TabIndex = 4;
             this.toDoLabel.Text = "ASSIGNMENT(S)";
             this.toDoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,7 +70,7 @@
             this.Controls.Add(this.toDoLabel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Calendar_View";
-            this.Size = new System.Drawing.Size(288, 370);
+            this.Size = new System.Drawing.Size(388, 404);
             this.ResumeLayout(false);
             this.PerformLayout();
 

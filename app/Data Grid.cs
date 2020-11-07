@@ -25,6 +25,11 @@ namespace app
         {
             header();
             dataGrid.DataSource = table;
+            dataGrid.Columns[0].Width = 65;
+            dataGrid.Columns[1].Width = 108;
+            dataGrid.Columns[2].Width = 92;
+            dataGrid.Columns[3].Width = 65;
+            dataGrid.Columns[4].Width = 54;
             showData();
         }
         public void header() {
@@ -46,6 +51,8 @@ namespace app
             string[] elements; // get the elements from a line;
             for (int i = 0; i < lines.Length; i++) {
                 elements = lines[i].Split(x, StringSplitOptions.None); //splits the line into elements and stores it
+                //makes the date to a short one - Nov/08/2020
+                elements[2] = DateTime.Parse(elements[2]).ToString("MMM/dd/yyyy");
                 table.Rows.Add(elements); //adds element to a row
             }
         }

@@ -35,8 +35,6 @@ namespace app
             cv.Dock = DockStyle.Fill;
             screen.Controls.Add(cv);
 
-
-
         }
         //array method for getting file, kay mu error usahay if ika daghan i declare
         private string[] getFile()
@@ -135,16 +133,6 @@ namespace app
                 cv.Dock = DockStyle.Fill;
                 screen.Controls.Add(cv);
             //}
-        }
-
-        private void screen_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void addTask_Click(object sender, EventArgs e)
