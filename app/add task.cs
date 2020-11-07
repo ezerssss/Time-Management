@@ -33,7 +33,6 @@ namespace app
                 File.WriteAllLines(path, lines);
                 resetText();
                 Data_Grid dg = new Data_Grid();
-                dg.addroooow();
                 MessageBox.Show("add task successful");
             }
         }

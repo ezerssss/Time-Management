@@ -78,19 +78,5 @@ namespace app
             temp.Clear();
             checkedMark.Clear();
         }
-
-        public void addroooow()
-        {
-            table.Columns.Add("Subject", typeof(string));
-            table.Columns.Add("Task", typeof(string));
-            table.Columns.Add("Date", typeof(string));
-            table.Columns.Add("Time", typeof(string));
-            table.Columns.Add("Status", typeof(bool));
-            dataGrid.DataSource = table;
-            string[] lines = getFile();
-            string[] elements = lines[0].Split(x, StringSplitOptions.None);
-            table.Rows.Add(elements);
-            MessageBox.Show("HELLO");
-        }
     }
 }

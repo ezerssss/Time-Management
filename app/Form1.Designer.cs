@@ -36,7 +36,6 @@
             this.logo2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.addTask = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +53,7 @@
             this.task.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.task.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.task.Location = new System.Drawing.Point(158, 448);
-            this.task.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.task.Margin = new System.Windows.Forms.Padding(2);
             this.task.Name = "task";
             this.task.Size = new System.Drawing.Size(58, 58);
             this.task.TabIndex = 5;
@@ -73,7 +72,7 @@
             this.calendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.calendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calendar.Location = new System.Drawing.Point(66, 448);
-            this.calendar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.calendar.Margin = new System.Windows.Forms.Padding(2);
             this.calendar.Name = "calendar";
             this.calendar.Size = new System.Drawing.Size(58, 58);
             this.calendar.TabIndex = 7;
@@ -130,7 +129,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
             this.button2.Location = new System.Drawing.Point(247, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 1;
@@ -147,23 +146,12 @@
             this.addTask.UseVisualStyleBackColor = true;
             this.addTask.Click += new System.EventHandler(this.addTask_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(221, 496);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 21);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "show";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.showTasks);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(288, 530);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.addTask);
             this.Controls.Add(this.screen);
             this.Controls.Add(this.logo2);
@@ -193,7 +181,6 @@
         private System.Windows.Forms.PictureBox logo2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button addTask;
-        private System.Windows.Forms.Button button1;
     }
 }
 
