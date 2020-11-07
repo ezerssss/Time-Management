@@ -33,7 +33,6 @@ C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Calendar_V
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Task_Lists.resources
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.add_task.resources
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Calendar_View.resources
-X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Task_Lists.resources
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Data_Grid.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.add_task.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.Data_Grid.resources
