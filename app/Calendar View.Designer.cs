@@ -28,44 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.calendar = new System.Windows.Forms.MonthCalendar();
+            this.assignmentScreen = new System.Windows.Forms.TextBox();
+            this.toDoLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // calendar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 316);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BITCH";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.calendar.Location = new System.Drawing.Point(30, 9);
+            this.calendar.Name = "calendar";
+            this.calendar.TabIndex = 2;
+            this.calendar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.monthCalendar1_MouseDown);
             // 
-            // monthCalendar1
+            // assignmentScreen
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(41, 79);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 2;
+            this.assignmentScreen.Location = new System.Drawing.Point(26, 200);
+            this.assignmentScreen.Multiline = true;
+            this.assignmentScreen.Name = "assignmentScreen";
+            this.assignmentScreen.Size = new System.Drawing.Size(236, 146);
+            this.assignmentScreen.TabIndex = 3;
+            // 
+            // toDoLabel
+            // 
+            this.toDoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toDoLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toDoLabel.Location = new System.Drawing.Point(0, 0);
+            this.toDoLabel.Name = "toDoLabel";
+            this.toDoLabel.Size = new System.Drawing.Size(288, 370);
+            this.toDoLabel.TabIndex = 4;
+            this.toDoLabel.Text = "ASSIGNMENT(S)";
+            this.toDoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Calendar_View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.assignmentScreen);
+            this.Controls.Add(this.calendar);
+            this.Controls.Add(this.toDoLabel);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Calendar_View";
-            this.Size = new System.Drawing.Size(384, 455);
+            this.Size = new System.Drawing.Size(288, 370);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar calendar;
+        private System.Windows.Forms.TextBox assignmentScreen;
+        private System.Windows.Forms.Label toDoLabel;
     }
 }
