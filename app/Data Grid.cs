@@ -13,6 +13,7 @@ namespace app
 {
     public partial class Data_Grid : UserControl
     {
+       
         DataTable table = new DataTable();
         string path = Application.StartupPath + @"\file.txt";
         string[] x = { "|#$#|" };
@@ -23,6 +24,9 @@ namespace app
 
         private void Data_Grid_Load(object sender, EventArgs e)
         {
+            //disables datagrid autohighlight on cells
+            this.dataGrid.DefaultCellStyle.SelectionBackColor = this.dataGrid.DefaultCellStyle.BackColor;
+            this.dataGrid.DefaultCellStyle.SelectionForeColor = this.dataGrid.DefaultCellStyle.ForeColor;
             header();
             dataGrid.DataSource = table;
             dataGrid.Columns[0].Width = 65;
@@ -60,6 +64,10 @@ namespace app
                                                                            //makes the date to a short one - Nov/08/2020
                     elements[2] = DateTime.Parse(elements[2]).ToString("MMM/dd/yyyy");
                     table.Rows.Add(elements); //adds element to a row
+                }
+                //disables datagrid sort feature
+                foreach (DataGridViewColumn col in dataGrid.Columns) {
+                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
                 }
             }
         }
