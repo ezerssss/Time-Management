@@ -40,6 +40,7 @@
             this.subject = new System.Windows.Forms.TextBox();
             this.task = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // date
@@ -88,6 +89,7 @@
             // 
             // hours
             // 
+            this.hours.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hours.FormattingEnabled = true;
             this.hours.Items.AddRange(new object[] {
             "01",
@@ -103,12 +105,14 @@
             "11",
             "12"});
             this.hours.Location = new System.Drawing.Point(125, 181);
+            this.hours.MaxDropDownItems = 6;
             this.hours.Name = "hours";
             this.hours.Size = new System.Drawing.Size(45, 21);
             this.hours.TabIndex = 5;
             // 
             // minutes
             // 
+            this.minutes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.minutes.FormattingEnabled = true;
             this.minutes.Items.AddRange(new object[] {
             "00",
@@ -120,7 +124,7 @@
             "06",
             "07",
             "08",
-            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -162,7 +166,8 @@
             "48",
             "49",
             "50",
-            "51 ",
+            "51",
+            "52 ",
             "53",
             "54",
             "55",
@@ -171,19 +176,21 @@
             "58",
             "59"});
             this.minutes.Location = new System.Drawing.Point(192, 181);
+            this.minutes.MaxDropDownItems = 15;
             this.minutes.Name = "minutes";
             this.minutes.Size = new System.Drawing.Size(45, 21);
             this.minutes.TabIndex = 6;
             // 
             // day
             // 
+            this.day.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.day.FormattingEnabled = true;
             this.day.Items.AddRange(new object[] {
             "AM",
             "PM"});
             this.day.Location = new System.Drawing.Point(243, 181);
             this.day.Name = "day";
-            this.day.Size = new System.Drawing.Size(38, 21);
+            this.day.Size = new System.Drawing.Size(41, 21);
             this.day.TabIndex = 7;
             // 
             // label5
@@ -201,6 +208,8 @@
             this.subject.Name = "subject";
             this.subject.Size = new System.Drawing.Size(181, 20);
             this.subject.TabIndex = 9;
+            this.subject.Text = "Enter subject of task";
+            this.subject.Click += new System.EventHandler(this.subject_Click);
             // 
             // task
             // 
@@ -208,6 +217,8 @@
             this.task.Name = "task";
             this.task.Size = new System.Drawing.Size(181, 20);
             this.task.TabIndex = 10;
+            this.task.Text = "Enter task detail";
+            this.task.Click += new System.EventHandler(this.task_Click);
             // 
             // button1
             // 
@@ -219,10 +230,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.addTask);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(176, 184);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = ": ";
+            // 
             // add_task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.task);
             this.Controls.Add(this.subject);
@@ -257,5 +278,6 @@
         private System.Windows.Forms.TextBox subject;
         private System.Windows.Forms.TextBox task;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
     }
 }

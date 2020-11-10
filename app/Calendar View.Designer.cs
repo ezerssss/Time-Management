@@ -35,7 +35,9 @@
             // 
             // calendar
             // 
+            this.calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.calendar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.calendar.Location = new System.Drawing.Point(81, 21);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 2;
@@ -71,6 +73,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Calendar_View";
             this.Size = new System.Drawing.Size(388, 404);
+            this.Load += new System.EventHandler(this.Calendar_View_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -114,38 +114,35 @@ namespace app
         private void task_Click(object sender, EventArgs e)
         {
             screen.Controls.Clear();
-
-           // if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("add_task"))
-           // {
-                Data_Grid dg = new Data_Grid();
-                dg.Dock = DockStyle.Fill;
-                screen.Controls.Add(dg);
-            //}
+            Data_Grid dg = new Data_Grid();
+            dg.Dock = DockStyle.Fill;
+            screen.Controls.Add(dg);
         }
 
         private void calendar_Click(object sender, EventArgs e)
         {
             screen.Controls.Clear();
-            //checks if panel is in task list or add task
-           // if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("add_task") || screen.Controls.ContainsKey("Data_Grid")) {
-
-                Calendar_View cv = new Calendar_View();
-                cv.Dock = DockStyle.Fill;
-                screen.Controls.Add(cv);
-            //}
+            Calendar_View cv = new Calendar_View();
+            cv.Dock = DockStyle.Fill;
+            screen.Controls.Add(cv);
         }
 
         private void addTask_Click(object sender, EventArgs e)
         {
             screen.Controls.Clear();
-            //if (screen.Controls.ContainsKey("Task_Lists") || screen.Controls.ContainsKey("Calendar_View") || screen.Controls.ContainsKey("Data_Grid")) {
-
-                add_task at = new add_task();
-                at.Dock = DockStyle.Fill;
-                screen.Controls.Add(at);
-            //}
+            add_task at = new add_task();
+            at.Dock = DockStyle.Fill;
+            screen.Controls.Add(at);
 
                 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            screen.Controls.Clear();
+            login lg = new login();
+            lg.Dock = DockStyle.Fill;
+            screen.Controls.Add(lg);
         }
     }
 }

@@ -36,3 +36,4 @@ X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Calendar_Vie
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Data_Grid.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.add_task.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.Data_Grid.resources
+X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.login.resources

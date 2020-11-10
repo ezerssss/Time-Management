@@ -13,9 +13,8 @@ namespace app
 {
     public partial class Calendar_View : UserControl
     {
-        DateTime date;
         string path;
-        string[] splitter = {"|#$#|"};
+        string[] splitter = { "|#$#|" };
         List<string> lines = new List<string>();
 
         public Calendar_View()
@@ -50,6 +49,20 @@ namespace app
                 assignmentScreen.Text = "None! YAY :)";
             }
         }
+        public void boldDates() {
+            DateTime date = new DateTime();
+            lines = File.ReadAllLines(path).ToList();
+            foreach (string line in lines)
+            {
+                string[] task = line.Split(splitter, StringSplitOptions.None);
+                date = Convert.ToDateTime(task[2]);
+                calendar.AddBoldedDate(date);
+            }
+        }
 
+        private void Calendar_View_Load(object sender, EventArgs e)
+        {
+            boldDates();
+        }
     }
 }
