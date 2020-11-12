@@ -29,56 +29,56 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.task = new System.Windows.Forms.Button();
-            this.calendar = new System.Windows.Forms.Button();
+            this.taskButton = new System.Windows.Forms.Button();
+            this.calendarButton = new System.Windows.Forms.Button();
             this.screen = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.logo2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.addTask = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.addTaskButton = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).BeginInit();
             this.SuspendLayout();
             // 
-            // task
+            // taskButton
             // 
-            this.task.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
-            this.task.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("task.BackgroundImage")));
-            this.task.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.task.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.task.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.task.FlatAppearance.BorderSize = 0;
-            this.task.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.task.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.task.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.task.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.task.Location = new System.Drawing.Point(199, 505);
-            this.task.Margin = new System.Windows.Forms.Padding(2);
-            this.task.Name = "task";
-            this.task.Size = new System.Drawing.Size(55, 55);
-            this.task.TabIndex = 5;
-            this.task.UseVisualStyleBackColor = false;
-            this.task.Click += new System.EventHandler(this.task_Click);
+            this.taskButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.taskButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("taskButton.BackgroundImage")));
+            this.taskButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.taskButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.taskButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.taskButton.FlatAppearance.BorderSize = 0;
+            this.taskButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.taskButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.taskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.taskButton.Location = new System.Drawing.Point(172, 505);
+            this.taskButton.Margin = new System.Windows.Forms.Padding(2);
+            this.taskButton.Name = "taskButton";
+            this.taskButton.Size = new System.Drawing.Size(55, 55);
+            this.taskButton.TabIndex = 5;
+            this.taskButton.UseVisualStyleBackColor = false;
+            this.taskButton.Click += new System.EventHandler(this.task_Click);
             // 
-            // calendar
+            // calendarButton
             // 
-            this.calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
-            this.calendar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("calendar.BackgroundImage")));
-            this.calendar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.calendar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calendar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.calendar.FlatAppearance.BorderSize = 0;
-            this.calendar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.calendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
-            this.calendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calendar.Location = new System.Drawing.Point(131, 505);
-            this.calendar.Margin = new System.Windows.Forms.Padding(2);
-            this.calendar.Name = "calendar";
-            this.calendar.Size = new System.Drawing.Size(55, 55);
-            this.calendar.TabIndex = 7;
-            this.calendar.UseVisualStyleBackColor = false;
-            this.calendar.Click += new System.EventHandler(this.calendar_Click);
+            this.calendarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.calendarButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("calendarButton.BackgroundImage")));
+            this.calendarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.calendarButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calendarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.calendarButton.FlatAppearance.BorderSize = 0;
+            this.calendarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.calendarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.calendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calendarButton.Location = new System.Drawing.Point(57, 505);
+            this.calendarButton.Margin = new System.Windows.Forms.Padding(2);
+            this.calendarButton.Name = "calendarButton";
+            this.calendarButton.Size = new System.Drawing.Size(55, 55);
+            this.calendarButton.TabIndex = 7;
+            this.calendarButton.UseVisualStyleBackColor = false;
+            this.calendarButton.Click += new System.EventHandler(this.calendar_Click);
             // 
             // screen
             // 
@@ -106,9 +106,9 @@
             // 
             this.logo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
             this.logo2.Image = ((System.Drawing.Image)(resources.GetObject("logo2.Image")));
-            this.logo2.Location = new System.Drawing.Point(99, 11);
+            this.logo2.Location = new System.Drawing.Point(57, 11);
             this.logo2.Name = "logo2";
-            this.logo2.Size = new System.Drawing.Size(207, 66);
+            this.logo2.Size = new System.Drawing.Size(249, 66);
             this.logo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo2.TabIndex = 4;
             this.logo2.TabStop = false;
@@ -116,41 +116,43 @@
             this.logo2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.logo2_MouseMove);
             this.logo2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.logo2_MouseUp);
             // 
-            // button2
+            // closeButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(342, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(35, 35);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.closeButton.Location = new System.Drawing.Point(342, 11);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(35, 35);
+            this.closeButton.TabIndex = 1;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // addTask
+            // addTaskButton
             // 
-            this.addTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
-            this.addTask.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addTask.BackgroundImage")));
-            this.addTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addTask.FlatAppearance.BorderSize = 0;
-            this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addTask.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.addTask.Location = new System.Drawing.Point(280, 507);
-            this.addTask.Margin = new System.Windows.Forms.Padding(2);
-            this.addTask.Name = "addTask";
-            this.addTask.Size = new System.Drawing.Size(50, 50);
-            this.addTask.TabIndex = 10;
-            this.addTask.UseVisualStyleBackColor = false;
-            this.addTask.Click += new System.EventHandler(this.addTask_Click);
+            this.addTaskButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(93)))), ((int)(((byte)(0)))));
+            this.addTaskButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addTaskButton.BackgroundImage")));
+            this.addTaskButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addTaskButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addTaskButton.FlatAppearance.BorderSize = 0;
+            this.addTaskButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.addTaskButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.addTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addTaskButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.addTaskButton.Location = new System.Drawing.Point(282, 507);
+            this.addTaskButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addTaskButton.Name = "addTaskButton";
+            this.addTaskButton.Size = new System.Drawing.Size(50, 50);
+            this.addTaskButton.TabIndex = 10;
+            this.addTaskButton.UseVisualStyleBackColor = false;
+            this.addTaskButton.Click += new System.EventHandler(this.addTask_Click);
             // 
             // linkLabel1
             // 
@@ -172,11 +174,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(388, 591);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.task);
-            this.Controls.Add(this.addTask);
+            this.Controls.Add(this.taskButton);
+            this.Controls.Add(this.addTaskButton);
             this.Controls.Add(this.logo2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.calendar);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.calendarButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.screen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -195,13 +197,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button task;
-        private System.Windows.Forms.Button calendar;
+        private System.Windows.Forms.Button taskButton;
+        private System.Windows.Forms.Button calendarButton;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox logo2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button addTask;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button addTaskButton;
         private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
