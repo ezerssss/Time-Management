@@ -52,7 +52,6 @@
             this.taskButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.taskButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.taskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taskButton.Location = new System.Drawing.Point(172, 505);
             this.taskButton.Margin = new System.Windows.Forms.Padding(2);
             this.taskButton.Name = "taskButton";
@@ -145,7 +144,6 @@
             this.addTaskButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.addTaskButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.addTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addTaskButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.addTaskButton.Location = new System.Drawing.Point(282, 507);
             this.addTaskButton.Margin = new System.Windows.Forms.Padding(2);
             this.addTaskButton.Name = "addTaskButton";

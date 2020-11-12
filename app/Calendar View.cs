@@ -53,6 +53,7 @@ namespace app
         private void checkAssignments()
         {
             lines = File.ReadAllLines(path).ToList();
+            assignmentScreen.Controls.Clear();
             assignmentScreen.AutoScroll = true;
             assignmentScreen.Text = "";
             toDoLabel.Text = calendar.SelectionStart.ToString("MMM/dd/yyyy");
