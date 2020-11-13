@@ -28,6 +28,16 @@ namespace app
 
         private void printCalendarTask(string time, string subject, string assignment, int verticalOffset)
         {
+            string text = subject + " - " + assignment;
+            string display = "";
+            for (int i = 0; i < text.Length; i++){
+                if (display.Length > 21 && i > 3)
+                {
+                    display += "...";
+                    break;
+                }
+                display += text[i];
+            }
             Label timebox = new Label();
             assignmentScreen.Controls.Add(timebox);
             timebox.Top = verticalOffset * 30 + 5;
@@ -41,14 +51,18 @@ namespace app
             timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
             TextBox taskBox = new TextBox();
+            ToolTip tp = new ToolTip();
+            tp.ShowAlways = true;
+
             assignmentScreen.Controls.Add(taskBox);
             taskBox.Top = verticalOffset * 30 + 7;
             taskBox.Left = 90;
             taskBox.Width = 220;
-            taskBox.Text = subject + " - " + assignment;
+            taskBox.Text = display;
             taskBox.ReadOnly = true;
             taskBox.Font = new Font("Bahnschrift", 12);
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            tp.SetToolTip(taskBox, text);
         }
         private void checkAssignments()
         {
