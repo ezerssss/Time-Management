@@ -15,25 +15,82 @@ namespace app
     {
         //ang location kay tupad rajud sa .exe file
         string path = Application.StartupPath + @"\file.txt";
+        string accPath = Application.StartupPath + @"\acc.txt";
         public Form1()
         {
             InitializeComponent();
         }
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new System.Net.WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        static Form1 _obj;
+
+        public static Form1 Instance
+        {
+            get
+            {
+                if (_obj == null)
+                    _obj = new Form1();
+                return _obj;
+            }
+        }
+
+        public Panel screenContainer
+        {
+            get { return screen; }
+            set { screen = value; }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            _obj = this;
             if (!File.Exists(path))
             {
                 File.Create(path);
-                MessageBox.Show("File created");
                 Application.Restart();
-                //^^^ incase nga naa problem with reading
+            }
+            if (!File.Exists(accPath))
+            {
+                using (StreamWriter writer = new StreamWriter(accPath))
+                {
+                    writer.WriteLine("false");
+                }
             }
 
-            //sets calendar user control to be default launch panel
-            Calendar_View cv = new Calendar_View();
-            cv.Dock = DockStyle.Fill;
-            screen.Controls.Add(cv);
+            if (CheckForInternetConnection())
+            {
+                string[] checkLogin = File.ReadAllLines(accPath);
+                if (checkLogin[0] == "false")
+                {
+                    login lg = new login();
+                    lg.Dock = DockStyle.Fill;
+                    screen.Controls.Add(lg);
+                }
+                else
+                {
+                    Calendar_View cv = new Calendar_View();
+                    cv.Dock = DockStyle.Fill;
+                    screen.Controls.Add(cv);
+                }
+            }
+            else
+            {
+                Calendar_View cv = new Calendar_View();
+                cv.Dock = DockStyle.Fill;
+                screen.Controls.Add(cv);
+            }
+            
 
         }
         //array method for getting file, kay mu error usahay if ika daghan i declare
@@ -71,13 +128,13 @@ namespace app
             drag = false;
         }
 
-        private void logo2_MouseDown(object sender, MouseEventArgs e)
+        private void screen_MouseDown(object sender, MouseEventArgs e)
         {
             drag = true;
             start = new Point(e.X, e.Y);
         }
 
-        private void logo2_MouseMove(object sender, MouseEventArgs e)
+        private void screen_MouseMove(object sender, MouseEventArgs e)
         {
             if (drag)
             {
@@ -86,63 +143,14 @@ namespace app
             }
         }
 
-        private void logo2_MouseUp(object sender, MouseEventArgs e)
+        private void screen_MouseUp(object sender, MouseEventArgs e)
         {
             drag = false;
         }
 
-        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        private void closeApp_Click(object sender, EventArgs e)
         {
-            drag = true;
-            start = new Point(e.X, e.Y);
-        }
-
-        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (drag)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.start.X, p.Y - this.start.Y);
-            }
-        }
-
-        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
-        {
-            drag = false;
-        }
-
-        private void task_Click(object sender, EventArgs e)
-        {
-            screen.Controls.Clear();
-            Data_Grid dg = new Data_Grid();
-            dg.Dock = DockStyle.Fill;
-            screen.Controls.Add(dg);
-        }
-
-        private void calendar_Click(object sender, EventArgs e)
-        {
-            screen.Controls.Clear();
-            Calendar_View cv = new Calendar_View();
-            cv.Dock = DockStyle.Fill;
-            screen.Controls.Add(cv);
-        }
-
-        private void addTask_Click(object sender, EventArgs e)
-        {
-            screen.Controls.Clear();
-            add_task at = new add_task();
-            at.Dock = DockStyle.Fill;
-            screen.Controls.Add(at);
-
-                
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            screen.Controls.Clear();
-            login lg = new login();
-            lg.Dock = DockStyle.Fill;
-            screen.Controls.Add(lg);
+            this.Close();
         }
     }
 }

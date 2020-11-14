@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace app
 {
     public partial class login : UserControl
     {
         string accPath = Application.StartupPath + @"\acc.txt";
-        bool hide = true;
+        bool hide;
         public login()
         {
             InitializeComponent();
@@ -40,38 +41,24 @@ namespace app
                 MessageBox.Show("Invalid username or password");
             }
             else {
-
                 File.WriteAllText(accPath, String.Empty);
                 List<string> lines = new List<string>();
+                lines.Add("true");
                 lines.Add(username.Text);
                 lines.Add(password.Text);
                 File.WriteAllLines(accPath, lines);
                 resetText();
-                readFile();
-                MessageBox.Show("account created");
+                afterLogin();
             }
         }
-        public void readFile() {
-            string[] lines = getFile();
-            if (lines.Length > 0)
-            {
-                label3.Text = lines[0];
-                label4.Text = lines[1];
 
-            }
-        }
-        private string[] getFile()
-        {
-            string[] file = File.ReadAllLines(accPath);
-            return file;
-        }
         private void resetText()
         {
             username.Text = "Enter username";
             username.ForeColor = Color.LightGray;
             password.Text = "Enter password";
-            password.PasswordChar = '\0';
-            hide = true;
+            password.PasswordChar = '*';
+            hide = false;
             password.ForeColor = Color.LightGray;
             username.Enabled = false;
             username.Enabled = true;
@@ -86,23 +73,36 @@ namespace app
                 File.Create(accPath);
                 MessageBox.Show("Account File created");
             }
-            readFile();
         }
 
         private void showPass(object sender, EventArgs e)
         {
-            if (password.Text != "Enter password") {
-                if (hide)
-                {
-                    password.PasswordChar = '*';
-                    hide = false;
-                }
-                else
-                {
-                    password.PasswordChar = '\0';
-                    hide = true;
-                }
+            if (hide)
+            {
+                password.PasswordChar = '*';
+                hide = false;
             }
+            else
+            {
+                password.PasswordChar = '\0';
+                hide = true;
+            }     
+        }
+
+        private void afterLogin()
+        {
+            if (Form1.Instance.screenContainer.Controls.ContainsKey("login"))
+            {
+                Calendar_View cv = new Calendar_View();
+                cv.Dock = DockStyle.Fill;
+                Form1.Instance.screenContainer.Controls.Clear();
+                Form1.Instance.screenContainer.Controls.Add(cv);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            afterLogin();
         }
     }
 }

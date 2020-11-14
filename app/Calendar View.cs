@@ -28,6 +28,13 @@ namespace app
 
         private void printCalendarTask(string time, string subject, string assignment, int verticalOffset)
         {
+            string text = subject + " - " + assignment;
+            string display = text;
+            if (text.Length > 22)
+            {
+                display = text.Substring(0, 23);
+                display += "...";
+            }
             Label timebox = new Label();
             assignmentScreen.Controls.Add(timebox);
             timebox.Top = verticalOffset * 30 + 5;
@@ -35,34 +42,40 @@ namespace app
             timebox.Width = 64;
             timebox.Height = 24;
             timebox.Text = time;
-            timebox.Font = new Font("Bahnschrift SemiBold", 11);
+            timebox.Font = new Font("Bahnschrift SemiBold", 10);
             timebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             timebox.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
             TextBox taskBox = new TextBox();
+            ToolTip tp = new ToolTip();
+            tp.ShowAlways = true;
+
             assignmentScreen.Controls.Add(taskBox);
             taskBox.Top = verticalOffset * 30 + 7;
             taskBox.Left = 90;
             taskBox.Width = 220;
-            taskBox.Text = subject + " - " + assignment;
+            taskBox.Text = display;
             taskBox.ReadOnly = true;
             taskBox.Font = new Font("Bahnschrift", 12);
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            tp.SetToolTip(taskBox, text);
         }
+
         private void checkAssignments()
         {
             lines = File.ReadAllLines(path).ToList();
             assignmentScreen.Controls.Clear();
             assignmentScreen.AutoScroll = true;
             assignmentScreen.Text = "";
-            toDoLabel.Text = calendar.SelectionStart.ToString("MMM/dd/yyyy");
             bool assignment = false;
             int yoffset = 0;
             foreach (string line in lines)
             {
                 string[] task = line.Split(splitter, StringSplitOptions.None);
-                if (DateTime.Parse(task[2]).ToString("MMM/dd/yyyy") == calendar.SelectionStart.ToString("MMM/dd/yyyy"))
+                if (lines.Count < 1)
+                    File.WriteAllText(path, "HElLO");
+                else if (DateTime.Parse(task[2]).ToString("MMM/dd/yyyy") == calendar.SelectionStart.ToString("MMM/dd/yyyy"))
                 {
                     printCalendarTask(task[3], task[0], task[1], yoffset);
                     assignment = true;
@@ -73,17 +86,17 @@ namespace app
             {
                 TextBox noAssignment = new TextBox();
                 assignmentScreen.Controls.Add(noAssignment);
-                noAssignment.Top = 20;
-                noAssignment.Left = 44;
-                noAssignment.Width = 270;
-                noAssignment.Height = 150;
-                noAssignment.Text = "Fucking beetch maderfacker ka naning nimo gud wala man lagi kay assignment you arse pillock you fucking diligent dickwad";
+                noAssignment.Left = 21;
+                noAssignment.Width = 289;
+                noAssignment.Height = 173;
+                noAssignment.Text = "INSERT NO ASSIGNMENTS PICTURE";
                 noAssignment.Multiline = true;
                 noAssignment.ReadOnly = true;
-                noAssignment.Font = new Font("Bahnschrift SemiBold", 14);
+                noAssignment.Font = new Font("Bahnschrift SemiBold", 10);
                 noAssignment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             }
         }
+
         public void boldDates() {
             DateTime date = new DateTime();
             lines = File.ReadAllLines(path).ToList();
@@ -97,7 +110,40 @@ namespace app
 
         private void Calendar_View_Load(object sender, EventArgs e)
         {
-            boldDates();
+            //boldDates();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Form1.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
+            {
+                Data_Grid dg = new Data_Grid();
+                dg.Dock = DockStyle.Fill;
+                Form1.Instance.screenContainer.Controls.Clear();
+                Form1.Instance.screenContainer.Controls.Add(dg);
+            }
+        }
+
+        private void userLogin_Click(object sender, EventArgs e)
+        {
+            if (Form1.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
+            {
+                login lg = new login();
+                lg.Dock = DockStyle.Fill;
+                Form1.Instance.screenContainer.Controls.Clear();
+                Form1.Instance.screenContainer.Controls.Add(lg);
+            }
+        }
+
+        private void addTask_Click(object sender, EventArgs e)
+        {
+            if (Form1.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
+            {
+                add_task at = new add_task();
+                at.Dock = DockStyle.Fill;
+                Form1.Instance.screenContainer.Controls.Clear();
+                Form1.Instance.screenContainer.Controls.Add(at);
+            }
         }
     }
 }

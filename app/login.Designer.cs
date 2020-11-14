@@ -28,122 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.login_button = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.username = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.login_button = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // login_button
-            // 
-            this.login_button.Location = new System.Drawing.Point(141, 226);
-            this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(90, 21);
-            this.login_button.TabIndex = 0;
-            this.login_button.Text = "LOGIN";
-            this.login_button.UseVisualStyleBackColor = true;
-            this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // username
             // 
+            this.username.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.username.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.username.Location = new System.Drawing.Point(117, 127);
+            this.username.Location = new System.Drawing.Point(68, 296);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(156, 20);
+            this.username.Size = new System.Drawing.Size(254, 28);
             this.username.TabIndex = 1;
             this.username.Text = "Enter username";
+            this.username.WordWrap = false;
             this.username.MouseClick += new System.Windows.Forms.MouseEventHandler(this.username_Click);
             // 
             // password
             // 
-            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.password.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.password.Location = new System.Drawing.Point(117, 172);
+            this.password.Location = new System.Drawing.Point(68, 359);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(156, 20);
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(254, 28);
             this.password.TabIndex = 2;
             this.password.Text = "Enter password";
             this.password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.password_Click);
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Username: ";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(52, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(313, 224);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // login_button
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password: ";
+            this.login_button.BackColor = System.Drawing.Color.Transparent;
+            this.login_button.FlatAppearance.BorderSize = 0;
+            this.login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_button.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_button.ForeColor = System.Drawing.Color.White;
+            this.login_button.Image = ((System.Drawing.Image)(resources.GetObject("login_button.Image")));
+            this.login_button.Location = new System.Drawing.Point(137, 416);
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(110, 43);
+            this.login_button.TabIndex = 0;
+            this.login_button.UseVisualStyleBackColor = false;
+            this.login_button.Click += new System.EventHandler(this.login_button_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.linkLabel1.Location = new System.Drawing.Point(147, 463);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(92, 14);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Continue anyway";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(283, 172);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(329, 358);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 19);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "*";
+            this.button1.Size = new System.Drawing.Size(29, 29);
+            this.button1.TabIndex = 9;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.showPass);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.Controls.Add(this.login_button);
             this.Name = "login";
-            this.Size = new System.Drawing.Size(388, 404);
+            this.Size = new System.Drawing.Size(388, 562);
             this.Load += new System.EventHandler(this.login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button login_button;
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button login_button;
+        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }

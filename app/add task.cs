@@ -78,5 +78,16 @@ namespace app
                 subject.Text = "";
             subject.ForeColor = Color.Black;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Form1.Instance.screenContainer.Controls.ContainsKey("add_task"))
+            {
+                Calendar_View cv = new Calendar_View();
+                cv.Dock = DockStyle.Fill;
+                Form1.Instance.screenContainer.Controls.Clear();
+                Form1.Instance.screenContainer.Controls.Add(cv);
+            }
+        }
     }
 }
