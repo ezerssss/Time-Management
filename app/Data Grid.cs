@@ -35,7 +35,7 @@ namespace app
             dataGrid.Columns[2].Width = 92;
             dataGrid.Columns[3].Width = 65;
             dataGrid.Columns[4].Width = 54;
-            //showData();
+            showData();
         }
         public void header() {
             table.Columns.Add("Subject", typeof(string));

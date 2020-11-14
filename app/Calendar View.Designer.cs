@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar_View));
             System.Windows.Forms.Button button1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar_View));
             this.calendar = new System.Windows.Forms.MonthCalendar();
             this.assignmentScreen = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +42,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.BackColor = System.Drawing.Color.Transparent;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.ForeColor = System.Drawing.Color.Transparent;
+            button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            button1.Location = new System.Drawing.Point(205, 27);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(108, 42);
+            button1.TabIndex = 9;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // calendar
             // 
@@ -95,26 +109,12 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            button1.BackColor = System.Drawing.Color.Transparent;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.ForeColor = System.Drawing.Color.Transparent;
-            button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            button1.Location = new System.Drawing.Point(205, 27);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(108, 42);
-            button1.TabIndex = 9;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // userLogin
             // 
             this.userLogin.FlatAppearance.BorderSize = 0;
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(149, 495);
+            this.userLogin.Location = new System.Drawing.Point(152, 494);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(50, 50);
             this.userLogin.TabIndex = 12;
@@ -126,7 +126,7 @@
             this.addTask.FlatAppearance.BorderSize = 0;
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(205, 494);
+            this.addTask.Location = new System.Drawing.Point(208, 494);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(51, 51);
             this.addTask.TabIndex = 13;

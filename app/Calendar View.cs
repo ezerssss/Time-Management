@@ -42,7 +42,7 @@ namespace app
             timebox.Width = 64;
             timebox.Height = 24;
             timebox.Text = time;
-            timebox.Font = new Font("Bahnschrift SemiBold", 10);
+            timebox.Font = new Font("Century Gothic Bold", 10);
             timebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             timebox.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,7 +57,7 @@ namespace app
             taskBox.Width = 220;
             taskBox.Text = display;
             taskBox.ReadOnly = true;
-            taskBox.Font = new Font("Bahnschrift", 12);
+            taskBox.Font = new Font("Century Gothic", 12);
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             tp.SetToolTip(taskBox, text);
         }
@@ -92,7 +92,7 @@ namespace app
                 noAssignment.Text = "INSERT NO ASSIGNMENTS PICTURE";
                 noAssignment.Multiline = true;
                 noAssignment.ReadOnly = true;
-                noAssignment.Font = new Font("Bahnschrift SemiBold", 10);
+                noAssignment.Font = new Font("Century Gothic", 10);
                 noAssignment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             }
         }
