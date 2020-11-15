@@ -93,9 +93,9 @@ namespace app
         {
             string text = displayElements[1];
             string display = text;
-            if (text.Length > 22)
+            if (text.Length > 18)
             {
-                display = text.Substring(0, 22);
+                display = text.Substring(0, 19);
                 display += "...";
             }
 
@@ -182,32 +182,11 @@ namespace app
         }
         private void removeTask_Click(object sender, EventArgs e)
         {
-            //System.Windows.Forms.MessageBox.Show("Bollocks");
             Button btn = (Button)sender;
             for (int g = 0; g < rowCounter + 1; g++)
             {
-                //System.Windows.Forms.MessageBox.Show("Balls" + g);
                 if (btn.Name == ("button" +g))
                 {
-                    /*Label dyt1 = panel1.Controls.Find(("date" + g), true).FirstOrDefault() as Label;
-                    dyt1.Dispose();
-                    Label tym1 = panel1.Controls.Find(("time" + g), true).FirstOrDefault() as Label;
-                    tym1.Dispose();
-                    Label sub1 = panel1.Controls.Find(("subj" + g), true).FirstOrDefault() as Label;
-                    sub1.Dispose();
-                    TextBox tsk1 = panel1.Controls.Find(("task" + g), true).FirstOrDefault() as TextBox;
-                    tsk1.Dispose();
-                    /*for (int t = g + 1 ; t < rowCounter + 1; t++)
-                    {
-                        Label dyt = panel1.Controls.Find(("date"+t), true).FirstOrDefault() as Label;
-                        dyt.Width -= 30;
-                        Label tym = panel1.Controls.Find(("time"+t), true).FirstOrDefault() as Label;
-                        tym.Width -= 30;
-                        Label sub = panel1.Controls.Find(("subj"+t), true).FirstOrDefault() as Label;
-                        sub.Width -= 30;
-                        TextBox tsk = panel1.Controls.Find(("task"+t), true).FirstOrDefault() as TextBox;
-                        tsk.Width -= 30;
-                    }*/
                     update(true,g);
                     break;
                 }
