@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Grid));
-            this.dataGrid = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,43 +36,15 @@
             this.addTask = new System.Windows.Forms.Button();
             this.userLogin = new System.Windows.Forms.Button();
             this.dayToday = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.referenceLabel1 = new System.Windows.Forms.Label();
+            this.referenceLabel2 = new System.Windows.Forms.Label();
+            this.referenceLabel3 = new System.Windows.Forms.Label();
+            this.referenceButton = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGrid
-            // 
-            this.dataGrid.AllowUserToAddRows = false;
-            this.dataGrid.AllowUserToDeleteRows = false;
-            this.dataGrid.AllowUserToResizeColumns = false;
-            this.dataGrid.AllowUserToResizeRows = false;
-            this.dataGrid.BackgroundColor = System.Drawing.Color.White;
-            this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGrid.Location = new System.Drawing.Point(1, 146);
-            this.dataGrid.Name = "dataGrid";
-            this.dataGrid.RowHeadersVisible = false;
-            this.dataGrid.RowHeadersWidth = 51;
-            this.dataGrid.Size = new System.Drawing.Size(388, 302);
-            this.dataGrid.TabIndex = 0;
             // 
             // button1
             // 
@@ -156,10 +125,76 @@
             this.dayToday.TabIndex = 16;
             this.dayToday.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.referenceButton);
+            this.panel1.Controls.Add(this.referenceLabel3);
+            this.panel1.Controls.Add(this.referenceLabel2);
+            this.panel1.Controls.Add(this.referenceLabel1);
+            this.panel1.Location = new System.Drawing.Point(3, 155);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(382, 300);
+            this.panel1.TabIndex = 17;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // referenceLabel1
+            // 
+            this.referenceLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceLabel1.ForeColor = System.Drawing.Color.White;
+            this.referenceLabel1.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
+            this.referenceLabel1.Location = new System.Drawing.Point(15, 24);
+            this.referenceLabel1.Name = "referenceLabel1";
+            this.referenceLabel1.Size = new System.Drawing.Size(50, 24);
+            this.referenceLabel1.TabIndex = 9;
+            this.referenceLabel1.Text = "12/30";
+            this.referenceLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceLabel1.Visible = false;
+            this.referenceLabel1.Click += new System.EventHandler(this.referenceLabel_Click);
+            // 
+            // referenceLabel2
+            // 
+            this.referenceLabel2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceLabel2.ForeColor = System.Drawing.Color.White;
+            this.referenceLabel2.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
+            this.referenceLabel2.Location = new System.Drawing.Point(15, 66);
+            this.referenceLabel2.Name = "referenceLabel2";
+            this.referenceLabel2.Size = new System.Drawing.Size(64, 24);
+            this.referenceLabel2.TabIndex = 10;
+            this.referenceLabel2.Text = "11:00AM";
+            this.referenceLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceLabel2.Visible = false;
+            // 
+            // referenceLabel3
+            // 
+            this.referenceLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceLabel3.ForeColor = System.Drawing.Color.White;
+            this.referenceLabel3.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
+            this.referenceLabel3.Location = new System.Drawing.Point(15, 104);
+            this.referenceLabel3.Name = "referenceLabel3";
+            this.referenceLabel3.Size = new System.Drawing.Size(64, 24);
+            this.referenceLabel3.TabIndex = 11;
+            this.referenceLabel3.Text = "11:00AM";
+            this.referenceLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceLabel3.Visible = false;
+            // 
+            // referenceButton
+            // 
+            this.referenceButton.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceButton.ForeColor = System.Drawing.Color.White;
+            this.referenceButton.Image = ((System.Drawing.Image)(resources.GetObject("referenceButton.Image")));
+            this.referenceButton.Location = new System.Drawing.Point(15, 142);
+            this.referenceButton.Name = "referenceButton";
+            this.referenceButton.Size = new System.Drawing.Size(20, 20);
+            this.referenceButton.TabIndex = 12;
+            this.referenceButton.Text = "12/30";
+            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceButton.Visible = false;
+            // 
             // Data_Grid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dayToday);
             this.Controls.Add(this.userLogin);
             this.Controls.Add(this.addTask);
@@ -167,20 +202,17 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGrid);
             this.Name = "Data_Grid";
             this.Size = new System.Drawing.Size(388, 562);
             this.Load += new System.EventHandler(this.Data_Grid_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -188,5 +220,10 @@
         private System.Windows.Forms.Button addTask;
         private System.Windows.Forms.Button userLogin;
         private System.Windows.Forms.Label dayToday;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label referenceLabel1;
+        private System.Windows.Forms.Label referenceLabel3;
+        private System.Windows.Forms.Label referenceLabel2;
+        private System.Windows.Forms.Label referenceButton;
     }
 }

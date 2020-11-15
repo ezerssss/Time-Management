@@ -1,4 +1,0 @@
-PE|#$#|Zumba|#$#|Sunday, 15 November 2020|#$#|11:59PM|#$#|false
-Physics|#$#|Bouyance|#$#|Sunday, 15 November 2020|#$#|11:59AM|#$#|false
-Filipino|#$#|Gawin Natin - Tradisyon ng mga katutubo|#$#|Saturday, 14 November 2020|#$#|11:59PM|#$#|false
-Science|#$#|Report about Plants and Animals|#$#|Saturday, 14 November 2020|#$#|04:00AM|#$#|false
