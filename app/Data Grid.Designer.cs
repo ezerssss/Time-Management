@@ -37,10 +37,10 @@
             this.userLogin = new System.Windows.Forms.Button();
             this.dayToday = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.referenceLabel1 = new System.Windows.Forms.Label();
-            this.referenceLabel2 = new System.Windows.Forms.Label();
-            this.referenceLabel3 = new System.Windows.Forms.Label();
             this.referenceButton = new System.Windows.Forms.Label();
+            this.referenceLabel3 = new System.Windows.Forms.Label();
+            this.referenceLabel2 = new System.Windows.Forms.Label();
+            this.referenceLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -137,19 +137,32 @@
             this.panel1.TabIndex = 17;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // referenceLabel1
+            // referenceButton
             // 
-            this.referenceLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referenceLabel1.ForeColor = System.Drawing.Color.White;
-            this.referenceLabel1.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
-            this.referenceLabel1.Location = new System.Drawing.Point(15, 24);
-            this.referenceLabel1.Name = "referenceLabel1";
-            this.referenceLabel1.Size = new System.Drawing.Size(50, 24);
-            this.referenceLabel1.TabIndex = 9;
-            this.referenceLabel1.Text = "12/30";
-            this.referenceLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.referenceLabel1.Visible = false;
-            this.referenceLabel1.Click += new System.EventHandler(this.referenceLabel_Click);
+            this.referenceButton.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceButton.ForeColor = System.Drawing.Color.White;
+            this.referenceButton.Image = ((System.Drawing.Image)(resources.GetObject("referenceButton.Image")));
+            this.referenceButton.Location = new System.Drawing.Point(15, 142);
+            this.referenceButton.Name = "referenceButton";
+            this.referenceButton.Size = new System.Drawing.Size(20, 20);
+            this.referenceButton.TabIndex = 12;
+            this.referenceButton.Text = "12/30";
+            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceButton.Visible = false;
+            // 
+            // referenceLabel3
+            // 
+            this.referenceLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceLabel3.ForeColor = System.Drawing.Color.White;
+            this.referenceLabel3.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
+            this.referenceLabel3.Location = new System.Drawing.Point(15, 104);
+            this.referenceLabel3.Name = "referenceLabel3";
+            this.referenceLabel3.Size = new System.Drawing.Size(64, 24);
+            this.referenceLabel3.TabIndex = 11;
+            this.referenceLabel3.Text = "Subject";
+            this.referenceLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceLabel3.Visible = false;
+            this.referenceLabel3.Click += new System.EventHandler(this.referenceLabel3_Click);
             // 
             // referenceLabel2
             // 
@@ -164,31 +177,19 @@
             this.referenceLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.referenceLabel2.Visible = false;
             // 
-            // referenceLabel3
+            // referenceLabel1
             // 
-            this.referenceLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referenceLabel3.ForeColor = System.Drawing.Color.White;
-            this.referenceLabel3.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
-            this.referenceLabel3.Location = new System.Drawing.Point(15, 104);
-            this.referenceLabel3.Name = "referenceLabel3";
-            this.referenceLabel3.Size = new System.Drawing.Size(64, 24);
-            this.referenceLabel3.TabIndex = 11;
-            this.referenceLabel3.Text = "11:00AM";
-            this.referenceLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.referenceLabel3.Visible = false;
-            // 
-            // referenceButton
-            // 
-            this.referenceButton.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referenceButton.ForeColor = System.Drawing.Color.White;
-            this.referenceButton.Image = ((System.Drawing.Image)(resources.GetObject("referenceButton.Image")));
-            this.referenceButton.Location = new System.Drawing.Point(15, 142);
-            this.referenceButton.Name = "referenceButton";
-            this.referenceButton.Size = new System.Drawing.Size(20, 20);
-            this.referenceButton.TabIndex = 12;
-            this.referenceButton.Text = "12/30";
-            this.referenceButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.referenceButton.Visible = false;
+            this.referenceLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceLabel1.ForeColor = System.Drawing.Color.White;
+            this.referenceLabel1.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
+            this.referenceLabel1.Location = new System.Drawing.Point(15, 24);
+            this.referenceLabel1.Name = "referenceLabel1";
+            this.referenceLabel1.Size = new System.Drawing.Size(50, 24);
+            this.referenceLabel1.TabIndex = 9;
+            this.referenceLabel1.Text = "12/30";
+            this.referenceLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceLabel1.Visible = false;
+            this.referenceLabel1.Click += new System.EventHandler(this.referenceLabel_Click);
             // 
             // Data_Grid
             // 
