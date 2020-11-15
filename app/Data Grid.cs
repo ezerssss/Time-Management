@@ -93,9 +93,9 @@ namespace app
         {
             string text = displayElements[1];
             string display = text;
-            if (text.Length > 18)
+            if (text.Length > 16)
             {
-                display = text.Substring(0, 19);
+                display = text.Substring(0, 17);
                 display += "...";
             }
 
