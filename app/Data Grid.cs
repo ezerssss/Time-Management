@@ -27,7 +27,6 @@ namespace app
         {
             //disables datagrid autohighlight on cells
             dayToday.Text = DateTime.Now.ToString("dd MMMM yyyy");
-
             showData();
         }
 
@@ -38,51 +37,61 @@ namespace app
         public void showData()
         {
             table.Clear();
-            string[] lines = getFile();
-            if (lines.Length < 1)
+            List<string> list = new List<string>();
+            string readLine;
+            using (StreamReader sr = new StreamReader(path)) {
+                while ((readLine = sr.ReadLine()) != null)
+                    list.Add(readLine);
+                sr.Close();
+            }
+            if (list.Count < 1)
             {
                 //table.Rows.Add("you", "take a break", "for", "now", "false
 
             }
             else {
+                int i = 0;
                 string[] elements; // get the elements from a line;
-                for (int i = 0; i < lines.Length; i++)
-                {
-                    elements = lines[i].Split(x, StringSplitOptions.None); //splits the line into elements and stores it
-                                                                           //makes the date to a short one - Nov/08/2020
+                foreach (var lines in list) { 
+                    elements = lines.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
+                    //makes the date to a short one - Nov/08/2020
                     elements[2] = DateTime.Parse(elements[2]).ToString("MM/dd");
                     //table.Rows.Add(elements[4],elements[2],elements[3],elements[0],elements[1]); //adds element to a ro
                     printTaskLine(elements, i);
+                    i++;
                 }
                 rowCounter = 0;
             }
         }
-        public string[] getFile()
-        {
-            string[] file = File.ReadAllLines(path);
-            return file;
-        }
         public void update(bool removeRow, int whatRow) {
             panel1.Controls.Clear();
             List<string> temp = new List<string>();
-            temp = File.ReadAllLines(path).ToList();
-            if (temp.Count() > 0) {
+            string readLine;
+            using (StreamReader sr = new StreamReader(path))
+            {
+                while ((readLine = sr.ReadLine()) != null)
+                    temp.Add(readLine);
+                sr.Close();
+            }
+            if (temp.Count() > 0)
+            {
                 List<int> checkedMark = new List<int>();
                 if (removeRow == true)
                 {
                     checkedMark.Add(whatRow);
                     //temp.RemoveAt()
                 }
-
-
                 checkedMark.Sort();
                 for (int j = checkedMark.Count() - 1; j >= 0; j--)
                 {
                     temp.RemoveAt(checkedMark[j]);
                 }
                 File.WriteAllText(path, String.Empty);
-                File.WriteAllLines(path, temp);
-                getFile();
+                using (StreamWriter sw = new StreamWriter(path)) {
+                    foreach (var lines in temp) {
+                        sw.WriteLine(lines);
+                    }
+                }
                 checkedMark.Clear();
             }
             showData();
@@ -100,6 +109,10 @@ namespace app
             }
 
             verticalOffset = verticalOffset * 30 + 5;
+
+            TextBox taskBox = new TextBox();
+            ToolTip tp = new ToolTip();
+            tp.ShowAlways = true;
 
             Button removeTask = new Button();
             panel1.Controls.Add(removeTask);
@@ -151,10 +164,8 @@ namespace app
             subjbox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
             subjbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             subjbox.Name = "subj" + rowCounter;
-
-            TextBox taskBox = new TextBox();
-            ToolTip tp = new ToolTip();
-            tp.ShowAlways = true;
+            tp.SetToolTip(subjbox, displayElements[0]);
+            
             panel1.Controls.Add(taskBox);
             taskBox.Top = verticalOffset + 2;
             taskBox.Left = subjbox.Left + subjbox.Width + 5;

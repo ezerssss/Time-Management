@@ -46,7 +46,10 @@ namespace app
                 lines.Add("true");
                 lines.Add(username.Text);
                 lines.Add(password.Text);
-                File.WriteAllLines(accPath, lines);
+                using (StreamWriter sw = new StreamWriter(accPath)) {
+                    foreach (var line in lines)
+                        sw.WriteLine(line);
+                }
                 resetText();
                 afterLogin();
             }

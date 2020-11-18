@@ -64,7 +64,13 @@ namespace app
 
         private void checkAssignments()
         {
-            lines = File.ReadAllLines(path).ToList();
+            string readLine;
+            using (StreamReader sr = new StreamReader(path)) {
+                while ((readLine = sr.ReadLine()) != null) {
+                    lines.Add(readLine);
+                }
+                sr.Close();
+            }
             assignmentScreen.Controls.Clear();
             assignmentScreen.AutoScroll = true;
             assignmentScreen.Text = "";
@@ -74,8 +80,12 @@ namespace app
             {
                 string[] task = line.Split(splitter, StringSplitOptions.None);
                 if (lines.Count < 1)
+                {
                     File.WriteAllText(path, "HElLO");
-                else if (DateTime.Parse(task[2]).ToString("MMM/dd/yyyy") == calendar.SelectionStart.ToString("MMM/dd/yyyy"))
+                }
+                else if(task.Length < 5)
+                {}
+                else if(DateTime.Parse(task[2]).ToString("MMM/dd/yyyy") == calendar.SelectionStart.ToString("MMM/dd/yyyy"))
                 {
                     printCalendarTask(task[3], task[0], task[1], yoffset);
                     assignment = true;

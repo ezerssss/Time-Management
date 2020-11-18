@@ -27,9 +27,22 @@ namespace app
             }
             else
             {
-                List<string> lines = getFile().ToList();
-                lines.Add(subject.Text + x[0] + task.Text + x[0] + date.Text + x[0] + hours.Text + ":" + minutes.Text + day.Text + x[0] + "false");
-                File.WriteAllLines(path, lines);
+                List<string> list = new List<string>();
+                String readLine;
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    while ((readLine = sr.ReadLine()) != null) {
+                        list.Add(readLine);
+                    }
+                    sr.Close();
+                }
+                readLine = subject.Text + x[0] + task.Text + x[0] + date.Text + x[0] + hours.Text + ":" + minutes.Text + day.Text + x[0] + "false";
+                list.Add(readLine);
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    foreach (var lines in list)
+                        sw.WriteLine(lines);
+                }
                 resetText();
                 MessageBox.Show("add task successful");
             }
@@ -40,10 +53,6 @@ namespace app
             hours.IntegralHeight = false;
             minutes.IntegralHeight = false;
             resetText();
-        }
-        private string[] getFile() {
-            string[] file = File.ReadAllLines(path);
-            return file;
         }
         private void resetText() {
             hours.Text = "01";
