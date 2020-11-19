@@ -196,7 +196,7 @@ namespace app
             Button btn = (Button)sender;
             for (int g = 0; g < rowCounter + 1; g++)
             {
-                if (btn.Name == ("button" +g))
+                if (btn.Name == ("button" + g))
                 {
                     update(true,g);
                     break;

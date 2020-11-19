@@ -13,6 +13,8 @@ namespace app
 {
     public partial class Form1 : Form
     {
+
+        string[] x = { "|#$#|" };
         //ang location kay tupad rajud sa .exe file
         string path = Application.StartupPath + @"\file.txt";
         string accPath = Application.StartupPath + @"\acc.txt";
@@ -60,6 +62,10 @@ namespace app
                 File.Create(path);
                 Application.Restart();
             }
+            else
+            {
+                sortList();
+            }
             if (!File.Exists(accPath))
             {
                 using (StreamWriter writer = new StreamWriter(accPath))
@@ -90,10 +96,45 @@ namespace app
                 cv.Dock = DockStyle.Fill;
                 screen.Controls.Add(cv);
             }
-            
+
 
         }
 
+        public void sortList() {
+            List<string> list = new List<string>();
+            string readLine;
+            using (StreamReader sr = new StreamReader(path))
+            {
+                while ((readLine = sr.ReadLine()) != null)
+                    list.Add(readLine);
+            }
+            string[] elements;
+            List<string> sortedList = new List<string>();
+            while (list.Count > 0)
+            {
+                string[] earliest = list.First().Split(x, StringSplitOptions.None);
+                foreach (var line in list)
+                {
+                    elements = line.Split(x, StringSplitOptions.None);
+                    int compare = DateTime.Compare(Convert.ToDateTime(elements[2]), Convert.ToDateTime(earliest[2]));
+                    if (compare < 0)
+                    {
+                        earliest = elements;
+                    }
+                }
+                string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3] + x[0] + earliest[4];
+                list.Remove(remove);
+                sortedList.Add(remove);
+            }
+            File.WriteAllText(path, String.Empty);
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                foreach (var lines in sortedList)
+                {
+                    sw.WriteLine(lines);
+                }
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();

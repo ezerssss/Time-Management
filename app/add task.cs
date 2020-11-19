@@ -45,6 +45,8 @@ namespace app
                 }
                 resetText();
                 MessageBox.Show("add task successful");
+                Form1 f1 = new Form1();
+                f1.sortList();
             }
         }
 
