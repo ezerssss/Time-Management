@@ -1,10 +1,1 @@
-kina earlyhan sangkatanan|#$#|kina earlyhan sangkatanan|#$#|Tuesday, 15 September 2020|#$#|01:00AM|#$#|false
-earliest|#$#|earliest|#$#|Sunday, 1 November 2020|#$#|01:00AM|#$#|false
-very early|#$#|very early|#$#|Sunday, 8 November 2020|#$#|01:00AM|#$#|false
-early|#$#|early|#$#|Tuesday, 17 November 2020|#$#|01:00AM|#$#|false
-mid of early and mid|#$#|mid of early and mid|#$#|Wednesday, 18 November 2020|#$#|01:00AM|#$#|false
-mid|#$#|mid|#$#|Thursday, 19 November 2020|#$#|01:00AM|#$#|false
-kina earlyhan sangkatanan|#$#|kina earlyhan sangkatanan|#$#|Thursday, 19 November 2020|#$#|01:00AM|#$#|false
-late|#$#|late|#$#|Saturday, 21 November 2020|#$#|01:00AM|#$#|false
-latest|#$#|latest|#$#|Friday, 27 November 2020|#$#|01:00AM|#$#|false
-pinaka late diay ni wrong ganina|#$#|pinaka late diay ni wrong ganina|#$#|Tuesday, 1 December 2020|#$#|01:00AM|#$#|false
+1|#$#|1|#$#|Friday, 27 November 2020|#$#|01:00AM|#$#|false

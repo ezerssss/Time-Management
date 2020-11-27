@@ -40,3 +40,17 @@ C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.add_task.r
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Data_Grid.resources
 C:\Users\boop\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.login.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.login.resources
+E:\Documents\Learning\C# programs\Time management\app\bin\Debug\app.exe.config
+E:\Documents\Learning\C# programs\Time management\app\bin\Debug\app.exe
+E:\Documents\Learning\C# programs\Time management\app\bin\Debug\app.pdb
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csprojAssemblyReference.cache
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.add_task.resources
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Calendar_View.resources
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Data_Grid.resources
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Form1.resources
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.login.resources
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.Properties.Resources.resources
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.GenerateResource.cache
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.exe
+E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.pdb

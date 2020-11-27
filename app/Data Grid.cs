@@ -47,6 +47,7 @@ namespace app
             if (list.Count < 1)
             {
                 //table.Rows.Add("you", "take a break", "for", "now", "false
+                //katong no task due something
 
             }
             else {
@@ -193,15 +194,25 @@ namespace app
         }
         private void removeTask_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            for (int g = 0; g < rowCounter + 1; g++)
+            List<string> taskList = new List<string>();
+            string readTask;
+            using (StreamReader sr = new StreamReader(path))
             {
-                if (btn.Name == ("button" + g))
-                {
-                    update(true,g);
-                    break;
-                }
+                while ((readTask = sr.ReadLine()) != null)
+                    taskList.Add(readTask);
+                sr.Close();
             }
+            Button btn = (Button)sender;
+            string name = btn.Name;
+            string count = name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6);
+            taskList.RemoveAt(int.Parse(count));
+            File.WriteAllText(path, String.Empty);
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                foreach (var line in taskList)
+                    sw.WriteLine(line);
+            }
+            update(false, 0);
         }
         private void addTask_Click(object sender, EventArgs e)
         {
@@ -225,10 +236,6 @@ namespace app
             }
         }
 
-        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
