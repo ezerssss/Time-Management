@@ -18,11 +18,14 @@ namespace app
         string path = Application.StartupPath + @"\file.txt";
         string[] x = { "|#$#|" };
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Grid));
+
         public Data_Grid()
         {
             InitializeComponent();
         }
+
         public int rowCounter = 0;
+
         private void Data_Grid_Load(object sender, EventArgs e)
         {
             //disables datagrid autohighlight on cells
@@ -32,71 +35,30 @@ namespace app
 
         private void updateButton(object sender, EventArgs e)
         {
-            update(false,69);
+            showData();
         }
+
         public void showData()
         {
             table.Clear();
-            List<string> list = new List<string>();
             string readLine;
+            int i = 0;
             using (StreamReader sr = new StreamReader(path)) {
                 while ((readLine = sr.ReadLine()) != null)
-                    list.Add(readLine);
-                sr.Close();
-            }
-            if (list.Count < 1)
-            {
-                //table.Rows.Add("you", "take a break", "for", "now", "false
-                //katong no task due something
-
-            }
-            else {
-                int i = 0;
-                string[] elements; // get the elements from a line;
-                foreach (var lines in list) { 
-                    elements = lines.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
+                {
+                    string[] elements = readLine.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
                     //makes the date to a short one - Nov/08/2020
                     elements[2] = DateTime.Parse(elements[2]).ToString("MM/dd");
                     //table.Rows.Add(elements[4],elements[2],elements[3],elements[0],elements[1]); //adds element to a ro
                     printTaskLine(elements, i);
-                    i++;
+                    i++;            
                 }
                 rowCounter = 0;
             }
         }
+
         public void update(bool removeRow, int whatRow) {
-            panel1.Controls.Clear();
-            List<string> temp = new List<string>();
-            string readLine;
-            using (StreamReader sr = new StreamReader(path))
-            {
-                while ((readLine = sr.ReadLine()) != null)
-                    temp.Add(readLine);
-                sr.Close();
-            }
-            if (temp.Count() > 0)
-            {
-                List<int> checkedMark = new List<int>();
-                if (removeRow == true)
-                {
-                    checkedMark.Add(whatRow);
-                    //temp.RemoveAt()
-                }
-                checkedMark.Sort();
-                for (int j = checkedMark.Count() - 1; j >= 0; j--)
-                {
-                    temp.RemoveAt(checkedMark[j]);
-                }
-                File.WriteAllText(path, String.Empty);
-                using (StreamWriter sw = new StreamWriter(path)) {
-                    foreach (var lines in temp) {
-                        sw.WriteLine(lines);
-                    }
-                }
-                checkedMark.Clear();
-            }
-            showData();
-            temp.Clear();
+            
         }
 
         private void printTaskLine(string[] displayElements, int verticalOffset)
@@ -182,6 +144,7 @@ namespace app
             rowCounter++;
             removeTask.Click += new EventHandler(removeTask_Click);
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (Form1.Instance.screenContainer.Controls.ContainsKey("Data_Grid"))
@@ -192,6 +155,7 @@ namespace app
                 Form1.Instance.screenContainer.Controls.Add(cv);
             }
         }
+
         private void removeTask_Click(object sender, EventArgs e)
         {
             List<string> taskList = new List<string>();
@@ -200,7 +164,6 @@ namespace app
             {
                 while ((readTask = sr.ReadLine()) != null)
                     taskList.Add(readTask);
-                sr.Close();
             }
             Button btn = (Button)sender;
             string name = btn.Name;
@@ -212,8 +175,9 @@ namespace app
                 foreach (var line in taskList)
                     sw.WriteLine(line);
             }
-            update(false, 0);
+            showData();
         }
+
         private void addTask_Click(object sender, EventArgs e)
         {
             if (Form1.Instance.screenContainer.Controls.ContainsKey("Data_Grid"))
@@ -236,20 +200,5 @@ namespace app
             }
         }
 
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void referenceLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void referenceLabel3_Click(object sender, EventArgs e)
-        {
-            // https://www.youtube.com/watch?v=DZvAZnIruhI
-        }
     }
 }
