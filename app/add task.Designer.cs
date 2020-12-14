@@ -187,8 +187,8 @@
             this.day.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.day.FormattingEnabled = true;
             this.day.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
+            "am",
+            "pm"});
             this.day.Location = new System.Drawing.Point(243, 181);
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(41, 21);

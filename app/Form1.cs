@@ -116,7 +116,8 @@ namespace app
                 foreach (var line in list)
                 {
                     elements = line.Split(x, StringSplitOptions.None);
-                    int compare = DateTime.Compare(Convert.ToDateTime(elements[2]), Convert.ToDateTime(earliest[2]));
+                    string date = elements[2] + " " + elements[3];
+                    int compare = DateTime.Compare(Convert.ToDateTime(date), Convert.ToDateTime(earliest[2] + " " + earliest[3]));
                     if (compare < 0)
                     {
                         earliest = elements;

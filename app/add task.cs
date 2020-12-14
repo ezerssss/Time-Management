@@ -36,7 +36,7 @@ namespace app
                     }
                     sr.Close();
                 }
-                readLine = subject.Text + x[0] + task.Text + x[0] + date.Text + x[0] + hours.Text + ":" + minutes.Text + day.Text + x[0] + "false";
+                readLine = subject.Text + x[0] + task.Text + x[0] + date.Text + x[0] + hours.Text + ":" + minutes.Text + " " + day.Text + x[0] + "false";
                 list.Add(readLine);
                 using (StreamWriter sw = new StreamWriter(path))
                 {
@@ -59,7 +59,7 @@ namespace app
         private void resetText() {
             hours.Text = "01";
             minutes.Text = "00";
-            day.Text = "AM";
+            day.Text = "am";
             date.Value = DateTime.Today;
             subject.Text = "Enter subject of task";
             subject.ForeColor = Color.LightGray;
