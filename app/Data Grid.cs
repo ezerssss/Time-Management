@@ -40,6 +40,7 @@ namespace app
 
         public void showData()
         {
+            panel1.Controls.Clear();
             table.Clear();
             string readLine;
             int i = 0;

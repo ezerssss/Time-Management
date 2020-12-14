@@ -59,7 +59,7 @@ namespace app
             _obj = this;
             if (!File.Exists(path))
             {
-                File.Create(path);
+                using (StreamWriter sw = new StreamWriter(path)) { }
                 Application.Restart();
             }
             else
