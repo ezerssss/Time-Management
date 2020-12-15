@@ -58,6 +58,10 @@ namespace app
                 List<int> assCmids = new List<int>();
                 List<int> forumCmids = new List<int>();
                 List<int> quizCmids = new List<int>();
+                List<string> list = new List<string>();
+                string[] elements;
+                List<string> sortedList = new List<string>();
+                List<string> openList = new List<string>();
                 using (var client = new HttpClient())
                 {
                     using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/login/token.php?service=moodle_mobile_app"))
@@ -161,16 +165,13 @@ namespace app
                                             {
                                                 cmidDueDateConfirmed++;
                                                 string pmorAM = UnixTimeStampToDateTime(b.duedate).ToString("tt").ToUpper();
-                                                using (StreamWriter writer = File.AppendText(path))
+                                                string date = UnixTimeStampToDateTime(b.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                                if (date == "Thu, 1 January 1970|#$#|08:00")
                                                 {
-                                                    string date = UnixTimeStampToDateTime(b.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
-                                                    if (date == "Thu, 1 January 1970|#$#|08:00")
-                                                    {
-                                                        date = "---|#$#|---";
-                                                        pmorAM = "";
-                                                    }                                                      
-                                                    writer.WriteLine(a.fullname + "|#$#|" + b.name + "|#$#|" + date + pmorAM);
-                                                }
+                                                    date = "---|#$#|---";
+                                                    pmorAM = "";
+                                                }                                                      
+                                                list.Add(a.fullname + "|#$#|" + b.name + "|#$#|" + date + pmorAM);
                                             }
                                         }
                                     }
@@ -199,30 +200,24 @@ namespace app
                                         if (a.duedate != 0)
                                         {
                                             string pmorAM = UnixTimeStampToDateTime(a.duedate).ToString("tt").ToUpper();
-                                            using (StreamWriter writer = File.AppendText(path))
+                                            string date = UnixTimeStampToDateTime(a.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                            if (date == "Thu, 1 January 1970|#$#|08:00")
                                             {
-                                                string date = UnixTimeStampToDateTime(a.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
-                                                if (date == "Thu, 1 January 1970|#$#|08:00")
-                                                {
-                                                    date = "---|#$#|---";
-                                                    pmorAM = "";
-                                                }
-                                                writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
+                                                date = "---|#$#|---";
+                                                pmorAM = "";
                                             }
+                                            list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
                                         }
                                         else
                                         {
                                             string pmorAM = UnixTimeStampToDateTime(a.cutoffdate).ToString("tt").ToUpper();
-                                            using (StreamWriter writer = File.AppendText(path))
+                                            string date = UnixTimeStampToDateTime(a.cutoffdate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                            if (date == "Thu, 1 January 1970|#$#|08:00")
                                             {
-                                                string date = UnixTimeStampToDateTime(a.cutoffdate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
-                                                if (date == "Thu, 1 January 1970|#$#|08:00")
-                                                {
-                                                    date = "---|#$#|---";
-                                                    pmorAM = "";
-                                                }
-                                                writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
+                                                date = "---|#$#|---";
+                                                pmorAM = "";
                                             }
+                                            list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
                                         }
                                     }
                                 }
@@ -248,16 +243,13 @@ namespace app
                                     {
                                         quizidsCount++;
                                         string pmorAM = UnixTimeStampToDateTime(a.timeclose).ToString("tt").ToUpper();
-                                        using (StreamWriter writer = File.AppendText(path))
+                                        string date = UnixTimeStampToDateTime(a.timeclose).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                        if (date == "Thu, 1 January 1970|#$#|08:00")
                                         {
-                                            string date = UnixTimeStampToDateTime(a.timeclose).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
-                                            if (date == "Thu, 1 January 1970|#$#|08:00")
-                                            {
-                                                date = "---|#$#|---";
-                                                pmorAM = "";
-                                            }
-                                            writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
+                                            date = "---|#$#|---";
+                                            pmorAM = "";
                                         }
+                                        list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
                                     }
                                 }
                             }
@@ -269,6 +261,48 @@ namespace app
                         {
                             foreach (var line in lines)
                                 sw.WriteLine(line);
+                        }
+                        string[] x = { "|#$#|" };
+                        while (list.Count > 0)
+                        {
+                            string[] earliest = list.First().Split(x, StringSplitOptions.None);
+                            DateTime earliestDate = new DateTime();
+                            foreach (var line in list)
+                            {
+
+                                elements = line.Split(x, StringSplitOptions.None);
+                                string date = elements[2] + " " + elements[3];
+                                if ((earliest[2] + " " + earliest[3]) != "--- ---")
+                                {
+                                    earliestDate = Convert.ToDateTime(earliest[2] + " " + earliest[3]);
+                                }
+                                if (date != "--- ---")
+                                {
+                                    int compare = DateTime.Compare(Convert.ToDateTime(Convert.ToDateTime(date).ToString("s")), Convert.ToDateTime(earliestDate.ToString("s")));
+                                    if (compare < 0)
+                                    {
+                                        earliest = elements;
+                                    }
+                                }
+                            }
+                            string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3];
+                            list.Remove(remove);
+                            if ((earliest[2] + " " + earliest[3]) != "--- ---")
+                                sortedList.Add(remove);
+                            else
+                                openList.Add(remove);
+
+                        }
+                        foreach (var ls in openList)
+                            sortedList.Add(ls);
+
+                        File.WriteAllText(path, String.Empty);
+                        using (StreamWriter sw = new StreamWriter(path))
+                        {
+                            foreach (var line in sortedList)
+                            {
+                                sw.WriteLine(line);
+                            }
                         }
                         resetText();
                         afterLogin();

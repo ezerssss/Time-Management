@@ -157,11 +157,6 @@ namespace app
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private bool drag = false;
         private Point start = new Point(0, 0);
 
