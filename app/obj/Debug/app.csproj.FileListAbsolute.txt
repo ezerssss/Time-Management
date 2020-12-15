@@ -57,3 +57,6 @@ E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.pdb
 D:\C# Projects\Time-Management\app\bin\Debug\Newtonsoft.Json.dll
 D:\C# Projects\Time-Management\app\bin\Debug\Newtonsoft.Json.xml
 D:\C# Projects\Time-Management\app\obj\Debug\app.csproj.CopyComplete
+X:\Documents\Learning\C# programs\Time management\app\bin\Debug\Newtonsoft.Json.dll
+X:\Documents\Learning\C# programs\Time management\app\bin\Debug\Newtonsoft.Json.xml
+X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.CopyComplete

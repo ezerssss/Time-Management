@@ -64,7 +64,7 @@ namespace app
             }
             else
             {
-                //sortList();
+                sortList();
             }
             if (!File.Exists(accPath))
             {
@@ -112,25 +112,41 @@ namespace app
             }
             string[] elements;
             List<string> sortedList = new List<string>();
+            List<string> openList = new List<string>();
             while (list.Count > 0)
             {
-                MessageBox.Show("HELLO");
                 string[] earliest = list.First().Split(x, StringSplitOptions.None);
+                DateTime earliestDate = new DateTime();
+                
                 foreach (var line in list)
                 {
 
                     elements = line.Split(x, StringSplitOptions.None);
                     string date = elements[2] + " " + elements[3];
-                    int compare = DateTime.Compare(Convert.ToDateTime(date), Convert.ToDateTime(earliest[2] + " " + earliest[3]));
-                    if (compare < 0)
+                    if ((earliest[2] + " " + earliest[3]) != "--- ---")
                     {
-                        earliest = elements;
+                        earliestDate = Convert.ToDateTime(earliest[2] + " " + earliest[3]);
+                    }
+                    if (date != "--- ---")
+                    {
+                        int compare = DateTime.Compare(Convert.ToDateTime(Convert.ToDateTime(date).ToString("s")), Convert.ToDateTime(earliestDate.ToString("s")));
+                        if (compare < 0)
+                        {
+                            earliest = elements;
+                        }
                     }
                 }
                 string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3];
                 list.Remove(remove);
-                sortedList.Add(remove);
+                if ((earliest[2] + " " + earliest[3]) != "--- ---")
+                    sortedList.Add(remove);
+                else
+                    openList.Add(remove);
+                
             }
+            foreach (var ls in openList)
+                sortedList.Add(ls);
+                
             File.WriteAllText(path, String.Empty);
             using (StreamWriter sw = new StreamWriter(path))
             {

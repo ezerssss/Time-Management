@@ -1,15 +1,29 @@
-English 5 (11-ABC)|#$#|SUBMISSION BOX |#$#|---|#$#|---
-English 5 (11-ABC)|#$#|Submission Box/Assignment Box |#$#|Fri, 16 October 2020|#$#|08:00PM
+gfdg|#$#|fsdg|#$#|Monday, 14 December 2020|#$#|01:00AM
+fad|#$#|fdaf|#$#|Tuesday, 15 December 2020|#$#|01:00AM
+fadsf|#$#|fdsg|#$#|Tuesday, 15 December 2020|#$#|01:02AM
+fdasf|#$#|fdsg|#$#|Tuesday, 15 December 2020|#$#|01:03AM
 Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|---|#$#|---
 Filipino 5 (11-ABC)|#$#|Ikalawang Takdang-Aralin:|#$#|---|#$#|---
 Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|---|#$#|---
 Filipino 5 (11-ABC)|#$#|Ikalawang Takda-Aralin:|#$#|---|#$#|---
-Math 5 (11-B)|#$#|Assignment 2.1 Composition of Functions|#$#|Fri, 18 December 2020|#$#|12:00PM
-Math 5 (11-B)|#$#|Assignment 2.2 On Limits|#$#|Fri, 18 December 2020|#$#|12:00PM
+RES2 Knowledge Integration , Application , and Extension|#$#|Revised Introduction|#$#|---|#$#|---
+RES2 Knowledge Integration , Application , and Extension|#$#|Revised Review of Related Literature|#$#|---|#$#|---
+RES2 Knowledge Integration , Application , and Extension|#$#|Revised Methodology|#$#|---|#$#|---
+RES2 Knowledge Integration , Application , and Extension|#$#|Data Presentation Plan|#$#|---|#$#|---
+RES2 Knowledge Integration , Application , and Extension|#$#|Result and Discussion Write Up|#$#|---|#$#|---
+RES2 Knowledge Integration , Application , and Extension|#$#|Updated Project Management Plan Outputs|#$#|---|#$#|---
+RES2 Knowledge Integration , Application , and Extension|#$#|Documentation (Activity Log)|#$#|---|#$#|---
+RES2 Knowledge Integration , Application , and Extension|#$#|Proof of Documentation with Adviser|#$#|---|#$#|---
 Filipino 5 (11-ABC)|#$#|Pag-uuri ng mga Ideya at Detalye|#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Uri ng Pagbasa|#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Proseso at Teorya ng Pagbasa|#$#|---|#$#|---
+Math 5 (11-A &amp; C)|#$#|QUESTIONS?|#$#|---|#$#|---
 Filipino 5 (11-ABC)|#$#|Pagtukoy sa Layunin sa Teksto|#$#|---|#$#|---
 Filipino 5 (11-ABC)|#$#|Pagtiyak sa Damdamin, Tono, at Pananaw ng Teksto|#$#|---|#$#|---
-Computer Science 5 Elective A &amp; B|#$#|2.7 Intro to Data Structs, Linear Data Structs - Short Quiz|#$#|Wed, 16 December 2020|#$#|11:59PM
-Computer Science 5 Elective A &amp; B|#$#|2.8 Recursion, Search Algorithms - Short Quiz|#$#|Wed, 16 December 2020|#$#|11:59PM
+Math 5 (11-A &amp; C)|#$#|Graded Assessment for Limit Theorems and One-Sided Limits|#$#|---|#$#|---
+Math 5 (11-A &amp; C)|#$#|Graded Assessment for Infinite Limits|#$#|---|#$#|---
+Math 5 (11-A &amp; C)|#$#|Practice Exercise 1 (Parabola)|#$#|---|#$#|---
+Math 5 (11-A &amp; C)|#$#|Practice Exercise 2 (Parabola)|#$#|---|#$#|---
+Math 5 (11-A &amp; C)|#$#|Practice Quiz on Ellipse|#$#|---|#$#|---
+Math 5 (11-A &amp; C)|#$#|Practice Quiz 2 on Ellipse|#$#|---|#$#|---
+Math 5 (11-C)|#$#|WEEK 1 - QUIZ 1|#$#|---|#$#|---
+Math 5 (11-C)|#$#|WEEK 1 QUIZ 2|#$#|---|#$#|---
+Math 5 (11-C)|#$#|WEEK 1 - QUIZ 3|#$#|---|#$#|---
