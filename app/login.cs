@@ -163,7 +163,13 @@ namespace app
                                                 string pmorAM = UnixTimeStampToDateTime(b.duedate).ToString("tt").ToUpper();
                                                 using (StreamWriter writer = File.AppendText(path))
                                                 {
-                                                    writer.WriteLine(a.fullname + "|#$#|" + b.name + "|#$#|" + UnixTimeStampToDateTime(b.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm") + pmorAM);
+                                                    string date = UnixTimeStampToDateTime(b.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                                    if (date == "Thu, 1 January 1970|#$#|08:00")
+                                                    {
+                                                        date = "OPEN|#$#|OPEN";
+                                                        pmorAM = "";
+                                                    }                                                      
+                                                    writer.WriteLine(a.fullname + "|#$#|" + b.name + "|#$#|" + date + pmorAM);
                                                 }
                                             }
                                         }
@@ -195,7 +201,13 @@ namespace app
                                             string pmorAM = UnixTimeStampToDateTime(a.duedate).ToString("tt").ToUpper();
                                             using (StreamWriter writer = File.AppendText(path))
                                             {
-                                                writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + UnixTimeStampToDateTime(a.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm") + pmorAM);
+                                                string date = UnixTimeStampToDateTime(a.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                                if (date == "Thu, 1 January 1970|#$#|08:00")
+                                                {
+                                                    date = "OPEN|#$#|OPEN";
+                                                    pmorAM = "";
+                                                }
+                                                writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
                                             }
                                         }
                                         else
@@ -203,7 +215,13 @@ namespace app
                                             string pmorAM = UnixTimeStampToDateTime(a.cutoffdate).ToString("tt").ToUpper();
                                             using (StreamWriter writer = File.AppendText(path))
                                             {
-                                                writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + UnixTimeStampToDateTime(a.cutoffdate).ToString("ddd, d MMMM yyyy|#$#|hh:mm") + pmorAM);
+                                                string date = UnixTimeStampToDateTime(a.cutoffdate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                                if (date == "Thu, 1 January 1970|#$#|08:00")
+                                                {
+                                                    date = "OPEN|#$#|OPEN";
+                                                    pmorAM = "";
+                                                }
+                                                writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
                                             }
                                         }
                                     }
@@ -232,7 +250,13 @@ namespace app
                                         string pmorAM = UnixTimeStampToDateTime(a.timeclose).ToString("tt").ToUpper();
                                         using (StreamWriter writer = File.AppendText(path))
                                         {
-                                            writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + UnixTimeStampToDateTime(a.timeclose).ToString("ddd, d MMMM yyyy|#$#|hh:mm") + pmorAM);
+                                            string date = UnixTimeStampToDateTime(a.timeclose).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                            if (date == "Thu, 1 January 1970|#$#|08:00")
+                                            {
+                                                date = "OPEN|#$#|OPEN";
+                                                pmorAM = "";
+                                            }
+                                            writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
                                         }
                                     }
                                 }

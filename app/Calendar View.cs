@@ -72,11 +72,15 @@ namespace app
             using (StreamReader sr = new StreamReader(path)) {
                 while ((readLine = sr.ReadLine()) != null) {
                     string[] task = readLine.Split(splitter, StringSplitOptions.None);
-                    if (DateTime.Parse(task[2]).ToString("MMM/dd/yyyy") == calendar.SelectionStart.ToString("MMM/dd/yyyy"))
+                    DateTime dateTime;
+                    if (DateTime.TryParse(task[2], out dateTime))
                     {
-                        printCalendarTask(task[3], task[0], task[1], yoffset);
-                        assignment = true;
-                        yoffset += 1;
+                        if (dateTime.ToString("MMM/dd/yyyy") == calendar.SelectionStart.ToString("MMM/dd/yyyy"))
+                        {
+                            printCalendarTask(task[3], task[0], task[1], yoffset);
+                            assignment = true;
+                            yoffset += 1;
+                        }       
                     }
                 }
             }

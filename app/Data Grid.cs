@@ -49,8 +49,11 @@ namespace app
                 {
                     string[] elements = readLine.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
                     //makes the date to a short one - Nov/08/2020
-                    elements[2] = DateTime.Parse(elements[2]).ToString("MM/dd");
-                    //table.Rows.Add(elements[4],elements[2],elements[3],elements[0],elements[1]); //adds element to a ro
+                    DateTime dateTime;
+                    if (DateTime.TryParse(elements[2], out dateTime))
+                    {
+                        elements[2] = dateTime.ToString("MM/dd");
+                    }     
                     printTaskLine(elements, i);
                     i++;            
                 }
