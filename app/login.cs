@@ -166,7 +166,7 @@ namespace app
                                                     string date = UnixTimeStampToDateTime(b.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
                                                     if (date == "Thu, 1 January 1970|#$#|08:00")
                                                     {
-                                                        date = "OPEN|#$#|OPEN";
+                                                        date = "---|#$#|---";
                                                         pmorAM = "";
                                                     }                                                      
                                                     writer.WriteLine(a.fullname + "|#$#|" + b.name + "|#$#|" + date + pmorAM);
@@ -204,7 +204,7 @@ namespace app
                                                 string date = UnixTimeStampToDateTime(a.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
                                                 if (date == "Thu, 1 January 1970|#$#|08:00")
                                                 {
-                                                    date = "OPEN|#$#|OPEN";
+                                                    date = "---|#$#|---";
                                                     pmorAM = "";
                                                 }
                                                 writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
@@ -218,7 +218,7 @@ namespace app
                                                 string date = UnixTimeStampToDateTime(a.cutoffdate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
                                                 if (date == "Thu, 1 January 1970|#$#|08:00")
                                                 {
-                                                    date = "OPEN|#$#|OPEN";
+                                                    date = "---|#$#|---";
                                                     pmorAM = "";
                                                 }
                                                 writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
@@ -253,7 +253,7 @@ namespace app
                                             string date = UnixTimeStampToDateTime(a.timeclose).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
                                             if (date == "Thu, 1 January 1970|#$#|08:00")
                                             {
-                                                date = "OPEN|#$#|OPEN";
+                                                date = "---|#$#|---";
                                                 pmorAM = "";
                                             }
                                             writer.WriteLine(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
