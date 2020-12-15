@@ -54,3 +54,6 @@ E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.Gener
 E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
 E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.exe
 E:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.pdb
+D:\C# Projects\Time-Management\app\bin\Debug\Newtonsoft.Json.dll
+D:\C# Projects\Time-Management\app\bin\Debug\Newtonsoft.Json.xml
+D:\C# Projects\Time-Management\app\obj\Debug\app.csproj.CopyComplete

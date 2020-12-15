@@ -1,0 +1,17 @@
+<<<<<<< Updated upstream
+=======
+English 5 (11-ABC)|#$#|SUBMISSION BOX |#$#|Thu, 1 January 1970|#$#|08:00AM
+English 5 (11-ABC)|#$#|Submission Box/Assignment Box |#$#|Fri, 16 October 2020|#$#|08:00PM
+Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|Thu, 1 January 1970|#$#|08:00AM
+Filipino 5 (11-ABC)|#$#|Ikalawang Takdang-Aralin:|#$#|Thu, 1 January 1970|#$#|08:00AM
+Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|Thu, 1 January 1970|#$#|08:00AM
+Filipino 5 (11-ABC)|#$#|Ikalawang Takda-Aralin:|#$#|Thu, 1 January 1970|#$#|08:00AM
+STEMR 2 (11-B)|#$#|Submission Bin|#$#|Wed, 16 December 2020|#$#|12:00AM
+Filipino 5 (11-ABC)|#$#|Pag-uuri ng mga Ideya at Detalye|#$#|Thu, 1 January 1970|#$#|08:00AM
+Filipino 5 (11-ABC)|#$#|Uri ng Pagbasa|#$#|Thu, 1 January 1970|#$#|08:00AM
+Filipino 5 (11-ABC)|#$#|Proseso at Teorya ng Pagbasa|#$#|Thu, 1 January 1970|#$#|08:00AM
+Filipino 5 (11-ABC)|#$#|Pagtukoy sa Layunin sa Teksto|#$#|Thu, 1 January 1970|#$#|08:00AM
+Filipino 5 (11-ABC)|#$#|Pagtiyak sa Damdamin, Tono, at Pananaw ng Teksto|#$#|Thu, 1 January 1970|#$#|08:00AM
+Computer Science 5 Elective A &amp; B|#$#|2.7 Intro to Data Structs, Linear Data Structs - Short Quiz|#$#|Wed, 16 December 2020|#$#|11:59PM
+Computer Science 5 Elective A &amp; B|#$#|2.8 Recursion, Search Algorithms - Short Quiz|#$#|Wed, 16 December 2020|#$#|11:59PM
+>>>>>>> Stashed changes

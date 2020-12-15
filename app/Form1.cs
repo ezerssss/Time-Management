@@ -64,7 +64,7 @@ namespace app
             }
             else
             {
-                sortList();
+                //sortList();
             }
             if (!File.Exists(accPath))
             {
@@ -85,10 +85,12 @@ namespace app
                 }
                 else
                 {
+                    //put api integration
                     Calendar_View cv = new Calendar_View();
                     cv.Dock = DockStyle.Fill;
                     screen.Controls.Add(cv);
                 }
+
             }
             else
             {
@@ -100,7 +102,7 @@ namespace app
 
         }
 
-        public void sortList() {
+        public void sortList() {          
             List<string> list = new List<string>();
             string readLine;
             using (StreamReader sr = new StreamReader(path))
@@ -112,9 +114,11 @@ namespace app
             List<string> sortedList = new List<string>();
             while (list.Count > 0)
             {
+                MessageBox.Show("HELLO");
                 string[] earliest = list.First().Split(x, StringSplitOptions.None);
                 foreach (var line in list)
                 {
+
                     elements = line.Split(x, StringSplitOptions.None);
                     string date = elements[2] + " " + elements[3];
                     int compare = DateTime.Compare(Convert.ToDateTime(date), Convert.ToDateTime(earliest[2] + " " + earliest[3]));
@@ -123,7 +127,7 @@ namespace app
                         earliest = elements;
                     }
                 }
-                string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3] + x[0] + earliest[4];
+                string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3];
                 list.Remove(remove);
                 sortedList.Add(remove);
             }
@@ -136,6 +140,7 @@ namespace app
                 }
             }
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
