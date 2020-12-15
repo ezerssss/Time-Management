@@ -1,7 +1,0 @@
-<<<<<<< Updated upstream
-false
-=======
-true
-eimagbanua
-SilayCity12!
->>>>>>> Stashed changes
