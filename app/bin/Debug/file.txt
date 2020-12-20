@@ -1,9 +1,24 @@
-English 5 (11-ABC)|#$#|Submission Box/Assignment Box |#$#|Fri, 16 October 2020|#$#|08:00PM
-English 5 (11-ABC)|#$#|SUBMISSION BOX |#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Ikalawang Takdang-Aralin:|#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Ikalawang Takda-Aralin:|#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Pag-uuri ng mga Ideya at Detalye|#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Pagtukoy sa Layunin sa Teksto|#$#|---|#$#|---
-Filipino 5 (11-ABC)|#$#|Pagtiyak sa Damdamin, Tono, at Pananaw ng Teksto|#$#|---|#$#|---
+gfg|#$#|gfg|#$#|Sunday, 20 December 2020|#$#|01:00AM|#$#|true
+gfdsg|#$#|fg|#$#|Sunday, 20 December 2020|#$#|01:02AM|#$#|true
+Social Science 5 (11-ABC)|#$#|Formative Assessment 2.2|#$#|Fri, 15 January 2021|#$#|08:30PM|#$#|false
+Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|---|#$#|---|#$#|false
+Filipino 5 (11-ABC)|#$#|Ikalawang Takda-Aralin:|#$#|---|#$#|---|#$#|false
+RES2 Knowledge Integration , Application , and Extension|#$#|Revised Introduction|#$#|---|#$#|---|#$#|false
+RES2 Knowledge Integration , Application , and Extension|#$#|Revised Review of Related Literature|#$#|---|#$#|---|#$#|false
+RES2 Knowledge Integration , Application , and Extension|#$#|Revised Methodology|#$#|---|#$#|---|#$#|false
+RES2 Knowledge Integration , Application , and Extension|#$#|Data Presentation Plan|#$#|---|#$#|---|#$#|false
+RES2 Knowledge Integration , Application , and Extension|#$#|Result and Discussion Write Up|#$#|---|#$#|---|#$#|false
+RES2 Knowledge Integration , Application , and Extension|#$#|Updated Project Management Plan Outputs|#$#|---|#$#|---|#$#|false
+RES2 Knowledge Integration , Application , and Extension|#$#|Documentation (Activity Log)|#$#|---|#$#|---|#$#|false
+RES2 Knowledge Integration , Application , and Extension|#$#|Proof of Documentation with Adviser|#$#|---|#$#|---|#$#|false
+Filipino 5 (11-ABC)|#$#|Pagtukoy sa Layunin sa Teksto|#$#|---|#$#|---|#$#|false
+Filipino 5 (11-ABC)|#$#|Pagtiyak sa Damdamin, Tono, at Pananaw ng Teksto|#$#|---|#$#|---|#$#|false
+Math 5 (11-A &amp; C)|#$#|Graded Assessment for Limit Theorems and One-Sided Limits|#$#|---|#$#|---|#$#|false
+Math 5 (11-A &amp; C)|#$#|Graded Assessment for Infinite Limits|#$#|---|#$#|---|#$#|false
+Math 5 (11-A &amp; C)|#$#|Practice Exercise 1 (Parabola)|#$#|---|#$#|---|#$#|false
+Math 5 (11-A &amp; C)|#$#|Practice Exercise 2 (Parabola)|#$#|---|#$#|---|#$#|false
+Math 5 (11-A &amp; C)|#$#|Practice Quiz on Ellipse|#$#|---|#$#|---|#$#|false
+Math 5 (11-A &amp; C)|#$#|Practice Quiz 2 on Ellipse|#$#|---|#$#|---|#$#|false
+Math 5 (11-C)|#$#|WEEK 1 - QUIZ 1|#$#|---|#$#|---|#$#|false
+Math 5 (11-C)|#$#|WEEK 1 QUIZ 2|#$#|---|#$#|---|#$#|false
+Math 5 (11-C)|#$#|WEEK 1 - QUIZ 3|#$#|---|#$#|---|#$#|false

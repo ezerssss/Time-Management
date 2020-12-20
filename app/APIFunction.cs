@@ -256,6 +256,7 @@ namespace app
                         }
                         string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3];
                         list.Remove(remove);
+                        remove += "|#$#|false";
                         if ((earliest[2] + " " + earliest[3]) != "--- ---")
                             sortedList.Add(remove);
                         else
@@ -273,6 +274,8 @@ namespace app
                             sw.WriteLine(line);
                         }
                     }
+                    Form1 f1 = new Form1();
+                    f1.sortList();
                     done = true;               
                     Calendar_View cv = new Calendar_View();
                     cv.Dock = DockStyle.Fill;

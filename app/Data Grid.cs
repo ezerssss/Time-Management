@@ -16,6 +16,7 @@ namespace app
        
         DataTable table = new DataTable();
         string path = Application.StartupPath + @"\file.txt";
+        string local = Application.StartupPath + @"\local.txt";
         string[] x = { "|#$#|" };
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Grid));
 
@@ -194,16 +195,39 @@ namespace app
         private void removeTask_Click(object sender, EventArgs e)
         {
             List<string> taskList = new List<string>();
+            List<string> localList = new List<string>();
             string readTask;
             using (StreamReader sr = new StreamReader(path))
             {
                 while ((readTask = sr.ReadLine()) != null)
                     taskList.Add(readTask);
             }
+            using (StreamReader sr = new StreamReader(local))
+            {
+                while ((readTask = sr.ReadLine()) != null)
+                    localList.Add(readTask);
+            }
             Button btn = (Button)sender;
             string name = btn.Name;
             string count = name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6);
-            taskList.RemoveAt(int.Parse(count));
+            string[] elements = taskList[int.Parse(count)].Split(x, StringSplitOptions.None);
+            MessageBox.Show(taskList[int.Parse(count)]);
+            if (bool.Parse(elements[4])) {
+                localList.Remove(taskList[int.Parse(count)]);
+                taskList.RemoveAt(int.Parse(count));
+                MessageBox.Show("it's true baby ghorl");
+                File.WriteAllText(local, String.Empty);
+                using (StreamWriter sw = new StreamWriter(local))
+                {
+                    foreach (var line in localList)
+                        sw.WriteLine(line);
+                }
+            }
+
+            else { 
+                taskList.Remove(taskList[int.Parse(count)]);
+            }
+               
             File.WriteAllText(path, String.Empty);
             using (StreamWriter sw = new StreamWriter(path))
             {

@@ -18,6 +18,7 @@ namespace app
         //ang location kay tupad rajud sa .exe file
         string path = Application.StartupPath + @"\file.txt";
         string accPath = Application.StartupPath + @"\acc.txt";
+        string local = Application.StartupPath + @"\local.txt";
         public Form1()
         {
             InitializeComponent();
@@ -57,6 +58,11 @@ namespace app
         private void Form1_Load(object sender, EventArgs e)
         {
             _obj = this;
+            if (!File.Exists(local))
+            {
+                using (StreamWriter sw = new StreamWriter(local)) { }
+                Application.Restart();
+            }
             if (!File.Exists(path))
             {
                 using (StreamWriter sw = new StreamWriter(path)) { }
@@ -109,6 +115,12 @@ namespace app
                 while ((readLine = sr.ReadLine()) != null)
                     list.Add(readLine);
             }
+            using (StreamReader sr = new StreamReader(local))
+            {
+                while ((readLine = sr.ReadLine()) != null) {
+                    list.Add(readLine);
+                }
+            }
             string[] elements;
             List<string> sortedList = new List<string>();
             List<string> openList = new List<string>();
@@ -116,10 +128,8 @@ namespace app
             {
                 string[] earliest = list.First().Split(x, StringSplitOptions.None);
                 DateTime earliestDate = new DateTime();
-                
                 foreach (var line in list)
                 {
-
                     elements = line.Split(x, StringSplitOptions.None);
                     string date = elements[2] + " " + elements[3];
                     if ((earliest[2] + " " + earliest[3]) != "--- ---")
@@ -135,7 +145,7 @@ namespace app
                         }
                     }
                 }
-                string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3];
+                string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3] + x[0] + earliest[4];
                 list.Remove(remove);
                 if ((earliest[2] + " " + earliest[3]) != "--- ---")
                     sortedList.Add(remove);
