@@ -83,7 +83,6 @@ namespace app
                         request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
                         var response = await client.SendAsync(request);
                         string responseContent = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine(responseContent);
                         List<courseIDs> cId = JsonConvert.DeserializeObject<List<courseIDs>>(responseContent);
                         foreach (var id in cId)
                         {
