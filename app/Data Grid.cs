@@ -35,7 +35,13 @@ namespace app
 
         private void updateButton(object sender, EventArgs e)
         {
-            showData();
+            if (Form1.Instance.screenContainer.Controls.ContainsKey("Data_Grid"))
+            {
+                APIFunction apiFunc = new APIFunction();
+                apiFunc.Dock = DockStyle.Fill;
+                Form1.Instance.screenContainer.Controls.Clear();
+                Form1.Instance.screenContainer.Controls.Add(apiFunc);
+            }
         }
 
         public void showData()
@@ -44,25 +50,50 @@ namespace app
             table.Clear();
             string readLine;
             int i = 0;
-            using (StreamReader sr = new StreamReader(path)) {
+            IDictionary<DateTime, int> dates = new Dictionary<DateTime, int>();
+            using (StreamReader sr = new StreamReader(path)) 
+            {
                 while ((readLine = sr.ReadLine()) != null)
                 {
                     string[] elements = readLine.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
                     //makes the date to a short one - Nov/08/2020
-                    DateTime dateTime;
+                    DateTime dateTime, dateToDetermine = new DateTime();
                     if (DateTime.TryParse(elements[2], out dateTime))
                     {
+                        if (!dates.ContainsKey(dateTime.AddDays(-2)))
+                        {
+                            dates.Add(dateTime.AddDays(-2), 1);
+                            dateToDetermine = dateTime.AddDays(-2);
+                        }     
+                        else
+                        {
+                            if (dates[dateTime.AddDays(-2)] < 5)
+                            {
+                                dates[dateTime.AddDays(-2)] += 1;
+                                dateToDetermine = dateTime.AddDays(-2);
+                            }                         
+                            else
+                            {
+                                int dayBefore = -1;
+                                while (dates.ContainsKey(dateTime.AddDays(dayBefore-2)) && dates[dateTime.AddDays(dayBefore-2)] >= 5)
+                                    dayBefore -= 1;
+                                if (!dates.ContainsKey(dateTime.AddDays(dayBefore-2)))
+                                    dates.Add(dateTime.AddDays(dayBefore-2), 1);
+                                else
+                                    dates[dateTime.AddDays(dayBefore-2)] += 1;
+                                dateToDetermine = dateTime.AddDays(dayBefore-2);
+                            }                                       
+                        }
                         elements[2] = dateTime.ToString("MM/dd");
-                    }     
-                    printTaskLine(elements, i);
-                    i++;            
+                    }
+                    if (DateTime.Compare(dateToDetermine, DateTime.Now) <= 0 || elements[2] == "---")
+                    {
+                        printTaskLine(elements, i);
+                        i++;
+                    }                            
                 }
                 rowCounter = 0;
             }
-        }
-
-        public void update(bool removeRow, int whatRow) {
-            
         }
 
         private void printTaskLine(string[] displayElements, int verticalOffset)
@@ -85,8 +116,8 @@ namespace app
             panel1.Controls.Add(removeTask);
             removeTask.Top = verticalOffset + 2;
             removeTask.Left = 2;
-            removeTask.Width = 20;
-            removeTask.Height = 20;
+            removeTask.Width = 22;
+            removeTask.Height = 22;
             removeTask.Name = "button" + rowCounter;
             removeTask.Image = ((System.Drawing.Image)(resources.GetObject("referenceButton.Image")));
             removeTask.FlatAppearance.BorderSize = 1;
@@ -99,7 +130,7 @@ namespace app
             datebox.Left = removeTask.Left + removeTask.Width + 5;
             datebox.Width = 50;
             datebox.Height = 24;
-            datebox.Text = displayElements[2];
+            datebox.Text = " " + displayElements[2];
             datebox.Font = new Font("Bahnschrift SemiBold", 11);
             datebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             datebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
@@ -112,7 +143,7 @@ namespace app
             timebox.Left = datebox.Left + datebox.Width;
             timebox.Width = 80;
             timebox.Height = 24;
-            timebox.Text = displayElements[3];
+            timebox.Text = " " + displayElements[3];
             timebox.Font = new Font("Bahnschrift SemiBold", 10);
             timebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             timebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
@@ -125,7 +156,7 @@ namespace app
             subjbox.Left = timebox.Left + timebox.Width;
             subjbox.Width = 64;
             subjbox.Height = 24;
-            subjbox.Text = displayElements[0];
+            subjbox.Text = " " + displayElements[0];
             subjbox.Font = new Font("Bahnschrift SemiBold", 10);
             subjbox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             subjbox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));

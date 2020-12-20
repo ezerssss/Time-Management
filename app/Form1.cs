@@ -85,10 +85,9 @@ namespace app
                 }
                 else
                 {
-                    //put api integration
-                    Calendar_View cv = new Calendar_View();
-                    cv.Dock = DockStyle.Fill;
-                    screen.Controls.Add(cv);
+                    APIFunction apiFunc = new APIFunction();
+                    apiFunc.Dock = DockStyle.Fill;
+                    screen.Controls.Add(apiFunc);
                 }
 
             }

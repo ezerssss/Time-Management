@@ -48,10 +48,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(225, 567);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(169, 457);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 30);
+            this.button1.Size = new System.Drawing.Size(71, 24);
             this.button1.TabIndex = 1;
             this.button1.Text = "UPDATE";
             this.button1.UseVisualStyleBackColor = true;
@@ -61,9 +60,8 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(517, 183);
+            this.pictureBox2.Size = new System.Drawing.Size(388, 149);
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
@@ -71,10 +69,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(273, 33);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(205, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(109, 48);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -84,10 +81,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(129, 33);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(97, 27);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 58);
+            this.button2.Size = new System.Drawing.Size(108, 47);
             this.button2.TabIndex = 10;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -97,10 +93,9 @@
             this.addTask.FlatAppearance.BorderSize = 0;
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(277, 608);
-            this.addTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addTask.Location = new System.Drawing.Point(208, 494);
             this.addTask.Name = "addTask";
-            this.addTask.Size = new System.Drawing.Size(68, 63);
+            this.addTask.Size = new System.Drawing.Size(51, 51);
             this.addTask.TabIndex = 14;
             this.addTask.UseVisualStyleBackColor = true;
             this.addTask.Click += new System.EventHandler(this.addTask_Click);
@@ -110,10 +105,9 @@
             this.userLogin.FlatAppearance.BorderSize = 0;
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(203, 608);
-            this.userLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userLogin.Location = new System.Drawing.Point(152, 494);
             this.userLogin.Name = "userLogin";
-            this.userLogin.Size = new System.Drawing.Size(67, 62);
+            this.userLogin.Size = new System.Drawing.Size(50, 50);
             this.userLogin.TabIndex = 15;
             this.userLogin.UseVisualStyleBackColor = true;
             this.userLogin.Click += new System.EventHandler(this.userLogin_Click);
@@ -124,11 +118,10 @@
             this.dayToday.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayToday.ForeColor = System.Drawing.Color.White;
             this.dayToday.Image = ((System.Drawing.Image)(resources.GetObject("dayToday.Image")));
-            this.dayToday.Location = new System.Drawing.Point(21, 97);
-            this.dayToday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dayToday.Location = new System.Drawing.Point(16, 79);
             this.dayToday.Name = "dayToday";
-            this.dayToday.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
-            this.dayToday.Size = new System.Drawing.Size(475, 69);
+            this.dayToday.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.dayToday.Size = new System.Drawing.Size(356, 56);
             this.dayToday.TabIndex = 16;
             this.dayToday.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -138,10 +131,9 @@
             this.panel1.Controls.Add(this.referenceLabel3);
             this.panel1.Controls.Add(this.referenceLabel2);
             this.panel1.Controls.Add(this.referenceLabel1);
-            this.panel1.Location = new System.Drawing.Point(4, 191);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 155);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 369);
+            this.panel1.Size = new System.Drawing.Size(382, 300);
             this.panel1.TabIndex = 17;
             // 
             // referenceButton
@@ -149,10 +141,9 @@
             this.referenceButton.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referenceButton.ForeColor = System.Drawing.Color.White;
             this.referenceButton.Image = ((System.Drawing.Image)(resources.GetObject("referenceButton.Image")));
-            this.referenceButton.Location = new System.Drawing.Point(20, 175);
-            this.referenceButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.referenceButton.Location = new System.Drawing.Point(15, 142);
             this.referenceButton.Name = "referenceButton";
-            this.referenceButton.Size = new System.Drawing.Size(27, 25);
+            this.referenceButton.Size = new System.Drawing.Size(20, 20);
             this.referenceButton.TabIndex = 12;
             this.referenceButton.Text = "12/30";
             this.referenceButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,10 +154,9 @@
             this.referenceLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referenceLabel3.ForeColor = System.Drawing.Color.White;
             this.referenceLabel3.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
-            this.referenceLabel3.Location = new System.Drawing.Point(20, 128);
-            this.referenceLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.referenceLabel3.Location = new System.Drawing.Point(15, 104);
             this.referenceLabel3.Name = "referenceLabel3";
-            this.referenceLabel3.Size = new System.Drawing.Size(85, 30);
+            this.referenceLabel3.Size = new System.Drawing.Size(64, 24);
             this.referenceLabel3.TabIndex = 11;
             this.referenceLabel3.Text = "Subject";
             this.referenceLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,10 +167,9 @@
             this.referenceLabel2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referenceLabel2.ForeColor = System.Drawing.Color.White;
             this.referenceLabel2.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
-            this.referenceLabel2.Location = new System.Drawing.Point(20, 81);
-            this.referenceLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.referenceLabel2.Location = new System.Drawing.Point(15, 66);
             this.referenceLabel2.Name = "referenceLabel2";
-            this.referenceLabel2.Size = new System.Drawing.Size(85, 30);
+            this.referenceLabel2.Size = new System.Drawing.Size(64, 24);
             this.referenceLabel2.TabIndex = 10;
             this.referenceLabel2.Text = "11:00AM";
             this.referenceLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,10 +180,9 @@
             this.referenceLabel1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referenceLabel1.ForeColor = System.Drawing.Color.White;
             this.referenceLabel1.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
-            this.referenceLabel1.Location = new System.Drawing.Point(20, 30);
-            this.referenceLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.referenceLabel1.Location = new System.Drawing.Point(15, 24);
             this.referenceLabel1.Name = "referenceLabel1";
-            this.referenceLabel1.Size = new System.Drawing.Size(67, 30);
+            this.referenceLabel1.Size = new System.Drawing.Size(50, 24);
             this.referenceLabel1.TabIndex = 9;
             this.referenceLabel1.Text = "12/30";
             this.referenceLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,7 +190,7 @@
             // 
             // Data_Grid
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dayToday);
@@ -212,9 +200,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Data_Grid";
-            this.Size = new System.Drawing.Size(517, 692);
+            this.Size = new System.Drawing.Size(388, 562);
             this.Load += new System.EventHandler(this.Data_Grid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
