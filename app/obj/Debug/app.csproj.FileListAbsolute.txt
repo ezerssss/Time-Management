@@ -80,3 +80,21 @@ C:\Users\User\Documents\Time management\app\obj\Debug\app.csproj.CoreCompileInpu
 C:\Users\User\Documents\Time management\app\obj\Debug\app.csproj.CopyComplete
 C:\Users\User\Documents\Time management\app\obj\Debug\app.exe
 C:\Users\User\Documents\Time management\app\obj\Debug\app.pdb
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\app.exe.config
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\app.exe
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\app.pdb
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.add_task.resources
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.APIFunction.resources
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Calendar_View.resources
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Data_Grid.resources
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Form1.resources
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.login.resources
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Properties.Resources.resources
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.GenerateResource.cache
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.CopyComplete
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.exe
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.pdb

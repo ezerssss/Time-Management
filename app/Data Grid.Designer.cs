@@ -127,6 +127,11 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = false;
+            this.panel1.HorizontalScroll.Enabled = false;
+            this.panel1.HorizontalScroll.Visible = false;
+            this.panel1.HorizontalScroll.Maximum = 0;
+            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.referenceButton);
             this.panel1.Controls.Add(this.referenceLabel3);
             this.panel1.Controls.Add(this.referenceLabel2);

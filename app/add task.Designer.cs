@@ -28,65 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_task));
             this.date = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.hours = new System.Windows.Forms.ComboBox();
             this.minutes = new System.Windows.Forms.ComboBox();
             this.day = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.subject = new System.Windows.Forms.TextBox();
             this.task = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.line1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SubjectLabel = new System.Windows.Forms.Label();
+            this.TaskLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // date
             // 
             this.date.CustomFormat = "day, MMM/dd/yyyy";
-            this.date.Location = new System.Drawing.Point(126, 155);
+            this.date.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.Location = new System.Drawing.Point(71, 261);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(181, 20);
+            this.date.Size = new System.Drawing.Size(246, 26);
             this.date.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Subject:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Task    : ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Date     : ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 184);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Time     : ";
             // 
             // hours
             // 
@@ -105,7 +78,7 @@
             "10",
             "11",
             "12"});
-            this.hours.Location = new System.Drawing.Point(125, 181);
+            this.hours.Location = new System.Drawing.Point(130, 336);
             this.hours.MaxDropDownItems = 6;
             this.hours.Name = "hours";
             this.hours.Size = new System.Drawing.Size(45, 21);
@@ -176,7 +149,7 @@
             "57",
             "58",
             "59"});
-            this.minutes.Location = new System.Drawing.Point(192, 181);
+            this.minutes.Location = new System.Drawing.Point(193, 336);
             this.minutes.MaxDropDownItems = 15;
             this.minutes.Name = "minutes";
             this.minutes.Size = new System.Drawing.Size(45, 21);
@@ -189,87 +162,247 @@
             this.day.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.day.Location = new System.Drawing.Point(243, 181);
+            this.day.Location = new System.Drawing.Point(244, 336);
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(41, 21);
             this.day.TabIndex = 7;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(123, 142);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(10, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = ":";
-            // 
             // subject
             // 
-            this.subject.Location = new System.Drawing.Point(126, 104);
+            this.subject.BackColor = System.Drawing.Color.White;
+            this.subject.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.subject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subject.ForeColor = System.Drawing.Color.Black;
+            this.subject.Location = new System.Drawing.Point(76, 94);
             this.subject.Name = "subject";
-            this.subject.Size = new System.Drawing.Size(181, 20);
+            this.subject.Size = new System.Drawing.Size(241, 19);
             this.subject.TabIndex = 9;
             this.subject.Text = "Enter subject of task";
             this.subject.Click += new System.EventHandler(this.subject_Click);
             // 
             // task
             // 
-            this.task.Location = new System.Drawing.Point(126, 129);
+            this.task.BackColor = System.Drawing.Color.White;
+            this.task.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.task.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.task.ForeColor = System.Drawing.Color.Black;
+            this.task.Location = new System.Drawing.Point(76, 178);
             this.task.Name = "task";
-            this.task.Size = new System.Drawing.Size(181, 20);
+            this.task.Size = new System.Drawing.Size(235, 19);
             this.task.TabIndex = 10;
-            this.task.Text = "Enter task detail";
+            this.task.Text = "Enter task details";
             this.task.Click += new System.EventHandler(this.task_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(164, 224);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(105, 427);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 23);
+            this.button1.Size = new System.Drawing.Size(165, 34);
             this.button1.TabIndex = 11;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Add Task";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.addTask);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(176, 184);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(179, 336);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.Size = new System.Drawing.Size(18, 18);
             this.label6.TabIndex = 12;
             this.label6.Text = ": ";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(208, 292);
+            this.button2.BackColor = System.Drawing.Color.OrangeRed;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(17, 13);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 13;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(128, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(125, 28);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "ADD TASK";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // line1
+            // 
+            this.line1.AutoSize = true;
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.ForeColor = System.Drawing.Color.DarkGray;
+            this.line1.Location = new System.Drawing.Point(69, 195);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(253, 13);
+            this.line1.TabIndex = 15;
+            this.line1.Text = "_________________________________________";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(68, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "_________________________________________";
+            // 
+            // SubjectLabel
+            // 
+            this.SubjectLabel.AutoSize = true;
+            this.SubjectLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SubjectLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubjectLabel.ForeColor = System.Drawing.Color.DarkGray;
+            this.SubjectLabel.Location = new System.Drawing.Point(69, 70);
+            this.SubjectLabel.Name = "SubjectLabel";
+            this.SubjectLabel.Size = new System.Drawing.Size(63, 20);
+            this.SubjectLabel.TabIndex = 17;
+            this.SubjectLabel.Text = "Subject";
+            // 
+            // TaskLabel
+            // 
+            this.TaskLabel.AutoSize = true;
+            this.TaskLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TaskLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaskLabel.ForeColor = System.Drawing.Color.DarkGray;
+            this.TaskLabel.Location = new System.Drawing.Point(69, 153);
+            this.TaskLabel.Name = "TaskLabel";
+            this.TaskLabel.Size = new System.Drawing.Size(38, 20);
+            this.TaskLabel.TabIndex = 18;
+            this.TaskLabel.Text = "Task";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(69, 238);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 20);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkGray;
+            this.label3.Location = new System.Drawing.Point(70, 336);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 21);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Time";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.DarkGray;
+            this.label4.Location = new System.Drawing.Point(68, 283);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(253, 13);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "_________________________________________";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(68, 361);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(253, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "_________________________________________";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Bradley Hand ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(65, 262);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 24);
+            this.label8.TabIndex = 24;
+            this.label8.Text = ".";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Bradley Hand ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(316, 262);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(15, 24);
+            this.label9.TabIndex = 25;
+            this.label9.Text = ".";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(68, 251);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(253, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "_________________________________________";
             // 
             // add_task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.task);
-            this.Controls.Add(this.subject);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.task);
+            this.Controls.Add(this.TaskLabel);
+            this.Controls.Add(this.SubjectLabel);
+            this.Controls.Add(this.line1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.subject);
             this.Controls.Add(this.day);
             this.Controls.Add(this.minutes);
             this.Controls.Add(this.hours);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.date);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label6);
             this.Name = "add_task";
-            this.Size = new System.Drawing.Size(388, 404);
+            this.Size = new System.Drawing.Size(388, 488);
             this.Load += new System.EventHandler(this.add_task_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -279,18 +412,25 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker date;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox hours;
         private System.Windows.Forms.ComboBox minutes;
         private System.Windows.Forms.ComboBox day;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox subject;
         private System.Windows.Forms.TextBox task;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label line1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SubjectLabel;
+        private System.Windows.Forms.Label TaskLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

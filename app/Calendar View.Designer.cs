@@ -37,10 +37,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userLogin = new System.Windows.Forms.Button();
             this.addTask = new System.Windows.Forms.Button();
+            this.birdBox = new System.Windows.Forms.PictureBox();
             button1 = new System.Windows.Forms.Button();
             this.assignmentScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birdBox)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -71,11 +73,13 @@
             // 
             // assignmentScreen
             // 
+            this.assignmentScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.assignmentScreen.Controls.Add(this.label1);
             this.assignmentScreen.Location = new System.Drawing.Point(34, 296);
             this.assignmentScreen.Name = "assignmentScreen";
             this.assignmentScreen.Size = new System.Drawing.Size(327, 192);
             this.assignmentScreen.TabIndex = 5;
+            this.assignmentScreen.Paint += new System.Windows.Forms.PaintEventHandler(this.assignmentScreen_Paint);
             // 
             // label1
             // 
@@ -114,7 +118,7 @@
             this.userLogin.FlatAppearance.BorderSize = 0;
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(152, 494);
+            this.userLogin.Location = new System.Drawing.Point(127, 494);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(50, 50);
             this.userLogin.TabIndex = 12;
@@ -133,10 +137,22 @@
             this.addTask.UseVisualStyleBackColor = true;
             this.addTask.Click += new System.EventHandler(this.addTask_Click);
             // 
+            // birdBox
+            // 
+            this.birdBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("birdBox.BackgroundImage")));
+            this.birdBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.birdBox.Location = new System.Drawing.Point(34, 296);
+            this.birdBox.Name = "birdBox";
+            this.birdBox.Size = new System.Drawing.Size(327, 192);
+            this.birdBox.TabIndex = 9;
+            this.birdBox.TabStop = false;
+            this.birdBox.Visible = false;
+            // 
             // Calendar_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.birdBox);
             this.Controls.Add(this.addTask);
             this.Controls.Add(this.userLogin);
             this.Controls.Add(button1);
@@ -151,6 +167,7 @@
             this.assignmentScreen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birdBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +180,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button userLogin;
         private System.Windows.Forms.Button addTask;
+        private System.Windows.Forms.PictureBox birdBox;
     }
 }

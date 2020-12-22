@@ -77,6 +77,7 @@ namespace app
                     {
                         if (dateTime.ToString("MMM/dd/yyyy") == calendar.SelectionStart.ToString("MMM/dd/yyyy"))
                         {
+                            birdBox.Visible = false;
                             printCalendarTask(task[3], task[0], task[1], yoffset);
                             assignment = true;
                             yoffset += 1;
@@ -86,16 +87,7 @@ namespace app
             }
             if (!assignment)
             {
-                TextBox noAssignment = new TextBox();
-                assignmentScreen.Controls.Add(noAssignment);
-                noAssignment.Left = 21;
-                noAssignment.Width = 289;
-                noAssignment.Height = 173;
-                noAssignment.Text = "INSERT NO ASSIGNMENTS PICTURE";
-                noAssignment.Multiline = true;
-                noAssignment.ReadOnly = true;
-                noAssignment.Font = new Font("Century Gothic", 10);
-                noAssignment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+                birdBox.Visible = true;
             }
         }
 
@@ -135,6 +127,11 @@ namespace app
                 Form1.Instance.screenContainer.Controls.Clear();
                 Form1.Instance.screenContainer.Controls.Add(at);
             }
+        }
+
+        private void assignmentScreen_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
