@@ -13,7 +13,6 @@ namespace app
 {
     public partial class Data_Grid : UserControl
     {
-       
         DataTable table = new DataTable();
         string path = Application.StartupPath + @"\file.txt";
         string local = Application.StartupPath + @"\local.txt";
@@ -23,6 +22,12 @@ namespace app
         public Data_Grid()
         {
             InitializeComponent();
+            panel1.AutoScroll = false;
+            panel1.HorizontalScroll.Enabled = false;
+            panel1.HorizontalScroll.Maximum = -1;
+            panel1.HorizontalScroll.SmallChange = 0;
+            panel1.HorizontalScroll.Visible = false;
+            panel1.AutoScroll = true;
         }
 
         public int rowCounter = 0;
@@ -34,14 +39,33 @@ namespace app
             showData();
         }
 
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new System.Net.WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void updateButton(object sender, EventArgs e)
         {
             if (Form1.Instance.screenContainer.Controls.ContainsKey("Data_Grid"))
             {
-                APIFunction apiFunc = new APIFunction();
-                apiFunc.Dock = DockStyle.Fill;
-                Form1.Instance.screenContainer.Controls.Clear();
-                Form1.Instance.screenContainer.Controls.Add(apiFunc);
+                if (CheckForInternetConnection())
+                {
+                    APIFunction apiFunc = new APIFunction();
+                    apiFunc.Dock = DockStyle.Fill;
+                    Form1.Instance.screenContainer.Controls.Clear();
+                    Form1.Instance.screenContainer.Controls.Add(apiFunc);
+                }
+                else
+                    MessageBox.Show("No Internet Connection!");
             }
         }
 
@@ -101,15 +125,11 @@ namespace app
         {
             string text = displayElements[1];
             string display = text;
-            if (text.Length > 16)
-            {
-                display = text.Substring(0, 17);
-                display += "...";
-            }
+
 
             verticalOffset = verticalOffset * 30 + 5;
 
-            TextBox taskBox = new TextBox();
+            Label taskBox = new Label();
             ToolTip tp = new ToolTip();
             tp.ShowAlways = true;
 
@@ -168,9 +188,9 @@ namespace app
             panel1.Controls.Add(taskBox);
             taskBox.Top = verticalOffset + 2;
             taskBox.Left = subjbox.Left + subjbox.Width + 5;
-            taskBox.Width = 220;
+            taskBox.Width = 135;
+            taskBox.AutoEllipsis = true;
             taskBox.Text = display;
-            taskBox.ReadOnly = true;
             taskBox.Font = new Font("Bahnschrift SemiBold", 11);
             taskBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -211,11 +231,9 @@ namespace app
             string name = btn.Name;
             string count = name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6);
             string[] elements = taskList[int.Parse(count)].Split(x, StringSplitOptions.None);
-            MessageBox.Show(taskList[int.Parse(count)]);
             if (bool.Parse(elements[4])) {
                 localList.Remove(taskList[int.Parse(count)]);
                 taskList.RemoveAt(int.Parse(count));
-                MessageBox.Show("it's true baby ghorl");
                 File.WriteAllText(local, String.Empty);
                 using (StreamWriter sw = new StreamWriter(local))
                 {

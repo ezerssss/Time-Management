@@ -48,7 +48,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(169, 457);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(169, 464);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 24);
             this.button1.TabIndex = 1;
@@ -127,11 +129,6 @@
             // 
             // panel1
             // 
-            this.panel1.AutoScroll = false;
-            this.panel1.HorizontalScroll.Enabled = false;
-            this.panel1.HorizontalScroll.Visible = false;
-            this.panel1.HorizontalScroll.Maximum = 0;
-            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.referenceButton);
             this.panel1.Controls.Add(this.referenceLabel3);
             this.panel1.Controls.Add(this.referenceLabel2);

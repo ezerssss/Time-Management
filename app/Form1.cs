@@ -23,6 +23,7 @@ namespace app
         {
             InitializeComponent();
         }
+
         public static bool CheckForInternetConnection()
         {
             try
