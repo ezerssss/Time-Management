@@ -17,6 +17,7 @@ namespace app
         string path = Application.StartupPath + @"\file.txt";
         string local = Application.StartupPath + @"\local.txt";
         string[] x = { "|#$#|" };
+        List<string> removeList = new List<string>();
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Grid));
 
         public Data_Grid()
@@ -71,10 +72,12 @@ namespace app
 
         public void showData()
         {
+            removeList.Clear();
             panel1.Controls.Clear();
             table.Clear();
             string readLine;
             int i = 0;
+            
             IDictionary<DateTime, int> dates = new Dictionary<DateTime, int>();
             using (StreamReader sr = new StreamReader(path)) 
             {
@@ -83,6 +86,7 @@ namespace app
                     string[] elements = readLine.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
                     //makes the date to a short one - Nov/08/2020
                     DateTime dateTime, dateToDetermine = new DateTime();
+                    string date = "---";
                     if (DateTime.TryParse(elements[2], out dateTime))
                     {
                         if (!dates.ContainsKey(dateTime.AddDays(-2)))
@@ -109,11 +113,14 @@ namespace app
                                 dateToDetermine = dateTime.AddDays(dayBefore-2);
                             }                                       
                         }
+                        date = elements[2];
                         elements[2] = dateTime.ToString("MM/dd");
                     }
                     if (DateTime.Compare(dateToDetermine, DateTime.Now) <= 0 || elements[2] == "---")
                     {
                         printTaskLine(elements, i);
+                        //MessageBox.Show(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
+                        removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
                         i++;
                     }                            
                 }
@@ -125,7 +132,6 @@ namespace app
         {
             string text = displayElements[1];
             string display = text;
-
 
             verticalOffset = verticalOffset * 30 + 5;
 
@@ -231,9 +237,12 @@ namespace app
             string name = btn.Name;
             string count = name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6);
             string[] elements = taskList[int.Parse(count)].Split(x, StringSplitOptions.None);
-            if (bool.Parse(elements[4])) {
-                localList.Remove(taskList[int.Parse(count)]);
-                taskList.RemoveAt(int.Parse(count));
+
+            if (bool.Parse(elements[4]))
+            {
+                
+                localList.Remove(removeList[int.Parse(count)]);
+                taskList.Remove(removeList[int.Parse(count)]);
                 File.WriteAllText(local, String.Empty);
                 using (StreamWriter sw = new StreamWriter(local))
                 {
@@ -242,10 +251,11 @@ namespace app
                 }
             }
 
-            else { 
-                taskList.Remove(taskList[int.Parse(count)]);
+            else
+            {
+                taskList.Remove(removeList[int.Parse(count)]);
             }
-               
+
             File.WriteAllText(path, String.Empty);
             using (StreamWriter sw = new StreamWriter(path))
             {

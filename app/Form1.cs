@@ -113,8 +113,10 @@ namespace app
             string readLine;
             using (StreamReader sr = new StreamReader(path))
             {
-                while ((readLine = sr.ReadLine()) != null)
+                while ((readLine = sr.ReadLine()) != null) {
                     list.Add(readLine);
+                }
+                    
             }
             using (StreamReader sr = new StreamReader(local))
             {
