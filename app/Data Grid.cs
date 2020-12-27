@@ -20,6 +20,8 @@ namespace app
         List<string> removeList = new List<string>();
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Grid));
 
+        bool showAll = true;
+
         public Data_Grid()
         {
             InitializeComponent();
@@ -66,7 +68,7 @@ namespace app
                     Form1.Instance.screenContainer.Controls.Add(apiFunc);
                 }
                 else
-                    MessageBox.Show("No Internet Connection!");
+                    MessageBox.Show("No Internet Connection!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -119,7 +121,6 @@ namespace app
                     if (DateTime.Compare(dateToDetermine, DateTime.Now) <= 0 || elements[2] == "---")
                     {
                         printTaskLine(elements, i);
-                        //MessageBox.Show(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
                         removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
                         i++;
                     }                            
@@ -135,12 +136,10 @@ namespace app
 
             verticalOffset = verticalOffset * 30 + 5;
 
-            Label taskBox = new Label();
             ToolTip tp = new ToolTip();
             tp.ShowAlways = true;
 
             Button removeTask = new Button();
-            panel1.Controls.Add(removeTask);
             removeTask.Top = verticalOffset + 2;
             removeTask.Left = 2;
             removeTask.Width = 22;
@@ -150,9 +149,9 @@ namespace app
             removeTask.FlatAppearance.BorderSize = 1;
             removeTask.FlatAppearance.BorderColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             removeTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            panel1.Controls.Add(removeTask);
 
             Label datebox = new Label();
-            panel1.Controls.Add(datebox);
             datebox.Top = verticalOffset;
             datebox.Left = removeTask.Left + removeTask.Width + 5;
             datebox.Width = 50;
@@ -163,9 +162,9 @@ namespace app
             datebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
             datebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             datebox.Name = "date" + rowCounter;
+            panel1.Controls.Add(datebox);
 
             Label timebox = new Label();
-            panel1.Controls.Add(timebox);
             timebox.Top = verticalOffset;
             timebox.Left = datebox.Left + datebox.Width;
             timebox.Width = 80;
@@ -176,9 +175,9 @@ namespace app
             timebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
             timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             timebox.Name = "time" + rowCounter;
+            panel1.Controls.Add(timebox);
 
             Label subjbox = new Label();
-            panel1.Controls.Add(subjbox);
             subjbox.Top = verticalOffset;
             subjbox.Left = timebox.Left + timebox.Width;
             subjbox.Width = 64;
@@ -190,8 +189,9 @@ namespace app
             subjbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             subjbox.Name = "subj" + rowCounter;
             tp.SetToolTip(subjbox, displayElements[0]);
-            
-            panel1.Controls.Add(taskBox);
+            panel1.Controls.Add(subjbox);
+
+            Label taskBox = new Label();
             taskBox.Top = verticalOffset + 2;
             taskBox.Left = subjbox.Left + subjbox.Width + 5;
             taskBox.Width = 135;
@@ -202,6 +202,7 @@ namespace app
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             taskBox.Name = "task" + rowCounter;
             tp.SetToolTip(taskBox, text);
+            panel1.Controls.Add(taskBox);
 
             rowCounter++;
             removeTask.Click += new EventHandler(removeTask_Click);
@@ -223,24 +224,28 @@ namespace app
             List<string> taskList = new List<string>();
             List<string> localList = new List<string>();
             string readTask;
+
             using (StreamReader sr = new StreamReader(path))
             {
                 while ((readTask = sr.ReadLine()) != null)
                     taskList.Add(readTask);
             }
+
             using (StreamReader sr = new StreamReader(local))
             {
                 while ((readTask = sr.ReadLine()) != null)
                     localList.Add(readTask);
             }
+
             Button btn = (Button)sender;
             string name = btn.Name;
             string count = name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6);
             string[] elements = taskList[int.Parse(count)].Split(x, StringSplitOptions.None);
+            MessageBox.Show(elements[0]);
 
             if (bool.Parse(elements[4]))
             {
-                
+                MessageBox.Show(removeList[int.Parse(count)]);
                 localList.Remove(removeList[int.Parse(count)]);
                 taskList.Remove(removeList[int.Parse(count)]);
                 File.WriteAllText(local, String.Empty);
@@ -262,7 +267,10 @@ namespace app
                 foreach (var line in taskList)
                     sw.WriteLine(line);
             }
-            showData();
+            if (showAll)
+                showData();
+            else
+                showAllFuntion();
         }
 
         private void addTask_Click(object sender, EventArgs e)
@@ -287,5 +295,45 @@ namespace app
             }
         }
 
+        private void showAllTask_Click(object sender, EventArgs e)
+        {
+            if (showAll)
+            {
+                showAllTask.Text = "TO-DO";
+                showAllFuntion();
+            }
+            else
+            {
+                showAllTask.Text = "ALL";
+                showAll = true;
+                showData();
+            }
+        }
+
+        private void showAllFuntion()
+        {           
+            string readline;
+            int i = 0;
+            removeList.Clear();
+            panel1.Controls.Clear();
+            table.Clear();
+
+            using (StreamReader sr = new StreamReader(path))
+            {
+                while ((readline = sr.ReadLine()) != null)
+                {
+                    string[] elements = readline.Split(x, StringSplitOptions.None);
+                    DateTime dateTime = new DateTime();
+                    if (DateTime.TryParse(elements[2], out dateTime))
+                    {
+                        elements[2] = dateTime.ToString("MM/dd");
+                    }
+                    printTaskLine(elements, i);
+                    removeList.Add(elements[0] + x[0] + elements[1] + x[0] + elements[2] + x[0] + elements[3] + x[0] + elements[4]);
+                    i++;
+                }
+            }
+            showAll = false;
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.referenceLabel3 = new System.Windows.Forms.Label();
             this.referenceLabel2 = new System.Windows.Forms.Label();
             this.referenceLabel1 = new System.Windows.Forms.Label();
+            this.showAllTask = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -50,9 +51,9 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(169, 464);
+            this.button1.Location = new System.Drawing.Point(134, 464);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 24);
+            this.button1.Size = new System.Drawing.Size(67, 24);
             this.button1.TabIndex = 1;
             this.button1.Text = "UPDATE";
             this.button1.UseVisualStyleBackColor = true;
@@ -95,7 +96,7 @@
             this.addTask.FlatAppearance.BorderSize = 0;
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(208, 494);
+            this.addTask.Location = new System.Drawing.Point(211, 494);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(51, 51);
             this.addTask.TabIndex = 14;
@@ -107,7 +108,7 @@
             this.userLogin.FlatAppearance.BorderSize = 0;
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(152, 494);
+            this.userLogin.Location = new System.Drawing.Point(149, 494);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(50, 50);
             this.userLogin.TabIndex = 15;
@@ -190,10 +191,23 @@
             this.referenceLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.referenceLabel1.Visible = false;
             // 
+            // showAllTask
+            // 
+            this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.showAllTask.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showAllTask.Location = new System.Drawing.Point(211, 464);
+            this.showAllTask.Name = "showAllTask";
+            this.showAllTask.Size = new System.Drawing.Size(67, 24);
+            this.showAllTask.TabIndex = 18;
+            this.showAllTask.Text = "ALL";
+            this.showAllTask.UseVisualStyleBackColor = true;
+            this.showAllTask.Click += new System.EventHandler(this.showAllTask_Click);
+            // 
             // Data_Grid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.showAllTask);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dayToday);
             this.Controls.Add(this.userLogin);
@@ -225,5 +239,6 @@
         private System.Windows.Forms.Label referenceLabel3;
         private System.Windows.Forms.Label referenceLabel2;
         private System.Windows.Forms.Label referenceButton;
+        private System.Windows.Forms.Button showAllTask;
     }
 }

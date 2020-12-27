@@ -45,7 +45,7 @@ namespace app
                 }
                 resetText();
                 sortList(readLine);
-                MessageBox.Show("add task successful");
+                MessageBox.Show("Add task successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

@@ -46,7 +46,7 @@ namespace app
         {
             done = false;
             if (username.Text == "" || password.Text == "" || username.Text == "Enter username" || password.Text == "Enter password") {
-                MessageBox.Show("Invalid username or password");
+                MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else {
                 File.WriteAllText(accPath, String.Empty);
@@ -78,7 +78,7 @@ namespace app
                         }
                         else
                         {
-                            MessageBox.Show("Invalid Login!");
+                            MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -434,8 +434,11 @@ namespace app
             resetText();
             if (!File.Exists(accPath))
             {
-                File.Create(accPath);
-                MessageBox.Show("Account File created");
+                using (StreamWriter writer = new StreamWriter(accPath))
+                {
+                    writer.WriteLine("false");
+                }
+                Application.Restart();
             }
         }
 
@@ -467,6 +470,30 @@ namespace app
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             afterLogin();
+        }
+
+        private void login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                login_button_ClickAsync(sender, e);
+        }
+
+        private void username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login_button_ClickAsync(sender, e);
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login_button_ClickAsync(sender, e);
+                e.SuppressKeyPress = true;
+            }  
         }
     }
 }

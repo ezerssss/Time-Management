@@ -55,6 +55,7 @@
             this.username.Text = "Enter username";
             this.username.WordWrap = false;
             this.username.MouseClick += new System.Windows.Forms.MouseEventHandler(this.username_Click);
+            this.username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_KeyDown);
             // 
             // password
             // 
@@ -70,6 +71,7 @@
             this.password.TabIndex = 2;
             this.password.Text = "Enter password";
             this.password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.password_Click);
+            this.password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_KeyDown);
             // 
             // pictureBox1
             // 
@@ -125,7 +127,7 @@
             // 
             this.loginBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.loginBar.Location = new System.Drawing.Point(88, 510);
-            this.loginBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginBar.Margin = new System.Windows.Forms.Padding(2);
             this.loginBar.Name = "loginBar";
             this.loginBar.Size = new System.Drawing.Size(206, 29);
             this.loginBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -163,6 +165,7 @@
             this.Name = "login";
             this.Size = new System.Drawing.Size(388, 562);
             this.Load += new System.EventHandler(this.login_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.login_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
