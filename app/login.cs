@@ -32,7 +32,7 @@ namespace app
         {
             if (username.Text == "Enter username")
                   username.Text = "";
-            username.ForeColor = Color.Black;
+            username.ForeColor = Color.Black;         
         }
 
         private void password_Click(object sender, MouseEventArgs e)
@@ -78,7 +78,12 @@ namespace app
                         }
                         else
                         {
+                            using (StreamWriter writer = new StreamWriter(accPath))
+                            {
+                                writer.WriteLine("false");
+                            }
                             MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            resetText();
                             return;
                         }
                     }
@@ -516,7 +521,13 @@ namespace app
             {
                 login_button_ClickAsync(sender, e);
                 e.SuppressKeyPress = true;
-            }  
+            }
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            password.Text = "";
+            password.ForeColor = Color.Black;
         }
     }
 }

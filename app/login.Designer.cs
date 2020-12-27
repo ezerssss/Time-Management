@@ -62,7 +62,7 @@
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.password.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.password.ForeColor = System.Drawing.SystemColors.ControlText;
             this.password.Location = new System.Drawing.Point(68, 359);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
@@ -70,6 +70,7 @@
             this.password.TabIndex = 2;
             this.password.Text = "Enter password";
             this.password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.password_Click);
+            this.password.Enter += new System.EventHandler(this.password_Enter);
             this.password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_KeyDown);
             // 
             // pictureBox1
@@ -126,7 +127,7 @@
             // 
             this.loginBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.loginBar.Location = new System.Drawing.Point(88, 508);
-            this.loginBar.Margin = new System.Windows.Forms.Padding(2);
+            this.loginBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginBar.Name = "loginBar";
             this.loginBar.Size = new System.Drawing.Size(206, 29);
             this.loginBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
