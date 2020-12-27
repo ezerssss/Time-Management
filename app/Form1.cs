@@ -22,6 +22,14 @@ namespace app
         public Form1()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            enableDoubleBuff(screen);
+        }
+
+        public static void enableDoubleBuff(System.Windows.Forms.Control cont)
+        {
+            System.Reflection.PropertyInfo DemoProp = typeof(System.Windows.Forms.Control).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            DemoProp.SetValue(cont, true, null);
         }
 
         public static bool CheckForInternetConnection()

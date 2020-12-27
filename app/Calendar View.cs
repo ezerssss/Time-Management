@@ -16,9 +16,10 @@ namespace app
         public Calendar_View()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             path = Directory.GetCurrentDirectory() + "\\file.txt";
             checkAssignments();
-        }
+        }  
 
         private void monthCalendar1_MouseDown(object sender, MouseEventArgs e)
         {

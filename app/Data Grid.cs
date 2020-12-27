@@ -31,6 +31,14 @@ namespace app
             panel1.HorizontalScroll.SmallChange = 0;
             panel1.HorizontalScroll.Visible = false;
             panel1.AutoScroll = true;
+            this.DoubleBuffered = true;
+            enableDoubleBuff(panel1);
+        }
+
+        public static void enableDoubleBuff(System.Windows.Forms.Control cont)
+        {
+            System.Reflection.PropertyInfo DemoProp = typeof(System.Windows.Forms.Control).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            DemoProp.SetValue(cont, true, null);
         }
 
         public int rowCounter = 0;
