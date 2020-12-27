@@ -79,7 +79,6 @@ namespace app
             table.Clear();
             string readLine;
             int i = 0;
-            
             IDictionary<DateTime, int> dates = new Dictionary<DateTime, int>();
             using (StreamReader sr = new StreamReader(path)) 
             {
@@ -224,28 +223,23 @@ namespace app
             List<string> taskList = new List<string>();
             List<string> localList = new List<string>();
             string readTask;
-
             using (StreamReader sr = new StreamReader(path))
             {
                 while ((readTask = sr.ReadLine()) != null)
                     taskList.Add(readTask);
             }
-
             using (StreamReader sr = new StreamReader(local))
             {
                 while ((readTask = sr.ReadLine()) != null)
                     localList.Add(readTask);
             }
-
             Button btn = (Button)sender;
             string name = btn.Name;
             string count = name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6);
             string[] elements = taskList[int.Parse(count)].Split(x, StringSplitOptions.None);
-            MessageBox.Show(elements[0]);
 
             if (bool.Parse(elements[4]))
             {
-                MessageBox.Show(removeList[int.Parse(count)]);
                 localList.Remove(removeList[int.Parse(count)]);
                 taskList.Remove(removeList[int.Parse(count)]);
                 File.WriteAllText(local, String.Empty);
@@ -268,9 +262,14 @@ namespace app
                     sw.WriteLine(line);
             }
             if (showAll)
+            {
                 showData();
+            }
+
             else
+            {
                 showAllFuntion();
+            }
         }
 
         private void addTask_Click(object sender, EventArgs e)
@@ -297,6 +296,7 @@ namespace app
 
         private void showAllTask_Click(object sender, EventArgs e)
         {
+            
             if (showAll)
             {
                 showAllTask.Text = "TO-DO";
@@ -311,28 +311,31 @@ namespace app
         }
 
         private void showAllFuntion()
-        {           
+        {
             string readline;
             int i = 0;
             removeList.Clear();
             panel1.Controls.Clear();
             table.Clear();
-
+            panel1.Refresh();
             using (StreamReader sr = new StreamReader(path))
             {
                 while ((readline = sr.ReadLine()) != null)
                 {
                     string[] elements = readline.Split(x, StringSplitOptions.None);
                     DateTime dateTime = new DateTime();
+                    string date = "---";
                     if (DateTime.TryParse(elements[2], out dateTime))
                     {
+                        date = elements[2];
                         elements[2] = dateTime.ToString("MM/dd");
                     }
                     printTaskLine(elements, i);
-                    removeList.Add(elements[0] + x[0] + elements[1] + x[0] + elements[2] + x[0] + elements[3] + x[0] + elements[4]);
+                    removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
                     i++;
                 }
             }
+            rowCounter = 0;
             showAll = false;
         }
     }
