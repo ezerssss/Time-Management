@@ -168,5 +168,17 @@ namespace app
         {
 
         }
+
+        private void subject_Enter(object sender, EventArgs e)
+        {
+            subject.Text = "";
+            subject.ForeColor = Color.Black;
+        }
+
+        private void task_Enter(object sender, EventArgs e)
+        {
+            task.Text = "";
+            task.ForeColor = Color.Black;
+        }
     }
 }

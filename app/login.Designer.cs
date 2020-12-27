@@ -46,7 +46,7 @@
             this.username.BackColor = System.Drawing.Color.WhiteSmoke;
             this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.username.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.username.ForeColor = System.Drawing.SystemColors.ControlText;
             this.username.Location = new System.Drawing.Point(68, 296);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(254, 28);
@@ -54,6 +54,7 @@
             this.username.Text = "Enter username";
             this.username.WordWrap = false;
             this.username.MouseClick += new System.Windows.Forms.MouseEventHandler(this.username_Click);
+            this.username.Enter += new System.EventHandler(this.username_Enter);
             this.username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_KeyDown);
             // 
             // password
@@ -127,7 +128,7 @@
             // 
             this.loginBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.loginBar.Location = new System.Drawing.Point(88, 508);
-            this.loginBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginBar.Margin = new System.Windows.Forms.Padding(2);
             this.loginBar.Name = "loginBar";
             this.loginBar.Size = new System.Drawing.Size(206, 29);
             this.loginBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;

@@ -529,5 +529,11 @@ namespace app
             password.Text = "";
             password.ForeColor = Color.Black;
         }
+
+        private void username_Enter(object sender, EventArgs e)
+        {
+            username.Text = "";
+            username.ForeColor = Color.Black;
+        }
     }
 }

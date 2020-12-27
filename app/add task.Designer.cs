@@ -179,6 +179,7 @@
             this.subject.TabIndex = 9;
             this.subject.Text = "Enter subject of task";
             this.subject.Click += new System.EventHandler(this.subject_Click);
+            this.subject.Enter += new System.EventHandler(this.subject_Enter);
             // 
             // task
             // 
@@ -192,6 +193,7 @@
             this.task.TabIndex = 10;
             this.task.Text = "Enter task details";
             this.task.Click += new System.EventHandler(this.task_Click);
+            this.task.Enter += new System.EventHandler(this.task_Enter);
             // 
             // button1
             // 
