@@ -48,6 +48,7 @@
             // button1
             // 
             button1.BackColor = System.Drawing.Color.Transparent;
+            button1.Cursor = System.Windows.Forms.Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.ForeColor = System.Drawing.Color.Transparent;
@@ -118,7 +119,7 @@
             this.userLogin.FlatAppearance.BorderSize = 0;
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(127, 494);
+            this.userLogin.Location = new System.Drawing.Point(144, 494);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(50, 50);
             this.userLogin.TabIndex = 12;

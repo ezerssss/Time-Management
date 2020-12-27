@@ -148,7 +148,7 @@ namespace app
             removeTask.FlatAppearance.BorderSize = 1;
             removeTask.FlatAppearance.BorderColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             removeTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            panel1.Controls.Add(removeTask);
+            
 
             Label datebox = new Label();
             datebox.Top = verticalOffset;
@@ -161,7 +161,7 @@ namespace app
             datebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
             datebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             datebox.Name = "date" + rowCounter;
-            panel1.Controls.Add(datebox);
+            
 
             Label timebox = new Label();
             timebox.Top = verticalOffset;
@@ -174,12 +174,13 @@ namespace app
             timebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
             timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             timebox.Name = "time" + rowCounter;
-            panel1.Controls.Add(timebox);
+            
 
             Label subjbox = new Label();
             subjbox.Top = verticalOffset;
             subjbox.Left = timebox.Left + timebox.Width;
             subjbox.Width = 64;
+            subjbox.AutoEllipsis = true;
             subjbox.Height = 24;
             subjbox.Text = " " + displayElements[0];
             subjbox.Font = new Font("Bahnschrift SemiBold", 10);
@@ -188,7 +189,7 @@ namespace app
             subjbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             subjbox.Name = "subj" + rowCounter;
             tp.SetToolTip(subjbox, displayElements[0]);
-            panel1.Controls.Add(subjbox);
+            
 
             Label taskBox = new Label();
             taskBox.Top = verticalOffset + 2;
@@ -201,6 +202,10 @@ namespace app
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             taskBox.Name = "task" + rowCounter;
             tp.SetToolTip(taskBox, text);
+            panel1.Controls.Add(removeTask);
+            panel1.Controls.Add(datebox);
+            panel1.Controls.Add(timebox);
+            panel1.Controls.Add(subjbox);
             panel1.Controls.Add(taskBox);
 
             rowCounter++;

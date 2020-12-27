@@ -84,7 +84,6 @@ namespace app
                     }
                     if (wsToken != "")
                     {
-                        timer1.Start();
                         loggingIn.Visible = true;
                         loginBar.Visible = true;
                         //gets userId
@@ -96,7 +95,9 @@ namespace app
                             string responseContent = await response.Content.ReadAsStringAsync();
                             userID id = JsonConvert.DeserializeObject<userID>(responseContent);
                             userId = id.userId;
+                            loginBar.Value += 4;
                         }
+                        printProgress.Text = "User ID Successfully Stored";
 
                         //gets coursesOfUser
                         using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
@@ -110,8 +111,14 @@ namespace app
                             {
                                 courseIds.Add(id.id.ToString() + "|#$#|" + id.displayName);
                                 courseNameIds.Add(id.id, id.displayName);
+                                if (loginBar.Value != 15)
+                                    loginBar.Value += 1;
+                                printProgress.Text = "Storing Courses: " + id.displayName;
                             }
                         }
+                        if (loginBar.Value != 15)
+                            loginBar.Value = 15;
+                        printProgress.Text = "Course IDS Successfully Stored";
 
                         //gets Activites of each Course 
                         foreach (var id in courseIds)
@@ -133,10 +140,16 @@ namespace app
                                             forumCmids.Add(cmid.CMID);
                                         else if (cmid.modname == "quiz")
                                             quizCmids.Add(cmid.CMID);
+                                        if (loginBar.Value != 40)
+                                            loginBar.Value += 1;
+                                        printProgress.Text = "Storing Tasks: " + cmid.CMID;
                                     }
                                 }
                             }
                         }
+                        if (loginBar.Value != 40)
+                            loginBar.Value = 40;
+                        printProgress.Text = "Task IDs Successfully Stored";
 
                         //gets DueDate and Name of Assignments
 
@@ -171,12 +184,18 @@ namespace app
                                                     pmorAM = "";
                                                 }                                                      
                                                 list.Add(a.fullname + "|#$#|" + b.name + "|#$#|" + date + pmorAM );
+                                                if (loginBar.Value != 60)
+                                                    loginBar.Value += 1;
+                                                printProgress.Text = "Storing Assignments: " + b.name;
                                             }
                                         }
                                     }
                                 }
                             }
                         }
+                        if (loginBar.Value != 60)
+                            loginBar.Value = 60;
+                        printProgress.Text = "Assignment IDs Successfully Stored";
 
                         //gets Name of forum
                         using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
@@ -206,6 +225,9 @@ namespace app
                                                 pmorAM = "";
                                             }
                                             list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM );
+                                            if (loginBar.Value != 80)
+                                                loginBar.Value += 1;
+                                            printProgress.Text = "Storing Forums: " + a.name;
                                         }
                                         else
                                         {
@@ -217,11 +239,17 @@ namespace app
                                                 pmorAM = "";
                                             }
                                             list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM );
+                                            if (loginBar.Value != 80)
+                                                loginBar.Value += 1;
+                                            printProgress.Text = "Storing Forums: " + a.name;
                                         }
                                     }
                                 }
                             }
                         }
+                        if (loginBar.Value != 80)
+                            loginBar.Value = 80;
+                        printProgress.Text = "Forum IDs Successfully Stored";
 
                         //gets Quizzes by course
                         using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
@@ -249,10 +277,17 @@ namespace app
                                             pmorAM = "";
                                         }
                                         list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM );
+                                        if (loginBar.Value != 99)
+                                            loginBar.Value += 1;
+                                        printProgress.Text = "Storing Quizzes: " + a.name;
                                     }
                                 }
                             }
                         }
+                        if (loginBar.Value != 100)
+                            loginBar.Value = 100;
+                        printProgress.Text = "Assignment IDs Successfully Stored";
+
                         lines.Add("true");
                         lines.Add(username.Text);
                         lines.Add(password.Text);
@@ -401,18 +436,6 @@ namespace app
             public int coursemodule { get; set; }
             public string name { get; set; }
             public int timeclose { get; set; }
-        }
-
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            loginBar.Increment(1);
-            if (loginBar.Value == 99)
-                loginBar.Value -= 1;
-            if (done)
-            {
-                loginBar.Value = 100;
-                timer1.Stop();
-            }
         }
 
         private void resetText()

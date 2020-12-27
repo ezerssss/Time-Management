@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.username = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
@@ -38,7 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.loginBar = new System.Windows.Forms.ProgressBar();
             this.loggingIn = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.printProgress = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,7 +125,7 @@
             // loginBar
             // 
             this.loginBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.loginBar.Location = new System.Drawing.Point(88, 510);
+            this.loginBar.Location = new System.Drawing.Point(88, 508);
             this.loginBar.Margin = new System.Windows.Forms.Padding(2);
             this.loginBar.Name = "loginBar";
             this.loginBar.Size = new System.Drawing.Size(206, 29);
@@ -138,7 +137,7 @@
             // 
             this.loggingIn.AutoSize = true;
             this.loggingIn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loggingIn.Location = new System.Drawing.Point(153, 491);
+            this.loggingIn.Location = new System.Drawing.Point(153, 488);
             this.loggingIn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.loggingIn.Name = "loggingIn";
             this.loggingIn.Size = new System.Drawing.Size(86, 17);
@@ -146,14 +145,22 @@
             this.loggingIn.Text = "Logging In...";
             this.loggingIn.Visible = false;
             // 
-            // timer1
+            // printProgress
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            this.printProgress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.printProgress.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printProgress.Location = new System.Drawing.Point(0, 537);
+            this.printProgress.Name = "printProgress";
+            this.printProgress.Size = new System.Drawing.Size(388, 21);
+            this.printProgress.TabIndex = 12;
+            this.printProgress.Text = ".......";
+            this.printProgress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.printProgress);
             this.Controls.Add(this.loggingIn);
             this.Controls.Add(this.loginBar);
             this.Controls.Add(this.button1);
@@ -181,6 +188,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar loginBar;
         private System.Windows.Forms.Label loggingIn;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label printProgress;
     }
 }

@@ -29,21 +29,16 @@ namespace app
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.loginBar = new System.Windows.Forms.ProgressBar();
+            this.printProgress = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(101, 207);
+            this.label1.Location = new System.Drawing.Point(99, 207);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 27);
             this.label1.TabIndex = 0;
@@ -51,15 +46,27 @@ namespace app
             // 
             // loginBar
             // 
-            this.loginBar.Location = new System.Drawing.Point(101, 263);
+            this.loginBar.Location = new System.Drawing.Point(97, 263);
             this.loginBar.Name = "loginBar";
             this.loginBar.Size = new System.Drawing.Size(194, 41);
             this.loginBar.TabIndex = 1;
+            // 
+            // printProgress
+            // 
+            this.printProgress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.printProgress.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printProgress.Location = new System.Drawing.Point(0, 307);
+            this.printProgress.Name = "printProgress";
+            this.printProgress.Size = new System.Drawing.Size(388, 27);
+            this.printProgress.TabIndex = 2;
+            this.printProgress.Text = ".......";
+            this.printProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // APIFunction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.printProgress);
             this.Controls.Add(this.loginBar);
             this.Controls.Add(this.label1);
             this.Name = "APIFunction";
@@ -71,9 +78,8 @@ namespace app
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar loginBar;
+        private System.Windows.Forms.Label printProgress;
     }
 }
