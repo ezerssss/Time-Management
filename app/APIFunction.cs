@@ -30,6 +30,15 @@ namespace app
         {
             this.BringToFront();
             string[] accDetails = File.ReadAllLines(accPath);
+            if (accDetails.Length < 3)
+            {
+                File.WriteAllText(accPath, String.Empty);
+                using (StreamWriter writer = new StreamWriter(accPath))
+                {
+                    writer.WriteLine("false");
+                }
+                return;
+            }
             File.WriteAllText(path, String.Empty);
             List<string> lines = new List<string>();
             string wsToken = "", userId = "";
