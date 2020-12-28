@@ -92,6 +92,14 @@ namespace app
             if (CheckForInternetConnection())
             {
                 string[] checkLogin = File.ReadAllLines(accPath);
+                if (checkLogin.Length < 1)
+                {
+                    using (StreamWriter writer = new StreamWriter(accPath))
+                    {
+                        writer.WriteLine("false");
+                    }
+                    Application.Restart();
+                }
                 if (checkLogin[0] == "false")
                 {
                     login lg = new login();

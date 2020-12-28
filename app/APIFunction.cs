@@ -32,11 +32,16 @@ namespace app
             string[] accDetails = File.ReadAllLines(accPath);
             if (accDetails.Length < 3)
             {
+                MessageBox.Show("No Account Stored", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 File.WriteAllText(accPath, String.Empty);
                 using (StreamWriter writer = new StreamWriter(accPath))
                 {
                     writer.WriteLine("false");
                 }
+                Calendar_View cv = new Calendar_View();
+                cv.Dock = DockStyle.Fill;
+                Form1.Instance.screenContainer.Controls.Clear();
+                Form1.Instance.screenContainer.Controls.Add(cv);
                 return;
             }
             File.WriteAllText(path, String.Empty);
