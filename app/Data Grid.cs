@@ -13,7 +13,6 @@ namespace app
 {
     public partial class Data_Grid : UserControl
     {
-        DataTable table = new DataTable();
         string path = Application.StartupPath + @"\file.txt";
         string local = Application.StartupPath + @"\local.txt";
         string[] x = { "|#$#|" };
@@ -84,7 +83,6 @@ namespace app
         {
             removeList.Clear();
             panel1.Controls.Clear();
-            table.Clear();
             string readLine;
             int i = 0;
             IDictionary<DateTime, int> dates = new Dictionary<DateTime, int>();
@@ -329,7 +327,6 @@ namespace app
             int i = 0;
             removeList.Clear();
             panel1.Controls.Clear();
-            table.Clear();
             panel1.Refresh();
             using (StreamReader sr = new StreamReader(path))
             {

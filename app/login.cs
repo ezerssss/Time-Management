@@ -44,6 +44,7 @@ namespace app
 
         private async void login_button_ClickAsync(object sender, EventArgs e)
         {
+            Form1.Globals.closeButtonDisable = true;
             done = false;
             if (username.Text == "" || password.Text == "" || username.Text == "Enter username" || password.Text == "Enter password") {
                 MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -349,6 +350,7 @@ namespace app
                         resetText();
                         afterLogin();
                         done = true;
+                        Form1.Globals.closeButtonDisable = false;
                     }
                 }
             }

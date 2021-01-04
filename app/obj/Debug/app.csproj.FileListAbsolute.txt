@@ -80,9 +80,6 @@ C:\Users\User\Documents\Time management\app\obj\Debug\app.csproj.CoreCompileInpu
 C:\Users\User\Documents\Time management\app\obj\Debug\app.csproj.CopyComplete
 C:\Users\User\Documents\Time management\app\obj\Debug\app.exe
 C:\Users\User\Documents\Time management\app\obj\Debug\app.pdb
-C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\app.exe.config
-C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\app.exe
-C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\app.pdb
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
@@ -96,5 +93,8 @@ C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Proper
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.GenerateResource.cache
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.CopyComplete
-C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.exe
-C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.pdb
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\EarlyBird.exe.config
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\EarlyBird.exe
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\EarlyBird.pdb
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\EarlyBird.exe
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\EarlyBird.pdb

@@ -39,7 +39,10 @@ namespace app
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
-
+        public static class Globals
+        {
+            public static bool closeButtonDisable { get; set; }
+        }
         public static void enableDoubleBuff(System.Windows.Forms.Control cont)
         {
             System.Reflection.PropertyInfo DemoProp = typeof(System.Windows.Forms.Control).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
@@ -244,9 +247,9 @@ namespace app
 
         private void closeApp_Click(object sender, EventArgs e)
         {
-            if (this.screenContainer.Controls.ContainsKey("APIFunction"))
+            if (this.screenContainer.Controls.ContainsKey("APIFunction") || Globals.closeButtonDisable == true)
             {
-                System.Windows.Forms.MessageBox.Show("Please do not do that. You are going to die");
+                MessageBox.Show("Please do not close the application while updating.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
