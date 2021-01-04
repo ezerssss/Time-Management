@@ -41,26 +41,29 @@ namespace app
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 235);
+            this.label1.Location = new System.Drawing.Point(132, 289);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 27);
+            this.label1.Size = new System.Drawing.Size(238, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Updating Reqs...";
             // 
             // loginBar
             // 
-            this.loginBar.Location = new System.Drawing.Point(87, 285);
+            this.loginBar.Location = new System.Drawing.Point(116, 351);
+            this.loginBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.loginBar.Name = "loginBar";
-            this.loginBar.Size = new System.Drawing.Size(206, 41);
+            this.loginBar.Size = new System.Drawing.Size(275, 50);
             this.loginBar.TabIndex = 1;
             // 
             // printProgress
             // 
             this.printProgress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.printProgress.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printProgress.Location = new System.Drawing.Point(0, 335);
+            this.printProgress.Location = new System.Drawing.Point(0, 412);
+            this.printProgress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.printProgress.Name = "printProgress";
-            this.printProgress.Size = new System.Drawing.Size(388, 27);
+            this.printProgress.Size = new System.Drawing.Size(517, 33);
             this.printProgress.TabIndex = 2;
             this.printProgress.Text = ".......";
             this.printProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,23 +72,25 @@ namespace app
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(83, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(111, 95);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 140);
+            this.pictureBox1.Size = new System.Drawing.Size(324, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // APIFunction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.printProgress);
             this.Controls.Add(this.loginBar);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "APIFunction";
-            this.Size = new System.Drawing.Size(388, 562);
+            this.Size = new System.Drawing.Size(517, 692);
             this.Load += new System.EventHandler(this.APIFunction_LoadAsync);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
