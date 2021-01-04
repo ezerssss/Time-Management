@@ -5,16 +5,20 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app", "app.csproj", "{A32BBCDC-31B5-4492-8279-3D5CEFCFAD44}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{1588CDDB-A91A-4BA1-85A5-8016EFEAD15F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A32BBCDC-31B5-4492-8279-3D5CEFCFAD44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A32BBCDC-31B5-4492-8279-3D5CEFCFAD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32BBCDC-31B5-4492-8279-3D5CEFCFAD44}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{A32BBCDC-31B5-4492-8279-3D5CEFCFAD44}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{A32BBCDC-31B5-4492-8279-3D5CEFCFAD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A32BBCDC-31B5-4492-8279-3D5CEFCFAD44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1588CDDB-A91A-4BA1-85A5-8016EFEAD15F}.Debug|Any CPU.ActiveCfg = Debug
+		{1588CDDB-A91A-4BA1-85A5-8016EFEAD15F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

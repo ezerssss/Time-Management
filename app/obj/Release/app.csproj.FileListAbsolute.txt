@@ -1,0 +1,17 @@
+D:\C# Projects\Time-Management\app\bin\Release\EarlyBird.exe.config
+D:\C# Projects\Time-Management\app\bin\Release\EarlyBird.exe
+D:\C# Projects\Time-Management\app\bin\Release\EarlyBird.pdb
+D:\C# Projects\Time-Management\app\bin\Release\Newtonsoft.Json.dll
+D:\C# Projects\Time-Management\app\bin\Release\Newtonsoft.Json.xml
+D:\C# Projects\Time-Management\app\obj\Release\app.add_task.resources
+D:\C# Projects\Time-Management\app\obj\Release\app.APIFunction.resources
+D:\C# Projects\Time-Management\app\obj\Release\app.Calendar_View.resources
+D:\C# Projects\Time-Management\app\obj\Release\app.Data_Grid.resources
+D:\C# Projects\Time-Management\app\obj\Release\app.Form1.resources
+D:\C# Projects\Time-Management\app\obj\Release\app.login.resources
+D:\C# Projects\Time-Management\app\obj\Release\app.Properties.Resources.resources
+D:\C# Projects\Time-Management\app\obj\Release\app.csproj.GenerateResource.cache
+D:\C# Projects\Time-Management\app\obj\Release\app.csproj.CoreCompileInputs.cache
+D:\C# Projects\Time-Management\app\obj\Release\app.csproj.CopyComplete
+D:\C# Projects\Time-Management\app\obj\Release\EarlyBird.exe
+D:\C# Projects\Time-Management\app\obj\Release\EarlyBird.pdb

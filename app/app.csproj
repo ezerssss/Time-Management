@@ -101,11 +101,11 @@
     <Compile Include="Data Grid.Designer.cs">
       <DependentUpon>Data Grid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Early Bird.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Early Bird.Designer.cs">
+      <DependentUpon>Early Bird.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>UserControl</SubType>
@@ -127,8 +127,8 @@
     <EmbeddedResource Include="Data Grid.resx">
       <DependentUpon>Data Grid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Early Bird.resx">
+      <DependentUpon>Early Bird.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
