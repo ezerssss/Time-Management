@@ -87,6 +87,7 @@
             // 
             this.login_button.BackColor = System.Drawing.Color.Transparent;
             this.login_button.FlatAppearance.BorderSize = 0;
+            this.login_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_button.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_button.ForeColor = System.Drawing.Color.White;

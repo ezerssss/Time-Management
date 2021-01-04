@@ -351,5 +351,10 @@ namespace app
             rowCounter = 0;
             showAll = false;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

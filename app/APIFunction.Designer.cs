@@ -29,16 +29,21 @@ namespace app
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APIFunction));
             this.label1 = new System.Windows.Forms.Label();
             this.loginBar = new System.Windows.Forms.ProgressBar();
             this.printProgress = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 207);
+            this.label1.Location = new System.Drawing.Point(99, 235);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 27);
             this.label1.TabIndex = 0;
@@ -46,32 +51,59 @@ namespace app
             // 
             // loginBar
             // 
-            this.loginBar.Location = new System.Drawing.Point(97, 263);
+            this.loginBar.Location = new System.Drawing.Point(87, 285);
             this.loginBar.Name = "loginBar";
-            this.loginBar.Size = new System.Drawing.Size(194, 41);
+            this.loginBar.Size = new System.Drawing.Size(206, 41);
             this.loginBar.TabIndex = 1;
             // 
             // printProgress
             // 
             this.printProgress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.printProgress.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printProgress.Location = new System.Drawing.Point(0, 307);
+            this.printProgress.Location = new System.Drawing.Point(0, 335);
             this.printProgress.Name = "printProgress";
             this.printProgress.Size = new System.Drawing.Size(388, 27);
             this.printProgress.TabIndex = 2;
             this.printProgress.Text = ".......";
             this.printProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(83, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(33, 32);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(352, 196);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // APIFunction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.printProgress);
             this.Controls.Add(this.loginBar);
             this.Controls.Add(this.label1);
             this.Name = "APIFunction";
             this.Size = new System.Drawing.Size(388, 562);
             this.Load += new System.EventHandler(this.APIFunction_LoadAsync);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,5 +113,7 @@ namespace app
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar loginBar;
         private System.Windows.Forms.Label printProgress;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

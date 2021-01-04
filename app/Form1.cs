@@ -8,11 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace app
 {
     public partial class Form1 : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+        );
 
         string[] x = { "|#$#|" };
         //ang location kay tupad rajud sa .exe file
@@ -24,6 +35,9 @@ namespace app
             InitializeComponent();
             this.DoubleBuffered = true;
             enableDoubleBuff(screen);
+            //Comment below para regular edges
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         public static void enableDoubleBuff(System.Windows.Forms.Control cont)
@@ -230,7 +244,14 @@ namespace app
 
         private void closeApp_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (this.screenContainer.Controls.ContainsKey("APIFunction"))
+            {
+                System.Windows.Forms.MessageBox.Show("Please do not do that. You are going to die");
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

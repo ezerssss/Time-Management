@@ -49,14 +49,21 @@
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(134, 464);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(121, 464);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 24);
+            this.button1.Size = new System.Drawing.Size(67, 30);
             this.button1.TabIndex = 1;
             this.button1.Text = "UPDATE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.updateButton);
             // 
             // pictureBox2
@@ -72,11 +79,12 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(199, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(109, 48);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button2
             // 
@@ -86,7 +94,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(97, 27);
+            this.button2.Location = new System.Drawing.Point(91, 27);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 47);
             this.button2.TabIndex = 10;
@@ -95,26 +103,32 @@
             // 
             // addTask
             // 
+            this.addTask.BackColor = System.Drawing.Color.White;
+            this.addTask.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addTask.FlatAppearance.BorderSize = 0;
+            this.addTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(211, 494);
+            this.addTask.Location = new System.Drawing.Point(208, 500);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(51, 51);
             this.addTask.TabIndex = 14;
-            this.addTask.UseVisualStyleBackColor = true;
+            this.addTask.UseVisualStyleBackColor = false;
             this.addTask.Click += new System.EventHandler(this.addTask_Click);
             // 
             // userLogin
             // 
+            this.userLogin.BackColor = System.Drawing.Color.White;
+            this.userLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userLogin.FlatAppearance.BorderSize = 0;
+            this.userLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(149, 494);
+            this.userLogin.Location = new System.Drawing.Point(132, 500);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(50, 50);
             this.userLogin.TabIndex = 15;
-            this.userLogin.UseVisualStyleBackColor = true;
+            this.userLogin.UseVisualStyleBackColor = false;
             this.userLogin.Click += new System.EventHandler(this.userLogin_Click);
             // 
             // dayToday
@@ -195,14 +209,22 @@
             // 
             // showAllTask
             // 
-            this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.showAllTask.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showAllTask.Location = new System.Drawing.Point(211, 464);
+            this.showAllTask.BackColor = System.Drawing.Color.White;
+            this.showAllTask.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("showAllTask.BackgroundImage")));
+            this.showAllTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.showAllTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showAllTask.FlatAppearance.BorderSize = 0;
+            this.showAllTask.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.showAllTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showAllTask.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showAllTask.ForeColor = System.Drawing.Color.White;
+            this.showAllTask.Location = new System.Drawing.Point(203, 464);
             this.showAllTask.Name = "showAllTask";
-            this.showAllTask.Size = new System.Drawing.Size(67, 24);
+            this.showAllTask.Size = new System.Drawing.Size(67, 30);
             this.showAllTask.TabIndex = 18;
             this.showAllTask.Text = "ALL";
-            this.showAllTask.UseVisualStyleBackColor = true;
+            this.showAllTask.UseVisualStyleBackColor = false;
             this.showAllTask.Click += new System.EventHandler(this.showAllTask_Click);
             // 
             // Data_Grid

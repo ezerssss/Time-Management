@@ -53,7 +53,7 @@
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.ForeColor = System.Drawing.Color.Transparent;
             button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            button1.Location = new System.Drawing.Point(205, 27);
+            button1.Location = new System.Drawing.Point(198, 27);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(108, 42);
             button1.TabIndex = 9;
@@ -108,7 +108,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(97, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(90, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(109, 43);
             this.pictureBox1.TabIndex = 8;
@@ -116,26 +116,32 @@
             // 
             // userLogin
             // 
+            this.userLogin.BackColor = System.Drawing.Color.White;
+            this.userLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userLogin.FlatAppearance.BorderSize = 0;
+            this.userLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(144, 494);
+            this.userLogin.Location = new System.Drawing.Point(132, 500);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(50, 50);
             this.userLogin.TabIndex = 12;
-            this.userLogin.UseVisualStyleBackColor = true;
+            this.userLogin.UseVisualStyleBackColor = false;
             this.userLogin.Click += new System.EventHandler(this.userLogin_Click);
             // 
             // addTask
             // 
+            this.addTask.BackColor = System.Drawing.Color.White;
+            this.addTask.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addTask.FlatAppearance.BorderSize = 0;
+            this.addTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(208, 494);
+            this.addTask.Location = new System.Drawing.Point(208, 500);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(51, 51);
             this.addTask.TabIndex = 13;
-            this.addTask.UseVisualStyleBackColor = true;
+            this.addTask.UseVisualStyleBackColor = false;
             this.addTask.Click += new System.EventHandler(this.addTask_Click);
             // 
             // birdBox
