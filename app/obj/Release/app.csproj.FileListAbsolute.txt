@@ -15,4 +15,3 @@ D:\C# Projects\Time-Management\app\obj\Release\app.csproj.CoreCompileInputs.cach
 D:\C# Projects\Time-Management\app\obj\Release\app.csproj.CopyComplete
 D:\C# Projects\Time-Management\app\obj\Release\EarlyBird.exe
 D:\C# Projects\Time-Management\app\obj\Release\EarlyBird.pdb
-D:\C# Projects\Time-Management\app\obj\Release\app.csprojAssemblyReference.cache
