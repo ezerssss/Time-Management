@@ -152,9 +152,9 @@ namespace app
             using (StreamReader sr = new StreamReader(path))
             {
                 while ((readLine = sr.ReadLine()) != null) {
-                    list.Add(readLine);
+                    if (!File.ReadAllText(local).Contains(readLine)) 
+                        list.Add(readLine);
                 }
-                    
             }
             using (StreamReader sr = new StreamReader(local))
             {
@@ -265,6 +265,11 @@ namespace app
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void EarlyBird_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

@@ -44,9 +44,6 @@ X:\Documents\Learning\C# programs\Time management\app\bin\Debug\Newtonsoft.Json.
 X:\Documents\Learning\C# programs\Time management\app\bin\Debug\Newtonsoft.Json.xml
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.csproj.CopyComplete
 X:\Documents\Learning\C# programs\Time management\app\obj\Debug\app.APIFunction.resources
-C:\Users\User\Documents\Time management\app\bin\Debug\app.exe.config
-C:\Users\User\Documents\Time management\app\bin\Debug\app.exe
-C:\Users\User\Documents\Time management\app\bin\Debug\app.pdb
 C:\Users\User\Documents\Time management\app\bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\Documents\Time management\app\bin\Debug\Newtonsoft.Json.xml
 C:\Users\User\Documents\Time management\app\obj\Debug\app.csprojAssemblyReference.cache
@@ -54,14 +51,11 @@ C:\Users\User\Documents\Time management\app\obj\Debug\app.add_task.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\app.APIFunction.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\app.Calendar_View.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\app.Data_Grid.resources
-C:\Users\User\Documents\Time management\app\obj\Debug\app.Form1.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\app.login.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\app.Properties.Resources.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\app.csproj.GenerateResource.cache
 C:\Users\User\Documents\Time management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\Time management\app\obj\Debug\app.csproj.CopyComplete
-C:\Users\User\Documents\Time management\app\obj\Debug\app.exe
-C:\Users\User\Documents\Time management\app\obj\Debug\app.pdb
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
@@ -98,3 +92,9 @@ D:\C# Projects\Time-Management\app\obj\Debug\EarlyBird.exe
 D:\C# Projects\Time-Management\app\obj\Debug\EarlyBird.pdb
 D:\C# Projects\Time-Management\app\obj\Debug\app.EarlyBird.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
+C:\Users\User\Documents\Time management\app\bin\Debug\EarlyBird.exe.config
+C:\Users\User\Documents\Time management\app\bin\Debug\EarlyBird.exe
+C:\Users\User\Documents\Time management\app\bin\Debug\EarlyBird.pdb
+C:\Users\User\Documents\Time management\app\obj\Debug\app.EarlyBird.resources
+C:\Users\User\Documents\Time management\app\obj\Debug\EarlyBird.exe
+C:\Users\User\Documents\Time management\app\obj\Debug\EarlyBird.pdb
