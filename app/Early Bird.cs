@@ -106,6 +106,7 @@ namespace app
                 {
                     writer.WriteLine("false");
                 }
+                Application.Restart();
             }
 
             if (CheckForInternetConnection())
