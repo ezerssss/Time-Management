@@ -32,6 +32,7 @@ namespace app
         string path = Application.StartupPath + @"\file.txt";
         string accPath = Application.StartupPath + @"\acc.txt";
         string local = Application.StartupPath + @"\local.txt";
+
         public EarlyBird()
         {
             InitializeComponent();
@@ -89,7 +90,6 @@ namespace app
             if (!File.Exists(local))
             {
                 using (StreamWriter sw = new StreamWriter(local)) { }
-                Application.Restart();
             }
             if (!File.Exists(path))
             {
@@ -98,6 +98,8 @@ namespace app
             }
             else
             {
+                if (!File.Exists(local) || !File.Exists(path))
+                    Application.Restart();
                 sortList();
             }
             if (!File.Exists(accPath))

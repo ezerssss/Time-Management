@@ -9,7 +9,7 @@ namespace app
 {
     public partial class Calendar_View : UserControl
     {
-        string path;
+        string path = Application.StartupPath + @"\file.txt";;
         string[] splitter = { "|#$#|" };
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar_View));
 
@@ -17,7 +17,6 @@ namespace app
         {
             InitializeComponent();
             this.DoubleBuffered = true;
-            path = Directory.GetCurrentDirectory() + "\\file.txt";
             checkAssignments();
         }  
 
