@@ -89,7 +89,6 @@ D:\C# Projects\Time-Management\app\obj\Debug\app.add_task.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.APIFunction.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.Calendar_View.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.Data_Grid.resources
-D:\C# Projects\Time-Management\app\obj\Debug\app.Form1.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.login.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.Properties.Resources.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.csproj.GenerateResource.cache
@@ -97,3 +96,5 @@ D:\C# Projects\Time-Management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
 D:\C# Projects\Time-Management\app\obj\Debug\app.csproj.CopyComplete
 D:\C# Projects\Time-Management\app\obj\Debug\EarlyBird.exe
 D:\C# Projects\Time-Management\app\obj\Debug\EarlyBird.pdb
+D:\C# Projects\Time-Management\app\obj\Debug\app.EarlyBird.resources
+D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache

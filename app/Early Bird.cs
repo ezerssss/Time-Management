@@ -12,9 +12,10 @@ using System.Runtime.InteropServices;
 
 namespace app
 {
-    public partial class Form1 : Form
+    public partial class EarlyBird : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
         private static extern IntPtr CreateRoundRectRgn
         (
             int nLeftRect,     // x-coordinate of upper-left corner
@@ -26,11 +27,12 @@ namespace app
         );
 
         string[] x = { "|#$#|" };
+
         //ang location kay tupad rajud sa .exe file
         string path = Application.StartupPath + @"\file.txt";
         string accPath = Application.StartupPath + @"\acc.txt";
         string local = Application.StartupPath + @"\local.txt";
-        public Form1()
+        public EarlyBird()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
@@ -63,14 +65,14 @@ namespace app
             }
         }
 
-        static Form1 _obj;
+        static EarlyBird _obj;
 
-        public static Form1 Instance
+        public static EarlyBird Instance
         {
             get
             {
                 if (_obj == null)
-                    _obj = new Form1();
+                    _obj = new EarlyBird();
                 return _obj;
             }
         }

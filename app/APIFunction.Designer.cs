@@ -47,11 +47,12 @@ namespace app
             this.label1.Size = new System.Drawing.Size(238, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Updating Reqs...";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // loginBar
             // 
             this.loginBar.Location = new System.Drawing.Point(116, 351);
-            this.loginBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginBar.Margin = new System.Windows.Forms.Padding(4);
             this.loginBar.Name = "loginBar";
             this.loginBar.Size = new System.Drawing.Size(275, 50);
             this.loginBar.TabIndex = 1;
@@ -73,7 +74,7 @@ namespace app
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(111, 95);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(324, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,7 +89,7 @@ namespace app
             this.Controls.Add(this.printProgress);
             this.Controls.Add(this.loginBar);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "APIFunction";
             this.Size = new System.Drawing.Size(517, 692);
             this.Load += new System.EventHandler(this.APIFunction_LoadAsync);

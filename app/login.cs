@@ -43,8 +43,7 @@ namespace app
         }
 
         private async void login_button_ClickAsync(object sender, EventArgs e)
-        {
-            Form1.Globals.closeButtonDisable = true;
+        {          
             done = false;
             if (username.Text == "" || password.Text == "" || username.Text == "Enter username" || password.Text == "Enter password") {
                 MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,6 +89,7 @@ namespace app
                     }
                     if (wsToken != "")
                     {
+                        EarlyBird.Globals.closeButtonDisable = true;
                         loggingIn.Visible = true;
                         loginBar.Visible = true;
                         //gets userId
@@ -345,12 +345,12 @@ namespace app
                                 sw.WriteLine(line);
                             }
                         }
-                        Form1 f1 = new Form1();
+                        EarlyBird f1 = new EarlyBird();
                         f1.sortList();
                         resetText();
                         afterLogin();
                         done = true;
-                        Form1.Globals.closeButtonDisable = false;
+                        EarlyBird.Globals.closeButtonDisable = false;
                     }
                 }
             }
@@ -461,6 +461,7 @@ namespace app
 
         private void login_Load(object sender, EventArgs e)
         {
+            EarlyBird.Globals.closeButtonDisable = false;
             resetText();
             if (!File.Exists(accPath))
             {
@@ -488,12 +489,12 @@ namespace app
 
         private void afterLogin()
         {
-            if (Form1.Instance.screenContainer.Controls.ContainsKey("login"))
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("login"))
             {
                 Calendar_View cv = new Calendar_View();
                 cv.Dock = DockStyle.Fill;
-                Form1.Instance.screenContainer.Controls.Clear();
-                Form1.Instance.screenContainer.Controls.Add(cv);
+                EarlyBird.Instance.screenContainer.Controls.Clear();
+                EarlyBird.Instance.screenContainer.Controls.Add(cv);
             }
         }
 

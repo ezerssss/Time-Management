@@ -99,34 +99,34 @@ namespace app
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Form1.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
             {
                 Data_Grid dg = new Data_Grid();
                 dg.Dock = DockStyle.Fill;
-                Form1.Instance.screenContainer.Controls.Clear();
-                Form1.Instance.screenContainer.Controls.Add(dg);
+                EarlyBird.Instance.screenContainer.Controls.Clear();
+                EarlyBird.Instance.screenContainer.Controls.Add(dg);
             }
         }
 
         private void userLogin_Click(object sender, EventArgs e)
         {
-            if (Form1.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
             {
                 login lg = new login();
                 lg.Dock = DockStyle.Fill;
-                Form1.Instance.screenContainer.Controls.Clear();
-                Form1.Instance.screenContainer.Controls.Add(lg);
+                EarlyBird.Instance.screenContainer.Controls.Clear();
+                EarlyBird.Instance.screenContainer.Controls.Add(lg);
             }
         }
 
         private void addTask_Click(object sender, EventArgs e)
         {
-            if (Form1.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
             {
                 add_task at = new add_task();
                 at.Dock = DockStyle.Fill;
-                Form1.Instance.screenContainer.Controls.Clear();
-                Form1.Instance.screenContainer.Controls.Add(at);
+                EarlyBird.Instance.screenContainer.Controls.Clear();
+                EarlyBird.Instance.screenContainer.Controls.Add(at);
             }
         }
 

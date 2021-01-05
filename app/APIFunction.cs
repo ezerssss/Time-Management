@@ -27,6 +27,20 @@ namespace app
         string[] splitter = { "|#$#|" };
         bool done = false;
 
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new System.Net.WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private async void APIFunction_LoadAsync(object sender, EventArgs e)
         {
             this.BringToFront();
@@ -41,8 +55,16 @@ namespace app
                 }
                 Calendar_View cv = new Calendar_View();
                 cv.Dock = DockStyle.Fill;
-                Form1.Instance.screenContainer.Controls.Clear();
-                Form1.Instance.screenContainer.Controls.Add(cv);
+                EarlyBird.Instance.screenContainer.Controls.Clear();
+                EarlyBird.Instance.screenContainer.Controls.Add(cv);
+                return;
+            }
+            if (!CheckForInternetConnection())
+            {
+                Calendar_View cv = new Calendar_View();
+                cv.Dock = DockStyle.Fill;
+                EarlyBird.Instance.screenContainer.Controls.Clear();
+                EarlyBird.Instance.screenContainer.Controls.Add(cv);
                 return;
             }
             File.WriteAllText(path, String.Empty);
@@ -323,13 +345,13 @@ namespace app
                             sw.WriteLine(line);
                         }
                     }
-                    Form1 f1 = new Form1();
+                    EarlyBird f1 = new EarlyBird();
                     f1.sortList();
                     done = true;               
                     Calendar_View cv = new Calendar_View();
                     cv.Dock = DockStyle.Fill;
-                    Form1.Instance.screenContainer.Controls.Clear();
-                    Form1.Instance.screenContainer.Controls.Add(cv);
+                    EarlyBird.Instance.screenContainer.Controls.Clear();
+                    EarlyBird.Instance.screenContainer.Controls.Add(cv);
                 }
             }
         }
@@ -421,6 +443,11 @@ namespace app
             public int coursemodule { get; set; }
             public string name { get; set; }
             public int timeclose { get; set; }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

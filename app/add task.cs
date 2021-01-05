@@ -91,12 +91,12 @@ namespace app
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Form1.Instance.screenContainer.Controls.ContainsKey("add_task"))
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("add_task"))
             {
                 Calendar_View cv = new Calendar_View();
                 cv.Dock = DockStyle.Fill;
-                Form1.Instance.screenContainer.Controls.Clear();
-                Form1.Instance.screenContainer.Controls.Add(cv);
+                EarlyBird.Instance.screenContainer.Controls.Clear();
+                EarlyBird.Instance.screenContainer.Controls.Add(cv);
             }
         }
         public void sortList(string rl)
