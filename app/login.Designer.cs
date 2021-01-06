@@ -53,7 +53,7 @@
             this.username.Multiline = true;
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(339, 44);
-            this.username.TabIndex = 0;
+            this.username.TabIndex = 2;
             this.username.Text = "Enter Username";
             this.username.WordWrap = false;
             this.username.MouseClick += new System.Windows.Forms.MouseEventHandler(this.username_Click);
@@ -73,7 +73,7 @@
             this.password.Name = "password";
             this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(339, 44);
-            this.password.TabIndex = 1;
+            this.password.TabIndex = 3;
             this.password.Text = "Enter password";
             this.password.WordWrap = false;
             this.password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.password_Click);
@@ -107,6 +107,7 @@
             this.login_button.TabIndex = 4;
             this.login_button.UseVisualStyleBackColor = false;
             this.login_button.Click += new System.EventHandler(this.login_button_ClickAsync);
+            this.login_button.Enter += new System.EventHandler(this.login_button_Enter);
             // 
             // linkLabel1
             // 
@@ -117,11 +118,12 @@
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(118, 20);
-            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Continue anyway";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.Enter += new System.EventHandler(this.linkLabel1_Enter);
             // 
             // button1
             // 
@@ -132,7 +134,8 @@
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 36);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 5;
+            this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.showPass);
             // 
@@ -154,7 +157,7 @@
             this.loggingIn.Location = new System.Drawing.Point(204, 597);
             this.loggingIn.Name = "loggingIn";
             this.loggingIn.Size = new System.Drawing.Size(113, 28);
-            this.loggingIn.TabIndex = 11;
+            this.loggingIn.TabIndex = 4;
             this.loggingIn.Text = "Logging In...";
             this.loggingIn.Visible = false;
             // 

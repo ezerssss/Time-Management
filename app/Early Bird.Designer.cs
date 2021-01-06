@@ -38,9 +38,10 @@
             // 
             this.screen.BackColor = System.Drawing.Color.White;
             this.screen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.screen.Location = new System.Drawing.Point(0, 30);
+            this.screen.Location = new System.Drawing.Point(0, 37);
+            this.screen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(387, 560);
+            this.screen.Size = new System.Drawing.Size(515, 689);
             this.screen.TabIndex = 8;
             this.screen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.screen_MouseDown);
             this.screen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.screen_MouseMove);
@@ -49,10 +50,12 @@
             // closeApp
             // 
             this.closeApp.FlatAppearance.BorderSize = 0;
-            this.closeApp.Location = new System.Drawing.Point(357, 2);
+            this.closeApp.Location = new System.Drawing.Point(476, 2);
+            this.closeApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closeApp.Name = "closeApp";
-            this.closeApp.Size = new System.Drawing.Size(26, 25);
+            this.closeApp.Size = new System.Drawing.Size(35, 31);
             this.closeApp.TabIndex = 9;
+            this.closeApp.TabStop = false;
             this.closeApp.Text = "X";
             this.closeApp.UseVisualStyleBackColor = true;
             this.closeApp.Click += new System.EventHandler(this.closeApp_Click);
@@ -60,25 +63,28 @@
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(325, 2);
+            this.button1.Location = new System.Drawing.Point(433, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 25);
+            this.button1.Size = new System.Drawing.Size(35, 31);
             this.button1.TabIndex = 10;
+            this.button1.TabStop = false;
             this.button1.Text = "-";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // EarlyBird
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(388, 591);
+            this.ClientSize = new System.Drawing.Size(517, 727);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.closeApp);
             this.Controls.Add(this.screen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EarlyBird";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EarlyBird";

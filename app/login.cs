@@ -542,14 +542,40 @@ namespace app
 
         private void password_Enter(object sender, EventArgs e)
         {
+            if (username.Text == "")
+            {
+                username.Text = "Enter Username";
+                username.ForeColor = Color.LightGray;
+            }
             password.Text = "";
             password.ForeColor = Color.Black;
         }
 
         private void username_Enter(object sender, EventArgs e)
         {
+            if (password.Text == "")
+            {
+                password.Text = "Enter password";
+                password.ForeColor = Color.LightGray;
+            }           
             username.Text = "";
             username.ForeColor = Color.Black;
+        }
+
+        private void login_button_Enter(object sender, EventArgs e)
+        {
+            if (username.Text == "")
+                username.Text = "Enter Username";
+            if (password.Text == "")
+                password.Text = "Enter password";
+        }
+
+        private void linkLabel1_Enter(object sender, EventArgs e)
+        {
+            if (username.Text == "")
+                username.Text = "Enter Username";
+            if (password.Text == "")
+                password.Text = "Enter password";
         }
     }
 }
