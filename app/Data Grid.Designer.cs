@@ -218,13 +218,14 @@
             this.showAllTask.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.showAllTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showAllTask.Font = new System.Drawing.Font("Questrial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showAllTask.Font = new System.Drawing.Font("Questrial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showAllTask.ForeColor = System.Drawing.Color.White;
             this.showAllTask.Location = new System.Drawing.Point(199, 464);
             this.showAllTask.Name = "showAllTask";
             this.showAllTask.Size = new System.Drawing.Size(72, 30);
             this.showAllTask.TabIndex = 18;
             this.showAllTask.Text = "ALL";
+            this.showAllTask.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.showAllTask.UseVisualStyleBackColor = false;
             this.showAllTask.Click += new System.EventHandler(this.showAllTask_Click);
             // 

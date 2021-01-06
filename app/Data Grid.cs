@@ -166,7 +166,7 @@ namespace app
             datebox.Width = 50;
             datebox.Height = 24;
             datebox.Text = " " + displayElements[2];
-            datebox.Font = new Font("Questrial", 12);
+            datebox.Font = new Font("Questrial", 10);
             datebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             datebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
             datebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,7 +196,7 @@ namespace app
             subjbox.Font = new Font("Questrial", 11);
             subjbox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             subjbox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
-            subjbox.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            subjbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             subjbox.Name = "subj" + rowCounter;
             tp.SetToolTip(subjbox, displayElements[0]);
             
