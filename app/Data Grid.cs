@@ -235,10 +235,10 @@ namespace app
 
         private void removeTask_Click(object sender, EventArgs e)
         {
-            DialogResult choice = MessageBox.Show("Please confirm before you proceed\nFinish task?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult choice = MessageBox.Show("Finish task?", "Please confirm before you proceed", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             Button btn = (Button)sender;
             string name = btn.Name;
-            int count = int.Parse(name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6));
+            int count = int.Parse(name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6));           
             if (choice == DialogResult.Yes)
             {
                 List<string> taskList = new List<string>();
@@ -254,8 +254,7 @@ namespace app
                     while ((readTask = sr.ReadLine()) != null)
                         localList.Add(readTask);
                 }
-                string[] elements = taskList[count].Split(x, StringSplitOptions.None);
-                
+                string[] elements = removeList[count].Split(x, StringSplitOptions.None);          
                 if (bool.Parse(elements[4]))
                 {
                     localList.Remove(removeList[count]);
@@ -272,13 +271,15 @@ namespace app
                 {
                     taskList.Remove(removeList[count]);
                 }
-                count--;
+                if (count > 0)
+                    count--;
                 File.WriteAllText(path, String.Empty);
                 using (StreamWriter sw = new StreamWriter(path))
                 {
                     foreach (var line in taskList)
                         sw.WriteLine(line);
                 }
+
                 if (showAll)
                 {
                     showData();
@@ -291,7 +292,7 @@ namespace app
             }
             string[] element = removeList[count].Split(x, StringSplitOptions.None);
             if (!bool.Parse(element[4]) && choice == DialogResult.No){
-                DialogResult secondChoice = MessageBox.Show("Please confirm before you proceed\nIgnore task?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult secondChoice = MessageBox.Show("Ignore task?", "Please confirm before you proceed", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (secondChoice == DialogResult.Yes) {
                     string reader;
                     List<string> ignoredList = new List<string>();
