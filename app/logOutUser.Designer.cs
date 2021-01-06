@@ -41,7 +41,7 @@ namespace app
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(56, 120);
+            this.pictureBox2.Location = new System.Drawing.Point(56, 111);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(313, 224);
             this.pictureBox2.TabIndex = 16;
@@ -52,7 +52,7 @@ namespace app
             this.userNameInitial.BackColor = System.Drawing.Color.Transparent;
             this.userNameInitial.Font = new System.Drawing.Font("Questrial", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameInitial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.userNameInitial.Location = new System.Drawing.Point(-24, 259);
+            this.userNameInitial.Location = new System.Drawing.Point(-24, 250);
             this.userNameInitial.Name = "userNameInitial";
             this.userNameInitial.Size = new System.Drawing.Size(262, 43);
             this.userNameInitial.TabIndex = 17;
@@ -68,7 +68,7 @@ namespace app
             this.logout_button.Font = new System.Drawing.Font("Questrial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_button.ForeColor = System.Drawing.Color.White;
             this.logout_button.Image = ((System.Drawing.Image)(resources.GetObject("logout_button.Image")));
-            this.logout_button.Location = new System.Drawing.Point(138, 361);
+            this.logout_button.Location = new System.Drawing.Point(138, 352);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(110, 43);
             this.logout_button.TabIndex = 18;
@@ -81,7 +81,7 @@ namespace app
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Questrial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.linkLabel1.Location = new System.Drawing.Point(168, 408);
+            this.linkLabel1.Location = new System.Drawing.Point(168, 399);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(50, 16);
             this.linkLabel1.TabIndex = 19;
