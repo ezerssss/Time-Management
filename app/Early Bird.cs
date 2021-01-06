@@ -32,6 +32,7 @@ namespace app
         string path = Application.StartupPath + @"\file.txt";
         string accPath = Application.StartupPath + @"\acc.txt";
         string local = Application.StartupPath + @"\local.txt";
+        string ignored = Application.StartupPath + @"\ignored.txt";
 
         public EarlyBird()
         {
@@ -96,6 +97,11 @@ namespace app
                 using (StreamWriter sw = new StreamWriter(path)) { }
                 Application.Restart();
             }
+            if (!File.Exists(ignored))
+            {
+                using (StreamWriter sw = new StreamWriter(ignored)) { }
+                Application.Restart();
+            }
             else
             {
                 if (!File.Exists(local) || !File.Exists(path))
@@ -152,7 +158,7 @@ namespace app
             using (StreamReader sr = new StreamReader(path))
             {
                 while ((readLine = sr.ReadLine()) != null) {
-                    if (!File.ReadAllText(local).Contains(readLine)) 
+                    if (!File.ReadAllText(local).Contains(readLine))
                         list.Add(readLine);
                 }
             }

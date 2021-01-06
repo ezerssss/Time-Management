@@ -15,6 +15,7 @@ namespace app
     {
         string path = Application.StartupPath + @"\file.txt";
         string local = Application.StartupPath + @"\local.txt";
+        string ignored = Application.StartupPath + @"\ignored.txt";
         string[] x = { "|#$#|" };
         List<string> removeList = new List<string>();
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Grid));
@@ -90,47 +91,50 @@ namespace app
             {
                 while ((readLine = sr.ReadLine()) != null)
                 {
-                    string[] elements = readLine.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
-                    //makes the date to a short one - Nov/08/2020
-                    DateTime dateTime, dateToDetermine = new DateTime();
-                    string date = "---";
-                    if (DateTime.TryParse(elements[2], out dateTime))
-                    {
-                        if (!dates.ContainsKey(dateTime.AddDays(-2)))
+                    if (!File.ReadAllText(ignored).Contains(readLine)) {
+                        string[] elements = readLine.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
+                                                                                        //makes the date to a short one - Nov/08/2020
+                        DateTime dateTime, dateToDetermine = new DateTime();
+                        string date = "---";
+                        if (DateTime.TryParse(elements[2], out dateTime))
                         {
-                            dates.Add(dateTime.AddDays(-2), 1);
-                            dateToDetermine = dateTime.AddDays(-2);
-                        }     
-                        else
-                        {
-                            if (dates[dateTime.AddDays(-2)] < 5)
+                            if (!dates.ContainsKey(dateTime.AddDays(-2)))
                             {
-                                dates[dateTime.AddDays(-2)] += 1;
+                                dates.Add(dateTime.AddDays(-2), 1);
                                 dateToDetermine = dateTime.AddDays(-2);
-                            }                         
+                            }
                             else
                             {
-                                int dayBefore = -1;
-                                while (dates.ContainsKey(dateTime.AddDays(dayBefore-2)) && dates[dateTime.AddDays(dayBefore-2)] >= 5)
-                                    dayBefore -= 1;
-                                if (!dates.ContainsKey(dateTime.AddDays(dayBefore-2)))
-                                    dates.Add(dateTime.AddDays(dayBefore-2), 1);
+                                if (dates[dateTime.AddDays(-2)] < 5)
+                                {
+                                    dates[dateTime.AddDays(-2)] += 1;
+                                    dateToDetermine = dateTime.AddDays(-2);
+                                }
                                 else
-                                    dates[dateTime.AddDays(dayBefore-2)] += 1;
-                                dateToDetermine = dateTime.AddDays(dayBefore-2);
-                            }                                       
+                                {
+                                    int dayBefore = -1;
+                                    while (dates.ContainsKey(dateTime.AddDays(dayBefore - 2)) && dates[dateTime.AddDays(dayBefore - 2)] >= 5)
+                                        dayBefore -= 1;
+                                    if (!dates.ContainsKey(dateTime.AddDays(dayBefore - 2)))
+                                        dates.Add(dateTime.AddDays(dayBefore - 2), 1);
+                                    else
+                                        dates[dateTime.AddDays(dayBefore - 2)] += 1;
+                                    dateToDetermine = dateTime.AddDays(dayBefore - 2);
+                                }
+                            }
+                            date = elements[2];
+                            elements[2] = dateTime.ToString("MM/dd");
                         }
-                        date = elements[2];
-                        elements[2] = dateTime.ToString("MM/dd");
+                        if (DateTime.Compare(dateToDetermine, DateTime.Now) <= 0 || elements[2] == "---")
+                        {
+                            printTaskLine(elements, i);
+                            removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
+                            i++;
+                        }
                     }
-                    if (DateTime.Compare(dateToDetermine, DateTime.Now) <= 0 || elements[2] == "---")
-                    {
-                        printTaskLine(elements, i);
-                        removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
-                        i++;
-                    }                            
                 }
                 rowCounter = 0;
+
             }
         }
 
@@ -231,56 +235,89 @@ namespace app
 
         private void removeTask_Click(object sender, EventArgs e)
         {
-            List<string> taskList = new List<string>();
-            List<string> localList = new List<string>();
-            string readTask;
-            using (StreamReader sr = new StreamReader(path))
-            {
-                while ((readTask = sr.ReadLine()) != null)
-                    taskList.Add(readTask);
-            }
-            using (StreamReader sr = new StreamReader(local))
-            {
-                while ((readTask = sr.ReadLine()) != null)
-                    localList.Add(readTask);
-            }
+            DialogResult choice = MessageBox.Show("Please confirm before you proceed\nFinish task?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             Button btn = (Button)sender;
             string name = btn.Name;
-            string count = name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6);
-            string[] elements = taskList[int.Parse(count)].Split(x, StringSplitOptions.None);
-
-            if (bool.Parse(elements[4]))
+            int count = int.Parse(name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6));
+            if (choice == DialogResult.Yes)
             {
-                localList.Remove(removeList[int.Parse(count)]);
-                taskList.Remove(removeList[int.Parse(count)]);
-                File.WriteAllText(local, String.Empty);
-                using (StreamWriter sw = new StreamWriter(local))
+                List<string> taskList = new List<string>();
+                List<string> localList = new List<string>();
+                string readTask;
+                using (StreamReader sr = new StreamReader(path))
                 {
-                    foreach (var line in localList)
+                    while ((readTask = sr.ReadLine()) != null)
+                        taskList.Add(readTask);
+                }
+                using (StreamReader sr = new StreamReader(local))
+                {
+                    while ((readTask = sr.ReadLine()) != null)
+                        localList.Add(readTask);
+                }
+                string[] elements = taskList[count].Split(x, StringSplitOptions.None);
+                
+                if (bool.Parse(elements[4]))
+                {
+                    localList.Remove(removeList[count]);
+                    taskList.Remove(removeList[count]);
+                    File.WriteAllText(local, String.Empty);
+                    using (StreamWriter sw = new StreamWriter(local))
+                    {
+                        foreach (var line in localList)
+                            sw.WriteLine(line);
+                    }
+                }
+
+                else
+                {
+                    taskList.Remove(removeList[count]);
+                }
+                count--;
+                File.WriteAllText(path, String.Empty);
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    foreach (var line in taskList)
                         sw.WriteLine(line);
                 }
-            }
+                if (showAll)
+                {
+                    showData();
+                }
 
-            else
-            {
-                taskList.Remove(removeList[int.Parse(count)]);
+                else
+                {
+                    showAllFuntion();
+                }
             }
+            string[] element = removeList[count].Split(x, StringSplitOptions.None);
+            if (!bool.Parse(element[4]) && choice == DialogResult.No){
+                DialogResult secondChoice = MessageBox.Show("Please confirm before you proceed\nIgnore task?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (secondChoice == DialogResult.Yes) {
+                    string reader;
+                    List<string> ignoredList = new List<string>();
+                    using (StreamReader sr = new StreamReader(ignored))
+                    {
+                        while ((reader = sr.ReadLine()) != null)
+                            ignoredList.Add(reader);
+                    }
+                    ignoredList.Add(removeList[count]);
+                    File.WriteAllText(ignored, String.Empty);
+                    using (StreamWriter sw = new StreamWriter(ignored)) {
+                        foreach (var lines in ignoredList)
+                            sw.WriteLine(lines);
+                    }
+                }
+                if (showAll)
+                {
+                    showData();
+                }
 
-            File.WriteAllText(path, String.Empty);
-            using (StreamWriter sw = new StreamWriter(path))
-            {
-                foreach (var line in taskList)
-                    sw.WriteLine(line);
+                else
+                {
+                    showAllFuntion();
+                }
             }
-            if (showAll)
-            {
-                showData();
-            }
-
-            else
-            {
-                showAllFuntion();
-            }
+            
         }
 
         private void addTask_Click(object sender, EventArgs e)
@@ -332,17 +369,19 @@ namespace app
             {
                 while ((readline = sr.ReadLine()) != null)
                 {
-                    string[] elements = readline.Split(x, StringSplitOptions.None);
-                    DateTime dateTime = new DateTime();
-                    string date = "---";
-                    if (DateTime.TryParse(elements[2], out dateTime))
-                    {
-                        date = elements[2];
-                        elements[2] = dateTime.ToString("MM/dd");
+                    if (!File.ReadAllText(ignored).Contains(readline)) {
+                        string[] elements = readline.Split(x, StringSplitOptions.None);
+                        DateTime dateTime = new DateTime();
+                        string date = "---";
+                        if (DateTime.TryParse(elements[2], out dateTime))
+                        {
+                            date = elements[2];
+                            elements[2] = dateTime.ToString("MM/dd");
+                        }
+                        printTaskLine(elements, i);
+                        removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
+                        i++;
                     }
-                    printTaskLine(elements, i);
-                    removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
-                    i++;
                 }
             }
             rowCounter = 0;
