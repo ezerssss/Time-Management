@@ -99,10 +99,11 @@
             this.login_button.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_button.ForeColor = System.Drawing.Color.White;
             this.login_button.Image = ((System.Drawing.Image)(resources.GetObject("login_button.Image")));
+            this.login_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.login_button.Location = new System.Drawing.Point(183, 512);
             this.login_button.Margin = new System.Windows.Forms.Padding(4);
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(147, 53);
+            this.login_button.Size = new System.Drawing.Size(155, 58);
             this.login_button.TabIndex = 4;
             this.login_button.UseVisualStyleBackColor = false;
             this.login_button.Click += new System.EventHandler(this.login_button_ClickAsync);
