@@ -189,14 +189,14 @@ namespace app
             Label subjbox = new Label();
             subjbox.Top = verticalOffset;
             subjbox.Left = timebox.Left + timebox.Width;
-            subjbox.Width = 64;
+            subjbox.Width = 70;
             subjbox.AutoEllipsis = true;
             subjbox.Height = 24;
             subjbox.Text = " " + displayElements[0];
             subjbox.Font = new Font("Bahnschrift SemiBold", 10);
             subjbox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             subjbox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
-            subjbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            subjbox.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             subjbox.Name = "subj" + rowCounter;
             tp.SetToolTip(subjbox, displayElements[0]);
             

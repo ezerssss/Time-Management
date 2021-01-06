@@ -98,3 +98,4 @@ C:\Users\User\Documents\Time management\app\bin\Debug\EarlyBird.pdb
 C:\Users\User\Documents\Time management\app\obj\Debug\app.EarlyBird.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\EarlyBird.exe
 C:\Users\User\Documents\Time management\app\obj\Debug\EarlyBird.pdb
+D:\C# Projects\Time-Management\app\obj\Debug\app.logOutUser.resources

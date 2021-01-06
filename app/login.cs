@@ -460,9 +460,7 @@ namespace app
         }
 
         private void login_Load(object sender, EventArgs e)
-        {
-            EarlyBird.Globals.closeButtonDisable = false;
-            resetText();
+        {         
             if (!File.Exists(accPath))
             {
                 using (StreamWriter writer = new StreamWriter(accPath))
@@ -471,6 +469,17 @@ namespace app
                 }
                 Application.Restart();
             }
+            using (StreamReader sr = new StreamReader(accPath))
+            {
+                if (sr.ReadLine() == "true")
+                {
+                    logOutUser lO = new logOutUser();
+                    EarlyBird.Instance.screenContainer.Controls.Clear();
+                    EarlyBird.Instance.screenContainer.Controls.Add(lO);
+                }
+            }
+            EarlyBird.Globals.closeButtonDisable = false;
+            resetText();
         }
 
         private void showPass(object sender, EventArgs e)
