@@ -17,6 +17,10 @@ namespace app
         public logOutUser()
         {
             InitializeComponent();
+            var pos = this.PointToScreen(userNameInitial.Location);
+            pos = pictureBox2.PointToClient(pos);
+            userNameInitial.Parent = pictureBox2;
+            userNameInitial.Location = pos;
             List<string> details = new List<string>();
             using (StreamReader sr = new StreamReader(accPath))
             {
@@ -24,9 +28,7 @@ namespace app
                 while ((ReadLine = sr.ReadLine()) != null)
                     details.Add(ReadLine);
             }
-            String userNameFromFile = details[1].ToUpper();
-            userNameInitial.Text = userNameFromFile.Substring(0,1);
-            userNameDisplay.Text = userNameFromFile;
+            userNameInitial.Text = details[1] + "!";
         }
 
         private void logOut_Click(object sender, EventArgs e)
@@ -42,7 +44,7 @@ namespace app
             EarlyBird.Instance.screenContainer.Controls.Add(lg);
         }
 
-        private void goBack_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Calendar_View cv = new Calendar_View();
             cv.Dock = DockStyle.Fill;

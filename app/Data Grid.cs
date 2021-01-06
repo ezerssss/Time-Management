@@ -166,7 +166,7 @@ namespace app
             datebox.Width = 50;
             datebox.Height = 24;
             datebox.Text = " " + displayElements[2];
-            datebox.Font = new Font("Bahnschrift SemiBold", 11);
+            datebox.Font = new Font("Questrial", 12);
             datebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             datebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
             datebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,7 +179,7 @@ namespace app
             timebox.Width = 80;
             timebox.Height = 24;
             timebox.Text = " " + displayElements[3];
-            timebox.Font = new Font("Bahnschrift SemiBold", 10);
+            timebox.Font = new Font("Questrial", 11);
             timebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             timebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
             timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -193,7 +193,7 @@ namespace app
             subjbox.AutoEllipsis = true;
             subjbox.Height = 24;
             subjbox.Text = " " + displayElements[0];
-            subjbox.Font = new Font("Bahnschrift SemiBold", 10);
+            subjbox.Font = new Font("Questrial", 11);
             subjbox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             subjbox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
             subjbox.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -207,7 +207,7 @@ namespace app
             taskBox.Width = 135;
             taskBox.AutoEllipsis = true;
             taskBox.Text = display;
-            taskBox.Font = new Font("Bahnschrift SemiBold", 11);
+            taskBox.Font = new Font("Questrial", 12);
             taskBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             taskBox.Name = "task" + rowCounter;

@@ -62,6 +62,7 @@ namespace app
                 string[] elements;
                 List<string> sortedList = new List<string>();
                 List<string> openList = new List<string>();
+                String fullName;
                 using (var client = new HttpClient())
                 {
                     using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/login/token.php?service=moodle_mobile_app"))
@@ -101,6 +102,7 @@ namespace app
                             string responseContent = await response.Content.ReadAsStringAsync();
                             userID id = JsonConvert.DeserializeObject<userID>(responseContent);
                             userId = id.userId;
+                            fullName = id.fullname;
                             loginBar.Value += 4;
                         }
                         printProgress.Text = "User ID Successfully Stored";
@@ -297,6 +299,7 @@ namespace app
                         lines.Add("true");
                         lines.Add(username.Text);
                         lines.Add(password.Text);
+                        lines.Add(fullName);
                         using (StreamWriter sw = new StreamWriter(accPath))
                         {
                             foreach (var line in lines)
@@ -372,6 +375,7 @@ namespace app
         public class userID
         {
             public string userId { get; set; }
+            public string fullname { get; set; }
         }
 
         public class courseIDs
