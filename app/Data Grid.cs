@@ -271,23 +271,11 @@ namespace app
                 {
                     taskList.Remove(removeList[count]);
                 }
-                if (count > 0)
-                    count--;
                 File.WriteAllText(path, String.Empty);
                 using (StreamWriter sw = new StreamWriter(path))
                 {
                     foreach (var line in taskList)
                         sw.WriteLine(line);
-                }
-
-                if (showAll)
-                {
-                    showData();
-                }
-
-                else
-                {
-                    showAllFuntion();
                 }
             }
             string[] element = removeList[count].Split(x, StringSplitOptions.None);
@@ -308,17 +296,17 @@ namespace app
                             sw.WriteLine(lines);
                     }
                 }
-                if (showAll)
-                {
-                    showData();
-                }
-
-                else
-                {
-                    showAllFuntion();
-                }
             }
-            
+            if (showAll)
+            {
+                showData();
+            }
+
+            else
+            {
+                showAllFuntion();
+            }
+
         }
 
         private void addTask_Click(object sender, EventArgs e)
