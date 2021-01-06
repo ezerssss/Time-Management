@@ -33,6 +33,7 @@ namespace app
             this.userNameInitial = new System.Windows.Forms.Label();
             this.userNameDisplay = new System.Windows.Forms.Label();
             this.logOut = new System.Windows.Forms.Button();
+            this.goBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // userNameInitial
@@ -72,11 +73,28 @@ namespace app
             this.logOut.UseVisualStyleBackColor = true;
             this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
+            // goBack
+            // 
+            this.goBack.BackColor = System.Drawing.Color.OrangeRed;
+            this.goBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("goBack.BackgroundImage")));
+            this.goBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.goBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBack.FlatAppearance.BorderSize = 0;
+            this.goBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.goBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goBack.Location = new System.Drawing.Point(9, 9);
+            this.goBack.Name = "goBack";
+            this.goBack.Size = new System.Drawing.Size(31, 30);
+            this.goBack.TabIndex = 14;
+            this.goBack.UseVisualStyleBackColor = false;
+            this.goBack.Click += new System.EventHandler(this.goBack_Click);
+            // 
             // logOutUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.goBack);
             this.Controls.Add(this.logOut);
             this.Controls.Add(this.userNameDisplay);
             this.Controls.Add(this.userNameInitial);
@@ -92,5 +110,6 @@ namespace app
         private System.Windows.Forms.Label userNameInitial;
         private System.Windows.Forms.Label userNameDisplay;
         private System.Windows.Forms.Button logOut;
+        private System.Windows.Forms.Button goBack;
     }
 }

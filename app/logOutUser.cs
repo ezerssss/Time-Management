@@ -41,5 +41,13 @@ namespace app
             EarlyBird.Instance.screenContainer.Controls.Clear();
             EarlyBird.Instance.screenContainer.Controls.Add(lg);
         }
+
+        private void goBack_Click(object sender, EventArgs e)
+        {
+            Calendar_View cv = new Calendar_View();
+            cv.Dock = DockStyle.Fill;
+            EarlyBird.Instance.screenContainer.Controls.Clear();
+            EarlyBird.Instance.screenContainer.Controls.Add(cv);
+        }
     }
 }
