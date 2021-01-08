@@ -82,6 +82,7 @@ namespace app
 
         public void showData()
         {
+            noTaskPic.Visible = true;
             removeList.Clear();
             panel1.Controls.Clear();
             string readLine;
@@ -140,6 +141,7 @@ namespace app
 
         private void printTaskLine(string[] displayElements, int verticalOffset)
         {
+            noTaskPic.Visible = false;
             string text = displayElements[1];
             string display = text;
 

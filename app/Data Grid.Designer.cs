@@ -42,9 +42,11 @@
             this.referenceLabel2 = new System.Windows.Forms.Label();
             this.referenceLabel1 = new System.Windows.Forms.Label();
             this.showAllTask = new System.Windows.Forms.Button();
+            this.noTaskPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.noTaskPic)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -56,7 +58,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Questrial", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(120, 464);
             this.button1.Name = "button1";
@@ -135,7 +137,7 @@
             // dayToday
             // 
             this.dayToday.BackColor = System.Drawing.Color.Transparent;
-            this.dayToday.Font = new System.Drawing.Font("Questrial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayToday.ForeColor = System.Drawing.Color.White;
             this.dayToday.Image = ((System.Drawing.Image)(resources.GetObject("dayToday.Image")));
             this.dayToday.Location = new System.Drawing.Point(16, 79);
@@ -218,7 +220,7 @@
             this.showAllTask.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.showAllTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showAllTask.Font = new System.Drawing.Font("Questrial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showAllTask.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showAllTask.ForeColor = System.Drawing.Color.White;
             this.showAllTask.Location = new System.Drawing.Point(199, 464);
             this.showAllTask.Name = "showAllTask";
@@ -229,10 +231,22 @@
             this.showAllTask.UseVisualStyleBackColor = false;
             this.showAllTask.Click += new System.EventHandler(this.showAllTask_Click);
             // 
+            // noTaskPic
+            // 
+            this.noTaskPic.BackColor = System.Drawing.Color.Transparent;
+            this.noTaskPic.Image = ((System.Drawing.Image)(resources.GetObject("noTaskPic.Image")));
+            this.noTaskPic.Location = new System.Drawing.Point(28, 181);
+            this.noTaskPic.Name = "noTaskPic";
+            this.noTaskPic.Size = new System.Drawing.Size(327, 205);
+            this.noTaskPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.noTaskPic.TabIndex = 19;
+            this.noTaskPic.TabStop = false;
+            // 
             // Data_Grid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.noTaskPic);
             this.Controls.Add(this.showAllTask);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dayToday);
@@ -248,7 +262,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.noTaskPic)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -266,5 +282,6 @@
         private System.Windows.Forms.Label referenceLabel2;
         private System.Windows.Forms.Label referenceButton;
         private System.Windows.Forms.Button showAllTask;
+        private System.Windows.Forms.PictureBox noTaskPic;
     }
 }

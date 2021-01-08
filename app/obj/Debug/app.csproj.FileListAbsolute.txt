@@ -63,7 +63,6 @@ C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.add_ta
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.APIFunction.resources
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Calendar_View.resources
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Data_Grid.resources
-C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Form1.resources
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.login.resources
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.Properties.Resources.resources
 C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.GenerateResource.cache
@@ -99,3 +98,5 @@ C:\Users\User\Documents\Time management\app\obj\Debug\app.EarlyBird.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\EarlyBird.exe
 C:\Users\User\Documents\Time management\app\obj\Debug\EarlyBird.pdb
 D:\C# Projects\Time-Management\app\obj\Debug\app.logOutUser.resources
+C:\Users\Ammelise\source\repos\ezerssss\Time-Management\app\obj\Debug\app.EarlyBird.resources
+C:\Users\Ammelise\source\repos\ezerssss\Time-Management\app\obj\Debug\app.logOutUser.resources
