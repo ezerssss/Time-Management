@@ -44,12 +44,28 @@ namespace app
             password.ForeColor = Color.Black;
         }
 
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new System.Net.WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private async void login_button_ClickAsync(object sender, EventArgs e)
         {          
             done = false;
             if (username.Text == "" || password.Text == "" || username.Text == "Enter username" || password.Text == "Enter password") {
                 MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (!CheckForInternetConnection())
+                MessageBox.Show("No Internet", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else {
                 File.WriteAllText(accPath, String.Empty);
                 File.WriteAllText(path, String.Empty);
@@ -350,7 +366,7 @@ namespace app
                                 sw.WriteLine(line);
                             }
                         }
-                        EarlyBird.Globals.closeButtonDisable = true;
+                        EarlyBird.Globals.closeButtonDisable = false;
                         EarlyBird f1 = new EarlyBird();
                         f1.sortList();
                         resetText();
