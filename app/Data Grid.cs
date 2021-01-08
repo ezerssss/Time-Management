@@ -237,7 +237,8 @@ namespace app
 
         private void removeTask_Click(object sender, EventArgs e)
         {
-            DialogResult choice = MessageBox.Show("Finish task?", "Please confirm before you proceed", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            PopUp pp = new PopUp();
+            DialogResult choice = pp.ShowDialog();
             Button btn = (Button)sender;
             string name = btn.Name;
             int count = int.Parse(name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6));           
@@ -281,34 +282,34 @@ namespace app
                 }
             }
             string[] element = removeList[count].Split(x, StringSplitOptions.None);
-            if (!bool.Parse(element[4]) && choice == DialogResult.No){
-                DialogResult secondChoice = MessageBox.Show("Ignore task?", "Please confirm before you proceed", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (secondChoice == DialogResult.Yes) {
-                    string reader;
-                    List<string> ignoredList = new List<string>();
-                    using (StreamReader sr = new StreamReader(ignored))
-                    {
-                        while ((reader = sr.ReadLine()) != null)
-                            ignoredList.Add(reader);
-                    }
-                    ignoredList.Add(removeList[count]);
-                    File.WriteAllText(ignored, String.Empty);
-                    using (StreamWriter sw = new StreamWriter(ignored)) {
-                        foreach (var lines in ignoredList)
-                            sw.WriteLine(lines);
-                    }
+            if (!bool.Parse(element[4]) && choice == DialogResult.Ignore){
+                string reader;
+                List<string> ignoredList = new List<string>();
+                using (StreamReader sr = new StreamReader(ignored))
+                {
+                while ((reader = sr.ReadLine()) != null)
+                ignoredList.Add(reader);
+                }
+                ignoredList.Add(removeList[count]);
+                File.WriteAllText(ignored, String.Empty);
+                using (StreamWriter sw = new StreamWriter(ignored)) {
+                foreach (var lines in ignoredList)
+                sw.WriteLine(lines);
                 }
             }
+            if (choice == DialogResult.No)
+            {
+                //nothing
+            }
+            pp.Dispose();
             if (showAll)
             {
                 showData();
             }
-
             else
             {
                 showAllFuntion();
             }
-
         }
 
         private void addTask_Click(object sender, EventArgs e)
@@ -339,12 +340,14 @@ namespace app
             if (showAll)
             {
                 showAllTask.Text = "TO-DO";
+                dayToday.Text = "All Tasks";
                 showAllFuntion();
             }
             else
             {
                 showAllTask.Text = "ALL";
                 showAll = true;
+                dayToday.Text = DateTime.Now.ToString("dd MMMM yyyy");
                 showData();
             }
         }

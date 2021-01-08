@@ -348,6 +348,7 @@ namespace app
                                 sw.WriteLine(line);
                             }
                         }
+                        EarlyBird.Globals.closeButtonDisable = true;
                         EarlyBird f1 = new EarlyBird();
                         f1.sortList();
                         resetText();
@@ -463,7 +464,8 @@ namespace app
         }
 
         private void login_Load(object sender, EventArgs e)
-        {         
+        {
+            EarlyBird.Globals.closeButtonDisable = false;
             if (!File.Exists(accPath))
             {
                 using (StreamWriter writer = new StreamWriter(accPath))
@@ -480,8 +482,7 @@ namespace app
                     EarlyBird.Instance.screenContainer.Controls.Clear();
                     EarlyBird.Instance.screenContainer.Controls.Add(lO);
                 }
-            }
-            EarlyBird.Globals.closeButtonDisable = false;
+            }   
             resetText();
         }
 

@@ -1,1 +1,9 @@
-yeah|#$#|asd|#$#|Friday, 8 January 2021|#$#|01:00AM|#$#|true
+English 5 (11-ABC)|#$#|Submission Box/Assignment Box |#$#|Fri, 16 October 2020|#$#|08:00PM|#$#|false
+Math 5 (11-B)|#$#|Assignment 2.3 (Review of Trigonometric Identities)|#$#|Mon, 11 January 2021|#$#|09:00AM|#$#|false
+Math 5 (11-B)|#$#|Assignment 2.4 (Limits of Trigonometric Functions)|#$#|Mon, 11 January 2021|#$#|09:00AM|#$#|false
+English 5 (11-ABC)|#$#|SUBMISSION BOX |#$#|---|#$#|---|#$#|false
+Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|---|#$#|---|#$#|false
+Filipino 5 (11-ABC)|#$#|Ikalawang Takda-Aralin:|#$#|---|#$#|---|#$#|false
+Filipino 5 (11-ABC)|#$#|Pag-uuri ng mga Ideya at Detalye|#$#|---|#$#|---|#$#|false
+Filipino 5 (11-ABC)|#$#|Pagtukoy sa Layunin sa Teksto|#$#|---|#$#|---|#$#|false
+Filipino 5 (11-ABC)|#$#|Pagtiyak sa Damdamin, Tono, at Pananaw ng Teksto|#$#|---|#$#|---|#$#|false
