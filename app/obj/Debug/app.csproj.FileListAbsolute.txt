@@ -101,3 +101,5 @@ D:\C# Projects\Time-Management\app\obj\Debug\app.logOutUser.resources
 C:\Users\Ammelise\source\repos\ezerssss\Time-Management\app\obj\Debug\app.EarlyBird.resources
 C:\Users\Ammelise\source\repos\ezerssss\Time-Management\app\obj\Debug\app.logOutUser.resources
 D:\C# Projects\Time-Management\app\obj\Debug\app.PopUp.resources
+C:\Users\User\Documents\Time management\app\obj\Debug\app.PopUp.resources
+C:\Users\User\Documents\Time management\app\obj\Debug\app.logOutUser.resources

@@ -20,7 +20,9 @@ namespace app
         string accPath = Application.StartupPath + @"\acc.txt";
         string path = Application.StartupPath + @"\file.txt";
         string[] splitter = { "|#$#|" };
-        bool hide;
+        bool hide = true;
+        bool userRemove = true;
+        bool passRemove = true;
         bool done = false;
 
         public login()
@@ -454,8 +456,8 @@ namespace app
             username.Text = "Enter username";
             username.ForeColor = Color.LightGray;
             password.Text = "Enter password";
-            password.PasswordChar = '*';
-            hide = false;
+            
+            hide = true;
             password.ForeColor = Color.LightGray;
             username.Enabled = false;
             username.Enabled = true;
@@ -465,6 +467,8 @@ namespace app
 
         private void login_Load(object sender, EventArgs e)
         {
+
+            password.PasswordChar = '\0';
             EarlyBird.Globals.closeButtonDisable = false;
             if (!File.Exists(accPath))
             {
@@ -544,10 +548,13 @@ namespace app
         {
             if (username.Text == "")
             {
-                username.Text = "Enter Username";
+                username.Text = "Enter username";
                 username.ForeColor = Color.LightGray;
+                userRemove = true;
             }
-            password.Text = "";
+            if (passRemove)
+                password.Text = "";
+            passRemove = false;
             password.ForeColor = Color.Black;
         }
 
@@ -557,25 +564,47 @@ namespace app
             {
                 password.Text = "Enter password";
                 password.ForeColor = Color.LightGray;
+                passRemove = true;
             }           
-            username.Text = "";
+            if (userRemove)
+                username.Text = "";
+            userRemove = false;
             username.ForeColor = Color.Black;
         }
 
         private void login_button_Enter(object sender, EventArgs e)
         {
-            if (username.Text == "")
-                username.Text = "Enter Username";
-            if (password.Text == "")
+            if (username.Text == "") {
+                username.Text = "Enter username";
+                userRemove = true;
+            }
+            if (userRemove)
+                username.ForeColor = Color.LightGray;
+            if (password.Text == "") {
                 password.Text = "Enter password";
+                passRemove = true;
+            }
+            if (passRemove)
+                password.ForeColor = Color.LightGray;
+               
         }
 
         private void linkLabel1_Enter(object sender, EventArgs e)
         {
             if (username.Text == "")
-                username.Text = "Enter Username";
+            {
+                username.Text = "Enter username";
+                userRemove = true;
+            }
+            if (userRemove)
+                username.ForeColor = Color.LightGray;
             if (password.Text == "")
+            {
                 password.Text = "Enter password";
+                passRemove = true;
+            }
+            if (passRemove)
+                password.ForeColor = Color.LightGray;
         }
     }
 }
