@@ -95,7 +95,16 @@ namespace app
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Login!");
+                        MessageBox.Show("Invalid Login!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        File.WriteAllText(accPath, String.Empty);
+                        using (StreamWriter writer = new StreamWriter(accPath))
+                        {
+                            writer.WriteLine("false");
+                        }
+                        login lg = new login();
+                        lg.Dock = DockStyle.Fill;
+                        EarlyBird.Instance.screenContainer.Controls.Clear();
+                        EarlyBird.Instance.screenContainer.Controls.Add(lg);
                         return;
                     }
                 }

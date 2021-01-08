@@ -353,7 +353,6 @@ namespace app
                         resetText();
                         afterLogin();
                         done = true;
-                        EarlyBird.Globals.closeButtonDisable = false;
                     }
                 }
             }
