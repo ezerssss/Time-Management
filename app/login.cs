@@ -24,7 +24,7 @@ namespace app
         bool userRemove = true;
         bool passRemove = true;
         bool done = false;
-
+        int num = 0;
         public login()
         {
             InitializeComponent();
@@ -492,7 +492,11 @@ namespace app
 
         private void showPass(object sender, EventArgs e)
         {
-            if (hide)
+            if (passRemove) {
+                password.PasswordChar = '\0';
+                hide = true;
+            }
+            else if (hide)
             {
                 password.PasswordChar = '*';
                 hide = false;
@@ -554,6 +558,10 @@ namespace app
             }
             if (passRemove)
                 password.Text = "";
+            if (num  < 1) {
+                password.PasswordChar = '*';
+                num++;
+            }
             passRemove = false;
             password.ForeColor = Color.Black;
         }
