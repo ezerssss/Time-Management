@@ -25,7 +25,6 @@ namespace app
         string accPath = Application.StartupPath + @"\acc.txt";
         string path = Application.StartupPath + @"\file.txt";
         string[] splitter = { "|#$#|" };
-        bool done = false;
 
         public static bool CheckForInternetConnection()
         {
@@ -355,8 +354,7 @@ namespace app
                         }
                     }
                     EarlyBird f1 = new EarlyBird();
-                    f1.sortList();
-                    done = true;               
+                    f1.sortList();         
                     Calendar_View cv = new Calendar_View();
                     cv.Dock = DockStyle.Fill;
                     EarlyBird.Instance.screenContainer.Controls.Clear();

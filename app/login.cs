@@ -23,7 +23,6 @@ namespace app
         bool hide = true;
         bool userRemove = true;
         bool passRemove = true;
-        bool done = false;
         int num = 0;
         public login()
         {
@@ -60,7 +59,6 @@ namespace app
 
         private async void login_button_ClickAsync(object sender, EventArgs e)
         {          
-            done = false;
             if (username.Text == "" || password.Text == "" || username.Text == "Enter username" || password.Text == "Enter password") {
                 MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -371,7 +369,6 @@ namespace app
                         f1.sortList();
                         resetText();
                         afterLogin();
-                        done = true;
                     }
                 }
             }
