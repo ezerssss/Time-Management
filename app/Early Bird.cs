@@ -40,8 +40,8 @@ namespace app
             this.DoubleBuffered = true;
             enableDoubleBuff(screen);
             //Comment below para regular edges
-            this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         public static class Globals
         {
