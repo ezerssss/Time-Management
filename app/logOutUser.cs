@@ -40,7 +40,8 @@ namespace app
             }
             login lg = new login();
             lg.Dock = DockStyle.Fill;
-            EarlyBird.Instance.screenContainer.Controls.Clear();
+            while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+            GC.Collect();
             EarlyBird.Instance.screenContainer.Controls.Add(lg);
         }
 
@@ -48,7 +49,8 @@ namespace app
         {
             Calendar_View cv = new Calendar_View();
             cv.Dock = DockStyle.Fill;
-            EarlyBird.Instance.screenContainer.Controls.Clear();
+            while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+            GC.Collect();
             EarlyBird.Instance.screenContainer.Controls.Add(cv);
         }
     }

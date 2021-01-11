@@ -102,7 +102,8 @@ namespace app
             {
                 Data_Grid dg = new Data_Grid();
                 dg.Dock = DockStyle.Fill;
-                EarlyBird.Instance.screenContainer.Controls.Clear();
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                GC.Collect();
                 EarlyBird.Instance.screenContainer.Controls.Add(dg);
             }
         }
@@ -113,7 +114,8 @@ namespace app
             {
                 login lg = new login();
                 lg.Dock = DockStyle.Fill;
-                EarlyBird.Instance.screenContainer.Controls.Clear();
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                GC.Collect();
                 EarlyBird.Instance.screenContainer.Controls.Add(lg);
             }
         }
@@ -124,7 +126,7 @@ namespace app
             {
                 add_task at = new add_task();
                 at.Dock = DockStyle.Fill;
-                EarlyBird.Instance.screenContainer.Controls.Clear();
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
                 EarlyBird.Instance.screenContainer.Controls.Add(at);
             }
         }

@@ -72,7 +72,8 @@ namespace app
                 {
                     APIFunction apiFunc = new APIFunction();
                     apiFunc.Dock = DockStyle.Fill;
-                    EarlyBird.Instance.screenContainer.Controls.Clear();
+                    while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                    GC.Collect();
                     EarlyBird.Instance.screenContainer.Controls.Add(apiFunc);
                 }
                 else
@@ -230,7 +231,8 @@ namespace app
             {
                 Calendar_View cv = new Calendar_View();
                 cv.Dock = DockStyle.Fill;
-                EarlyBird.Instance.screenContainer.Controls.Clear();
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                GC.Collect();
                 EarlyBird.Instance.screenContainer.Controls.Add(cv);
             }
         }
@@ -318,7 +320,7 @@ namespace app
             {
                 add_task at = new add_task();
                 at.Dock = DockStyle.Fill;
-                EarlyBird.Instance.screenContainer.Controls.Clear();
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
                 EarlyBird.Instance.screenContainer.Controls.Add(at);
             }
         }
@@ -329,7 +331,8 @@ namespace app
             {
                 login lg = new login();
                 lg.Dock = DockStyle.Fill;
-                EarlyBird.Instance.screenContainer.Controls.Clear();
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                GC.Collect();
                 EarlyBird.Instance.screenContainer.Controls.Add(lg);
             }
         }
