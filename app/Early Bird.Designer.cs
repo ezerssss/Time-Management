@@ -38,7 +38,7 @@
             // 
             this.screen.BackColor = System.Drawing.Color.White;
             this.screen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.screen.Location = new System.Drawing.Point(3, 30);
+            this.screen.Location = new System.Drawing.Point(0, 30);
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(387, 560);
             this.screen.TabIndex = 8;
@@ -52,7 +52,7 @@
             this.closeApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.closeApp.FlatAppearance.BorderSize = 0;
             this.closeApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeApp.Location = new System.Drawing.Point(366, 4);
+            this.closeApp.Location = new System.Drawing.Point(359, 4);
             this.closeApp.Name = "closeApp";
             this.closeApp.Size = new System.Drawing.Size(23, 23);
             this.closeApp.TabIndex = 9;
@@ -66,7 +66,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(338, 4);
+            this.button1.Location = new System.Drawing.Point(331, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 23);
             this.button1.TabIndex = 10;
@@ -79,7 +79,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(393, 594);
+            this.ClientSize = new System.Drawing.Size(387, 590);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.closeApp);
             this.Controls.Add(this.screen);

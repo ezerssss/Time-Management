@@ -90,7 +90,6 @@ D:\C# Projects\Time-Management\app\obj\Debug\app.csproj.CopyComplete
 D:\C# Projects\Time-Management\app\obj\Debug\EarlyBird.exe
 D:\C# Projects\Time-Management\app\obj\Debug\EarlyBird.pdb
 D:\C# Projects\Time-Management\app\obj\Debug\app.EarlyBird.resources
-D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
 C:\Users\User\Documents\Time management\app\bin\Debug\EarlyBird.exe.config
 C:\Users\User\Documents\Time management\app\bin\Debug\EarlyBird.exe
 C:\Users\User\Documents\Time management\app\bin\Debug\EarlyBird.pdb

@@ -1,12 +1,2 @@
 English 5 (11-ABC)|#$#|Submission Box/Assignment Box |#$#|Fri, 16 October 2020|#$#|08:00PM|#$#|false
-Math 5 (11-B)|#$#|Quiz 4 (2:00 PM, Tuesday, January 12, 2021)|#$#|Tue, 12 January 2021|#$#|05:00PM|#$#|false
-Social Science 5 (11-ABC)|#$#|Formative Assessment 2.3|#$#|Fri, 15 January 2021|#$#|08:20PM|#$#|false
 English 5 (11-ABC)|#$#|SUBMISSION BOX |#$#|---|#$#|---|#$#|false
-Filipino 5 (11-ABC)|#$#|Unang Takdang-Aralin:|#$#|---|#$#|---|#$#|false
-Filipino 5 (11-ABC)|#$#|Ikalawang Takda-Aralin:|#$#|---|#$#|---|#$#|false
-Filipino 5 (11-ABC)|#$#|Pagtukoy sa Layunin sa Teksto|#$#|---|#$#|---|#$#|false
-Filipino 5 (11-ABC)|#$#|Pagtiyak sa Damdamin, Tono, at Pananaw ng Teksto|#$#|---|#$#|---|#$#|false
-Filipino 5 (11-ABC)|#$#|1. Pagkilala sa Pagkakaiba ng Katotohanan at Opinyon|#$#|---|#$#|---|#$#|false
-Filipino 5 (11-ABC)|#$#|2. Pagsusuri sa Kawastuhan ng Ideya at Pananaw|#$#|---|#$#|---|#$#|false
-Filipino 5 (11-ABC)|#$#|3. Paghihinuha at Paghula sa Kalalabasan ng Pangyayari|#$#|---|#$#|---|#$#|false
-Filipino 5 (11-ABC)|#$#|4. Pagbuo ng Lagom at Kongklusyon|#$#|---|#$#|---|#$#|false
