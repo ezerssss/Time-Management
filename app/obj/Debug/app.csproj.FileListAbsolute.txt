@@ -102,3 +102,4 @@ C:\Users\Ammelise\source\repos\ezerssss\Time-Management\app\obj\Debug\app.logOut
 D:\C# Projects\Time-Management\app\obj\Debug\app.PopUp.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\app.PopUp.resources
 C:\Users\User\Documents\Time management\app\obj\Debug\app.logOutUser.resources
+C:\Users\Ammelise\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.PopUp.resources
