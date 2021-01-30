@@ -153,6 +153,7 @@
             this.panel1.Controls.Add(this.referenceLabel3);
             this.panel1.Controls.Add(this.referenceLabel2);
             this.panel1.Controls.Add(this.referenceLabel1);
+            this.panel1.Font = new System.Drawing.Font("Questrial", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(3, 155);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(382, 300);
