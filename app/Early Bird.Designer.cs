@@ -40,7 +40,7 @@
             this.screen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.screen.Location = new System.Drawing.Point(0, 30);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(387, 560);
+            this.screen.Size = new System.Drawing.Size(386, 559);
             this.screen.TabIndex = 8;
             this.screen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.screen_MouseDown);
             this.screen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.screen_MouseMove);
