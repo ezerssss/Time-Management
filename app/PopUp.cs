@@ -20,5 +20,10 @@ namespace app
         private void PopUp_FormClosing(object sender, FormClosingEventArgs e)
         {                 
         }
+
+        private void yes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
