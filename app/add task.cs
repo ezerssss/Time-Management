@@ -15,6 +15,8 @@ namespace app
     {
         string local = Application.StartupPath + @"\local.txt";
         string path = Application.StartupPath + @"\file.txt";
+        bool subjectEnter = true;
+        bool taskEnter = true;
         string[] x = { "|#$#|" };
         public add_task()
         {
@@ -23,8 +25,8 @@ namespace app
 
         private void addTask(object sender, EventArgs e)
         {
-            if (subject.Text == "" || task.Text == "" || hours.Text == "" || minutes.Text == "" || day.Text == "") {
-                MessageBox.Show("Invalid Inputs!");
+            if (subject.Text == "" || task.Text == "" || hours.Text == "" || minutes.Text == "" || day.Text == "" || subjectEnter || taskEnter) {
+                MessageBox.Show("Invalid input/s", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -174,12 +176,24 @@ namespace app
         {
             subject.Text = "";
             subject.ForeColor = Color.Black;
+            subjectEnter = false;
         }
 
         private void task_Enter(object sender, EventArgs e)
         {
             task.Text = "";
             task.ForeColor = Color.Black;
+            taskEnter = false;
+        }
+
+        private void subject_KeyDown(object sender, KeyEventArgs e)
+        {
+            subjectEnter = false;
+        }
+
+        private void task_KeyDown(object sender, KeyEventArgs e)
+        {
+            taskEnter = false;
         }
     }
 }
