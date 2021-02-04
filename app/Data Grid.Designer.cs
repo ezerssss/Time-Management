@@ -60,12 +60,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Questrial", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(120, 464);
+            this.button1.Location = new System.Drawing.Point(115, 464);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 30);
+            this.button1.Size = new System.Drawing.Size(78, 30);
             this.button1.TabIndex = 1;
             this.button1.Text = "UPDATE";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.updateButton);
             // 
@@ -223,12 +222,11 @@
             this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showAllTask.Font = new System.Drawing.Font("Questrial", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showAllTask.ForeColor = System.Drawing.Color.White;
-            this.showAllTask.Location = new System.Drawing.Point(199, 464);
+            this.showAllTask.Location = new System.Drawing.Point(198, 464);
             this.showAllTask.Name = "showAllTask";
-            this.showAllTask.Size = new System.Drawing.Size(72, 30);
+            this.showAllTask.Size = new System.Drawing.Size(78, 30);
             this.showAllTask.TabIndex = 18;
             this.showAllTask.Text = "ALL";
-            this.showAllTask.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.showAllTask.UseVisualStyleBackColor = false;
             this.showAllTask.Click += new System.EventHandler(this.showAllTask_Click);
             // 
