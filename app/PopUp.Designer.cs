@@ -140,7 +140,6 @@ namespace app
             this.MinimizeBox = false;
             this.Name = "PopUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Confirm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PopUp_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

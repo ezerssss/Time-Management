@@ -239,11 +239,13 @@ namespace app
 
         private void removeTask_Click(object sender, EventArgs e)
         {
-            PopUp pp = new PopUp();
-            DialogResult choice = pp.ShowDialog();
             Button btn = (Button)sender;
             string name = btn.Name;
-            int count = int.Parse(name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6));           
+            int count = int.Parse(name.Remove(name.IndexOf("button"), name.IndexOf("button") + 6));
+            string[] elementsForTitle = removeList[count].Split(x, StringSplitOptions.None);
+            PopUp pp = new PopUp();
+            pp.Text = elementsForTitle[1];
+            DialogResult choice = pp.ShowDialog();                  
             if (choice == DialogResult.Yes)
             {
                 List<string> taskList = new List<string>();
@@ -284,26 +286,67 @@ namespace app
                 }
             }
             string[] element = removeList[count].Split(x, StringSplitOptions.None);
-            if (!bool.Parse(element[4]) && choice == DialogResult.Ignore){
+            if (!bool.Parse(element[4]) && choice == DialogResult.Ignore)
+            {
                 string reader;
                 List<string> ignoredList = new List<string>();
                 using (StreamReader sr = new StreamReader(ignored))
                 {
-                while ((reader = sr.ReadLine()) != null)
-                ignoredList.Add(reader);
+                    while ((reader = sr.ReadLine()) != null)
+                        ignoredList.Add(reader);
                 }
                 ignoredList.Add(removeList[count]);
                 File.WriteAllText(ignored, String.Empty);
-                using (StreamWriter sw = new StreamWriter(ignored)) {
-                foreach (var lines in ignoredList)
-                sw.WriteLine(lines);
+                using (StreamWriter sw = new StreamWriter(ignored))
+                {
+                    foreach (var lines in ignoredList)
+                        sw.WriteLine(lines);
                 }
             }
-            if (choice == DialogResult.No)
+            else if (bool.Parse(element[4]) && choice == DialogResult.Ignore) {
+                List<string> taskList = new List<string>();
+                List<string> localList = new List<string>();
+                string readTask;
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    while ((readTask = sr.ReadLine()) != null)
+                        taskList.Add(readTask);
+                }
+                using (StreamReader sr = new StreamReader(local))
+                {
+                    while ((readTask = sr.ReadLine()) != null)
+                        localList.Add(readTask);
+                }
+                string[] elements = removeList[count].Split(x, StringSplitOptions.None);
+                if (bool.Parse(elements[4]))
+                {
+                    localList.Remove(removeList[count]);
+                    taskList.Remove(removeList[count]);
+                    File.WriteAllText(local, String.Empty);
+                    using (StreamWriter sw = new StreamWriter(local))
+                    {
+                        foreach (var line in localList)
+                            sw.WriteLine(line);
+                    }
+                }
+
+                else
+                {
+                    taskList.Remove(removeList[count]);
+                }
+                File.WriteAllText(path, String.Empty);
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    foreach (var line in taskList)
+                        sw.WriteLine(line);
+                }
+            }
+            else if (choice == DialogResult.No)
             {
                 //nothing
             }
-            pp.Dispose();
+            while (pp.Controls.Count > 0) pp.Controls[0].Dispose();
+            GC.Collect();
             if (showAll)
             {
                 showData();

@@ -210,7 +210,9 @@ namespace app
                                             }
                                             list.Add(a.fullname + "|#$#|" + b.name + "|#$#|" + date + pmorAM);
                                             if (loginBar.Value != 60)
+                                            {
                                                 loginBar.Value += 1;
+                                            }                                        
                                             printProgress.Text = "Storing Assignments: " + b.name;
                                         }
                                     }
@@ -311,7 +313,7 @@ namespace app
                     }
                     if (loginBar.Value != 100)
                         loginBar.Value = 100;
-                    printProgress.Text = "Assignment IDs Successfully Stored";
+                    printProgress.Text = "Quiz IDs Successfully Stored";
 
                     string[] x = { "|#$#|" };
                     while (list.Count > 0)
