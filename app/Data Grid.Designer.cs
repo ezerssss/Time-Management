@@ -58,7 +58,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Questrial", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(115, 464);
             this.button1.Name = "button1";
@@ -152,7 +152,7 @@
             this.panel1.Controls.Add(this.referenceLabel3);
             this.panel1.Controls.Add(this.referenceLabel2);
             this.panel1.Controls.Add(this.referenceLabel1);
-            this.panel1.Font = new System.Drawing.Font("Questrial", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(3, 155);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(382, 300);
@@ -220,7 +220,7 @@
             this.showAllTask.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.showAllTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showAllTask.Font = new System.Drawing.Font("Questrial", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showAllTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showAllTask.ForeColor = System.Drawing.Color.White;
             this.showAllTask.Location = new System.Drawing.Point(198, 464);
             this.showAllTask.Name = "showAllTask";

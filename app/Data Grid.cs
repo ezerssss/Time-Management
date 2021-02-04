@@ -168,7 +168,7 @@ namespace app
             datebox.Left = removeTask.Left + removeTask.Width + 5;
             datebox.Width = 50;
             datebox.Height = 24;
-            datebox.Text = " " + displayElements[2];
+            datebox.Text = displayElements[2];
             datebox.Font = new Font("Questrial", 10);
             datebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             datebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
