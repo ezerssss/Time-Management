@@ -100,28 +100,28 @@ namespace app
                         string date = "---";
                         if (DateTime.TryParse(elements[2], out dateTime))
                         {
-                            if (!dates.ContainsKey(dateTime.AddDays(-3)))
+                            if (!dates.ContainsKey(dateTime.AddDays(-2)))
                             {
-                                dates.Add(dateTime.AddDays(-3), 1);
-                                dateToDetermine = dateTime.AddDays(-3);
+                                dates.Add(dateTime.AddDays(-2), 1);
+                                dateToDetermine = dateTime.AddDays(-2);
                             }
                             else
                             {
-                                if (dates[dateTime.AddDays(-3)] < 5)
+                                if (dates[dateTime.AddDays(-2)] < 5)
                                 {
-                                    dates[dateTime.AddDays(-3)] += 1;
-                                    dateToDetermine = dateTime.AddDays(-3);
+                                    dates[dateTime.AddDays(-2)] += 1;
+                                    dateToDetermine = dateTime.AddDays(-2);
                                 }
                                 else
                                 {
                                     int dayBefore = -1;
-                                    while (dates.ContainsKey(dateTime.AddDays(dayBefore - 3)) && dates[dateTime.AddDays(dayBefore - 3)] >= 5)
+                                    while (dates.ContainsKey(dateTime.AddDays(dayBefore - 2)) && dates[dateTime.AddDays(dayBefore - 2)] >= 5)
                                         dayBefore -= 1;
-                                    if (!dates.ContainsKey(dateTime.AddDays(dayBefore - 3)))
-                                        dates.Add(dateTime.AddDays(dayBefore - 3), 1);
+                                    if (!dates.ContainsKey(dateTime.AddDays(dayBefore - 2)))
+                                        dates.Add(dateTime.AddDays(dayBefore - 2), 1);
                                     else
-                                        dates[dateTime.AddDays(dayBefore - 3)] += 1;
-                                    dateToDetermine = dateTime.AddDays(dayBefore - 3);
+                                        dates[dateTime.AddDays(dayBefore - 2)] += 1;
+                                    dateToDetermine = dateTime.AddDays(dayBefore - 2);
                                 }
                             }
                             date = elements[2];
