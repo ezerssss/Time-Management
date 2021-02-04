@@ -48,7 +48,7 @@ namespace app
             this.yes.ForeColor = System.Drawing.Color.White;
             this.yes.Image = ((System.Drawing.Image)(resources.GetObject("yes.Image")));
             this.yes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.yes.Location = new System.Drawing.Point(1, 195);
+            this.yes.Location = new System.Drawing.Point(11, 194);
             this.yes.Name = "yes";
             this.yes.Size = new System.Drawing.Size(99, 43);
             this.yes.TabIndex = 0;
@@ -64,7 +64,7 @@ namespace app
             this.no.Font = new System.Drawing.Font("Questrial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no.ForeColor = System.Drawing.Color.White;
             this.no.Image = ((System.Drawing.Image)(resources.GetObject("no.Image")));
-            this.no.Location = new System.Drawing.Point(204, 195);
+            this.no.Location = new System.Drawing.Point(214, 194);
             this.no.Name = "no";
             this.no.Size = new System.Drawing.Size(100, 43);
             this.no.TabIndex = 1;
@@ -79,7 +79,7 @@ namespace app
             this.ignore.Font = new System.Drawing.Font("Questrial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ignore.ForeColor = System.Drawing.Color.White;
             this.ignore.Image = ((System.Drawing.Image)(resources.GetObject("ignore.Image")));
-            this.ignore.Location = new System.Drawing.Point(103, 195);
+            this.ignore.Location = new System.Drawing.Point(113, 194);
             this.ignore.Name = "ignore";
             this.ignore.Size = new System.Drawing.Size(99, 43);
             this.ignore.TabIndex = 2;
@@ -90,7 +90,7 @@ namespace app
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(109, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(119, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(86, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,7 +100,7 @@ namespace app
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Questrial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 100);
+            this.label1.Location = new System.Drawing.Point(49, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 25);
             this.label1.TabIndex = 5;
@@ -109,10 +109,10 @@ namespace app
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Questrial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(18, 137);
+            this.textBox1.Location = new System.Drawing.Point(28, 136);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(272, 46);
@@ -124,8 +124,8 @@ namespace app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(306, 249);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(326, 247);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.yes);
@@ -133,7 +133,7 @@ namespace app
             this.Controls.Add(this.ignore);
             this.Controls.Add(this.no);
             this.Font = new System.Drawing.Font("Questrial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
