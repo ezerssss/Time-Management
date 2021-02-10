@@ -373,7 +373,7 @@ namespace app
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unstable Internet, Please try again", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("NO TASKS STORED, PLEASE UPDATE AGAIN", "Unstable Internet", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EarlyBird f1 = new EarlyBird();
                 f1.sortList();
                 Calendar_View cv = new Calendar_View();
