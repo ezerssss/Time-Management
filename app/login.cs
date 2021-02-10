@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace app
 {
@@ -79,298 +80,315 @@ namespace app
                 List<string> sortedList = new List<string>();
                 List<string> openList = new List<string>();
                 String fullName;
-                using (var client = new HttpClient())
+                try
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/login/token.php?service=moodle_mobile_app"))
+                    using (var client = new HttpClient())
                     {
-                        //gets token
-                        request.Content = new StringContent("username=" + username.Text + "&password=" + password.Text);//"username="+ uname.Text + "&password=" + password.Text rlopos Godofmischief.loki#117
-                        request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
-                        var response = await client.SendAsync(request);
-                        string responseContent = await response.Content.ReadAsStringAsync();
-                        if (!responseContent.Contains("Invalid login"))
+                        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/login/token.php?service=moodle_mobile_app"))
                         {
-                            getToken tokens = JsonConvert.DeserializeObject<getToken>(responseContent);
-                            wsToken = tokens.token;
-                        }
-                        else
-                        {
-                            using (StreamWriter writer = new StreamWriter(accPath))
-                            {
-                                writer.WriteLine("false");
-                            }
-                            MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            resetText();
-                            return;
-                        }
-                    }
-                    if (wsToken != "")
-                    {
-                        EarlyBird.Globals.closeButtonDisable = true;
-                        loggingIn.Visible = true;
-                        loginBar.Visible = true;
-                        //gets userId
-                        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
-                        {
-                            request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=core_webservice_get_site_info");
+                            //gets token
+                            request.Content = new StringContent("username=" + username.Text + "&password=" + password.Text);//"username="+ uname.Text + "&password=" + password.Text rlopos Godofmischief.loki#117
                             request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
                             var response = await client.SendAsync(request);
                             string responseContent = await response.Content.ReadAsStringAsync();
-                            userID id = JsonConvert.DeserializeObject<userID>(responseContent);
-                            userId = id.userId;
-                            fullName = id.fullname;
-                            loginBar.Value += 4;
-                        }
-                        printProgress.Text = "User ID Successfully Stored";
-
-                        //gets coursesOfUser
-                        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
-                        {
-                            request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=core_enrol_get_users_courses" + "&userid=" + userId);
-                            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
-                            var response = await client.SendAsync(request);
-                            string responseContent = await response.Content.ReadAsStringAsync();
-                            List<courseIDs> cId = JsonConvert.DeserializeObject<List<courseIDs>>(responseContent);
-                            foreach (var id in cId)
+                            if (!responseContent.Contains("Invalid login"))
                             {
-                                courseIds.Add(id.id.ToString() + "|#$#|" + id.displayName);
-                                courseNameIds.Add(id.id, id.displayName);
-                                if (loginBar.Value != 15)
-                                    loginBar.Value += 1;
-                                printProgress.Text = "Storing Courses: " + id.displayName;
+                                getToken tokens = JsonConvert.DeserializeObject<getToken>(responseContent);
+                                wsToken = tokens.token;
+                            }
+                            else
+                            {
+                                using (StreamWriter writer = new StreamWriter(accPath))
+                                {
+                                    writer.WriteLine("false");
+                                }
+                                MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                resetText();
+                                return;
                             }
                         }
-                        if (loginBar.Value != 15)
-                            loginBar.Value = 15;
-                        printProgress.Text = "Course IDS Successfully Stored";
-
-                        //gets Activites of each Course 
-                        foreach (var id in courseIds)
+                        if (wsToken != "")
                         {
+                            EarlyBird.Globals.closeButtonDisable = true;
+                            loggingIn.Visible = true;
+                            loginBar.Visible = true;
+                            //gets userId
                             using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
                             {
-                                request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=core_completion_get_activities_completion_status" + "&courseid=" + id.Split(splitter, StringSplitOptions.None)[0] + "&userid=" + userId);
+                                request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=core_webservice_get_site_info");
                                 request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
                                 var response = await client.SendAsync(request);
                                 string responseContent = await response.Content.ReadAsStringAsync();
-                                actIDsBig cmIDs = JsonConvert.DeserializeObject<actIDsBig>(responseContent);
-                                foreach (var cmid in cmIDs.statuses)
+                                userID id = JsonConvert.DeserializeObject<userID>(responseContent);
+                                userId = id.userId;
+                                fullName = id.fullname;
+                                loginBar.Value += 4;
+                            }
+                            printProgress.Text = "User ID Successfully Stored";
+
+                            //gets coursesOfUser
+                            using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
+                            {
+                                request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=core_enrol_get_users_courses" + "&userid=" + userId);
+                                request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
+                                var response = await client.SendAsync(request);
+                                string responseContent = await response.Content.ReadAsStringAsync();
+                                List<courseIDs> cId = JsonConvert.DeserializeObject<List<courseIDs>>(responseContent);
+                                foreach (var id in cId)
                                 {
-                                    if (cmid.state == 0)
+                                    courseIds.Add(id.id.ToString() + "|#$#|" + id.displayName);
+                                    courseNameIds.Add(id.id, id.displayName);
+                                    if (loginBar.Value != 15)
+                                        loginBar.Value += 1;
+                                    printProgress.Text = "Storing Courses: " + id.displayName;
+                                }
+                            }
+                            if (loginBar.Value != 15)
+                                loginBar.Value = 15;
+                            printProgress.Text = "Course IDS Successfully Stored";
+
+                            //gets Activites of each Course 
+                            foreach (var id in courseIds)
+                            {
+                                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
+                                {
+                                    request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=core_completion_get_activities_completion_status" + "&courseid=" + id.Split(splitter, StringSplitOptions.None)[0] + "&userid=" + userId);
+                                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
+                                    var response = await client.SendAsync(request);
+                                    string responseContent = await response.Content.ReadAsStringAsync();
+                                    actIDsBig cmIDs = JsonConvert.DeserializeObject<actIDsBig>(responseContent);
+                                    foreach (var cmid in cmIDs.statuses)
                                     {
-                                        if (cmid.modname == "assign")
-                                            assCmids.Add(cmid.CMID);
-                                        else if (cmid.modname == "forum")
-                                            forumCmids.Add(cmid.CMID);
-                                        else if (cmid.modname == "quiz")
-                                            quizCmids.Add(cmid.CMID);
-                                        if (loginBar.Value != 40)
-                                            loginBar.Value += 1;
-                                        printProgress.Text = "Storing Tasks: " + cmid.CMID;
+                                        if (cmid.state == 0)
+                                        {
+                                            if (cmid.modname == "assign")
+                                                assCmids.Add(cmid.CMID);
+                                            else if (cmid.modname == "forum")
+                                                forumCmids.Add(cmid.CMID);
+                                            else if (cmid.modname == "quiz")
+                                                quizCmids.Add(cmid.CMID);
+                                            if (loginBar.Value != 40)
+                                                loginBar.Value += 1;
+                                            printProgress.Text = "Storing Tasks: " + cmid.CMID;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        if (loginBar.Value != 40)
-                            loginBar.Value = 40;
-                        printProgress.Text = "Task IDs Successfully Stored";
+                            if (loginBar.Value != 40)
+                                loginBar.Value = 40;
+                            printProgress.Text = "Task IDs Successfully Stored";
 
-                        //gets DueDate and Name of Assignments
+                            //gets DueDate and Name of Assignments
 
-                        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
-                        {
-                            request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=mod_assign_get_assignments");
-                            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
-                            var response = await client.SendAsync(request);
-                            string responseContent = await response.Content.ReadAsStringAsync();
-                            dueDateBig dueDates = JsonConvert.DeserializeObject<dueDateBig>(responseContent);
-                            int cmidDueDateConfirmed = 0;
-                            while (cmidDueDateConfirmed < assCmids.Count)
+                            using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
                             {
-                                foreach (var a in dueDates.courses)
+                                request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=mod_assign_get_assignments");
+                                request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
+                                var response = await client.SendAsync(request);
+                                string responseContent = await response.Content.ReadAsStringAsync();
+                                dueDateBig dueDates = JsonConvert.DeserializeObject<dueDateBig>(responseContent);
+                                int cmidDueDateConfirmed = 0;
+                                while (cmidDueDateConfirmed < assCmids.Count)
                                 {
-                                    if (cmidDueDateConfirmed == assCmids.Count)
-                                        break;
-                                    if (a.assignments.Count != 0)
+                                    foreach (var a in dueDates.courses)
                                     {
-                                        foreach (var b in a.assignments)
+                                        if (cmidDueDateConfirmed == assCmids.Count)
+                                            break;
+                                        if (a.assignments.Count != 0)
                                         {
-                                            if (cmidDueDateConfirmed == assCmids.Count)
-                                                break;
-                                            if (b.cmid == assCmids[cmidDueDateConfirmed])
+                                            foreach (var b in a.assignments)
                                             {
-                                                cmidDueDateConfirmed++;
-                                                string pmorAM = UnixTimeStampToDateTime(b.duedate).ToString("tt").ToUpper();
-                                                string date = UnixTimeStampToDateTime(b.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                                if (cmidDueDateConfirmed == assCmids.Count)
+                                                    break;
+                                                if (b.cmid == assCmids[cmidDueDateConfirmed])
+                                                {
+                                                    cmidDueDateConfirmed++;
+                                                    string pmorAM = UnixTimeStampToDateTime(b.duedate).ToString("tt").ToUpper();
+                                                    string date = UnixTimeStampToDateTime(b.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                                    if (date == "Thu, 1 January 1970|#$#|08:00")
+                                                    {
+                                                        date = "---|#$#|---";
+                                                        pmorAM = "";
+                                                    }
+                                                    list.Add(a.fullname + "|#$#|" + b.name + "|#$#|" + date + pmorAM);
+                                                    if (loginBar.Value != 60)
+                                                        loginBar.Value += 1;
+                                                    printProgress.Text = "Storing Assignments: " + b.name;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            if (loginBar.Value != 60)
+                                loginBar.Value = 60;
+                            printProgress.Text = "Assignment IDs Successfully Stored";
+
+                            //gets Name of forum
+                            using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
+                            {
+                                request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=mod_forum_get_forums_by_courses");
+                                request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
+                                var response = await client.SendAsync(request);
+                                string responseContent = await response.Content.ReadAsStringAsync();
+                                List<forumName> forums = JsonConvert.DeserializeObject<List<forumName>>(responseContent);
+                                int forumCmidsCount = 0;
+                                while (forumCmidsCount < forumCmids.Count)
+                                {
+                                    foreach (var a in forums)
+                                    {
+                                        if (forumCmidsCount == forumCmids.Count)
+                                            break;
+                                        if (a.cmid == forumCmids[forumCmidsCount])
+                                        {
+                                            forumCmidsCount++;
+                                            if (a.duedate != 0)
+                                            {
+                                                string pmorAM = UnixTimeStampToDateTime(a.duedate).ToString("tt").ToUpper();
+                                                string date = UnixTimeStampToDateTime(a.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
                                                 if (date == "Thu, 1 January 1970|#$#|08:00")
                                                 {
                                                     date = "---|#$#|---";
                                                     pmorAM = "";
-                                                }                                                      
-                                                list.Add(a.fullname + "|#$#|" + b.name + "|#$#|" + date + pmorAM );
-                                                if (loginBar.Value != 60)
+                                                }
+                                                list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
+                                                if (loginBar.Value != 80)
                                                     loginBar.Value += 1;
-                                                printProgress.Text = "Storing Assignments: " + b.name;
+                                                printProgress.Text = "Storing Forums: " + a.name;
+                                            }
+                                            else
+                                            {
+                                                string pmorAM = UnixTimeStampToDateTime(a.cutoffdate).ToString("tt").ToUpper();
+                                                string date = UnixTimeStampToDateTime(a.cutoffdate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                                if (date == "Thu, 1 January 1970|#$#|08:00")
+                                                {
+                                                    date = "---|#$#|---";
+                                                    pmorAM = "";
+                                                }
+                                                list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
+                                                if (loginBar.Value != 80)
+                                                    loginBar.Value += 1;
+                                                printProgress.Text = "Storing Forums: " + a.name;
                                             }
                                         }
                                     }
                                 }
                             }
-                        }
-                        if (loginBar.Value != 60)
-                            loginBar.Value = 60;
-                        printProgress.Text = "Assignment IDs Successfully Stored";
+                            if (loginBar.Value != 80)
+                                loginBar.Value = 80;
+                            printProgress.Text = "Forum IDs Successfully Stored";
 
-                        //gets Name of forum
-                        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
-                        {
-                            request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=mod_forum_get_forums_by_courses");
-                            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
-                            var response = await client.SendAsync(request);
-                            string responseContent = await response.Content.ReadAsStringAsync();
-                            List<forumName> forums = JsonConvert.DeserializeObject<List<forumName>>(responseContent);
-                            int forumCmidsCount = 0;
-                            while (forumCmidsCount < forumCmids.Count)
+                            //gets Quizzes by course
+                            using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
                             {
-                                foreach (var a in forums)
+                                request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=mod_quiz_get_quizzes_by_courses");
+                                request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
+                                var response = await client.SendAsync(request);
+                                string responseContent = await response.Content.ReadAsStringAsync();
+                                quizzesBig quiz = JsonConvert.DeserializeObject<quizzesBig>(responseContent);
+                                int quizidsCount = 0;
+                                while (quizidsCount < quizCmids.Count)
                                 {
-                                    if (forumCmidsCount == forumCmids.Count)
-                                        break;
-                                    if (a.cmid == forumCmids[forumCmidsCount])
+                                    foreach (var a in quiz.quizzes)
                                     {
-                                        forumCmidsCount++;
-                                        if (a.duedate != 0)
+                                        if (quizidsCount == quizCmids.Count)
+                                            break;
+                                        if (a.coursemodule == quizCmids[quizidsCount])
                                         {
-                                            string pmorAM = UnixTimeStampToDateTime(a.duedate).ToString("tt").ToUpper();
-                                            string date = UnixTimeStampToDateTime(a.duedate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
+                                            quizidsCount++;
+                                            string pmorAM = UnixTimeStampToDateTime(a.timeclose).ToString("tt").ToUpper();
+                                            string date = UnixTimeStampToDateTime(a.timeclose).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
                                             if (date == "Thu, 1 January 1970|#$#|08:00")
                                             {
                                                 date = "---|#$#|---";
                                                 pmorAM = "";
                                             }
-                                            list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM );
-                                            if (loginBar.Value != 80)
+                                            list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM);
+                                            if (loginBar.Value != 99)
                                                 loginBar.Value += 1;
-                                            printProgress.Text = "Storing Forums: " + a.name;
-                                        }
-                                        else
-                                        {
-                                            string pmorAM = UnixTimeStampToDateTime(a.cutoffdate).ToString("tt").ToUpper();
-                                            string date = UnixTimeStampToDateTime(a.cutoffdate).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
-                                            if (date == "Thu, 1 January 1970|#$#|08:00")
-                                            {
-                                                date = "---|#$#|---";
-                                                pmorAM = "";
-                                            }
-                                            list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM );
-                                            if (loginBar.Value != 80)
-                                                loginBar.Value += 1;
-                                            printProgress.Text = "Storing Forums: " + a.name;
+                                            printProgress.Text = "Storing Quizzes: " + a.name;
                                         }
                                     }
                                 }
                             }
-                        }
-                        if (loginBar.Value != 80)
-                            loginBar.Value = 80;
-                        printProgress.Text = "Forum IDs Successfully Stored";
+                            if (loginBar.Value != 100)
+                                loginBar.Value = 100;
+                            printProgress.Text = "Assignment IDs Successfully Stored";
 
-                        //gets Quizzes by course
-                        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/webservice/rest/server.php?moodlewsrestformat=json"))
-                        {
-                            request.Content = new StringContent("wstoken=" + wsToken + "&wsfunction=mod_quiz_get_quizzes_by_courses");
-                            request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
-                            var response = await client.SendAsync(request);
-                            string responseContent = await response.Content.ReadAsStringAsync();
-                            quizzesBig quiz = JsonConvert.DeserializeObject<quizzesBig>(responseContent);
-                            int quizidsCount = 0;
-                            while (quizidsCount < quizCmids.Count)
+                            lines.Add("true");
+                            lines.Add(username.Text);
+                            lines.Add(password.Text);
+                            lines.Add(fullName);
+                            using (StreamWriter sw = new StreamWriter(accPath))
                             {
-                                foreach (var a in quiz.quizzes)
+                                foreach (var line in lines)
+                                    sw.WriteLine(line);
+                            }
+                            string[] x = { "|#$#|" };
+                            while (list.Count > 0)
+                            {
+                                string[] earliest = list.First().Split(x, StringSplitOptions.None);
+                                DateTime earliestDate = new DateTime();
+                                foreach (var line in list)
                                 {
-                                    if (quizidsCount == quizCmids.Count)
-                                        break;
-                                    if (a.coursemodule == quizCmids[quizidsCount])
+
+                                    elements = line.Split(x, StringSplitOptions.None);
+                                    string date = elements[2] + " " + elements[3];
+                                    if ((earliest[2] + " " + earliest[3]) != "--- ---")
                                     {
-                                        quizidsCount++;
-                                        string pmorAM = UnixTimeStampToDateTime(a.timeclose).ToString("tt").ToUpper();
-                                        string date = UnixTimeStampToDateTime(a.timeclose).ToString("ddd, d MMMM yyyy|#$#|hh:mm");
-                                        if (date == "Thu, 1 January 1970|#$#|08:00")
+                                        earliestDate = Convert.ToDateTime(earliest[2] + " " + earliest[3]);
+                                    }
+                                    if (date != "--- ---")
+                                    {
+                                        int compare = DateTime.Compare(Convert.ToDateTime(Convert.ToDateTime(date).ToString("s")), Convert.ToDateTime(earliestDate.ToString("s")));
+                                        if (compare < 0)
                                         {
-                                            date = "---|#$#|---";
-                                            pmorAM = "";
+                                            earliest = elements;
                                         }
-                                        list.Add(courseNameIds[a.course] + "|#$#|" + a.name + "|#$#|" + date + pmorAM );
-                                        if (loginBar.Value != 99)
-                                            loginBar.Value += 1;
-                                        printProgress.Text = "Storing Quizzes: " + a.name;
                                     }
                                 }
-                            }
-                        }
-                        if (loginBar.Value != 100)
-                            loginBar.Value = 100;
-                        printProgress.Text = "Assignment IDs Successfully Stored";
-
-                        lines.Add("true");
-                        lines.Add(username.Text);
-                        lines.Add(password.Text);
-                        lines.Add(fullName);
-                        using (StreamWriter sw = new StreamWriter(accPath))
-                        {
-                            foreach (var line in lines)
-                                sw.WriteLine(line);
-                        }
-                        string[] x = { "|#$#|" };
-                        while (list.Count > 0)
-                        {
-                            string[] earliest = list.First().Split(x, StringSplitOptions.None);
-                            DateTime earliestDate = new DateTime();
-                            foreach (var line in list)
-                            {
-
-                                elements = line.Split(x, StringSplitOptions.None);
-                                string date = elements[2] + " " + elements[3];
+                                string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3];
+                                list.Remove(remove);
+                                remove += "|#$#|false";
                                 if ((earliest[2] + " " + earliest[3]) != "--- ---")
-                                {
-                                    earliestDate = Convert.ToDateTime(earliest[2] + " " + earliest[3]);
-                                }
-                                if (date != "--- ---")
-                                {
-                                    int compare = DateTime.Compare(Convert.ToDateTime(Convert.ToDateTime(date).ToString("s")), Convert.ToDateTime(earliestDate.ToString("s")));
-                                    if (compare < 0)
-                                    {
-                                        earliest = elements;
-                                    }
-                                }
+                                    sortedList.Add(remove);
+                                else
+                                    openList.Add(remove);
+
                             }
-                            string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3];
-                            list.Remove(remove);
-                            remove += "|#$#|false";
-                            if ((earliest[2] + " " + earliest[3]) != "--- ---")
-                                sortedList.Add(remove);
-                            else
-                                openList.Add(remove);
+                            foreach (var ls in openList)
+                                sortedList.Add(ls);
 
-                        }
-                        foreach (var ls in openList)
-                            sortedList.Add(ls);
-
-                        File.WriteAllText(path, String.Empty);
-                        using (StreamWriter sw = new StreamWriter(path))
-                        {
-                            foreach (var line in sortedList)
+                            File.WriteAllText(path, String.Empty);
+                            using (StreamWriter sw = new StreamWriter(path))
                             {
-                                sw.WriteLine(line);
+                                foreach (var line in sortedList)
+                                {
+                                    sw.WriteLine(line);
+                                }
                             }
+                            EarlyBird.Globals.closeButtonDisable = false;
+                            EarlyBird f1 = new EarlyBird();
+                            f1.sortList();
+                            resetText();
+                            afterLogin();
                         }
-                        EarlyBird.Globals.closeButtonDisable = false;
-                        EarlyBird f1 = new EarlyBird();
-                        f1.sortList();
-                        resetText();
-                        afterLogin();
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unstable Internet, Please try again", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string accPath = Application.StartupPath + @"\acc.txt";
+                    using (StreamWriter sw = new StreamWriter(accPath))
+                    {
+                        sw.WriteLine("false");
+                    }
+                    login lg = new login();
+                    lg.Dock = DockStyle.Fill;
+                    while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                    GC.Collect();
+                    EarlyBird.Instance.screenContainer.Controls.Add(lg);
+                }     
             }
         }
 
