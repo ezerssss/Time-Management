@@ -484,9 +484,9 @@ namespace app
 
         private void resetText()
         {
-            username.Text = "Enter username";
+            username.Text = "Username";
             username.ForeColor = Color.LightGray;
-            password.Text = "Enter password";
+            password.Text = "Password";
             
             hide = true;
             password.ForeColor = Color.LightGray;
@@ -585,7 +585,7 @@ namespace app
         {
             if (username.Text == "")
             {
-                username.Text = "Enter username";
+                username.Text = "Username";
                 username.ForeColor = Color.LightGray;
                 userRemove = true;
             }
@@ -603,7 +603,7 @@ namespace app
         {
             if (password.Text == "")
             {
-                password.Text = "Enter password";
+                password.Text = "Password";
                 password.ForeColor = Color.LightGray;
                 passRemove = true;
             }           
@@ -616,13 +616,13 @@ namespace app
         private void login_button_Enter(object sender, EventArgs e)
         {
             if (username.Text == "") {
-                username.Text = "Enter username";
+                username.Text = "Username";
                 userRemove = true;
             }
             if (userRemove)
                 username.ForeColor = Color.LightGray;
             if (password.Text == "") {
-                password.Text = "Enter password";
+                password.Text = "Password";
                 passRemove = true;
             }
             if (passRemove)
@@ -634,14 +634,14 @@ namespace app
         {
             if (username.Text == "")
             {
-                username.Text = "Enter username";
+                username.Text = "Username";
                 userRemove = true;
             }
             if (userRemove)
                 username.ForeColor = Color.LightGray;
             if (password.Text == "")
             {
-                password.Text = "Enter password";
+                password.Text = "Password";
                 passRemove = true;
             }
             if (passRemove)

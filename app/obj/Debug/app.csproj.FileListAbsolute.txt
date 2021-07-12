@@ -123,3 +123,4 @@ C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.Cop
 C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\EarlyBird.exe
 C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\EarlyBird.pdb
 C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
+D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache

@@ -117,7 +117,7 @@ namespace app
                 Application.Restart();
             }
 
-            if (CheckForInternetConnection())
+            /*if (CheckForInternetConnection())
             {
                 string[] checkLogin = File.ReadAllLines(accPath);
                 if (checkLogin.Length < 1)
@@ -141,13 +141,13 @@ namespace app
                     screen.Controls.Add(apiFunc);
                 }
 
-            }
-            else
-            {
+            }*/
+            //else
+            //{
                 Calendar_View cv = new Calendar_View();
                 cv.Dock = DockStyle.Fill;
                 screen.Controls.Add(cv);
-            }
+            //}
 
 
         }
