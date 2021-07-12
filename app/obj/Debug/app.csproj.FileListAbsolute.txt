@@ -124,3 +124,23 @@ C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\EarlyBird.exe
 C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\EarlyBird.pdb
 C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
 D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\EarlyBird.exe.config
+C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\EarlyBird.exe
+C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\EarlyBird.pdb
+C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.add_task.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.APIFunction.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.Calendar_View.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.Data_Grid.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.EarlyBird.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.PopUp.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.login.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.logOutUser.resources
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.csproj.GenerateResource.cache
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.csproj.CopyComplete
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\EarlyBird.exe
+C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\EarlyBird.pdb
