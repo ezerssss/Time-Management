@@ -67,7 +67,6 @@ namespace app
                 MessageBox.Show("No Internet", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else {
                 File.WriteAllText(accPath, String.Empty);
-                File.WriteAllText(path, String.Empty);
                 List<string> lines = new List<string>();
                 string wsToken = "", userId = "";
                 IDictionary<int, string> courseNameIds = new Dictionary<int, string>();
