@@ -66,6 +66,10 @@ namespace app
             else if (!CheckForInternetConnection())
                 MessageBox.Show("No Internet", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else {
+                login_button.Enabled = false;
+                linkLabel1.Enabled = false;
+                linkLabel1.Text = "Trying to login";
+
                 File.WriteAllText(accPath, String.Empty);
                 List<string> lines = new List<string>();
                 string wsToken = "", userId = "";
@@ -387,7 +391,10 @@ namespace app
                     while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
                     GC.Collect();
                     EarlyBird.Instance.screenContainer.Controls.Add(lg);
-                }     
+                }
+                login_button.Enabled = true;
+                linkLabel1.Enabled = true;
+                linkLabel1.Text = "Continue";
             }
         }
 

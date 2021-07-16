@@ -101,7 +101,7 @@
             this.login_button.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_button.ForeColor = System.Drawing.Color.White;
             this.login_button.Image = ((System.Drawing.Image)(resources.GetObject("login_button.Image")));
-            this.login_button.Location = new System.Drawing.Point(105, 390);
+            this.login_button.Location = new System.Drawing.Point(102, 390);
             this.login_button.Name = "login_button";
             this.login_button.Size = new System.Drawing.Size(189, 65);
             this.login_button.TabIndex = 4;
@@ -111,15 +111,15 @@
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Questrial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.linkLabel1.Location = new System.Drawing.Point(170, 458);
+            this.linkLabel1.Location = new System.Drawing.Point(1, 456);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(54, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(386, 21);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Continue ";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             this.linkLabel1.Enter += new System.EventHandler(this.linkLabel1_Enter);
@@ -142,7 +142,7 @@
             // 
             this.loginBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.loginBar.Location = new System.Drawing.Point(88, 508);
-            this.loginBar.Margin = new System.Windows.Forms.Padding(2);
+            this.loginBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginBar.Name = "loginBar";
             this.loginBar.Size = new System.Drawing.Size(206, 29);
             this.loginBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
