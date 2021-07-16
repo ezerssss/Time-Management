@@ -220,7 +220,10 @@ namespace app
                     {
                         int verticalOffsets = i * 60 + 50;
                         Label collectiveDate = new Label();
-                        collectiveDate.Text = pair.Key;
+                        if (pair.Key == "---")
+                            collectiveDate.Text = "No deadline set";
+                        else
+                            collectiveDate.Text = pair.Key;
                         collectiveDate.Name = "colDate" + rowCounter;
                         collectiveDate.Width = panel1.Width-11;
                         collectiveDate.Height = 24;
@@ -622,7 +625,10 @@ namespace app
                     }
                     int verticalOffset = i * 60 + 50;
                     Label collectiveDate = new Label();
-                    collectiveDate.Text = pair.Key;
+                    if (pair.Key == "---")
+                        collectiveDate.Text = "No deadline set";
+                    else
+                        collectiveDate.Text = pair.Key;
                     collectiveDate.Name = "colDate" + rowCounter;
                     collectiveDate.Width = panel1.Width - 11;
                     collectiveDate.Height = 24;
