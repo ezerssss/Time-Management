@@ -58,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7B02EFF5F0AB93991A247B5F891566E0"
+        "OwnerKey" = "8:_AED138AFB9F0089C9BD30DC42E687415"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AED138AFB9F0089C9BD30DC42E687415"
+        "OwnerKey" = "8:_7B02EFF5F0AB93991A247B5F891566E0"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -175,6 +175,11 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_264AA5B2D873988D5588B623F828F006"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -221,6 +226,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_7B02EFF5F0AB93991A247B5F891566E0"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -247,6 +257,11 @@
             "AssemblyAsmDisplayName" = "8:Syncfusion.Licensing, Version=19.2460.0.46, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_AED138AFB9F0089C9BD30DC42E687415"
+                    {
+                    "Name" = "8:Syncfusion.Licensing.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Syncfusion.Licensing.dll"
             "TargetName" = "8:"
@@ -376,7 +391,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:EarlyBird"
         "ProductCode" = "8:{381725FF-745D-49A5-8AD3-FEEA5EDFEFDD}"
-        "PackageCode" = "8:{7923CABA-1800-413B-93F2-2337353D9564}"
+        "PackageCode" = "8:{9DFE09B0-BFDB-4591-8573-7DAAEB3C595F}"
         "UpgradeCode" = "8:{5113ED31-D971-49A6-9768-4133B3BAE71E}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -496,21 +511,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D52E4DE328854276BF55C8D61B06EF6B"
-            {
-            "Name" = "8:EarlyBird"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
-            "Folder" = "8:_68C69046FEC941C5863B4CD04FD8BF8F"
-            "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D7211FF29D9F45CD860EB11920BDB3BA"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_074029A854FB412EBC8A5FB1CA3537B6"
             {
             "Name" = "8:EarlyBird"
             "Arguments" = "8:"
@@ -521,10 +522,10 @@
             "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
             "Folder" = "8:_A5985D98F510415897A410AC2B21EACE"
             "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Icon" = "8:"
+            "Icon" = "8:_BAB6BA3DFBDC4383848F712CB76A722C"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E0E75D823D794106A3A66F08755AD16F"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4E73F9D6BF0843F99DEA53B8F9496E25"
             {
             "Name" = "8:EarlyBird"
             "Arguments" = "8:"
@@ -535,7 +536,21 @@
             "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
             "Folder" = "8:_C2E60C9935584FC887B855D8842D3176"
             "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Icon" = "8:"
+            "Icon" = "8:_BAB6BA3DFBDC4383848F712CB76A722C"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FF47CB4E350B440D99D159E1204CCF48"
+            {
+            "Name" = "8:EarlyBird"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
+            "Folder" = "8:_68C69046FEC941C5863B4CD04FD8BF8F"
+            "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
+            "Icon" = "8:_BAB6BA3DFBDC4383848F712CB76A722C"
             "Feature" = "8:"
             }
         }
