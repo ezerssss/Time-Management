@@ -123,7 +123,6 @@ C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csproj.Cop
 C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\EarlyBird.exe
 C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\EarlyBird.pdb
 C:\Users\Yogi\Source\Repos\ezerssss\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
-D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache
 C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\EarlyBird.exe.config
 C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\EarlyBird.exe
 C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\EarlyBird.pdb
@@ -145,3 +144,4 @@ C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.csp
 C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\EarlyBird.exe
 C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\EarlyBird.pdb
 D:\C# Projects\Time-Management\app\bin\Debug\Syncfusion.Licensing.dll
+D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache

@@ -15,25 +15,25 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2367867F4D7D494EAB4C5AE592E5F692"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2500F4B017ED4B9FA46CF70DC8F99421"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_264AA5B2D873988D5588B623F828F006"
         "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_2A5F0D7B44EA4C269C5F865C99C76738"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7B02EFF5F0AB93991A247B5F891566E0"
+        "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AED138AFB9F0089C9BD30DC42E687415"
         "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,8 +45,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7B02EFF5F0AB93991A247B5F891566E0"
+        "MsmKey" = "8:_BAB6BA3DFBDC4383848F712CB76A722C"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -58,7 +58,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7B02EFF5F0AB93991A247B5F891566E0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_264AA5B2D873988D5588B623F828F006"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AED138AFB9F0089C9BD30DC42E687415"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -101,7 +113,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Setup.msi"
+        "OutputFilename" = "8:EarlyBirdSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -156,46 +168,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2367867F4D7D494EAB4C5AE592E5F692"
-            {
-            "SourcePath" = "8:D:\\Downloads\\bird-logo.ico"
-            "TargetName" = "8:bird-logo.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2500F4B017ED4B9FA46CF70DC8F99421"
-            {
-            "SourcePath" = "8:D:\\Downloads\\Compressed\\Questrial-Regular.ttf"
-            "TargetName" = "8:Questrial-Regular.ttf"
-            "Tag" = "8:"
-            "Folder" = "8:_8B73BC0600BF46FAB86829DEEB0CCFCF"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:5"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_264AA5B2D873988D5588B623F828F006"
             {
             "AssemblyRegister" = "3:1"
@@ -203,11 +175,6 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_264AA5B2D873988D5588B623F828F006"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -227,6 +194,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A5F0D7B44EA4C269C5F865C99C76738"
+            {
+            "SourcePath" = "8:D:\\Documents\\School\\STEMR2\\Questrial-Regular.ttf"
+            "TargetName" = "8:Questrial-Regular.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_8B73BC0600BF46FAB86829DEEB0CCFCF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:5"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7B02EFF5F0AB93991A247B5F891566E0"
             {
             "AssemblyRegister" = "3:1"
@@ -234,11 +221,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_7B02EFF5F0AB93991A247B5F891566E0"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -256,6 +238,52 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AED138AFB9F0089C9BD30DC42E687415"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Syncfusion.Licensing, Version=19.2460.0.46, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:Syncfusion.Licensing.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BAB6BA3DFBDC4383848F712CB76A722C"
+            {
+            "SourcePath" = "8:D:\\Documents\\School\\STEMR2\\bird-logo.ico"
+            "TargetName" = "8:bird-logo.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -365,7 +393,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_2367867F4D7D494EAB4C5AE592E5F692"
+        "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -468,21 +496,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3FC47ED9F4EB4E5EA1B6C82D42FCF421"
-            {
-            "Name" = "8:EarlyBird"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
-            "Folder" = "8:_C2E60C9935584FC887B855D8842D3176"
-            "WorkingFolder" = "8:"
-            "Icon" = "8:_2367867F4D7D494EAB4C5AE592E5F692"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4E5BF1D336224FD5904BD1BE7AC07771"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D52E4DE328854276BF55C8D61B06EF6B"
             {
             "Name" = "8:EarlyBird"
             "Arguments" = "8:"
@@ -493,10 +507,10 @@
             "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
             "Folder" = "8:_68C69046FEC941C5863B4CD04FD8BF8F"
             "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Icon" = "8:_2367867F4D7D494EAB4C5AE592E5F692"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DA4CCAFEF90E4BD5BC522AC378379A25"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D7211FF29D9F45CD860EB11920BDB3BA"
             {
             "Name" = "8:EarlyBird"
             "Arguments" = "8:"
@@ -506,8 +520,22 @@
             "Transitive" = "11:FALSE"
             "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
             "Folder" = "8:_A5985D98F510415897A410AC2B21EACE"
-            "WorkingFolder" = "8:"
-            "Icon" = "8:_2367867F4D7D494EAB4C5AE592E5F692"
+            "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E0E75D823D794106A3A66F08755AD16F"
+            {
+            "Name" = "8:EarlyBird"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
+            "Folder" = "8:_C2E60C9935584FC887B855D8842D3176"
+            "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
