@@ -380,7 +380,7 @@ namespace app
                 }
                 catch
                 {
-                    MessageBox.Show("Please try again", "Unstable Internet", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please try again", "Failed to login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     string accPath = Application.StartupPath + @"\acc.txt";
                     using (StreamWriter sw = new StreamWriter(accPath))
                     {
