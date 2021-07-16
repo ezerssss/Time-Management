@@ -371,7 +371,7 @@ namespace app
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("NO TASKS STORED, PLEASE UPDATE AGAIN", "Unstable Internet", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EarlyBird f1 = new EarlyBird();

@@ -144,3 +144,4 @@ C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.csp
 C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\app.csproj.CopyComplete
 C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\EarlyBird.exe
 C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\EarlyBird.pdb
+D:\C# Projects\Time-Management\app\bin\Debug\Syncfusion.Licensing.dll

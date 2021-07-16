@@ -27,38 +27,57 @@ namespace app
 
         private void printCalendarTask(string time, string subject, string assignment, int verticalOffset)
         {
-            string text = subject + " - " + assignment;
+            string text = subject.ToUpper() + "  -  " + assignment;
             string display = text;
-            if (text.Length > 22)
-            {
-                display = text.Substring(0, 23);
-                display += "...";
-            }
-            Label timebox = new Label();
-            assignmentScreen.Controls.Add(timebox);
-            timebox.Top = verticalOffset * 30 + 5;
-            timebox.Left = 20;
-            timebox.Width = 64;
-            timebox.Height = 24;
-            timebox.Text = time;
-            timebox.Font = new Font("Century Gothic Bold", 10);
-            timebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
-            timebox.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
-            TextBox taskBox = new TextBox();
+            Label heading = new Label();
+            heading.Width = 200;
+            heading.Height = 30;
+            heading.Left = 8;
+            heading.Top = 7;
+            heading.Text = "Task/s for " + calendar.SelectionStart.ToString("MMM d");
+            heading.Font = new Font("Questrial", 16);
+            heading.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+            assignmentScreen.Controls.Add(heading);
+
+            Label timebox = new Label();     
+            timebox.Top = verticalOffset * 65 + 54;
+            timebox.Left = 40;
+            timebox.Width = 85;
+            timebox.Height = 46;
+            timebox.Text = time;
+            timebox.BackColor = Color.FromArgb(255, 180, 0);
+            timebox.Font = new Font("Questrial", 14);
+            timebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+            timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            assignmentScreen.Controls.Add(timebox);
+
+
+            Label taskBox = new Label();
             ToolTip tp = new ToolTip();
             tp.ShowAlways = true;
 
             assignmentScreen.Controls.Add(taskBox);
-            taskBox.Top = verticalOffset * 30 + 7;
-            taskBox.Left = 90;
-            taskBox.Width = 220;
+            taskBox.Top = verticalOffset * 65 + 64;
+            taskBox.Left = 143;
+            taskBox.Width = 187;
+            taskBox.Height = 38;
             taskBox.Text = display;
-            taskBox.ReadOnly = true;
-            taskBox.Font = new Font("Century Gothic", 12);
+            taskBox.AutoEllipsis = true;
+            taskBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+            taskBox.Font = new Font("Questrial", 13);
+            taskBox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#E18829");
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             tp.SetToolTip(taskBox, text);
+
+            var picture = new PictureBox
+            {
+                Name = "pictureBox",
+                Size = new Size(350, 85),
+                Location = new Point(5, verticalOffset * 64 + 26),
+                Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")))
+            };
+            assignmentScreen.Controls.Add(picture);
         }
 
         private void checkAssignments()
@@ -129,11 +148,6 @@ namespace app
                 while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
                 EarlyBird.Instance.screenContainer.Controls.Add(at);
             }
-        }
-
-        private void assignmentScreen_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

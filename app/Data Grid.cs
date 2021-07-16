@@ -48,7 +48,7 @@ namespace app
         private void Data_Grid_Load(object sender, EventArgs e)
         {
             //disables datagrid autohighlight on cells
-            dayToday.Text = DateTime.Now.ToString("dd MMMM yyyy");
+            dayToday.Text = "Today is " + DateTime.Now.ToString("dd MMMM yyyy");
             showData();
         }
 
@@ -218,23 +218,25 @@ namespace app
                     }
                     if (DateTime.Compare(dateToDetermine, DateTime.Now) <= 0 || pair.Key == "---")
                     {
-                        int verticalOffset = i * 30 + 5;
+                        int verticalOffsets = i * 60 + 50;
                         Label collectiveDate = new Label();
                         collectiveDate.Text = pair.Key;
                         collectiveDate.Name = "colDate" + rowCounter;
-                        collectiveDate.Width = panel1.Width;
+                        collectiveDate.Width = panel1.Width-11;
                         collectiveDate.Height = 24;
-                        collectiveDate.Font = new Font("Questrial", 10);
-                        //collectiveDate.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+                        collectiveDate.Left = 11;
+                        collectiveDate.Font = new Font("Questrial", 11);
+                        collectiveDate.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
                         //collectiveDate.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
-                        collectiveDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                        collectiveDate.Top = verticalOffset;
-                        i++;
+                        collectiveDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+                        collectiveDate.Top = verticalOffsets;
+
 
                         panel1.Controls.Add(collectiveDate);
 
                         foreach (var value in pair.Value)
                         {
+                            
                             string[] elements = value.Split(x, StringSplitOptions.None);
                             printTaskLine(elements, i);
                             removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
@@ -242,6 +244,7 @@ namespace app
                             //removeList.Add(value);
                             i++;
                         }
+                        i++;                
                     }
                 }
 
@@ -258,82 +261,107 @@ namespace app
             DateTime dateTime= new DateTime();
             displayElements[2] = dateTime.ToString("MM/dd"); 
 
-            verticalOffset = verticalOffset * 30 + 5;
 
             ToolTip tp = new ToolTip();
             tp.ShowAlways = true;
 
+            Label heading = new Label();
+            heading.Width = 200;
+            heading.Height = 30;
+            heading.Left = 8;
+            heading.Top = 7;
+            heading.Text = "Task/s";
+            heading.Font = new Font("Questrial", 18);
+            heading.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+            panel1.Controls.Add(heading);
+            panel1.Controls.Add(showAllTask);
+            panel1.Controls.Add(button1);
+
             Button removeTask = new Button();
-            removeTask.Top = verticalOffset + 2;
-            removeTask.Left = 2;
+            removeTask.Top = verticalOffset * 60 + 95;
+
+            removeTask.Left = 1;
             removeTask.Width = 22;
             removeTask.Height = 22;
             removeTask.Name = "button" + rowCounter;
             removeTask.Image = ((System.Drawing.Image)(resources.GetObject("referenceButton.Image")));
-            removeTask.FlatAppearance.BorderSize = 1;
+            removeTask.FlatAppearance.BorderSize = 0;
             removeTask.FlatAppearance.BorderColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             removeTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 
 
-            Label datebox = new Label();
-            datebox.Top = verticalOffset;
-            datebox.Left = removeTask.Left + removeTask.Width + 5;
-            datebox.Width = 50;
-            datebox.Height = 24;
-            datebox.Text = displayElements[2];
-            datebox.Font = new Font("Questrial", 10);
-            datebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
-            datebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
-            datebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            datebox.Name = "date" + rowCounter;
+            //Label datebox = new Label();
+            //datebox.Top = verticalOffset;
+            //datebox.Left = removeTask.Left + removeTask.Width + 5;
+            //datebox.Width = 50;
+            //datebox.Height = 24;
+            //datebox.Text = displayElements[2];
+            //datebox.Font = new Font("Questrial", 10);
+            //datebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+            //datebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
+            //datebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            //datebox.Name = "date" + rowCounter;
 
 
             Label timebox = new Label();
-            timebox.Top = verticalOffset;
-            timebox.Left = datebox.Left + datebox.Width;
-            timebox.Width = 80;
+            timebox.Top = verticalOffset * 60 + 93;
+            timebox.Left = removeTask.Left + removeTask.Width + 10;
+            timebox.Width = 90;
             timebox.Height = 24;
             timebox.Text = " " + displayElements[3];
-            timebox.Font = new Font("Questrial", 11);
+            timebox.Font = new Font("Questrial", 14);
+            timebox.BackColor = Color.FromArgb(255, 180, 0);
             timebox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
-            timebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
+            //timebox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
             timebox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             timebox.Name = "time" + rowCounter;
             
 
             Label subjbox = new Label();
-            subjbox.Top = verticalOffset;
-            subjbox.Left = timebox.Left + timebox.Width;
-            subjbox.Width = 70;
+            subjbox.Top = verticalOffset * 60 + 93;
+
+            subjbox.Left = timebox.Left + timebox.Width + 14;
+            subjbox.Width = 199;
             subjbox.AutoEllipsis = true;
             subjbox.Height = 24;
-            subjbox.Text = " " + displayElements[0];
-            subjbox.Font = new Font("Questrial", 11);
-            subjbox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
-            subjbox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
-            subjbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            subjbox.Text = " " + displayElements[0].ToUpper() + " - " + display;
+            subjbox.Font = new Font("Questrial", 13);
+            subjbox.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+            subjbox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#E18829");
+            //subjbox.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
+            subjbox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             subjbox.Name = "subj" + rowCounter;
-            tp.SetToolTip(subjbox, displayElements[0]);
+            tp.SetToolTip(subjbox, displayElements[0] + " - " + display);
             
 
-            Label taskBox = new Label();
-            taskBox.Top = verticalOffset + 2;
-            taskBox.Left = subjbox.Left + subjbox.Width + 5;
-            taskBox.Width = 135;
-            taskBox.AutoEllipsis = true;
-            taskBox.Text = display;
-            taskBox.Font = new Font("Questrial", 12);
-            taskBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
-            taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            taskBox.Name = "task" + rowCounter;
+            //Label taskBox = new Label();
+            //taskBox.Top = verticalOffset * 30 + 57;
+            //taskBox.Left = subjbox.Left + subjbox.Width - 7;
+            //taskBox.Width = 120;
+            //taskBox.AutoEllipsis = true;
+            //taskBox.Text = "- " + display;
+            //taskBox.Font = new Font("Questrial", 13);
+            //taskBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+            //taskBox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#E18829");
+            //taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            //taskBox.Name = "task" + rowCounter;
 
-            tp.SetToolTip(taskBox, text);
+            //tp.SetToolTip(taskBox, text);
+
+            var picture = new PictureBox
+            {
+                Name = "pictureBox",
+                Size = new Size(350, 84),
+                Location = new Point(0, verticalOffset * 60 + 55),
+                Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")))
+            };
 
             panel1.Controls.Add(removeTask);
-            panel1.Controls.Add(datebox);
+            //panel1.Controls.Add(datebox); fakyu
             panel1.Controls.Add(timebox);
             panel1.Controls.Add(subjbox);
-            panel1.Controls.Add(taskBox);
+            //panel1.Controls.Add(taskBox); fakyu
+            panel1.Controls.Add(picture);
 
             rowCounter++;
             removeTask.Click += new EventHandler(removeTask_Click);
@@ -498,16 +526,18 @@ namespace app
         {
             
             if (showAll)
-            {
-                showAllTask.Text = "TO-DO";
+            {           
+                showAllTask.Image = ((System.Drawing.Image)(resources.GetObject("todo_image.Image")));
+                showAllTask.Text = "";
                 dayToday.Text = "All Tasks";
                 showAllFuntion();
             }
             else
             {
-                showAllTask.Text = "ALL";
+                showAllTask.Image = ((System.Drawing.Image)(resources.GetObject("show_image.Image")));
+                showAllTask.Text = "";
                 showAll = true;
-                dayToday.Text = DateTime.Now.ToString("dd MMMM yyyy");
+                dayToday.Text = "Today is " + DateTime.Now.ToString("dd MMMM yyyy");
                 showData();
             }
         }
@@ -550,6 +580,17 @@ namespace app
             panel1.Controls.Clear();
             panel1.Refresh();
             dictionary.Clear();
+
+            Label heading = new Label();
+            heading.Width = 200;
+            heading.Height = 30;
+            heading.Left = 8;
+            heading.Top = 7;
+            heading.Text = "Task/s";
+            heading.Font = new Font("Questrial", 18);
+            heading.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+            panel1.Controls.Add(heading);
+
             using (StreamReader sr = new StreamReader(path))
             {
                 while ((readline = sr.ReadLine()) != null)
@@ -579,20 +620,20 @@ namespace app
                         date = pair.Key;
                         //elements[2] = dateTime.ToString("MM/dd");
                     }
-                    int verticalOffset = i * 30 + 5;
+                    int verticalOffset = i * 60 + 50;
                     Label collectiveDate = new Label();
                     collectiveDate.Text = pair.Key;
-                    Console.WriteLine(pair.Key);
                     collectiveDate.Name = "colDate" + rowCounter;
-                    collectiveDate.Width = panel1.Width;
+                    collectiveDate.Width = panel1.Width - 11;
                     collectiveDate.Height = 24;
-                    collectiveDate.Font = new Font("Questrial", 10);
-                    //collectiveDate.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
+                    collectiveDate.Left = 11;
+                    collectiveDate.Font = new Font("Questrial", 11);
+                    collectiveDate.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
                     //collectiveDate.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel1.Image")));
-                    collectiveDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                    collectiveDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
                     collectiveDate.Top = verticalOffset;
+                    //i++;
                     panel1.Controls.Add(collectiveDate);
-                    i++;
                     foreach (var value in pair.Value)
                     {
                         string[] elements = value.Split(x, StringSplitOptions.None);
@@ -600,26 +641,12 @@ namespace app
                         removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
                         i++;
                     }
+                    i++;
                 }
                         
             }
             rowCounter = 0;
             showAll = false;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -157,21 +157,6 @@ namespace app
             }
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void subject_Enter(object sender, EventArgs e)
         {
             subject.Text = "";
@@ -189,11 +174,15 @@ namespace app
         private void subject_KeyDown(object sender, KeyEventArgs e)
         {
             subjectEnter = false;
+            if (e.KeyCode == Keys.Enter)
+                e.SuppressKeyPress = true;
         }
 
         private void task_KeyDown(object sender, KeyEventArgs e)
         {
             taskEnter = false;
+            if (e.KeyCode == Keys.Enter)
+                e.SuppressKeyPress = true;
         }
     }
 }
