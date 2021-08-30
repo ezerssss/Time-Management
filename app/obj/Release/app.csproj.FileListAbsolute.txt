@@ -18,4 +18,3 @@ D:\C# Projects\Time-Management\app\obj\Release\app.EarlyBird.resources
 D:\C# Projects\Time-Management\app\obj\Release\app.PopUp.resources
 D:\C# Projects\Time-Management\app\obj\Release\app.logOutUser.resources
 D:\C# Projects\Time-Management\app\bin\Release\Syncfusion.Licensing.dll
-D:\C# Projects\Time-Management\app\obj\Release\app.csprojAssemblyReference.cache
