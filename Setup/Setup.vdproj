@@ -11,6 +11,7 @@
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
 "SccProvider" = "8:"
+"BackwardsCompatibleGUIDGeneration" = "8:TRUE"
     "Hierarchy"
     {
         "Entry"
@@ -178,7 +179,7 @@
                     "_264AA5B2D873988D5588B623F828F006"
                     {
                     "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
+                    "Attributes" = "3:514"
                     }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
@@ -189,7 +190,7 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -209,7 +210,7 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -229,7 +230,7 @@
                     "_7B02EFF5F0AB93991A247B5F891566E0"
                     {
                     "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
+                    "Attributes" = "3:514"
                     }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
@@ -240,7 +241,7 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -260,7 +261,7 @@
                     "_AED138AFB9F0089C9BD30DC42E687415"
                     {
                     "Name" = "8:Syncfusion.Licensing.dll"
-                    "Attributes" = "3:512"
+                    "Attributes" = "3:514"
                     }
                 }
             "SourcePath" = "8:Syncfusion.Licensing.dll"
@@ -271,7 +272,7 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -291,7 +292,7 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -390,19 +391,19 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:EarlyBird"
-        "ProductCode" = "8:{381725FF-745D-49A5-8AD3-FEEA5EDFEFDD}"
-        "PackageCode" = "8:{9DFE09B0-BFDB-4591-8573-7DAAEB3C595F}"
+        "ProductCode" = "8:{65096D6E-C141-47D4-A8EF-6521F3754E1E}"
+        "PackageCode" = "8:{126A70C7-7DA5-460D-A834-8099DF378EA1}"
         "UpgradeCode" = "8:{5113ED31-D971-49A6-9768-4133B3BAE71E}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.2.0"
         "Manufacturer" = "8:EarlyBird"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Setup"
+        "Title" = "8:EarlyBirdSetup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Magbanua, Mendoza, Tumacole"
         "Keywords" = "8:"
@@ -954,7 +955,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B869FE4EB28B4B85B57A4E3C8765FE67"
             {
-            "SourcePath" = "8:..\\app\\obj\\Debug\\EarlyBird.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"

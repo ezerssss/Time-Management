@@ -87,40 +87,30 @@ namespace app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _obj = this;
-            if (!File.Exists(local))
+            try
             {
-                using (StreamWriter sw = new StreamWriter(local)) { }
-            }
-            if (!File.Exists(path))
-            {
-                using (StreamWriter sw = new StreamWriter(path)) { }
-                Application.Restart();
-            }
-            if (!File.Exists(ignored))
-            {
-                using (StreamWriter sw = new StreamWriter(ignored)) { }
-                Application.Restart();
-            }
-            else
-            {
-                if (!File.Exists(local) || !File.Exists(path))
-                    Application.Restart();
-                sortList();
-            }
-            if (!File.Exists(accPath))
-            {
-                using (StreamWriter writer = new StreamWriter(accPath))
+                _obj = this;
+                if (!File.Exists(local))
                 {
-                    writer.WriteLine("false");
+                    using (StreamWriter sw = new StreamWriter(local)) { }
                 }
-                Application.Restart();
-            }
-
-            /*if (CheckForInternetConnection())
-            {
-                string[] checkLogin = File.ReadAllLines(accPath);
-                if (checkLogin.Length < 1)
+                if (!File.Exists(path))
+                {
+                    using (StreamWriter sw = new StreamWriter(path)) { }
+                    Application.Restart();
+                }
+                if (!File.Exists(ignored))
+                {
+                    using (StreamWriter sw = new StreamWriter(ignored)) { }
+                    Application.Restart();
+                }
+                else
+                {
+                    if (!File.Exists(local) || !File.Exists(path))
+                        Application.Restart();
+                    sortList();
+                }
+                if (!File.Exists(accPath))
                 {
                     using (StreamWriter writer = new StreamWriter(accPath))
                     {
@@ -128,88 +118,113 @@ namespace app
                     }
                     Application.Restart();
                 }
-                if (checkLogin[0] == "false")
+
+                if (CheckForInternetConnection())
                 {
-                    login lg = new login();
-                    lg.Dock = DockStyle.Fill;
-                    screen.Controls.Add(lg);
+                    string[] checkLogin = File.ReadAllLines(accPath);
+                    if (checkLogin.Length < 1)
+                    {
+                        using (StreamWriter writer = new StreamWriter(accPath))
+                        {
+                            writer.WriteLine("false");
+                        }
+                        Application.Restart();
+                    }
+                    if (checkLogin[0] == "false")
+                    {
+                        login lg = new login();
+                        lg.Dock = DockStyle.Fill;
+                        screen.Controls.Add(lg);
+                    }
+                    else
+                    {
+                        APIFunction apiFunc = new APIFunction();
+                        apiFunc.Dock = DockStyle.Fill;
+                        screen.Controls.Add(apiFunc);
+                    }
+
                 }
                 else
                 {
-                    APIFunction apiFunc = new APIFunction();
-                    apiFunc.Dock = DockStyle.Fill;
-                    screen.Controls.Add(apiFunc);
+                    Calendar_View cv = new Calendar_View();
+                    cv.Dock = DockStyle.Fill;
+                    screen.Controls.Add(cv);
                 }
-
-            }*/
-            //else
-            //{
-                Calendar_View cv = new Calendar_View();
-                cv.Dock = DockStyle.Fill;
-                screen.Controls.Add(cv);
-            //}
-
-
+            }
+            catch
+            {
+                return;
+            }
         }
 
-        public void sortList() {          
-            List<string> list = new List<string>();
-            string readLine;
-            using (StreamReader sr = new StreamReader(path))
+        public void sortList()
+        {
+            try
             {
-                while ((readLine = sr.ReadLine()) != null) {
-                    if (!File.ReadAllText(local).Contains(readLine))
-                        list.Add(readLine);
-                }
-            }
-            using (StreamReader sr = new StreamReader(local))
-            {
-                while ((readLine = sr.ReadLine()) != null) {
-                    list.Add(readLine);
-                }
-            }
-            string[] elements;
-            List<string> sortedList = new List<string>();
-            List<string> openList = new List<string>();
-            while (list.Count > 0)
-            {
-                string[] earliest = list.First().Split(x, StringSplitOptions.None);
-                DateTime earliestDate = new DateTime();
-                foreach (var line in list)
+                List<string> list = new List<string>();
+                string readLine;
+                using (StreamReader sr = new StreamReader(path))
                 {
-                    elements = line.Split(x, StringSplitOptions.None);
-                    string date = elements[2] + " " + elements[3];
-                    if ((earliest[2] + " " + earliest[3]) != "--- ---")
+                    while ((readLine = sr.ReadLine()) != null)
                     {
-                        earliestDate = Convert.ToDateTime(earliest[2] + " " + earliest[3]);
+                        if (!File.ReadAllText(local).Contains(readLine))
+                            list.Add(readLine);
                     }
-                    if (date != "--- ---")
+                }
+                using (StreamReader sr = new StreamReader(local))
+                {
+                    while ((readLine = sr.ReadLine()) != null)
                     {
-                        int compare = DateTime.Compare(Convert.ToDateTime(Convert.ToDateTime(date).ToString("s")), Convert.ToDateTime(earliestDate.ToString("s")));
-                        if (compare < 0)
+                        list.Add(readLine);
+                    }
+                }
+                string[] elements;
+                List<string> sortedList = new List<string>();
+                List<string> openList = new List<string>();
+                while (list.Count > 0)
+                {
+                    string[] earliest = list.First().Split(x, StringSplitOptions.None);
+                    DateTime earliestDate = new DateTime();
+                    foreach (var line in list)
+                    {
+                        elements = line.Split(x, StringSplitOptions.None);
+                        string date = elements[2] + " " + elements[3];
+                        if ((earliest[2] + " " + earliest[3]) != "--- ---")
                         {
-                            earliest = elements;
+                            earliestDate = Convert.ToDateTime(earliest[2] + " " + earliest[3]);
+                        }
+                        if (date != "--- ---")
+                        {
+                            int compare = DateTime.Compare(Convert.ToDateTime(Convert.ToDateTime(date).ToString("s")), Convert.ToDateTime(earliestDate.ToString("s")));
+                            if (compare < 0)
+                            {
+                                earliest = elements;
+                            }
                         }
                     }
+                    string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3] + x[0] + earliest[4];
+                    list.Remove(remove);
+                    if ((earliest[2] + " " + earliest[3]) != "--- ---")
+                        sortedList.Add(remove);
+                    else
+                        openList.Add(remove);
+
                 }
-                string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3] + x[0] + earliest[4];
-                list.Remove(remove);
-                if ((earliest[2] + " " + earliest[3]) != "--- ---")
-                    sortedList.Add(remove);
-                else
-                    openList.Add(remove);
-                
-            }
-            foreach (var ls in openList)
-                sortedList.Add(ls);
-                
-            File.WriteAllText(path, String.Empty);
-            using (StreamWriter sw = new StreamWriter(path))
-            {
-                foreach (var lines in sortedList)
+                foreach (var ls in openList)
+                    sortedList.Add(ls);
+
+                File.WriteAllText(path, String.Empty);
+                using (StreamWriter sw = new StreamWriter(path))
                 {
-                    sw.WriteLine(lines);
+                    foreach (var lines in sortedList)
+                    {
+                        sw.WriteLine(lines);
+                    }
                 }
+            }
+            catch
+            {
+                return;
             }
         }
 

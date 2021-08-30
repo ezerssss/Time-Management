@@ -145,4 +145,3 @@ C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\EarlyBi
 C:\Users\User\Documents\Visual Studio apps\Time management\app\obj\Debug\EarlyBird.pdb
 D:\C# Projects\Time-Management\app\bin\Debug\Syncfusion.Licensing.dll
 C:\Users\User\Documents\Visual Studio apps\Time management\app\bin\Debug\Syncfusion.Licensing.dll
-D:\C# Projects\Time-Management\app\obj\Debug\app.csprojAssemblyReference.cache

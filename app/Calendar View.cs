@@ -55,9 +55,7 @@ namespace app
 
             Label taskBox = new Label();
             ToolTip tp = new ToolTip();
-            tp.ShowAlways = true;
-
-            assignmentScreen.Controls.Add(taskBox);
+            tp.ShowAlways = true; 
             taskBox.Top = verticalOffset * 65 + 64;
             taskBox.Left = 143;
             taskBox.Width = 187;
@@ -69,12 +67,13 @@ namespace app
             taskBox.ForeColor = System.Drawing.ColorTranslator.FromHtml("#E18829");
             taskBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             tp.SetToolTip(taskBox, text);
+            assignmentScreen.Controls.Add(taskBox);
 
             var picture = new PictureBox
             {
                 Name = "pictureBox",
                 Size = new Size(350, 85),
-                Location = new Point(5, verticalOffset * 64 + 26),
+                Location = new Point(5, verticalOffset * 65 + 26),
                 Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")))
             };
             assignmentScreen.Controls.Add(picture);

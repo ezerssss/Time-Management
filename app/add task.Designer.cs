@@ -184,9 +184,9 @@
             this.subject.Location = new System.Drawing.Point(54, 125);
             this.subject.Multiline = true;
             this.subject.Name = "subject";
-            this.subject.Size = new System.Drawing.Size(278, 25);
+            this.subject.Size = new System.Drawing.Size(284, 28);
             this.subject.TabIndex = 9;
-            this.subject.Text = "Enter subject of task";
+            this.subject.Text = "Enter subject name of task";
             this.subject.Click += new System.EventHandler(this.subject_Click);
             this.subject.Enter += new System.EventHandler(this.subject_Enter);
             this.subject.KeyDown += new System.Windows.Forms.KeyEventHandler(this.subject_KeyDown);
@@ -200,7 +200,7 @@
             this.task.Location = new System.Drawing.Point(54, 224);
             this.task.Multiline = true;
             this.task.Name = "task";
-            this.task.Size = new System.Drawing.Size(284, 25);
+            this.task.Size = new System.Drawing.Size(284, 30);
             this.task.TabIndex = 10;
             this.task.Text = "Enter task details";
             this.task.Click += new System.EventHandler(this.task_Click);
