@@ -62,14 +62,12 @@ namespace app
             minutes.Text = "00";
             day.Text = "am";
             date.Value = DateTime.Today;
-            subject.Text = "Enter subject of task";
+            subject.Text = "Enter subject name of task";
             subject.ForeColor = Color.LightGray;
-            task.Text = "Enter task detail";
+            task.Text = "Enter task details";
             task.ForeColor = Color.LightGray;
-            subject.Enabled = false;
-            subject.Enabled = true;
-            task.Enabled = false;
-            task.Enabled = true;
+            subjectEnter = true;
+            taskEnter = true;
         }
 
         private void key_down(object sender, KeyEventArgs e)
@@ -79,14 +77,14 @@ namespace app
 
         private void task_Click(object sender, EventArgs e)
         {
-            if (task.Text == "Enter task detail")
+            if (task.Text == "Enter task details")
                 task.Text = "";
             task.ForeColor = Color.Black;
         }
 
         private void subject_Click(object sender, EventArgs e)
         {
-            if (subject.Text == "Enter subject of task")
+            if (subject.Text == "Enter subject name of task")
                 subject.Text = "";
             subject.ForeColor = Color.Black;
         }
