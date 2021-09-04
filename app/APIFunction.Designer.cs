@@ -34,7 +34,9 @@ namespace app
             this.loginBar = new System.Windows.Forms.ProgressBar();
             this.printProgress = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,6 +79,15 @@ namespace app
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(386, 562);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
             // APIFunction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,10 +96,12 @@ namespace app
             this.Controls.Add(this.printProgress);
             this.Controls.Add(this.loginBar);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
             this.Name = "APIFunction";
             this.Size = new System.Drawing.Size(388, 562);
             this.Load += new System.EventHandler(this.APIFunction_LoadAsync);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +112,6 @@ namespace app
         private System.Windows.Forms.ProgressBar loginBar;
         private System.Windows.Forms.Label printProgress;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

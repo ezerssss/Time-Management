@@ -38,15 +38,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.showAllTask = new System.Windows.Forms.Button();
+            this.referenceLabel2 = new System.Windows.Forms.Label();
+            this.referenceLabel3 = new System.Windows.Forms.Label();
             this.noTaskPic = new System.Windows.Forms.PictureBox();
             this.referenceButton = new System.Windows.Forms.Label();
-            this.referenceLabel3 = new System.Windows.Forms.Label();
-            this.referenceLabel2 = new System.Windows.Forms.Label();
             this.referenceLabel1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.show_image = new System.Windows.Forms.Label();
             this.todo_image = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.links = new System.Windows.Forms.Button();
+            this.deleteImage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noTaskPic)).BeginInit();
@@ -111,7 +113,7 @@
             this.addTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(196, 500);
+            this.addTask.Location = new System.Drawing.Point(166, 500);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(79, 50);
             this.addTask.TabIndex = 14;
@@ -127,7 +129,7 @@
             this.userLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(114, 500);
+            this.userLogin.Location = new System.Drawing.Point(84, 500);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(79, 50);
             this.userLogin.TabIndex = 15;
@@ -150,14 +152,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
+            this.panel1.Controls.Add(this.deleteImage);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.showAllTask);
+            this.panel1.Controls.Add(this.referenceLabel2);
+            this.panel1.Controls.Add(this.referenceLabel3);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel1.Location = new System.Drawing.Point(12, 171);
+            this.panel1.Location = new System.Drawing.Point(7, 171);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(362, 315);
+            this.panel1.Size = new System.Drawing.Size(370, 315);
             this.panel1.TabIndex = 17;
             // 
             // label1
@@ -193,6 +198,32 @@
             this.showAllTask.UseVisualStyleBackColor = false;
             this.showAllTask.Click += new System.EventHandler(this.showAllTask_Click);
             // 
+            // referenceLabel2
+            // 
+            this.referenceLabel2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceLabel2.ForeColor = System.Drawing.Color.White;
+            this.referenceLabel2.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
+            this.referenceLabel2.Location = new System.Drawing.Point(9, 272);
+            this.referenceLabel2.Name = "referenceLabel2";
+            this.referenceLabel2.Size = new System.Drawing.Size(64, 24);
+            this.referenceLabel2.TabIndex = 10;
+            this.referenceLabel2.Text = "11:00AM";
+            this.referenceLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceLabel2.Visible = false;
+            // 
+            // referenceLabel3
+            // 
+            this.referenceLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.referenceLabel3.ForeColor = System.Drawing.Color.White;
+            this.referenceLabel3.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
+            this.referenceLabel3.Location = new System.Drawing.Point(138, 272);
+            this.referenceLabel3.Name = "referenceLabel3";
+            this.referenceLabel3.Size = new System.Drawing.Size(64, 24);
+            this.referenceLabel3.TabIndex = 11;
+            this.referenceLabel3.Text = "Subject";
+            this.referenceLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.referenceLabel3.Visible = false;
+            // 
             // noTaskPic
             // 
             this.noTaskPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
@@ -218,32 +249,6 @@
             this.referenceButton.Text = "12/30";
             this.referenceButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.referenceButton.Visible = false;
-            // 
-            // referenceLabel3
-            // 
-            this.referenceLabel3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referenceLabel3.ForeColor = System.Drawing.Color.White;
-            this.referenceLabel3.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel3.Image")));
-            this.referenceLabel3.Location = new System.Drawing.Point(281, 442);
-            this.referenceLabel3.Name = "referenceLabel3";
-            this.referenceLabel3.Size = new System.Drawing.Size(64, 24);
-            this.referenceLabel3.TabIndex = 11;
-            this.referenceLabel3.Text = "Subject";
-            this.referenceLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.referenceLabel3.Visible = false;
-            // 
-            // referenceLabel2
-            // 
-            this.referenceLabel2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referenceLabel2.ForeColor = System.Drawing.Color.White;
-            this.referenceLabel2.Image = ((System.Drawing.Image)(resources.GetObject("referenceLabel2.Image")));
-            this.referenceLabel2.Location = new System.Drawing.Point(53, 496);
-            this.referenceLabel2.Name = "referenceLabel2";
-            this.referenceLabel2.Size = new System.Drawing.Size(64, 24);
-            this.referenceLabel2.TabIndex = 10;
-            this.referenceLabel2.Text = "11:00AM";
-            this.referenceLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.referenceLabel2.Visible = false;
             // 
             // referenceLabel1
             // 
@@ -299,19 +304,46 @@
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
             // 
+            // links
+            // 
+            this.links.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
+            this.links.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.links.FlatAppearance.BorderSize = 0;
+            this.links.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
+            this.links.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
+            this.links.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.links.ForeColor = System.Drawing.Color.Transparent;
+            this.links.Image = ((System.Drawing.Image)(resources.GetObject("links.Image")));
+            this.links.Location = new System.Drawing.Point(248, 500);
+            this.links.Name = "links";
+            this.links.Size = new System.Drawing.Size(64, 50);
+            this.links.TabIndex = 23;
+            this.links.UseVisualStyleBackColor = false;
+            this.links.Click += new System.EventHandler(this.links_Click);
+            // 
+            // deleteImage
+            // 
+            this.deleteImage.AutoSize = true;
+            this.deleteImage.Image = ((System.Drawing.Image)(resources.GetObject("deleteImage.Image")));
+            this.deleteImage.Location = new System.Drawing.Point(120, 39);
+            this.deleteImage.Name = "deleteImage";
+            this.deleteImage.Size = new System.Drawing.Size(41, 15);
+            this.deleteImage.TabIndex = 24;
+            this.deleteImage.Text = "delete";
+            this.deleteImage.Visible = false;
+            // 
             // Data_Grid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.links);
             this.Controls.Add(this.noTaskPic);
             this.Controls.Add(this.todo_image);
             this.Controls.Add(this.show_image);
             this.Controls.Add(this.userLogin);
             this.Controls.Add(this.addTask);
             this.Controls.Add(this.referenceButton);
-            this.Controls.Add(this.referenceLabel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.referenceLabel2);
             this.Controls.Add(this.dayToday);
             this.Controls.Add(this.referenceLabel1);
             this.Controls.Add(this.button2);
@@ -323,6 +355,7 @@
             this.Load += new System.EventHandler(this.Data_Grid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noTaskPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -350,5 +383,7 @@
         private System.Windows.Forms.Label show_image;
         private System.Windows.Forms.Label todo_image;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button links;
+        private System.Windows.Forms.Label deleteImage;
     }
 }

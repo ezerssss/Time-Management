@@ -33,6 +33,9 @@ namespace app
         string accPath = Application.StartupPath + @"\acc.txt";
         string local = Application.StartupPath + @"\local.txt";
         string ignored = Application.StartupPath + @"\ignored.txt";
+        string link = Application.StartupPath + @"\links.txt";
+
+        bool enabledExperimental = false;
 
         public EarlyBird()
         {
@@ -85,6 +88,8 @@ namespace app
             set { screen = value; }
         }
 
+        List<string> linksList = new List<string>();
+
         private void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -113,6 +118,14 @@ namespace app
                 if (!File.Exists(accPath))
                 {
                     using (StreamWriter writer = new StreamWriter(accPath))
+                    {
+                        writer.WriteLine("false");
+                    }
+                    Application.Restart();
+                }
+                if (!File.Exists(link))
+                {
+                    using (StreamWriter writer = new StreamWriter(link)) 
                     {
                         writer.WriteLine("false");
                     }
@@ -150,11 +163,65 @@ namespace app
                     cv.Dock = DockStyle.Fill;
                     screen.Controls.Add(cv);
                 }
+
+
+
+                sortListLink();
+
+                //link start progrmaming
+                string readLine;
+
+                using (StreamReader sr = new StreamReader(link))
+                {
+                    enabledExperimental = bool.Parse(sr.ReadLine());  
+                    while ((readLine = sr.ReadLine()) != null)
+                    {
+                        if (readLine.Contains(DateTime.Now.DayOfWeek.ToString()))
+                        {
+                            linksList.Add(readLine);
+                        }
+                    }
+                }
+
+
+
+                if (enabledExperimental)
+                {
+                    experimentalHandle();
+                }
             }
             catch
             {
-                return;
+                MessageBox.Show("FORM LOAD ERROR\nPlease Contact Developers", "Error 01", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
             }
+
+        }
+
+        public void experimentalHandle()
+        {
+            if (linksList.Count > 0)
+            {
+                DateTime a = DateTime.Now;
+                DateTime b = DateTime.Parse(linksList[0].Split(x, StringSplitOptions.None)[0]);
+                int timeInterval = ((int)b.Subtract(a).TotalMilliseconds) - 600000;
+                if (timeInterval < 0)
+                {
+                    timer1.Interval = 15000;
+                    timer1.Start();
+                }
+                else
+                {
+                    timer1.Interval = timeInterval;
+                    timer1.Start();
+                }
+            }      
+        }
+
+        public void linkBrowserHandle()
+        {
+            System.Diagnostics.Process.Start(linksList[0].Split(x, StringSplitOptions.None)[3]);
+            linksList.RemoveAt(0);
         }
 
         public void sortList()
@@ -163,14 +230,6 @@ namespace app
             {
                 List<string> list = new List<string>();
                 string readLine;
-                using (StreamReader sr = new StreamReader(path))
-                {
-                    while ((readLine = sr.ReadLine()) != null)
-                    {
-                        if (!File.ReadAllText(local).Contains(readLine))
-                            list.Add(readLine);
-                    }
-                }
                 using (StreamReader sr = new StreamReader(local))
                 {
                     while ((readLine = sr.ReadLine()) != null)
@@ -178,6 +237,15 @@ namespace app
                         list.Add(readLine);
                     }
                 }
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    while ((readLine = sr.ReadLine()) != null)
+                    {
+                        if (!list.Contains(readLine))
+                            list.Add(readLine);
+                    }
+                }
+                
                 string[] elements;
                 List<string> sortedList = new List<string>();
                 List<string> openList = new List<string>();
@@ -221,10 +289,64 @@ namespace app
                         sw.WriteLine(lines);
                     }
                 }
+
+
             }
             catch
             {
-                return;
+                MessageBox.Show("SORT ERROR\nPlease Contact Developers", "Error 02", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+        }
+
+        public void sortListLink()
+        {
+            try
+            {
+                List<string> list = new List<string>();
+                string readLine;
+                using (StreamReader sr = new StreamReader(link))
+                {
+                    enabledExperimental = bool.Parse(sr.ReadLine());
+                    while ((readLine = sr.ReadLine()) != null)
+                    {
+                        list.Add(readLine);
+                    }
+                }
+                string[] elements;
+                List<string> sortedList = new List<string>();
+                while (list.Count > 00)
+                {
+                    string[] earliest = list[0].Split(x, StringSplitOptions.None);
+                    DateTime earliestDate = new DateTime();
+                    earliestDate = DateTime.Parse(earliest[0]);
+                    foreach (var line in list)
+                    {
+                        elements = line.Split(x, StringSplitOptions.None);
+                        string date = elements[0];
+                        int compare = DateTime.Compare(Convert.ToDateTime(Convert.ToDateTime(date).ToString("s")), Convert.ToDateTime(earliestDate.ToString("s")));
+                        if (compare < 0)
+                        {
+                            earliest = elements;
+                        }
+                    }
+                    string remove = earliest[0] + x[0] + earliest[1] + x[0] + earliest[2] + x[0] + earliest[3];
+                    list.Remove(remove);
+                    sortedList.Add(remove);
+                    using (StreamWriter sw = new StreamWriter(link))
+                    {
+                        sw.WriteLine(enabledExperimental);
+                        foreach (var lines in sortedList)
+                        {
+                            sw.WriteLine(lines);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("LINKS SORT ERROR\nPlease Contact Developers", "Error 02.1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
             }
         }
 
@@ -288,9 +410,11 @@ namespace app
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void EarlyBird_KeyUp(object sender, KeyEventArgs e)
-        {
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {            
+            timer1.Stop();
+            linkBrowserHandle();
+            experimentalHandle();
         }
     }
 }

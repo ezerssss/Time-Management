@@ -291,6 +291,7 @@ namespace app
             removeTask.FlatAppearance.BorderSize = 0;
             removeTask.FlatAppearance.BorderColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             removeTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            removeTask.Cursor = Cursors.Hand;
 
 
             //Label datebox = new Label();
@@ -653,6 +654,17 @@ namespace app
             }
             rowCounter = 0;
             showAll = false;
+        }
+
+        private void links_Click(object sender, EventArgs e)
+        {
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("Data_Grid"))
+            {
+                links li = new links();
+                li.Dock = DockStyle.Fill;
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                EarlyBird.Instance.screenContainer.Controls.Add(li);
+            }
         }
     }
 }

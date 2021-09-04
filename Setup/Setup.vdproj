@@ -16,7 +16,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_264AA5B2D873988D5588B623F828F006"
+        "MsmKey" = "8:_0216A098C35B850B65966B278351108F"
+        "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_17046AA2F553BC0457DC856C49F6058E"
         "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -24,18 +30,6 @@
         {
         "MsmKey" = "8:_2A5F0D7B44EA4C269C5F865C99C76738"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7B02EFF5F0AB93991A247B5F891566E0"
-        "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AED138AFB9F0089C9BD30DC42E687415"
-        "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,6 +46,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E3F58C4305BFC73AF265C8AB9448C067"
+        "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
         "MsmSig" = "8:_UNDEFINED"
@@ -59,19 +59,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AED138AFB9F0089C9BD30DC42E687415"
+        "OwnerKey" = "8:_E3F58C4305BFC73AF265C8AB9448C067"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_264AA5B2D873988D5588B623F828F006"
+        "OwnerKey" = "8:_0216A098C35B850B65966B278351108F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7B02EFF5F0AB93991A247B5F891566E0"
+        "OwnerKey" = "8:_17046AA2F553BC0457DC856C49F6058E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -169,20 +169,51 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_264AA5B2D873988D5588B623F828F006"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0216A098C35B850B65966B278351108F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_264AA5B2D873988D5588B623F828F006"
+                    "_0216A098C35B850B65966B278351108F"
                     {
                     "Name" = "8:Newtonsoft.Json.dll"
                     "Attributes" = "3:514"
                     }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:TRUE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_17046AA2F553BC0457DC856C49F6058E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_17046AA2F553BC0457DC856C49F6058E"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:514"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"
@@ -220,21 +251,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7B02EFF5F0AB93991A247B5F891566E0"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BAB6BA3DFBDC4383848F712CB76A722C"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_7B02EFF5F0AB93991A247B5F891566E0"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:514"
-                    }
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:D:\\Documents\\School\\STEMR2\\bird-logo.ico"
+            "TargetName" = "8:bird-logo.ico"
             "Tag" = "8:"
             "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"
             "Condition" = "8:"
@@ -248,17 +268,17 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AED138AFB9F0089C9BD30DC42E687415"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E3F58C4305BFC73AF265C8AB9448C067"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Syncfusion.Licensing, Version=19.2460.0.46, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_AED138AFB9F0089C9BD30DC42E687415"
+                    "_E3F58C4305BFC73AF265C8AB9448C067"
                     {
                     "Name" = "8:Syncfusion.Licensing.dll"
                     "Attributes" = "3:514"
@@ -280,26 +300,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BAB6BA3DFBDC4383848F712CB76A722C"
-            {
-            "SourcePath" = "8:D:\\Documents\\School\\STEMR2\\bird-logo.ico"
-            "TargetName" = "8:bird-logo.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -391,15 +391,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:EarlyBird"
-        "ProductCode" = "8:{65096D6E-C141-47D4-A8EF-6521F3754E1E}"
-        "PackageCode" = "8:{126A70C7-7DA5-460D-A834-8099DF378EA1}"
+        "ProductCode" = "8:{BBDB98A8-933F-4FF3-BCBB-5824BA73DCA0}"
+        "PackageCode" = "8:{18830A9D-303E-4568-B568-BB3FDF4912FF}"
         "UpgradeCode" = "8:{5113ED31-D971-49A6-9768-4133B3BAE71E}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.2.0"
+        "ProductVersion" = "8:1.3.0"
         "Manufacturer" = "8:EarlyBird"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -955,7 +955,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B869FE4EB28B4B85B57A4E3C8765FE67"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\app\\obj\\Release\\EarlyBird.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"

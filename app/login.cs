@@ -373,6 +373,8 @@ namespace app
                             EarlyBird.Globals.closeButtonDisable = false;
                             EarlyBird f1 = new EarlyBird();
                             f1.sortList();
+                            f1.Dispose();
+                            GC.Collect();
                             resetText();
                             afterLogin();
                         }

@@ -148,5 +148,16 @@ namespace app
                 EarlyBird.Instance.screenContainer.Controls.Add(at);
             }
         }
+
+        private void links_Click(object sender, EventArgs e)
+        {
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("Calendar_View"))
+            {
+                links li = new links();
+                li.Dock = DockStyle.Fill;
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                EarlyBird.Instance.screenContainer.Controls.Add(li);
+            }
+        }
     }
 }

@@ -363,6 +363,8 @@ namespace app
                         }
                         EarlyBird f1 = new EarlyBird();
                         f1.sortList();
+                        f1.Dispose();
+                        GC.Collect();
                         Calendar_View cv = new Calendar_View();
                         cv.Dock = DockStyle.Fill;
                         while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
@@ -374,8 +376,6 @@ namespace app
             catch
             {
                 MessageBox.Show("NO TASKS STORED, PLEASE UPDATE AGAIN", "Update failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                EarlyBird f1 = new EarlyBird();
-                f1.sortList();
                 Calendar_View cv = new Calendar_View();
                 cv.Dock = DockStyle.Fill;
                 while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();

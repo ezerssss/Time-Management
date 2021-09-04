@@ -88,6 +88,12 @@
     <Compile Include="add task.Designer.cs">
       <DependentUpon>add task.cs</DependentUpon>
     </Compile>
+    <Compile Include="addLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addLinks.Designer.cs">
+      <DependentUpon>addLinks.cs</DependentUpon>
+    </Compile>
     <Compile Include="APIFunction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     <Compile Include="Early Bird.Designer.cs">
       <DependentUpon>Early Bird.cs</DependentUpon>
     </Compile>
+    <Compile Include="links.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="links.Designer.cs">
+      <DependentUpon>links.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,9 @@
     <EmbeddedResource Include="add task.resx">
       <DependentUpon>add task.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addLinks.resx">
+      <DependentUpon>addLinks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="APIFunction.resx">
       <DependentUpon>APIFunction.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Early Bird.resx">
       <DependentUpon>Early Bird.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="links.resx">
+      <DependentUpon>links.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp.resx">
       <DependentUpon>PopUp.cs</DependentUpon>
