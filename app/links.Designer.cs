@@ -48,7 +48,7 @@ namespace app
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(386, 559);
             this.pictureBox3.TabIndex = 16;
@@ -74,7 +74,7 @@ namespace app
             this.userLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(84, 502);
+            this.userLogin.Location = new System.Drawing.Point(81, 502);
             this.userLogin.Margin = new System.Windows.Forms.Padding(0);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(79, 50);
@@ -92,7 +92,7 @@ namespace app
             this.addTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(167, 502);
+            this.addTask.Location = new System.Drawing.Point(164, 502);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(79, 50);
             this.addTask.TabIndex = 22;
@@ -110,7 +110,7 @@ namespace app
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(248, 501);
+            this.button1.Location = new System.Drawing.Point(245, 501);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 50);
             this.button1.TabIndex = 23;

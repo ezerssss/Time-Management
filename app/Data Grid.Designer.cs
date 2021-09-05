@@ -36,6 +36,7 @@
             this.userLogin = new System.Windows.Forms.Button();
             this.dayToday = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.deleteImage = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.showAllTask = new System.Windows.Forms.Button();
             this.referenceLabel2 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.todo_image = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.links = new System.Windows.Forms.Button();
-            this.deleteImage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noTaskPic)).BeginInit();
@@ -113,7 +113,7 @@
             this.addTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(166, 500);
+            this.addTask.Location = new System.Drawing.Point(163, 500);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(79, 50);
             this.addTask.TabIndex = 14;
@@ -129,7 +129,7 @@
             this.userLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(84, 500);
+            this.userLogin.Location = new System.Drawing.Point(81, 500);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(79, 50);
             this.userLogin.TabIndex = 15;
@@ -164,6 +164,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(370, 315);
             this.panel1.TabIndex = 17;
+            // 
+            // deleteImage
+            // 
+            this.deleteImage.AutoSize = true;
+            this.deleteImage.Image = ((System.Drawing.Image)(resources.GetObject("deleteImage.Image")));
+            this.deleteImage.Location = new System.Drawing.Point(120, 39);
+            this.deleteImage.Name = "deleteImage";
+            this.deleteImage.Size = new System.Drawing.Size(41, 15);
+            this.deleteImage.TabIndex = 24;
+            this.deleteImage.Text = "delete";
+            this.deleteImage.Visible = false;
             // 
             // label1
             // 
@@ -314,23 +325,12 @@
             this.links.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.links.ForeColor = System.Drawing.Color.Transparent;
             this.links.Image = ((System.Drawing.Image)(resources.GetObject("links.Image")));
-            this.links.Location = new System.Drawing.Point(248, 500);
+            this.links.Location = new System.Drawing.Point(245, 500);
             this.links.Name = "links";
             this.links.Size = new System.Drawing.Size(64, 50);
             this.links.TabIndex = 23;
             this.links.UseVisualStyleBackColor = false;
             this.links.Click += new System.EventHandler(this.links_Click);
-            // 
-            // deleteImage
-            // 
-            this.deleteImage.AutoSize = true;
-            this.deleteImage.Image = ((System.Drawing.Image)(resources.GetObject("deleteImage.Image")));
-            this.deleteImage.Location = new System.Drawing.Point(120, 39);
-            this.deleteImage.Name = "deleteImage";
-            this.deleteImage.Size = new System.Drawing.Size(41, 15);
-            this.deleteImage.TabIndex = 24;
-            this.deleteImage.Text = "delete";
-            this.deleteImage.Visible = false;
             // 
             // Data_Grid
             // 

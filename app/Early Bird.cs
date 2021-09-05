@@ -34,8 +34,10 @@ namespace app
         string local = Application.StartupPath + @"\local.txt";
         string ignored = Application.StartupPath + @"\ignored.txt";
         string link = Application.StartupPath + @"\links.txt";
+        string visited = Application.StartupPath + @"\visited.txt";
 
         bool enabledExperimental = false;
+        bool visitedLinks = false;
 
         public EarlyBird()
         {
@@ -131,6 +133,15 @@ namespace app
                     }
                     Application.Restart();
                 }
+                if (!File.Exists(visited))
+                {
+                    using (StreamWriter writer = new StreamWriter(visited))
+                    {
+                        writer.WriteLine(DateTime.Now.ToString("ddd"));
+                    }
+                    Application.Restart();
+                }
+
 
                 if (CheckForInternetConnection())
                 {
@@ -164,11 +175,8 @@ namespace app
                     screen.Controls.Add(cv);
                 }
 
-
-
                 sortListLink();
 
-                //link start progrmaming
                 string readLine;
 
                 using (StreamReader sr = new StreamReader(link))
@@ -182,13 +190,7 @@ namespace app
                         }
                     }
                 }
-
-
-
-                if (enabledExperimental)
-                {
-                    experimentalHandle();
-                }
+                getLinkFile();
             }
             catch
             {
@@ -196,6 +198,36 @@ namespace app
                 Application.Exit();
             }
 
+        }
+
+        public void getLinkFile()
+        {
+            if (enabledExperimental)
+            {
+                string readLinkLine;
+                using (StreamReader sr = new StreamReader(visited))
+                {
+                    if (sr.ReadLine() == DateTime.Now.ToString("ddd"))
+                    {
+                        visitedLinks = true;
+                        while ((readLinkLine = sr.ReadLine()) != null)
+                        {
+                            if (linksList.Contains(readLinkLine))
+                            {
+                                linksList.Remove(readLinkLine);
+                            }
+                        }
+                    }
+                }
+                if (!visitedLinks)
+                {
+                    using (StreamWriter sw = new StreamWriter(visited))
+                    {
+                        sw.WriteLine(DateTime.Now.ToString("ddd"));
+                    }
+                }
+                experimentalHandle();
+            }
         }
 
         public void experimentalHandle()
@@ -220,7 +252,11 @@ namespace app
 
         public void linkBrowserHandle()
         {
-            System.Diagnostics.Process.Start(linksList[0].Split(x, StringSplitOptions.None)[3]);
+            System.Diagnostics.Process.Start(linksList[0].Split(x, StringSplitOptions.None)[3]);           
+            using (StreamWriter sw = new StreamWriter(visited, true))
+            {
+                sw.WriteLine(linksList[0]);
+            }
             linksList.RemoveAt(0);
         }
 

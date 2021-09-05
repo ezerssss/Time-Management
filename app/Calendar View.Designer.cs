@@ -124,7 +124,7 @@
             this.userLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(84, 500);
+            this.userLogin.Location = new System.Drawing.Point(81, 500);
             this.userLogin.Margin = new System.Windows.Forms.Padding(0);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(79, 50);
@@ -141,7 +141,7 @@
             this.addTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(166, 500);
+            this.addTask.Location = new System.Drawing.Point(163, 500);
             this.addTask.Name = "addTask";
             this.addTask.Size = new System.Drawing.Size(79, 50);
             this.addTask.TabIndex = 13;
@@ -190,7 +190,7 @@
             this.links.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.links.ForeColor = System.Drawing.Color.Transparent;
             this.links.Image = ((System.Drawing.Image)(resources.GetObject("links.Image")));
-            this.links.Location = new System.Drawing.Point(248, 500);
+            this.links.Location = new System.Drawing.Point(245, 500);
             this.links.Name = "links";
             this.links.Size = new System.Drawing.Size(64, 50);
             this.links.TabIndex = 16;

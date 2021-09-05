@@ -202,10 +202,10 @@ namespace app
             DialogResult choice = al.ShowDialog();
             while (al.Controls.Count > 0) al.Controls[0].Dispose();
             GC.Collect();
-            if (enabledExperimental)
-            {
-                MessageBox.Show("Application needs to restart for experimental features to work.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            EarlyBird f1 = new EarlyBird();
+            f1.getLinkFile();
+            f1.Dispose();
+            GC.Collect();
             processData();
         }
 
