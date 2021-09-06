@@ -131,7 +131,7 @@ namespace app
                 {
                     using (StreamWriter writer = new StreamWriter(link)) 
                     {
-                        writer.WriteLine("false");
+                        writer.WriteLine("False");
                     }
                     Application.Restart();
                 }
@@ -348,7 +348,8 @@ namespace app
                     enabledExperimental = bool.Parse(sr.ReadLine());
                     while ((readLine = sr.ReadLine()) != null)
                     {
-                        list.Add(readLine);
+                        if (readLine.Contains("|#$#|"))
+                            list.Add(readLine);
                     }
                 }
                 string[] elements;
