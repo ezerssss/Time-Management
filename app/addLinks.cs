@@ -93,9 +93,7 @@ namespace app
                         sw.WriteLine(line);
                     }
                 }
-                EarlyBird f1 = new EarlyBird();
-                f1.sortListLink();
-                f1.Dispose();
+                EarlyBird.Instance.sortListLink();
                 GC.Collect();
                 MessageBox.Show("Add link successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

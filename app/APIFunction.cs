@@ -361,9 +361,7 @@ namespace app
                                 sw.WriteLine(line);
                             }
                         }
-                        EarlyBird f1 = new EarlyBird();
-                        f1.sortList();
-                        f1.Dispose();
+                        EarlyBird.Instance.sortList();
                         GC.Collect();
                         Calendar_View cv = new Calendar_View();
                         cv.Dock = DockStyle.Fill;

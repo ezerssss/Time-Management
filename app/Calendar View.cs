@@ -156,6 +156,8 @@ namespace app
                 links li = new links();
                 li.Dock = DockStyle.Fill;
                 while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                GC.Collect();
+                MessageBox.Show(GC.GetTotalMemory(true).ToString());
                 EarlyBird.Instance.screenContainer.Controls.Add(li);
             }
         }

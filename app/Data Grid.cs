@@ -663,6 +663,8 @@ namespace app
                 links li = new links();
                 li.Dock = DockStyle.Fill;
                 while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                this.Dispose();
+                GC.Collect();
                 EarlyBird.Instance.screenContainer.Controls.Add(li);
             }
         }

@@ -79,7 +79,9 @@ namespace app
             get
             {
                 if (_obj == null)
-                    _obj = new EarlyBird();
+                {
+                    _obj = new EarlyBird();                  
+                }                
                 return _obj;
             }
         }
@@ -351,7 +353,7 @@ namespace app
                 }
                 string[] elements;
                 List<string> sortedList = new List<string>();
-                while (list.Count > 00)
+                while (list.Count > 0)
                 {
                     string[] earliest = list[0].Split(x, StringSplitOptions.None);
                     DateTime earliestDate = new DateTime();

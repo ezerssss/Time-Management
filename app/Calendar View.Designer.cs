@@ -73,7 +73,7 @@
             this.calendar.Font = new System.Drawing.Font("Questrial", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.calendar.Location = new System.Drawing.Point(87, 106);
-            this.calendar.MaxDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.calendar.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
             this.calendar.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 2;

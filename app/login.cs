@@ -371,9 +371,7 @@ namespace app
                                 }
                             }
                             EarlyBird.Globals.closeButtonDisable = false;
-                            EarlyBird f1 = new EarlyBird();
-                            f1.sortList();
-                            f1.Dispose();
+                            EarlyBird.Instance.sortList();
                             GC.Collect();
                             resetText();
                             afterLogin();

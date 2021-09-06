@@ -65,7 +65,9 @@ namespace app
                 Calendar_View cv = new Calendar_View();
                 cv.Dock = DockStyle.Fill;
                 while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                this.Dispose();
                 GC.Collect();
+                MessageBox.Show(GC.GetTotalMemory(true).ToString());
                 EarlyBird.Instance.screenContainer.Controls.Add(cv);
             }
         }
@@ -202,9 +204,7 @@ namespace app
             DialogResult choice = al.ShowDialog();
             while (al.Controls.Count > 0) al.Controls[0].Dispose();
             GC.Collect();
-            EarlyBird f1 = new EarlyBird();
-            f1.getLinkFile();
-            f1.Dispose();
+            EarlyBird.Instance.getLinkFile();
             GC.Collect();
             processData();
         }
