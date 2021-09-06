@@ -58,6 +58,8 @@ namespace app
             }
         }
 
+        ToolTip tpExpe = new ToolTip();
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("links"))
@@ -65,23 +67,22 @@ namespace app
                 Calendar_View cv = new Calendar_View();
                 cv.Dock = DockStyle.Fill;
                 while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
-                this.Dispose();
+                tpExpe.Dispose();
                 GC.Collect();
-                MessageBox.Show(GC.GetTotalMemory(true).ToString());
                 EarlyBird.Instance.screenContainer.Controls.Add(cv);
             }
         }
 
         int offset = 0;
         List<string> linklist = new List<string>();
-        bool enabledExperimental = false;
+        bool enabledExperimental = false;      
 
         private void load(object sender, EventArgs e)
         {
             processData();
             expeFeatures.Checked = enabledExperimental;
-            ToolTip tp = new ToolTip();
-            tp.SetToolTip(expeFeatures, "Automatically open links 10 minutes before the time set. If the app crashes please contact Ezra Magbanua or Andry Tumacole.");
+            tpExpe.ShowAlways = true;
+            tpExpe.SetToolTip(expeFeatures, "Automatically open links 10 minutes before the time set. If the app crashes please contact Ezra Magbanua or Andry Tumacole.");
         }
  
 
@@ -89,7 +90,7 @@ namespace app
         {
             pictureBox1.Visible = false;
             offset = 0;
-            panel1.Controls.Clear();
+            while (panel1.Controls.Count > 0) panel1.Controls[0].Dispose();
             linklist.Clear();
             string readline;
             int boolClassLink = 0;
