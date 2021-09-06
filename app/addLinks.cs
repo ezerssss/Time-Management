@@ -72,11 +72,28 @@ namespace app
             }
         }
 
+        public bool checkLinkUrl(string r)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(r);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (days.Count < 1 || subject.Text == "Enter subject name" || subject.Text == "" || linkText.Text == "Enter Link" || linkText.Text == "")
             {
                 MessageBox.Show("Invalid input/s", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!checkLinkUrl(linkText.Text))
+            {
+                MessageBox.Show("Invalid Link", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

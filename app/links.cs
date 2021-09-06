@@ -79,14 +79,17 @@ namespace app
 
         private void load(object sender, EventArgs e)
         {
-            processData();
+            comboBox1.Text = DateTime.Now.ToString("dddd");
+            comboBox1.SelectedIndex = comboBox1.Items.IndexOf(DateTime.Now.ToString("dddd"));
+            label1.Text = "Class Links for " + comboBox1.Text;
+            processData(comboBox1.Text);
             expeFeatures.Checked = enabledExperimental;
             tpExpe.ShowAlways = true;
-            tpExpe.SetToolTip(expeFeatures, "Automatically open links 10 minutes before the time set. If the app crashes please contact Ezra Magbanua or Andry Tumacole.");
+            tpExpe.SetToolTip(expeFeatures, "Automatically open links 10 minutes before the time set. If the app crashes please contact Ezra Magbanua or Andry Tumacole.");         
         }
  
 
-        private void processData()
+        private void processData(string day)
         {
             pictureBox1.Visible = false;
             offset = 0;
@@ -96,18 +99,19 @@ namespace app
             int boolClassLink = 0;
             enabledExperimental = false;
 
+            button3.Enabled = false;
             using (StreamReader sr = new StreamReader(link))
             {
                 enabledExperimental = bool.Parse(sr.ReadLine());
                 while ((readline = sr.ReadLine()) != null)
                 {
-                    if (readline.Contains(DateTime.Now.DayOfWeek.ToString()))
+                    if (readline.Contains(day))
                     {
                         linklist.Add(readline);
                         boolClassLink++;
                     }
                 }
-            }
+            }           
             if (boolClassLink == 0)
             {
                 pictureBox1.Visible = true;
@@ -120,6 +124,7 @@ namespace app
                     offset++;
                 }
             }
+            button3.Enabled = true;
         }
 
         private void printTaskLine(int offset, string r)
@@ -207,7 +212,7 @@ namespace app
             GC.Collect();
             EarlyBird.Instance.getLinkFile();
             GC.Collect();
-            processData();
+            processData(DateTime.Now.DayOfWeek.ToString());
         }
 
         string[] linkTextSeperator = { "Text: " };
@@ -228,12 +233,7 @@ namespace app
                 foreach (var link in linklist)
                     sw.WriteLine(link);
             }         
-            processData();
-        }
-
-        private void expeFeatures_CheckedChanged(object sender, EventArgs e)
-        {
-
+            processData(DateTime.Now.DayOfWeek.ToString());
         }
 
         private void expeFeatures_Click(object sender, EventArgs e)
@@ -272,6 +272,36 @@ namespace app
             }
             MessageBox.Show("Restarting EarlyBird", "Experimental Features", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             Application.Restart();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.DroppedDown)
+            {
+                comboBox1.DroppedDown = false;
+            }
+            else
+            {
+                comboBox1.DroppedDown = true;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Tuesday" || comboBox1.Text == "Thursday" || comboBox1.Text == "Saturday")
+            {
+                label1.Font = new Font("Questrial", 20);
+            }
+            else if (comboBox1.Text == "Wednesday")
+            {
+                label1.Font = new Font("Questrial", 18);
+            }
+            else
+            {
+                label1.Font = new Font("Questrial", 21);
+            }
+            label1.Text = "Class Links for " + comboBox1.Text;
+            processData(comboBox1.Text);
         }
     }
 }

@@ -194,9 +194,9 @@ namespace app
                 }
                 getLinkFile();
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("FORM LOAD ERROR\nPlease Contact Developers", "Error 01", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("FORM LOAD ERROR\nPlease Contact Developers\n"+ex.ToString(), "Error 01", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
 
@@ -330,9 +330,9 @@ namespace app
 
 
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("SORT ERROR\nPlease Contact Developers", "Error 02", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("SORT ERROR\nPlease Contact Developers\n" + ex.ToString(), "Error 02", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
@@ -382,9 +382,9 @@ namespace app
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("LINKS SORT ERROR\nPlease Contact Developers", "Error 02.1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("LINKS SORT ERROR\nPlease Contact Developers\n"+ex.ToString(), "Error 02.1", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
