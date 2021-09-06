@@ -78,11 +78,11 @@ namespace app
         bool enabledExperimental = false;      
 
         private void load(object sender, EventArgs e)
-        {
+        {           
+            processData(DateTime.Now.DayOfWeek.ToString());
             comboBox1.Text = DateTime.Now.ToString("dddd");
             comboBox1.SelectedIndex = comboBox1.Items.IndexOf(DateTime.Now.ToString("dddd"));
             label1.Text = "Class Links for " + comboBox1.Text;
-            processData(comboBox1.Text);
             expeFeatures.Checked = enabledExperimental;
             tpExpe.ShowAlways = true;
             tpExpe.SetToolTip(expeFeatures, "Automatically open links 10 minutes before the time set. If the app crashes please contact Ezra Magbanua or Andry Tumacole.");         
