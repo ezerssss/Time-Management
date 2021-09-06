@@ -20,3 +20,4 @@ D:\C# Projects\Time-Management\app\obj\Release\app.logOutUser.resources
 D:\C# Projects\Time-Management\app\bin\Release\Syncfusion.Licensing.dll
 D:\C# Projects\Time-Management\app\obj\Release\app.links.resources
 D:\C# Projects\Time-Management\app\obj\Release\app.addLinks.resources
+D:\C# Projects\Time-Management\app\obj\Release\app.csprojAssemblyReference.cache

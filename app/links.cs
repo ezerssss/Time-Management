@@ -78,7 +78,9 @@ namespace app
         bool enabledExperimental = false;      
 
         private void load(object sender, EventArgs e)
-        {           
+        {
+            button3.Visible = false;
+            comboBox1.Visible = false;
             processData(DateTime.Now.DayOfWeek.ToString());
             comboBox1.Text = DateTime.Now.ToString("dddd");
             comboBox1.SelectedIndex = comboBox1.Items.IndexOf(DateTime.Now.ToString("dddd"));
@@ -125,6 +127,8 @@ namespace app
                 }
             }
             button3.Enabled = true;
+            button3.Visible = true;
+            comboBox1.Visible = true;
         }
 
         private void printTaskLine(int offset, string r)
