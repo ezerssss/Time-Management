@@ -76,8 +76,9 @@ namespace app
         {
             try
             {
-                System.Diagnostics.Process.Start(r);
-                return true;
+                using (var client = new System.Net.WebClient())
+                using (client.OpenRead(r))
+                    return true;
             }
             catch
             {

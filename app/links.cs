@@ -27,7 +27,10 @@ namespace app
             panel1.HorizontalScroll.Visible = false;
             panel1.AutoScroll = true;
             this.DoubleBuffered = true;
-            enableDoubleBuff(panel1);
+            for (int x = 0; x < this.Controls.Count; x++)
+            {
+                enableDoubleBuff(this.Controls[x]);
+            }
         }
         public static void enableDoubleBuff(System.Windows.Forms.Control cont)
         {
@@ -42,6 +45,7 @@ namespace app
                 login lg = new login();
                 lg.Dock = DockStyle.Fill;
                 while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                tpExpe.Dispose();
                 GC.Collect();
                 EarlyBird.Instance.screenContainer.Controls.Add(lg);
             }
@@ -54,6 +58,7 @@ namespace app
                 add_task at = new add_task();
                 at.Dock = DockStyle.Fill;
                 while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                tpExpe.Dispose();
                 EarlyBird.Instance.screenContainer.Controls.Add(at);
             }
         }

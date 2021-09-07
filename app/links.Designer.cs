@@ -129,7 +129,7 @@ namespace app
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
-            this.panel1.Location = new System.Drawing.Point(9, 123);
+            this.panel1.Location = new System.Drawing.Point(9, 122);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(370, 366);
             this.panel1.TabIndex = 26;
@@ -161,7 +161,7 @@ namespace app
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-18, 109);
+            this.pictureBox2.Location = new System.Drawing.Point(-19, 107);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(431, 459);
             this.pictureBox2.TabIndex = 28;

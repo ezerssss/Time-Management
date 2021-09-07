@@ -84,7 +84,7 @@
             this.assignmentScreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
             this.assignmentScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.assignmentScreen.Controls.Add(this.label1);
-            this.assignmentScreen.Location = new System.Drawing.Point(6, 296);
+            this.assignmentScreen.Location = new System.Drawing.Point(7, 296);
             this.assignmentScreen.Name = "assignmentScreen";
             this.assignmentScreen.Size = new System.Drawing.Size(372, 190);
             this.assignmentScreen.TabIndex = 5;
@@ -164,7 +164,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-20, 282);
+            this.pictureBox2.Location = new System.Drawing.Point(-19, 282);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(411, 280);

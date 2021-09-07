@@ -160,7 +160,7 @@
             this.panel1.Controls.Add(this.referenceLabel3);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel1.Location = new System.Drawing.Point(7, 171);
+            this.panel1.Location = new System.Drawing.Point(8, 171);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(370, 315);
             this.panel1.TabIndex = 17;
@@ -277,7 +277,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-16, 156);
+            this.pictureBox2.Location = new System.Drawing.Point(-15, 156);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(431, 422);
             this.pictureBox2.TabIndex = 19;

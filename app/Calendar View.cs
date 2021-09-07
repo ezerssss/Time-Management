@@ -17,8 +17,18 @@ namespace app
         {
             InitializeComponent();
             this.DoubleBuffered = true;
+            for (int x = 0; x < this.Controls.Count; x++)
+            {
+                enableDoubleBuff(this.Controls[x]);
+            }
             checkAssignments();
-        }  
+        }
+
+        public static void enableDoubleBuff(System.Windows.Forms.Control cont)
+        {
+            System.Reflection.PropertyInfo DemoProp = typeof(System.Windows.Forms.Control).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            DemoProp.SetValue(cont, true, null);
+        }
 
         private void monthCalendar1_MouseDown(object sender, MouseEventArgs e)
         {
