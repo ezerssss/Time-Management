@@ -239,10 +239,18 @@ namespace app
                 DateTime a = DateTime.Now;
                 DateTime b = DateTime.Parse(linksList[0].Split(x, StringSplitOptions.None)[0]);
                 int timeInterval = ((int)b.Subtract(a).TotalMilliseconds) - 600000;
-                if (timeInterval < 0)
+                if (timeInterval < 0 && timeInterval > -900000)
                 {
                     timer1.Interval = 15000;
                     timer1.Start();
+                }
+                else if (timeInterval < -900000)
+                {
+                    using (StreamWriter sw = new StreamWriter(visited, true))
+                    {
+                        sw.WriteLine(linksList[0]);
+                    }
+                    linksList.RemoveAt(0);
                 }
                 else
                 {
@@ -250,6 +258,13 @@ namespace app
                     timer1.Start();
                 }
             }      
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            linkBrowserHandle();
+            experimentalHandle();
         }
 
         public void linkBrowserHandle()
@@ -449,11 +464,5 @@ namespace app
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {            
-            timer1.Stop();
-            linkBrowserHandle();
-            experimentalHandle();
-        }
     }
 }
