@@ -74,16 +74,10 @@ namespace app
 
         public bool checkLinkUrl(string r)
         {
-            try
-            {
-                using (var client = new System.Net.WebClient())
-                using (client.OpenRead(r))
-                    return true;
-            }
-            catch
-            {
-                return false;
-            }
+            Uri uriResult;
+            bool result = Uri.TryCreate(r, UriKind.Absolute, out uriResult)
+            && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+            return result;
         }
 
         private void button1_Click(object sender, EventArgs e)

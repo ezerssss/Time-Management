@@ -32,51 +32,14 @@ namespace app
                 enableDoubleBuff(this.Controls[x]);
             }
         }
+
         public static void enableDoubleBuff(System.Windows.Forms.Control cont)
         {
             System.Reflection.PropertyInfo DemoProp = typeof(System.Windows.Forms.Control).GetProperty("DoubleBuffered", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             DemoProp.SetValue(cont, true, null);
         }
 
-        private void userLogin_Click(object sender, EventArgs e)
-        {
-            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("links"))
-            {
-                login lg = new login();
-                lg.Dock = DockStyle.Fill;
-                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
-                tpExpe.Dispose();
-                GC.Collect();
-                EarlyBird.Instance.screenContainer.Controls.Add(lg);
-            }
-        }
-
-        private void addTask_Click(object sender, EventArgs e)
-        {
-            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("links"))
-            {
-                add_task at = new add_task();
-                at.Dock = DockStyle.Fill;
-                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
-                tpExpe.Dispose();
-                EarlyBird.Instance.screenContainer.Controls.Add(at);
-            }
-        }
-
         ToolTip tpExpe = new ToolTip();
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("links"))
-            {
-                Calendar_View cv = new Calendar_View();
-                cv.Dock = DockStyle.Fill;
-                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
-                tpExpe.Dispose();
-                GC.Collect();
-                EarlyBird.Instance.screenContainer.Controls.Add(cv);
-            }
-        }
 
         int offset = 0;
         List<string> linklist = new List<string>();
@@ -84,15 +47,22 @@ namespace app
 
         private void load(object sender, EventArgs e)
         {
-            button3.Visible = false;
             comboBox1.Visible = false;
             processData(DateTime.Now.DayOfWeek.ToString());
             comboBox1.Text = DateTime.Now.ToString("dddd");
             comboBox1.SelectedIndex = comboBox1.Items.IndexOf(DateTime.Now.ToString("dddd"));
-            label1.Text = "Class Links for " + comboBox1.Text;
+            //label1.Text = "Class Links for " + comboBox1.Text;
             expeFeatures.Checked = enabledExperimental;
             tpExpe.ShowAlways = true;
-            tpExpe.SetToolTip(expeFeatures, "Automatically open links 10 minutes before the time set. If the app crashes please contact Ezra Magbanua or Andry Tumacole.");         
+            tpExpe.SetToolTip(button4, "Automatically open links 10 minutes before the time set. If the app crashes please contact the developers.");
+            if (enabledExperimental)
+            {
+                label2.Text = "ENABLED";
+            }
+            else
+            {
+                label2.Text = "DISABLED";
+            }
         }
  
 
@@ -105,35 +75,38 @@ namespace app
             string readline;
             int boolClassLink = 0;
             enabledExperimental = false;
-
-            button3.Enabled = false;
-            using (StreamReader sr = new StreamReader(link))
+            try
             {
-                enabledExperimental = bool.Parse(sr.ReadLine());
-                while ((readline = sr.ReadLine()) != null)
+                using (StreamReader sr = new StreamReader(link))
                 {
-                    if (readline.Contains(day))
+                    enabledExperimental = bool.Parse(sr.ReadLine());
+                    while ((readline = sr.ReadLine()) != null)
                     {
-                        linklist.Add(readline);
-                        boolClassLink++;
+                        if (readline.Contains(day))
+                        {
+                            linklist.Add(readline);
+                            boolClassLink++;
+                        }
                     }
                 }
-            }           
-            if (boolClassLink == 0)
-            {
-                pictureBox1.Visible = true;
-            }
-            else
-            {
-                foreach (var link in linklist)
+                if (boolClassLink == 0)
                 {
-                    printTaskLine(offset, link);
-                    offset++;
+                    pictureBox1.Visible = true;
                 }
+                else
+                {
+                    foreach (var link in linklist)
+                    {
+                        printTaskLine(offset, link);
+                        offset++;
+                    }
+                }
+                comboBox1.Visible = true;
             }
-            button3.Enabled = true;
-            button3.Visible = true;
-            comboBox1.Visible = true;
+            catch (IOException)
+            {
+                processData(day);
+            }                   
         }
 
         private void printTaskLine(int offset, string r)
@@ -247,6 +220,11 @@ namespace app
 
         private void expeFeatures_Click(object sender, EventArgs e)
         {
+            experimentalClickHandle();
+        }
+
+        private void experimentalClickHandle()
+        {
             List<string> list = new List<string>();
             using (StreamReader sr = new StreamReader(link))
             {
@@ -283,34 +261,48 @@ namespace app
             Application.Restart();
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label1.Focus();
+            processData(comboBox1.Text);
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            if (comboBox1.DroppedDown)
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("links"))
             {
-                comboBox1.DroppedDown = false;
-            }
-            else
-            {
-                comboBox1.DroppedDown = true;
+                Calendar_View cv = new Calendar_View();
+                cv.Dock = DockStyle.Fill;
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                tpExpe.Dispose();
+                GC.Collect();
+                EarlyBird.Instance.screenContainer.Controls.Add(cv);
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "Tuesday" || comboBox1.Text == "Thursday" || comboBox1.Text == "Saturday")
+            if (EarlyBird.Instance.screenContainer.Controls.ContainsKey("links"))
             {
-                label1.Font = new Font("Questrial", 20);
+                Data_Grid dg = new Data_Grid();
+                dg.Dock = DockStyle.Fill;
+                while (EarlyBird.Instance.screenContainer.Controls.Count > 0) EarlyBird.Instance.screenContainer.Controls[0].Dispose();
+                tpExpe.Dispose();
+                GC.Collect();
+                EarlyBird.Instance.screenContainer.Controls.Add(dg);
             }
-            else if (comboBox1.Text == "Wednesday")
-            {
-                label1.Font = new Font("Questrial", 18);
-            }
-            else
-            {
-                label1.Font = new Font("Questrial", 21);
-            }
-            label1.Text = "Class Links for " + comboBox1.Text;
-            processData(comboBox1.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            expeFeatures.Checked = !enabledExperimental;
+            experimentalClickHandle();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            expeFeatures.Checked = !enabledExperimental;
+            experimentalClickHandle();
         }
     }
 }
