@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userLogin = new System.Windows.Forms.Button();
-            this.addTask = new System.Windows.Forms.Button();
             this.birdBox = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -119,34 +118,19 @@
             this.userLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.userLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.FlatAppearance.BorderSize = 0;
             this.userLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userLogin.Image = ((System.Drawing.Image)(resources.GetObject("userLogin.Image")));
-            this.userLogin.Location = new System.Drawing.Point(81, 500);
+            this.userLogin.Location = new System.Drawing.Point(123, 500);
             this.userLogin.Margin = new System.Windows.Forms.Padding(0);
             this.userLogin.Name = "userLogin";
             this.userLogin.Size = new System.Drawing.Size(79, 50);
             this.userLogin.TabIndex = 12;
             this.userLogin.UseVisualStyleBackColor = false;
             this.userLogin.Click += new System.EventHandler(this.userLogin_Click);
-            // 
-            // addTask
-            // 
-            this.addTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
-            this.addTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addTask.FlatAppearance.BorderSize = 0;
-            this.addTask.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
-            this.addTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
-            this.addTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addTask.Image = ((System.Drawing.Image)(resources.GetObject("addTask.Image")));
-            this.addTask.Location = new System.Drawing.Point(163, 500);
-            this.addTask.Name = "addTask";
-            this.addTask.Size = new System.Drawing.Size(79, 50);
-            this.addTask.TabIndex = 13;
-            this.addTask.UseVisualStyleBackColor = false;
-            this.addTask.Click += new System.EventHandler(this.addTask_Click);
             // 
             // birdBox
             // 
@@ -184,13 +168,14 @@
             // 
             this.links.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.links.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.links.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.links.FlatAppearance.BorderSize = 0;
             this.links.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.links.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.links.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.links.ForeColor = System.Drawing.Color.Transparent;
             this.links.Image = ((System.Drawing.Image)(resources.GetObject("links.Image")));
-            this.links.Location = new System.Drawing.Point(245, 500);
+            this.links.Location = new System.Drawing.Point(205, 500);
             this.links.Name = "links";
             this.links.Size = new System.Drawing.Size(64, 50);
             this.links.TabIndex = 16;
@@ -203,7 +188,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.links);
             this.Controls.Add(this.birdBox);
-            this.Controls.Add(this.addTask);
             this.Controls.Add(this.userLogin);
             this.Controls.Add(this.assignmentScreen);
             this.Controls.Add(this.calendar);
@@ -230,7 +214,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button userLogin;
-        private System.Windows.Forms.Button addTask;
         private System.Windows.Forms.PictureBox birdBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

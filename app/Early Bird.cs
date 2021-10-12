@@ -254,12 +254,19 @@ namespace app
 
         public void linkBrowserHandle()
         {
-            System.Diagnostics.Process.Start(linksList[0].Split(x, StringSplitOptions.None)[3]);           
-            using (StreamWriter sw = new StreamWriter(visited, true))
+            try
             {
-                sw.WriteLine(linksList[0]);
+                System.Diagnostics.Process.Start(linksList[0].Split(x, StringSplitOptions.None)[3]);
+                using (StreamWriter sw = new StreamWriter(visited, true))
+                {
+                    sw.WriteLine(linksList[0]);
+                }
+                linksList.RemoveAt(0);
             }
-            linksList.RemoveAt(0);
+            catch (Exception ex)
+            {
+                MessageBox.Show("LINK ERROR\nPlease Contact Developers\n" + ex.ToString(), "Error 04", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void sortList()
