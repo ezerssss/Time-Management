@@ -1,2 +1,1 @@
 Tue
-01:00AM|#$#|Tuesday|#$#|qweq|#$#|https://www.google.com/search?q=how+to+make+combobox+readonly+in+c%23&rlz=1C1BNSD_enPH927PH927&oq=how+to+make+combobox+readonly&aqs=chrome.0.0i512j69i57j0i512j0i22i30l3j0i512j0i22i30l3.10105j0j4&sourceid=chrome&ie=UTF-8
