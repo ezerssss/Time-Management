@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar_View));
             this.calendar = new System.Windows.Forms.MonthCalendar();
@@ -39,6 +40,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.links = new System.Windows.Forms.Button();
+            this.HelpButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             button1 = new System.Windows.Forms.Button();
             this.assignmentScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +58,7 @@
             button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("Questrial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
             button1.Location = new System.Drawing.Point(205, 41);
             button1.Name = "button1";
@@ -69,7 +72,7 @@
             // calendar
             // 
             this.calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.calendar.Font = new System.Drawing.Font("Questrial", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.calendar.Location = new System.Drawing.Point(87, 106);
             this.calendar.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
@@ -90,7 +93,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Questrial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -182,10 +185,32 @@
             this.links.UseVisualStyleBackColor = false;
             this.links.Click += new System.EventHandler(this.links_Click);
             // 
+            // HelpButton
+            // 
+            this.HelpButton.BackColor = System.Drawing.Color.Transparent;
+            this.HelpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HelpButton.BackgroundImage")));
+            this.HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HelpButton.FlatAppearance.BorderSize = 0;
+            this.HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HelpButton.Location = new System.Drawing.Point(348, 11);
+            this.HelpButton.Name = "HelpButton";
+            this.HelpButton.Size = new System.Drawing.Size(30, 30);
+            this.HelpButton.TabIndex = 40;
+            this.toolTip1.SetToolTip(this.HelpButton, resources.GetString("HelpButton.ToolTip"));
+            this.HelpButton.UseVisualStyleBackColor = false;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 30000;
+            this.toolTip1.InitialDelay = 100;
+            this.toolTip1.ReshowDelay = 100;
+            this.toolTip1.ToolTipTitle = "Help";
+            // 
             // Calendar_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.HelpButton);
             this.Controls.Add(this.links);
             this.Controls.Add(this.birdBox);
             this.Controls.Add(this.userLogin);
@@ -218,5 +243,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button links;
+        private System.Windows.Forms.Button HelpButton;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

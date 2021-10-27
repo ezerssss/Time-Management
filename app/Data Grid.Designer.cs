@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data_Grid));
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,8 @@
             this.todo_image = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.links = new System.Windows.Forms.Button();
+            this.HelpButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noTaskPic)).BeginInit();
@@ -92,7 +95,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Questrial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
             this.button2.Location = new System.Drawing.Point(91, 37);
             this.button2.Name = "button2";
@@ -123,7 +126,7 @@
             // dayToday
             // 
             this.dayToday.BackColor = System.Drawing.Color.Transparent;
-            this.dayToday.Font = new System.Drawing.Font("Questrial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayToday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
             this.dayToday.Image = ((System.Drawing.Image)(resources.GetObject("dayToday.Image")));
             this.dayToday.Location = new System.Drawing.Point(16, 84);
@@ -162,7 +165,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Questrial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -317,10 +320,32 @@
             this.links.UseVisualStyleBackColor = false;
             this.links.Click += new System.EventHandler(this.links_Click);
             // 
+            // HelpButton
+            // 
+            this.HelpButton.BackColor = System.Drawing.Color.Transparent;
+            this.HelpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HelpButton.BackgroundImage")));
+            this.HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HelpButton.FlatAppearance.BorderSize = 0;
+            this.HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HelpButton.Location = new System.Drawing.Point(348, 11);
+            this.HelpButton.Name = "HelpButton";
+            this.HelpButton.Size = new System.Drawing.Size(30, 30);
+            this.HelpButton.TabIndex = 40;
+            this.toolTip1.SetToolTip(this.HelpButton, resources.GetString("HelpButton.ToolTip"));
+            this.HelpButton.UseVisualStyleBackColor = false;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 30000;
+            this.toolTip1.InitialDelay = 100;
+            this.toolTip1.ReshowDelay = 100;
+            this.toolTip1.ToolTipTitle = "Help";
+            // 
             // Data_Grid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.HelpButton);
             this.Controls.Add(this.links);
             this.Controls.Add(this.noTaskPic);
             this.Controls.Add(this.todo_image);
@@ -368,5 +393,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button links;
         private System.Windows.Forms.Label deleteImage;
+        private System.Windows.Forms.Button HelpButton;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -21,3 +21,25 @@ D:\C# Projects\Time-Management\app\bin\Release\Syncfusion.Licensing.dll
 D:\C# Projects\Time-Management\app\obj\Release\app.links.resources
 D:\C# Projects\Time-Management\app\obj\Release\app.addLinks.resources
 D:\C# Projects\Time-Management\app\obj\Release\app.csprojAssemblyReference.cache
+C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\EarlyBird.exe.config
+C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\EarlyBird.exe
+C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\EarlyBird.pdb
+C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\Newtonsoft.Json.dll
+C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\Syncfusion.Licensing.dll
+C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\Newtonsoft.Json.xml
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.csproj.AssemblyReference.cache
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.add_task.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.addLinks.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.APIFunction.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.Calendar_View.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.Data_Grid.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.EarlyBird.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.links.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.PopUp.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.login.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.Properties.Resources.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.logOutUser.resources
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.csproj.GenerateResource.cache
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.csproj.CoreCompileInputs.cache
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\EarlyBird.exe
+C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\EarlyBird.pdb

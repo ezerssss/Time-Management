@@ -1,15 +1,2 @@
-STEMR 3 (12-B)|#$#|Peer Evaluation, Adviser's Evaluation |#$#|Sat, 25 September 2021|#$#|12:00AM|#$#|false
-Filipino 6 (12-ABC)|#$#|Takdang Aralin|#$#|Thu, 14 October 2021|#$#|12:00AM|#$#|false
-Social Science 6 (12-ABC)|#$#|LG 2.3 Graded Task (AA)|#$#|Fri, 15 October 2021|#$#|11:59PM|#$#|false
-Physics 4 Core A &amp; B (Level 1)|#$#|Lesson 4.1 Mini Activity!|#$#|Mon, 18 October 2021|#$#|11:59PM|#$#|false
-Physics 4 Core A &amp; B (Level 1)|#$#|Activity 4.2: Using Video Tracker|#$#|Mon, 18 October 2021|#$#|11:59PM|#$#|false
-Social Science 6 (12-ABC)|#$#|LG 1.5 Graded Task (LT 2)|#$#|Fri, 22 October 2021|#$#|11:59PM|#$#|false
-Social Science 6 (12-ABC)|#$#|LG 2.4 Graded Task (LT 2)|#$#|Fri, 22 October 2021|#$#|11:59PM|#$#|false
-Social Science 6 (12-ABC)|#$#|LG 3.3 Graded Task (LT 2)|#$#|Fri, 22 October 2021|#$#|11:59PM|#$#|false
-Social Science 6 (12-ABC)|#$#|LG 3.8 Graded Task (LT 2)|#$#|Fri, 22 October 2021|#$#|11:59PM|#$#|false
-Social Science 6 (12-ABC)|#$#|LG 3.12 Graded Task (LT 2)|#$#|Fri, 22 October 2021|#$#|11:59PM|#$#|false
-STEMR 3 (12-B)|#$#|Project Plan: SY:2021-2022|#$#|Mon, 25 October 2021|#$#|12:00AM|#$#|false
-Physics 4 Core A &amp; B (Level 1)|#$#|Activity 3: Graphical Analysis|#$#|Mon, 25 October 2021|#$#|11:59PM|#$#|false
 Social Science 6 (12-ABC)|#$#|Case Study Project|#$#|Tue, 26 October 2021|#$#|11:59PM|#$#|false
-STEMR 3 (12-B)|#$#|Manuscripts |#$#|---|#$#|---|#$#|false
 Social Science 6 (12-ABC)|#$#|Discussion Board|#$#|---|#$#|---|#$#|false
