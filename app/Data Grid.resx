@@ -737,20 +737,6 @@
         giCTFM/7f6OBCOKZonslAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="showAllTask.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACYAAAApCAYAAABZa1t7AAAABGdBTUEAALGPC/xhBQAAAeFJREFUWEft
-        l79OAkEQxnkEHsFH8BHsaH0EE16Akk5aOks7K3rpTbShxpJOWisp7c7fNzezOTj+3AUuMWR/yZebnZ3Z
-        /bhdgvaOURTFBP2gS/OF7n2bdtD4YEt0y41v1xyaXsve4slTB6HmriwtCk8dhbLPsroYeao5NH2UvcXE
-        Uwehpq2xxmvXoCkbawVN2VgraMrGWkHTvzf2jh5P6AUF++Z3pZ8kcZaxLjnL2BopPqb4iRH75ne1QeI6
-        71g21giasrFW0JSNtYKmbKwVNI3K3k659e2aQ1MfxSfrgpP/fR2FBW6QjuqS6vvymUymBt+QAVoh/aUq
-        KR743NqKLgzrztBv7CNir7QnwRzNbADEz2jhcVfG9AJ2960Zk5ElGlqiArlvpDeoZ5gdek6LKz9GCzT1
-        ea0VtelDBozVrxqdVPrgEVdzGkyRirXhG4qj3FgB+LxMqGbsOS2ezHnOroTHMmy1QTXH09b0eNtYTASM
-        ZXLlcXJPLMOaS2ZF1PA0w0gb2+Yo9Qfk9B+S1pJUt/R8zZgK5jYAYvsyeLzPWO2NeRxvXIYkjXePUZc+
-        3SvBWG84HWs8Y3EtoiOxY0Bbr1cQh7HaHfN53afq0etbZ/cuYGwmfGgwNrOa83HaM3MF9Hp/P1pWPsQs
-        fh4AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="referenceLabel2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -771,6 +757,20 @@
         pwUWGpDTCe/X7DRA6jDD3wB8mF8ClovgSgPGpNESIw2wfRByR+E56bDAHP8XqMEz6tQOtdbBAGdCGwVo
         p/W6gwHOBLsXIh4EcCZoXA7UFN685/TgQSBrgqbCSC3Hmk+5NMQgiVskzwkryO1anGPm2D9ci2/FG/AQ
         H9u+Aq0UAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="showAllTask.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACYAAAApCAYAAABZa1t7AAAABGdBTUEAALGPC/xhBQAAAeFJREFUWEft
+        l79OAkEQxnkEHsFH8BHsaH0EE16Akk5aOks7K3rpTbShxpJOWisp7c7fNzezOTj+3AUuMWR/yZebnZ3Z
+        /bhdgvaOURTFBP2gS/OF7n2bdtD4YEt0y41v1xyaXsve4slTB6HmriwtCk8dhbLPsroYeao5NH2UvcXE
+        Uwehpq2xxmvXoCkbawVN2VgraMrGWkHTvzf2jh5P6AUF++Z3pZ8kcZaxLjnL2BopPqb4iRH75ne1QeI6
+        71g21giasrFW0JSNtYKmbKwVNI3K3k659e2aQ1MfxSfrgpP/fR2FBW6QjuqS6vvymUymBt+QAVoh/aUq
+        KR743NqKLgzrztBv7CNir7QnwRzNbADEz2jhcVfG9AJ2960Zk5ElGlqiArlvpDeoZ5gdek6LKz9GCzT1
+        ea0VtelDBozVrxqdVPrgEVdzGkyRirXhG4qj3FgB+LxMqGbsOS2ezHnOroTHMmy1QTXH09b0eNtYTASM
+        ZXLlcXJPLMOaS2ZF1PA0w0gb2+Yo9Qfk9B+S1pJUt/R8zZgK5jYAYvsyeLzPWO2NeRxvXIYkjXePUZc+
+        3SvBWG84HWs8Y3EtoiOxY0Bbr1cQh7HaHfN53afq0etbZ/cuYGwmfGgwNrOa83HaM3MF9Hp/P1pWPsQs
+        fh4AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="noTaskPic.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1383,9 +1383,6 @@
         NJCOAwjxPZ6jcLVpijF2zWo7/4RheAf07zM5jGt+ZgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="HelpButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
@@ -1623,9 +1620,12 @@
         HyXYKBkvxq/Zv7bfg9+L39M/i98jN+ABxfvHF/8fFvIBTvHRHbMAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="HelpButton.ToolTip" xml:space="preserve">
     <value>Add Task:
- - Add a your own custom task not fetched from KHub
+ - Add your own custom task not fetched from KHub
 Show All:
  - Shows all tasks
 Show ToDo:
@@ -1639,7 +1639,4 @@ Calendar:
 Links:
  - Takes you to the Links Page</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

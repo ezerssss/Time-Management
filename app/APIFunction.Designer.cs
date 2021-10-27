@@ -42,10 +42,10 @@ namespace app
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Questrial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(99, 235);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 29);
+            this.label1.Size = new System.Drawing.Size(190, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Updating Reqs...";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -60,7 +60,7 @@ namespace app
             // printProgress
             // 
             this.printProgress.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.printProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printProgress.Font = new System.Drawing.Font("Questrial", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printProgress.Location = new System.Drawing.Point(0, 335);
             this.printProgress.Name = "printProgress";
             this.printProgress.Size = new System.Drawing.Size(388, 27);

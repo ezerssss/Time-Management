@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar_View));
             this.calendar = new System.Windows.Forms.MonthCalendar();
             this.assignmentScreen = new System.Windows.Forms.Panel();
@@ -42,32 +41,13 @@
             this.links = new System.Windows.Forms.Button();
             this.HelpButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            button1 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.assignmentScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birdBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.BackColor = System.Drawing.Color.Transparent;
-            button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
-            button1.Location = new System.Drawing.Point(205, 41);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(94, 40);
-            button1.TabIndex = 9;
-            button1.Text = "To-do";
-            button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // calendar
             // 
@@ -83,6 +63,7 @@
             // 
             // assignmentScreen
             // 
+            this.assignmentScreen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.assignmentScreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
             this.assignmentScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.assignmentScreen.Controls.Add(this.label1);
@@ -107,6 +88,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -118,6 +100,7 @@
             // 
             // userLogin
             // 
+            this.userLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.userLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.userLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.userLogin.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -169,6 +152,7 @@
             // 
             // links
             // 
+            this.links.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.links.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.links.Cursor = System.Windows.Forms.Cursors.Hand;
             this.links.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
@@ -192,6 +176,7 @@
             this.HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HelpButton.FlatAppearance.BorderSize = 0;
             this.HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HelpButton.Font = new System.Drawing.Font("Questrial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton.Location = new System.Drawing.Point(348, 11);
             this.HelpButton.Name = "HelpButton";
             this.HelpButton.Size = new System.Drawing.Size(30, 30);
@@ -206,17 +191,32 @@
             this.toolTip1.ReshowDelay = 100;
             this.toolTip1.ToolTipTitle = "Help";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(203, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 44);
+            this.button1.TabIndex = 41;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Calendar_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.HelpButton);
             this.Controls.Add(this.links);
             this.Controls.Add(this.birdBox);
             this.Controls.Add(this.userLogin);
             this.Controls.Add(this.assignmentScreen);
             this.Controls.Add(this.calendar);
-            this.Controls.Add(button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
@@ -245,5 +245,6 @@
         private System.Windows.Forms.Button links;
         private System.Windows.Forms.Button HelpButton;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button1;
     }
 }

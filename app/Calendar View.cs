@@ -22,6 +22,7 @@ namespace app
                 enableDoubleBuff(this.Controls[x]);
             }
             checkAssignments();
+            
         }
 
         public static void enableDoubleBuff(System.Windows.Forms.Control cont)
@@ -121,7 +122,9 @@ namespace app
 
         private void Calendar_View_Load(object sender, EventArgs e)
         {
-            //boldDates();
+            button1.Parent = pictureBox1;
+            button1.BackColor = Color.Transparent;
+            button1.Location = new Point(145, 25);
         }
 
         private void button1_Click(object sender, EventArgs e)

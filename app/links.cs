@@ -47,6 +47,11 @@ namespace app
 
         private void load(object sender, EventArgs e)
         {
+            button3.Parent = pictureBox2;
+            button3.Location = new Point(30, 25);
+            button1.Parent = pictureBox2;
+            button1.Location = new Point(145, 25);
+
             comboBox1.Visible = false;
             processData(DateTime.Now.DayOfWeek.ToString());
             comboBox1.Text = DateTime.Now.ToString("dddd");

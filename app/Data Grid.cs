@@ -53,6 +53,10 @@ namespace app
             //disables datagrid autohighlight on cells
             dayToday.Text = "Today is " + DateTime.Now.ToString("dd MMMM yyyy");
             showData();
+            button2.Parent = pictureBox1;
+            button2.Location = new Point(35, 25);
+            panel1.Controls.Add(showAllTask);
+            panel1.Controls.Add(button1);
         }
 
         public static bool CheckForInternetConnection()
@@ -91,80 +95,13 @@ namespace app
             noTaskPic.Visible = true;
             removeList.Clear();
             panel1.Controls.Clear();
+            panel1.Controls.Add(showAllTask);
+            panel1.Controls.Add(button1);
             string readLine;
             int i = 0;
             dictionary.Clear();
             IDictionary<DateTime, int> dates = new Dictionary<DateTime, int>();
-            //using (StreamReader sr = new StreamReader(path))
-            //{
-            //    while ((readLine = sr.ReadLine()) != null)
-            //    {
-            //        if (!File.ReadAllText(ignored).Contains(readLine))
-            //        {
-            //            string[] elements = readLine.Split(x, StringSplitOptions.None); //splits the line into elements and stores it
-            //                                                                            //makes the date to a short one - Nov/08/2020
-            //                                                                            //MessageBox.Show(elements[2]);
-            //            DateTime dateTime, dateToDetermine = new DateTime();
-            //            string date = "---";
-            //            if (DateTime.TryParse(elements[2], out dateTime))
-            //            {
-            //                if (!dates.ContainsKey(dateTime.AddDays(-3)))
-            //                {
-            //                    dates.Add(dateTime.AddDays(-3), 1);
-            //                    dateToDetermine = dateTime.AddDays(-3);
-            //                }
-            //                else
-            //                {
-            //                    if (dates[dateTime.AddDays(-3)] < 5)
-            //                    {
-            //                        dates[dateTime.AddDays(-3)] += 1;
-            //                        dateToDetermine = dateTime.AddDays(-3);
-            //                    }
-            //                    else
-            //                    {
-            //                        int dayBefore = -1;
-            //                        while (dates.ContainsKey(dateTime.AddDays(dayBefore - 3)) && dates[dateTime.AddDays(dayBefore - 3)] >= 5)
-            //                            dayBefore -= 1;
-            //                        if (!dates.ContainsKey(dateTime.AddDays(dayBefore - 3)))
-            //                            dates.Add(dateTime.AddDays(dayBefore - 3), 1);
-            //                        else
-            //                            dates[dateTime.AddDays(dayBefore - 3)] += 1;
-            //                        dateToDetermine = dateTime.AddDays(dayBefore - 3);
-            //                    }
-            //                }
-            //                date = elements[2];
-            //                MessageBox.Show(elements[2]);
-            //                elements[2] = dateTime.ToString("MM/dd");
-            //            }
-            //            if (DateTime.Compare(dateToDetermine, DateTime.Now) <= 0 || elements[2] == "---")
-            //            {
-            //                if (!dictionary.ContainsKey(elements[2]))
-            //                {
-            //                    dictionary.Add(elements[2], new List<string>());
-            //                    dictionary[elements[2]].Add(string.Join(x[0], elements));
-            //                }
-            //                else
-            //                {
-            //                    dictionary[elements[2]].Add(string.Join(x[0], elements));
-            //                }
-            //                printTaskLine(elements, i);
-            //                removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
-            //                i++;
-            //                foreach (var key in dictionary)
-            //                {
-            //                    Console.WriteLine(key);
-            //                    Console.WriteLine(key.Key);
-            //                    foreach (var value in key.Value)
-            //                    {
-            //                        Console.WriteLine("-" + value);
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    }
-            //    rowCounter = 0;
-
-            //}
+            
             using (StreamReader sr = new StreamReader(path))
             {
                 while ((readLine = sr.ReadLine()) != null)
@@ -280,13 +217,11 @@ namespace app
             heading.Font = new Font("Questrial", 18);
             heading.ForeColor = System.Drawing.ColorTranslator.FromHtml("#FFFFFF");
             panel1.Controls.Add(heading);
-            panel1.Controls.Add(showAllTask);
-            panel1.Controls.Add(button1);
 
             Button removeTask = new Button();
             removeTask.Top = verticalOffset * 60 + 95;
 
-            removeTask.Left = 1;
+            removeTask.Left = 8;
             removeTask.Width = 22;
             removeTask.Height = 22;
             removeTask.Name = "button" + rowCounter;
@@ -359,7 +294,7 @@ namespace app
             {
                 Name = "pictureBox",
                 Size = new Size(350, 84),
-                Location = new Point(0, verticalOffset * 60 + 55),
+                Location = new Point(8, verticalOffset * 60 + 55),
                 Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")))
             };
 
@@ -549,35 +484,6 @@ namespace app
             }
         }
 
-        //private void showAllFuntion()
-        //{
-        //    string readline;
-        //    int i = 0;
-        //    removeList.Clear();
-        //    panel1.Controls.Clear();
-        //    panel1.Refresh();
-        //    using (StreamReader sr = new StreamReader(path))
-        //    {
-        //        while ((readline = sr.ReadLine()) != null)
-        //        {
-        //            if (!File.ReadAllText(ignored).Contains(readline)) {
-        //                string[] elements = readline.Split(x, StringSplitOptions.None);
-        //                DateTime dateTime = new DateTime();
-        //                string date = "---";
-        //                if (DateTime.TryParse(elements[2], out dateTime))
-        //                {
-        //                    date = elements[2];
-        //                    elements[2] = dateTime.ToString("MM/dd");
-        //                }
-        //                printTaskLine(elements, i);
-        //                removeList.Add(elements[0] + x[0] + elements[1] + x[0] + date + x[0] + elements[3] + x[0] + elements[4]);
-        //                i++;
-        //            }
-        //        }
-        //    }
-        //    rowCounter = 0;
-        //    showAll = false;
-        //}
 
         private void showAllFuntion()
         {
@@ -585,6 +491,8 @@ namespace app
             int i = 0;
             removeList.Clear();
             panel1.Controls.Clear();
+            panel1.Controls.Add(showAllTask);
+            panel1.Controls.Add(button1);
             panel1.Refresh();
             dictionary.Clear();
 

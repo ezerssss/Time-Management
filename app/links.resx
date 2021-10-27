@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="button1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -831,9 +828,6 @@
         rkJggg==
 </value>
   </data>
-  <metadata name="helptooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>6, 17</value>
-  </metadata>
   <data name="HelpButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
@@ -1071,6 +1065,9 @@
         HyXYKBkvxq/Zv7bfg9+L39M/i98jN+ABxfvHF/8fFvIBTvHRHbMAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="helptooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>6, 17</value>
+  </metadata>
   <data name="HelpButton.ToolTip" xml:space="preserve">
     <value>Links:
  - Shows links to synchronous classes
@@ -1078,14 +1075,13 @@
  - Choose the day of the week in the drop down list
 Add Link:
  - Add a link for a synchronous class
-Auto Open:
- - Will automatically open a link when its almost time
+Enable Button:
+ - Enables automatic opening of links when its almost time
+Disable Button:
+- Disable automatic opening of links
 Calendar:
  - Takes you to the Calendar View
 To-do:
  - Takes you to the To-do List</value>
   </data>
-  <metadata name="helptooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>6, 17</value>
-  </metadata>
 </root>

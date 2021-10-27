@@ -38,9 +38,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.deleteImage = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.showAllTask = new System.Windows.Forms.Button();
             this.referenceLabel2 = new System.Windows.Forms.Label();
             this.referenceLabel3 = new System.Windows.Forms.Label();
+            this.showAllTask = new System.Windows.Forms.Button();
             this.noTaskPic = new System.Windows.Forms.PictureBox();
             this.referenceButton = new System.Windows.Forms.Label();
             this.referenceLabel1 = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(288, 5);
+            this.button1.Location = new System.Drawing.Point(303, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 46);
             this.button1.TabIndex = 1;
@@ -79,6 +79,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(56, 11);
@@ -89,11 +90,11 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
@@ -101,13 +102,13 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 42);
             this.button2.TabIndex = 10;
-            this.button2.Text = "Calendar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // addTask
             // 
+            this.addTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.addTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.addTask.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addTask.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
@@ -138,13 +139,14 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
             this.panel1.Controls.Add(this.deleteImage);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.showAllTask);
             this.panel1.Controls.Add(this.referenceLabel2);
             this.panel1.Controls.Add(this.referenceLabel3);
+            this.panel1.Controls.Add(this.showAllTask);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel1.Location = new System.Drawing.Point(8, 171);
@@ -177,25 +179,6 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Visible = false;
             // 
-            // showAllTask
-            // 
-            this.showAllTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
-            this.showAllTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.showAllTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showAllTask.FlatAppearance.BorderSize = 0;
-            this.showAllTask.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
-            this.showAllTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
-            this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showAllTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showAllTask.ForeColor = System.Drawing.Color.White;
-            this.showAllTask.Image = ((System.Drawing.Image)(resources.GetObject("showAllTask.Image")));
-            this.showAllTask.Location = new System.Drawing.Point(232, 6);
-            this.showAllTask.Name = "showAllTask";
-            this.showAllTask.Size = new System.Drawing.Size(49, 46);
-            this.showAllTask.TabIndex = 18;
-            this.showAllTask.UseVisualStyleBackColor = false;
-            this.showAllTask.Click += new System.EventHandler(this.showAllTask_Click);
-            // 
             // referenceLabel2
             // 
             this.referenceLabel2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,6 +204,25 @@
             this.referenceLabel3.Text = "Subject";
             this.referenceLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.referenceLabel3.Visible = false;
+            // 
+            // showAllTask
+            // 
+            this.showAllTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
+            this.showAllTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.showAllTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showAllTask.FlatAppearance.BorderSize = 0;
+            this.showAllTask.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
+            this.showAllTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(136)))), ((int)(((byte)(41)))));
+            this.showAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showAllTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showAllTask.ForeColor = System.Drawing.Color.White;
+            this.showAllTask.Image = ((System.Drawing.Image)(resources.GetObject("showAllTask.Image")));
+            this.showAllTask.Location = new System.Drawing.Point(250, 8);
+            this.showAllTask.Name = "showAllTask";
+            this.showAllTask.Size = new System.Drawing.Size(49, 46);
+            this.showAllTask.TabIndex = 18;
+            this.showAllTask.UseVisualStyleBackColor = false;
+            this.showAllTask.Click += new System.EventHandler(this.showAllTask_Click);
             // 
             // noTaskPic
             // 
@@ -304,6 +306,7 @@
             // 
             // links
             // 
+            this.links.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.links.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
             this.links.Cursor = System.Windows.Forms.Cursors.Hand;
             this.links.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
@@ -327,6 +330,7 @@
             this.HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HelpButton.FlatAppearance.BorderSize = 0;
             this.HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HelpButton.Font = new System.Drawing.Font("Questrial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpButton.Location = new System.Drawing.Point(348, 11);
             this.HelpButton.Name = "HelpButton";
             this.HelpButton.Size = new System.Drawing.Size(30, 30);
