@@ -107,7 +107,6 @@ namespace app
                                 }
                                 MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 resetText();
-                                return;
                             }
                         }
                         if (wsToken != "")
@@ -392,6 +391,7 @@ namespace app
                     GC.Collect();
                     EarlyBird.Instance.screenContainer.Controls.Add(lg);
                 }
+
                 login_button.Enabled = true;
                 linkLabel1.Enabled = true;
                 linkLabel1.Text = "Continue";
