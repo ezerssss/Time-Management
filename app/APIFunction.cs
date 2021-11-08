@@ -88,7 +88,7 @@ namespace app
                     using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://khub.cvisc.pshs.edu.ph/login/token.php?service=moodle_mobile_app"))
                     {
                         //gets token
-                        request.Content = new StringContent("username=" + accDetails[1] + "&password=" + accDetails[2]);//"username="+ uname.Text + "&password=" + password.Text rlopos Godofmischief.loki#117
+                        request.Content = new StringContent("username=" + accDetails[1] + "&password=" + accDetails[2]);//"username="+ uname.Text + "&password=" + password.Text
                         request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/x-www-form-urlencoded");
                         var response = await client.SendAsync(request);
                         string responseContent = await response.Content.ReadAsStringAsync();

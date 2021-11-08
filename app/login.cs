@@ -58,10 +58,16 @@ namespace app
             }
         }
 
+        string[] blacklisted = {"cfabella", "cgabing", "hjacedo", "rmalpas", "ggamorin", "jmpamoyo", "rcanugot", "jcbajenting", "tsbalamban", "tpbuaya", "cdcabatingan", "kcaruz", "ygdizon", "qaelcamel", "dogalila", "sdgatal", "sbjala", "jmlasmarias", "aslopez", "apmarquez", "mnmernado", "ptmonreal", "lmnavarro", "lbnavarte", "rhpostrado", "maredulla", "jgsinguit", "kmsoria", "kcundag", "rsuytico", "jgvillarin"};
+
         private async void login_button_ClickAsync(object sender, EventArgs e)
         {          
             if (username.Text == "" || password.Text == "" || username.Text == "Enter username" || password.Text == "Enter password") {
                 MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (blacklisted.Contains(username.Text))
+            {
+                MessageBox.Show("You don't have permission to use the app.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (!CheckForInternetConnection())
                 MessageBox.Show("No Internet", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
