@@ -20,7 +20,6 @@ D:\C# Projects\Time-Management\app\obj\Release\app.logOutUser.resources
 D:\C# Projects\Time-Management\app\bin\Release\Syncfusion.Licensing.dll
 D:\C# Projects\Time-Management\app\obj\Release\app.links.resources
 D:\C# Projects\Time-Management\app\obj\Release\app.addLinks.resources
-D:\C# Projects\Time-Management\app\obj\Release\app.csprojAssemblyReference.cache
 C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\EarlyBird.exe.config
 C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\EarlyBird.exe
 C:\Users\Boop\Source\Repos\Time-Management\app\bin\Release\EarlyBird.pdb
@@ -43,3 +42,4 @@ C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.csproj.GenerateRe
 C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\app.csproj.CoreCompileInputs.cache
 C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\EarlyBird.exe
 C:\Users\Boop\Source\Repos\Time-Management\app\obj\Release\EarlyBird.pdb
+D:\C# Projects\Time-Management\app\obj\Release\app.csprojAssemblyReference.cache

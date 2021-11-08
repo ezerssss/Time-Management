@@ -28,19 +28,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_2A5F0D7B44EA4C269C5F865C99C76738"
+        "MsmKey" = "8:_6812C601041A42BFA795049A2DF6EB8B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8AD0813011A74943858751631D672713"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BAB6BA3DFBDC4383848F712CB76A722C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -231,29 +231,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A5F0D7B44EA4C269C5F865C99C76738"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6812C601041A42BFA795049A2DF6EB8B"
             {
-            "SourcePath" = "8:D:\\Documents\\School\\STEMR2\\Questrial-Regular.ttf"
-            "TargetName" = "8:Questrial-Regular.ttf"
-            "Tag" = "8:"
-            "Folder" = "8:_8B73BC0600BF46FAB86829DEEB0CCFCF"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:5"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BAB6BA3DFBDC4383848F712CB76A722C"
-            {
-            "SourcePath" = "8:D:\\Documents\\School\\STEMR2\\bird-logo.ico"
+            "SourcePath" = "8:D:\\Documents\\School\\PAST PLEASE DONT LOOK NOW\\STEMR2\\bird-logo.ico"
             "TargetName" = "8:bird-logo.ico"
             "Tag" = "8:"
             "Folder" = "8:_43C849EE00A5472D8350C4613338D7DA"
@@ -261,12 +241,32 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
+            "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8AD0813011A74943858751631D672713"
+            {
+            "SourcePath" = "8:D:\\Documents\\School\\PAST PLEASE DONT LOOK NOW\\STEMR2\\Questrial-Regular.ttf"
+            "TargetName" = "8:Questrial-Regular.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_8B73BC0600BF46FAB86829DEEB0CCFCF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:5"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
@@ -523,7 +523,7 @@
             "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
             "Folder" = "8:_A5985D98F510415897A410AC2B21EACE"
             "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Icon" = "8:_BAB6BA3DFBDC4383848F712CB76A722C"
+            "Icon" = "8:_6812C601041A42BFA795049A2DF6EB8B"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4E73F9D6BF0843F99DEA53B8F9496E25"
@@ -537,7 +537,7 @@
             "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
             "Folder" = "8:_C2E60C9935584FC887B855D8842D3176"
             "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Icon" = "8:_BAB6BA3DFBDC4383848F712CB76A722C"
+            "Icon" = "8:_6812C601041A42BFA795049A2DF6EB8B"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FF47CB4E350B440D99D159E1204CCF48"
@@ -551,7 +551,7 @@
             "Target" = "8:_B869FE4EB28B4B85B57A4E3C8765FE67"
             "Folder" = "8:_68C69046FEC941C5863B4CD04FD8BF8F"
             "WorkingFolder" = "8:_43C849EE00A5472D8350C4613338D7DA"
-            "Icon" = "8:_BAB6BA3DFBDC4383848F712CB76A722C"
+            "Icon" = "8:_6812C601041A42BFA795049A2DF6EB8B"
             "Feature" = "8:"
             }
         }
